@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ti-B1-dx7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--Home Interface Controller-->
+        <scene sceneID="3Hf-mJ-ff0">
+            <objects>
+                <controller id="1ti-B1-dx7" customClass="HomeInterfaceController">
+                    <items>
+                        <label width="130.5" height="30.5" alignment="left" text="Welcome" id="SvB-Wd-on3">
+                            <fontDescription key="font" type="system" pointSize="20"/>
+                        </label>
+                        <button width="1" alignment="left" title="Start" id="vuA-gu-tcN">
+                            <connections>
+                                <segue destination="cQl-4r-Sj5" kind="push" id="bkB-dX-Gtv"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="160" y="476"/>
+        </scene>
+        <!--outdoor run-->
+        <scene sceneID="WNs-y7-sZX">
+            <objects>
+                <controller title="outdoor run" id="mBd-Hz-rN4" customClass="InterfaceController">
+                    <items>
+                        <label alignment="left" text="00.00mi" id="tgx-q6-0qg">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <label alignment="left" text="00:00" id="0cz-6j-a0V">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <label alignment="left" text="0:00m/mi" id="dv7-ki-RLt">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <group width="1" alignment="left" id="SAZ-tF-nb6">
+                            <items>
+                                <button width="66" alignment="left" title="Stop" id="H7Y-74-Xmm">
+                                    <connections>
+                                        <action selector="stopPressed:" destination="mBd-Hz-rN4" id="len-fi-1fl"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="left" title="Split" id="xTD-Da-9Ss">
+                                    <connections>
+                                        <action selector="splitPressed:" destination="mBd-Hz-rN4" id="hQk-hV-SRd"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="distLabel" destination="tgx-q6-0qg" id="XBD-MF-UXb"/>
+                        <outlet property="paceLabel" destination="dv7-ki-RLt" id="ogd-Py-yyr"/>
+                        <outlet property="splits" destination="xTD-Da-9Ss" id="Ku9-h7-faW"/>
+                        <outlet property="stopButton" destination="H7Y-74-Xmm" id="IMg-An-QIx"/>
+                        <outlet property="timeLabel" destination="0cz-6j-a0V" id="V1X-PJ-2br"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="681" y="476"/>
+        </scene>
+        <!--info-->
+        <scene sceneID="zMs-UM-jRi">
+            <objects>
+                <controller identifier="info" title="info" id="OFG-kB-t8o"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="230"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="n3v-md-9q4">
+            <objects>
+                <controller id="cQl-4r-Sj5">
+                    <items>
+                        <button width="1" alignment="left" title="Indoor" id="JBr-g3-Jmg">
+                            <connections>
+                                <segue destination="2bW-gH-Rss" kind="push" id="w4I-hv-chb"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Outdoor" id="JC5-2G-gkX">
+                            <connections>
+                                <segue destination="mBd-Hz-rN4" kind="push" id="6pl-7Z-bPq"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Info" id="yMZ-os-ppq">
+                            <connections>
+                                <segue destination="OFG-kB-t8o" kind="push" id="MUT-yq-mm2"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="418" y="476"/>
+        </scene>
+        <!--detail-->
+        <scene sceneID="QBc-Xn-EXD">
+            <objects>
+                <controller identifier="detail" title="detail" id="7qm-hX-h4C" customClass="DetailInterfaceController">
+                    <items>
+                        <label alignment="left" text="00.00mi" id="gMK-kn-fn4">
+                            <fontDescription key="font" type="system" pointSize="28"/>
+                        </label>
+                        <label alignment="left" text="00:00" id="9TD-yL-f8J">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <label alignment="left" text="5:30m/mi" id="56D-6a-TMx">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <label alignment="left" text="130bpm" id="NAP-yn-MaE">
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                        </label>
+                        <button width="1" alignment="left" title="Save" id="N6V-zG-5kL">
+                            <connections>
+                                <action selector="save" destination="7qm-hX-h4C" id="ckG-OW-BVe"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Back" id="lZZ-Uw-LcM">
+                            <connections>
+                                <action selector="back" destination="7qm-hX-h4C" id="XBn-CP-YNs"/>
+                                <segue destination="1ti-B1-dx7" kind="push" id="Uso-eh-7ee"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="Distance" destination="gMK-kn-fn4" id="Xqa-Ud-R5T"/>
+                        <outlet property="Heartrate" destination="NAP-yn-MaE" id="IhJ-kv-jAb"/>
+                        <outlet property="Pace" destination="56D-6a-TMx" id="SUH-Bg-oQg"/>
+                        <outlet property="Time" destination="9TD-yL-f8J" id="6EI-1C-bQ6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="897" y="476"/>
+        </scene>
+        <!--notice-->
+        <scene sceneID="bFD-Ga-RnT">
+            <objects>
+                <controller identifier="notice" title="notice" id="r3B-zr-CKF" customClass="NoticeInterfaceController">
+                    <items>
+                        <label height="145.5" alignment="left" numberOfLines="9" id="yaw-cP-06b">
+                            <string key="text">We are unable to save data to your iPhone. Make sure your iPhone is connected, otherwise you are at risk of losing this workout data</string>
+                            <fontDescription key="font" type="system" pointSize="15"/>
+                        </label>
+                        <button width="1" alignment="left" title="Understand &amp; Save data locally" id="EK5-wc-1Aq">
+                            <connections>
+                                <action selector="saveLocally" destination="r3B-zr-CKF" id="PYU-OB-4cD"/>
+                                <segue destination="7qm-hX-h4C" kind="push" id="RxB-Tx-etI"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1086" y="476"/>
+        </scene>
+        <!--data-->
+        <scene sceneID="nh4-Xl-QKd">
+            <objects>
+                <controller identifier="data" id="Hy9-tQ-vNH" customClass="DetailInterfaceController">
+                    <items>
+                        <label width="136" height="117.5" alignment="left" text="You have unsaved data on your watch. Please connect your iPhone and click save data. Otherwise, your data will be deleted. " numberOfLines="8" id="eHB-cz-z9b">
+                            <fontDescription key="font" type="system" pointSize="14"/>
+                            <variation key="device=watch38mm" height="104.5"/>
+                            <variation key="device=watch42mm" height="109.5" width="152"/>
+                        </label>
+                        <button width="1" alignment="left" title="Save Data" id="mDR-9Y-jdD">
+                            <connections>
+                                <action selector="saveagain" destination="Hy9-tQ-vNH" id="8jS-4z-H7v"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Delete" id="LiO-eM-dAv">
+                            <connections>
+                                <segue destination="1ti-B1-dx7" kind="push" id="lIL-dF-BfJ"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="warning" destination="eHB-cz-z9b" id="n6a-xo-cmN"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="418" y="715"/>
+        </scene>
+        <!--outdoor run-->
+        <scene sceneID="0GS-CR-qLW">
+            <objects>
+                <controller title="outdoor run" id="2bW-gH-Rss" customClass="IndoorRunInterfaceController">
+                    <items>
+                        <label alignment="left" text="00.00mi" id="IoV-Pc-m1N">
+                            <fontDescription key="font" type="system" pointSize="30"/>
+                        </label>
+                        <label alignment="left" text="00:00" id="3kE-XI-Ur2">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <label alignment="left" text="0:00m/mi" id="NCY-ZE-xmD">
+                            <fontDescription key="font" type="system" pointSize="25"/>
+                        </label>
+                        <group width="1" alignment="left" id="gYj-fN-zid">
+                            <items>
+                                <button width="66" alignment="left" title="Stop" id="Obl-1N-PfW">
+                                    <connections>
+                                        <action selector="stop" destination="2bW-gH-Rss" id="HXw-xe-uZO"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="left" title="Split" id="egj-ik-dZ1">
+                                    <connections>
+                                        <action selector="splitPressed:" destination="2bW-gH-Rss" id="SbT-rv-KOL"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="distLabel" destination="IoV-Pc-m1N" id="VHP-BN-VJi"/>
+                        <outlet property="paceLabel" destination="NCY-ZE-xmD" id="sPv-UW-qjB"/>
+                        <outlet property="splits" destination="egj-ik-dZ1" id="aZl-gv-k2p"/>
+                        <outlet property="stopButton" destination="Obl-1N-PfW" id="qud-iS-RZW"/>
+                        <outlet property="timeLabel" destination="3kE-XI-Ur2" id="syk-I0-j90"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="681" y="715"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Uso-eh-7ee"/>
+    </inferredMetricsTieBreakers>
+</document>
