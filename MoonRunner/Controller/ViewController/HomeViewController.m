@@ -22,10 +22,8 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
-    
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    
     self.runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
     
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
@@ -43,12 +41,14 @@
     [self.map setRegion:mapRegion animated: YES];
     
     float distance = 0.00;
-    NSLog(@"runs %@", self.runArray);
+    int INT = 0;
     for (int i = 0; i < self.runArray.count; i++) {
         Run *run = [self.runArray objectAtIndex:i];
         distance = distance + [run.distance intValue];
+        INT = i;
     }
     self.totalDistance.text = [NSString stringWithFormat:@"%@", [MathController stringifyDistance:distance]];
+    self.totalRuns.text = [NSString stringWithFormat:@"%i", INT + 1];
     
     [[HealthKitManager sharedManager] requestAuthorization];
     [super viewDidLoad];
@@ -58,14 +58,17 @@
     
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
         
-        [UIView animateWithDuration:10 animations:^{
+        [self.view layoutIfNeeded];
+        [UIView animateWithDuration:1 animations:^{
             self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+            [self.view layoutIfNeeded];
         }];
         
     }else if (swipe.direction == UISwipeGestureRecognizerDirectionLeft){
         
-        [UIView animateWithDuration:10 animations:^{
+        [UIView animateWithDuration:1 animations:^{
             self.MapWidth.constant = 0;
+            [self.view layoutIfNeeded];
         }];
     }
 }

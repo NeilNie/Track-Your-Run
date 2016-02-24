@@ -111,6 +111,27 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     return [NSString stringWithFormat:@"%i:%02i %@", paceMin, paceSec, unitName];
 }
 
++ (NSString *)stringifyCaloriesFromDist:(float)meters{
+    
+    float unitDivider;
+    NSString *unitName;
+    
+    if (isMetric) {
+        
+        unitName = @"km";
+        unitDivider = metersInKM;
+        
+    } else {
+        
+        unitName = @"mi";
+        unitDivider = metersInMile;
+    }
+    
+    NSNumber *miles = [NSNumber numberWithFloat:(meters / unitDivider) * 0.63 * 150];
+    return [NSString stringWithFormat:@"%i", miles.intValue];
+
+}
+
 + (NSArray *)colorSegmentsForLocations:(NSArray *)locations
 {
     if (locations.count == 1){

@@ -26,23 +26,30 @@ static float const mapPadding = 1.1f;
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self configureView];
     [self loadMap];
+    name = [[NSMutableArray alloc] initWithObjects:@"Time", @"Average pace", @"Calories", @"Stride rate", @"Average heartbeat", @"Max heartbeat", nil];
+    valueA = [[NSMutableArray alloc] initWithObjects:
+              [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES],
+              [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
+              [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
+              @"N/A",
+              @"N/A",
+              [NSString stringWithFormat:@"%d", self.run.max_heart_rate.intValue],
+              nil];
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
+    masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
+    [self.table reloadData];
+    NSLog(@"data %@ %@", name, valueA);
 }
 
-#pragma mark - Private
-
-- (void)configureView
-{
-    self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
+-(void)configureView{
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
-    
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
-    self.timeLabel.text = [NSString stringWithFormat:@"Time: %@",  [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES]];
-    self.paceLabel.text = [NSString stringWithFormat:@"Pace: %@",  [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue]];
-    self.MaxHeart.text = [NSString stringWithFormat:@"Max Heartbeat: %d", [self.run.max_heart_rate intValue]];
+    self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
 }
+
+#pragma mark - Private
 
 - (void)loadMap
 {
@@ -72,30 +79,81 @@ static float const mapPadding = 1.1f;
 #pragma mark - UITableView Delegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70;
+    
+    if (indexPath.section == 0) {
+        return 55;
+    }else{
+        return 70;
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    switch (section) {
+        case 0:
+            return [name count];
+            break;
+        case 1:
+            return [array count];
+            break;
+            
+        default:
+            break;
+    }
     return array.count;
+}
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    
+    if (section == 1) {
+        return @"Splits";
+    }else{
+        return nil;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
-    UILabel *time = (UILabel *)[cell.contentView viewWithTag:1];
-    UILabel *distance = (UILabel *)[cell.contentView viewWithTag:2];
-    UILabel *heart = (UILabel *)[cell.contentView viewWithTag:3];
-    UILabel *number = (UILabel *)[cell.contentView viewWithTag:4];
-    NSDictionary *dict = [array objectAtIndex:indexPath.row];
-    time.text = [dict objectForKey:@"time"];
-    distance.text = [dict objectForKey:@"distance"];
-    heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
-    number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
+    SplitCell *cell = (SplitCell *)[tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
+    
+    NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
+    NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
+
+    switch (indexPath.section) {
+        case 0:
+            
+            cell.nameLabel.hidden = NO;
+            cell.value.hidden = NO;
+            cell.time.hidden = YES;
+            cell.distance.hidden = YES;
+            cell.heart.hidden = YES;
+            cell.number.hidden = YES;
+            
+            cell.nameLabel.text = [name objectAtIndex:indexPath.row];
+            cell.value.text = [valueA objectAtIndex:indexPath.row];
+            break;
+        case 1:
+            
+            cell.nameLabel.hidden = YES;
+            cell.value.hidden = YES;
+            cell.time.hidden = NO;
+            cell.distance.hidden = NO;
+            cell.heart.hidden = NO;
+            cell.number.hidden = NO;
+            
+            cell.time.text = [dict objectForKey:@"time"];
+            cell.distance.text = [dict objectForKey:@"distance"];
+            cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
+            cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
+            break;
+            
+        default:
+            break;
+    }
+    
     return cell;
 }
 

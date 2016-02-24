@@ -14,7 +14,7 @@
 static bool const isMetric = NO;
 static float const metersInKM = 1000;
 static float const metersInMile = 1609.344;
-static const int idealSmoothReachSize = 33; // about 133 locations/mi
+//static const int idealSmoothReachSize = 33; // about 133 locations/mi
 
 + (NSString *)stringifyDistance:(float)meters {
     

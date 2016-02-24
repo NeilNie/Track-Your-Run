@@ -39,8 +39,9 @@
             }];
             NSLog(@"sent message %@", data);
             [self pushControllerWithName:@"home" context:nil];
+            
         }else{
-            [self.warning setText:@"can't be saved"];
+            NSLog(@"can't be saved");
             [self pushControllerWithName:@"home" context:nil];
         }
         
@@ -88,23 +89,15 @@
         session.delegate = self;
         [session activateSession];
         
-        if ([session isReachable]) {
+        //save data to iphone
+        [session sendMessage:data replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
             
-            //save data to iphone
-            [session sendMessage:data replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
-                
-            } errorHandler:^(NSError * _Nonnull error) {
-                NSLog(@"error %@", error);
-                
-            }];
-            NSLog(@"sent message %@", data);
-            [self pushControllerWithName:@"home" context:nil];
-        }else{
-            NSLog(@"saved locally");
-            localData = data;
-            [[NSUserDefaults standardUserDefaults] setObject:localData forKey:@"localData"];
-            [self pushControllerWithName:@"home" context:nil];
-        }
+        } errorHandler:^(NSError * _Nonnull error) {
+            NSLog(@"error %@", error);
+            
+        }];
+        NSLog(@"sent message %@", data);
+        [self pushControllerWithName:@"home" context:nil];
         
     }else{
         NSLog(@"not supported");

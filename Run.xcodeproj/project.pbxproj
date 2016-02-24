@@ -22,6 +22,7 @@
 		00C80B961C79258F005C4E39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168D1C768E920024770E /* HealthKit.framework */; };
 		00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
+		00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
 		00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F709C61C77B17300743BEE /* PastRunsViewController.m */; };
 		00F898831C793FFA0036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898821C793FFA0036481C /* Media.xcassets */; };
@@ -35,6 +36,10 @@
 		28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC51C75518E000834C6 /* NewRunViewController.m */; };
 		28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC71C75518E000834C6 /* RunDetailsViewController.m */; };
 		28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28716ECD1C756154000834C6 /* Launch Screen.storyboard */; };
+		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
+		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
+		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
+		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
 		FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950A1929CF2600A0179A /* Foundation.framework */; };
 		FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950C1929CF2600A0179A /* CoreGraphics.framework */; };
@@ -129,6 +134,8 @@
 		00C80B8C1C792542005C4E39 /* NoticeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeInterfaceController.m; sourceTree = "<group>"; };
 		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
+		00DEDBAD1C7A425700023BF8 /* IndoorRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndoorRunViewController.h; sourceTree = "<group>"; };
+		00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndoorRunViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		00F709C51C77B17300743BEE /* PastRunsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastRunsViewController.h; sourceTree = "<group>"; };
 		00F709C61C77B17300743BEE /* PastRunsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastRunsViewController.m; sourceTree = "<group>"; };
@@ -150,6 +157,12 @@
 		28716EC61C75518E000834C6 /* RunDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailsViewController.h; sourceTree = "<group>"; };
 		28716EC71C75518E000834C6 /* RunDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailsViewController.m; sourceTree = "<group>"; };
 		28716ECD1C756154000834C6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
+		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
+		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCell.h; sourceTree = "<group>"; };
+		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCell.m; sourceTree = "<group>"; };
+		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
 		FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 		FA1F95071929CF2600A0179A /* Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */,
 				00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */,
 				281816901C768E990024770E /* HealthKit.framework in Frameworks */,
 				FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */,
@@ -259,6 +273,8 @@
 				00C80B861C792542005C4E39 /* IndoorRunInterfaceController.m */,
 				00C80B871C792542005C4E39 /* InterfaceController.h */,
 				00C80B881C792542005C4E39 /* InterfaceController.m */,
+				28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */,
+				28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -296,6 +312,7 @@
 		FA1F95091929CF2600A0179A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BB79111C7B814E00D669F6 /* CoreMotion.framework */,
 				00F64F591C78E65B00851B49 /* WatchConnectivity.framework */,
 				2818168F1C768E990024770E /* HealthKit.framework */,
 				2818168D1C768E920024770E /* HealthKit.framework */,
@@ -354,6 +371,9 @@
 			isa = PBXGroup;
 			children = (
 				28716EC21C75358D000834C6 /* Main.storyboard */,
+				28BF33141C7CD4F4002CE706 /* SplitCell.h */,
+				28BF33151C7CD4F4002CE706 /* SplitCell.m */,
+				28BF33171C7CD4FF002CE706 /* SplitCell.xib */,
 				FAB9AA20192DB4CC00FF8E47 /* RunCell.h */,
 				FAB9AA21192DB4CC00FF8E47 /* RunCell.m */,
 				28716ECD1C756154000834C6 /* Launch Screen.storyboard */,
@@ -384,6 +404,8 @@
 				FA30BD11192B319400CD453E /* HomeViewController.m */,
 				28716EC41C75518E000834C6 /* NewRunViewController.h */,
 				28716EC51C75518E000834C6 /* NewRunViewController.m */,
+				00DEDBAD1C7A425700023BF8 /* IndoorRunViewController.h */,
+				00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */,
 				28716EC61C75518E000834C6 /* RunDetailsViewController.h */,
 				28716EC71C75518E000834C6 /* RunDetailsViewController.m */,
 				00F709C51C77B17300743BEE /* PastRunsViewController.h */,
@@ -552,6 +574,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00F898831C793FFA0036481C /* Media.xcassets in Resources */,
+				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
 				281816481C7617CF0024770E /* bar_chart.png in Resources */,
 				FA1F95171929CF2600A0179A /* InfoPlist.strings in Resources */,
 				001A52101C7A17920060095B /* running-blue.png in Resources */,
@@ -581,6 +604,7 @@
 				00C80B901C792542005C4E39 /* IndoorRunInterfaceController.m in Sources */,
 				00C80B911C792542005C4E39 /* InterfaceController.m in Sources */,
 				00C80B8D1C792542005C4E39 /* DetailInterfaceController.m in Sources */,
+				28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,12 +613,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
+				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
 				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
 				00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */,
 				FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */,
 				00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */,
 				FA24F25519481C6200500593 /* Run.m in Sources */,
 				2818168A1C7678180024770E /* MathController.m in Sources */,
+				00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */,
 				FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */,
 				FA30BD12192B319400CD453E /* HomeViewController.m in Sources */,
 				FA1F95231929CF2600A0179A /* RunMaster.xcdatamodeld in Sources */,

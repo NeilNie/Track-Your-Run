@@ -11,12 +11,16 @@
 #import "MathController.h"
 #import "Location.h"
 #import "MulticolorPolylineSegment.h"
+#import "SplitCell.h"
 #import <MapKit/MapKit.h>
 
 @class Run;
 
 @interface RunDetailsViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>{
+    NSMutableArray *masterArray;
     NSArray *array;
+    NSArray *name;
+    NSArray *valueA;
 }
 
 @property (strong, nonatomic) Run *run;
@@ -24,9 +28,6 @@
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
-@property (nonatomic, weak) IBOutlet UILabel *timeLabel;
-@property (nonatomic, weak) IBOutlet UILabel *paceLabel;
-@property (nonatomic, weak) IBOutlet UILabel *MaxHeart;
 @property (nonatomic, weak) IBOutlet UITableView *table;
 
 @end

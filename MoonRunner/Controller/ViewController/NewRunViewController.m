@@ -54,14 +54,17 @@ static NSString * const detailSegueName = @"NewRunDetails";
     
     if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
         
-        [UIView animateWithDuration:10 animations:^{
+        [self.view layoutIfNeeded];
+        [UIView animateWithDuration:0.8 animations:^{
             self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+            [self.view layoutIfNeeded];
         }];
         
     }else if (swipe.direction == UISwipeGestureRecognizerDirectionLeft){
         
-        [UIView animateWithDuration:10 animations:^{
+        [UIView animateWithDuration:0.8 animations:^{
             self.MapWidth.constant = 0;
+            [self.view layoutIfNeeded];
         }];
     }
 }
@@ -76,6 +79,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 - (IBAction)stopPressed:(id)sender
 {
+    [Pedometer stopPedometerUpdates];
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Save", @"Discard", nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
     [actionSheet showInView:self.view];
@@ -111,6 +115,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     if (it == 0) {
 
         [startTimer invalidate];
+        [self startPedometer];
         timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
         self.countDownLabel.hidden = YES;
         self.timeLabel.hidden = NO;
@@ -123,14 +128,23 @@ static NSString * const detailSegueName = @"NewRunDetails";
         self.Label2.hidden = NO;
         self.Label3.hidden = NO;
         self.Label4.hidden = NO;
+        self.split.hidden = NO;
     }
 }
 
-- (void)saveRun{
+-(void)startPedometer{
     
-    if (self.splitsArray.count > 0) {
-        
-    }
+    Pedometer = [[CMPedometer alloc] init];
+    [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
+        if (!error) {
+            NSLog(@"%i", pedometerData.numberOfSteps.intValue);
+        }else{
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)saveRun{
     
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     
@@ -173,6 +187,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
         self.timeLabel.text = [NSString stringWithFormat:@"%@",  [MathController stringifySecondCount:self.seconds usingLongFormat:NO]];
         self.distLabel.text = [NSString stringWithFormat:@"%@", [MathController stringifyDistance:self.distance]];
         self.paceLabel.text = [NSString stringWithFormat:@"%@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+        self.calories.text = [NSString stringWithFormat:@"%@", [MathController stringifyCaloriesFromDist:self.distance]];
     });
 }
 
@@ -263,9 +278,8 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSLog(@"%@", self.run);
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if ([[segue identifier] isEqualToString:detailSegueName]) {
         [[segue destinationViewController] setRun:self.run];
     }
@@ -274,7 +288,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 #pragma mark - TableView Delegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 60;
+    return 65;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -291,9 +305,13 @@ static NSString * const detailSegueName = @"NewRunDetails";
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
     UILabel *time = (UILabel *)[cell.contentView viewWithTag:1];
     UILabel *distance = (UILabel *)[cell.contentView viewWithTag:2];
+    UILabel *number = (UILabel *)[cell.contentView viewWithTag:3];
+    UILabel *pace = (UILabel *)[cell.contentView viewWithTag:4];
     NSDictionary *dict = [self.splitsArray objectAtIndex:indexPath.row];
     time.text = [dict objectForKey:@"time"];
     distance.text = [dict objectForKey:@"distance"];
+    number.text = [NSString stringWithFormat:@"Split %li", indexPath.row + 1];
+    pace.text = [MathController stringifyAvgPaceFromDist:[[dict objectForKey:@"distance"] floatValue] overTime:[[dict objectForKey:@"time"] intValue]];
     return cell;
 }
 

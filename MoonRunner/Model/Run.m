@@ -18,5 +18,6 @@
 @dynamic locations;
 @dynamic splits;
 @dynamic max_heart_rate;
+@dynamic stride_rate;
 
 @end

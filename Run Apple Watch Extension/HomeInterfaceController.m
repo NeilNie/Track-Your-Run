@@ -18,20 +18,7 @@
 
 - (void)awakeWithContext:(id)context {
     
-    HKHealthStore *healthStore = [[HKHealthStore alloc] init];
-    HKQuantityType *type = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
-    HKQuantityType *type2 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
-    HKQuantityType *type3 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
     
-    [healthStore requestAuthorizationToShareTypes:nil readTypes:[NSSet setWithObjects:type, type2, type3, nil] completion:^(BOOL success, NSError * _Nullable error) {
-        
-        if (success) {
-            NSLog(@"health data request success");
-            
-        }else{
-            NSLog(@"error %@", error);
-        }
-    }];
     [super awakeWithContext:context];
     
     // Configure interface objects here.
@@ -39,21 +26,29 @@
 
 - (void)willActivate {
     
+    HKHealthStore *healthStore = [[HKHealthStore alloc] init];
+    HKQuantityType *type = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
+    HKQuantityType *type2 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
+    HKQuantityType *type3 = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
+    
+    [healthStore requestAuthorizationToShareTypes:nil readTypes:[NSSet setWithObjects:type, type2, type3, nil] completion:^(BOOL success, NSError * _Nullable error) {
+        
+        NSLog(@"requested");
+        if (success) {
+            NSLog(@"health data request success");
+            
+        }else{
+            NSLog(@"error %@", error);
+        }
+    }];
+    
     if (localData) {
         [self pushControllerWithName:@"data" context:nil];
     }
+    started = NO;
+    
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
-}
-
--(void)sessionWatchStateDidChange:(nonnull WCSession *)session
-{
-    if(WCSession.isSupported){
-        WCSession* session = WCSession.defaultSession;
-        session.delegate = self;
-        [session activateSession];
-        
-    }
 }
 
 - (void)didDeactivate {

@@ -11,6 +11,9 @@
 #import <HealthKit/HealthKit.h>
 #import "Math.h"
 #import "InterfaceController.h"
+#import "DetailInterfaceController.h"
+
+BOOL started;
 
 @interface IndoorRunInterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
     
@@ -18,8 +21,9 @@
     HKWorkoutSession *workoutSession;
     HKAnchoredObjectQuery *heartQuery;
     HKAnchoredObjectQuery *distanceQuery;
+    NSPredicate *Predicate;
     
-    NSTimer *timer;
+    NSTimer *timerIndoor;
 }
 
 @property int seconds;

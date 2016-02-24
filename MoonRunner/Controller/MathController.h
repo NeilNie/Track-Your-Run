@@ -18,4 +18,6 @@
 
 + (NSArray *)colorSegmentsForLocations:(NSArray *)locations;
 
++ (NSString *)stringifyCaloriesFromDist:(float)meters;
+
 @end

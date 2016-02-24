@@ -13,8 +13,9 @@
 
 @interface Run : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * distance;
-@property (nonatomic, retain) NSNumber * duration;
+@property (nonatomic, retain) NSNumber *distance;
+@property (nonatomic, retain) NSNumber *duration;
+@property (nonatomic, retain) NSNumber *stride_rate;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSData *splits;
 @property (nonatomic, retain) NSString *max_heart_rate;
