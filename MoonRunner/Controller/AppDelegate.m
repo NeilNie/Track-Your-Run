@@ -141,7 +141,7 @@
     newRun.duration = [NSNumber numberWithInt:[[message objectForKey:@"time"] intValue]];
     newRun.timestamp = [NSDate date];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"splits"]];
-    newRun.max_heart_rate = [NSString stringWithFormat:@"%@ bpm", [message objectForKey:@"max"]];
+    newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"max"]];
     
     self.run = newRun;
     
@@ -153,6 +153,5 @@
     }
     
 }
-
 
 @end

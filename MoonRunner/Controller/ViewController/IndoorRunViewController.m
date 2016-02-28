@@ -77,14 +77,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
     if (self.splitsArray.count > 0) {
         
     }
-    
+    NSArray *array;
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     
     newRun.distance = [NSNumber numberWithFloat:self.distance];
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.timestamp = [NSDate date];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
-    newRun.max_heart_rate = [NSString stringWithFormat:@"N/A bpm"];
+    newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:array];
     
     NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {

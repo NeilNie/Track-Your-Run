@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ti-B1-dx7">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E49a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ti-B1-dx7">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
@@ -32,12 +32,16 @@
                             <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
                             <variation key="device=watch42mm" height="36"/>
                         </label>
-                        <label height="32" alignment="left" text="00:00" id="0cz-6j-a0V">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
-                            <variation key="device=watch42mm" height="39"/>
-                        </label>
+                        <group width="1" height="30.5" alignment="left" spacing="0.0" id="ufl-2a-TWZ">
+                            <items>
+                                <label height="1" alignment="left" text="88:88" id="Tev-UB-Bbb">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text=":00" id="eQN-l6-Bp3"/>
+                            </items>
+                        </group>
                         <label height="31" alignment="left" text="0:00m/mi" id="dv7-ki-RLt">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="29"/>
                             <variation key="device=watch42mm" height="38"/>
                         </label>
                         <button width="1" height="42" alignment="left" title="Split" id="6WN-xl-pct">
@@ -68,8 +72,9 @@
                     </menu>
                     <connections>
                         <outlet property="distLabel" destination="tgx-q6-0qg" id="XBD-MF-UXb"/>
+                        <outlet property="milisecondsLabel" destination="eQN-l6-Bp3" id="UTD-Hf-eRQ"/>
                         <outlet property="paceLabel" destination="dv7-ki-RLt" id="ogd-Py-yyr"/>
-                        <outlet property="timeLabel" destination="0cz-6j-a0V" id="V1X-PJ-2br"/>
+                        <outlet property="timeLabel" destination="Tev-UB-Bbb" id="Iqf-nG-KxE"/>
                     </connections>
                 </controller>
             </objects>
@@ -114,6 +119,9 @@
                         <button width="1" height="40" alignment="left" title="Stop" id="hdN-Aq-Hbq">
                             <fontDescription key="font" type="system" pointSize="20"/>
                             <variation key="device=watch42mm" height="49.5"/>
+                            <connections>
+                                <action selector="stop" destination="OFG-kB-t8o" id="1HB-Ym-ZRB"/>
+                            </connections>
                         </button>
                     </items>
                     <connections>
@@ -157,16 +165,23 @@
             <objects>
                 <controller identifier="detail" title="detail" id="7qm-hX-h4C" customClass="DetailInterfaceController">
                     <items>
-                        <label alignment="left" text="00.00mi" id="gMK-kn-fn4">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="31"/>
+                        <label height="30" alignment="left" text="00.00mi" id="gMK-kn-fn4">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
                         </label>
-                        <label alignment="left" text="00:00" id="9TD-yL-f8J">
+                        <group width="1" height="30" alignment="left" spacing="0.0" id="OIT-kj-yLT">
+                            <items>
+                                <label height="30" alignment="left" text="00:00" id="9TD-yL-f8J">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text=":00" id="q7y-qp-MgI">
+                                    <fontDescription key="font" type="system" pointSize="15"/>
+                                </label>
+                            </items>
+                        </group>
+                        <label height="26.5" alignment="left" text="5:30m/mi" id="56D-6a-TMx">
                             <fontDescription key="font" type="system" weight="medium" pointSize="26"/>
                         </label>
-                        <label alignment="left" text="5:30m/mi" id="56D-6a-TMx">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="26"/>
-                        </label>
-                        <label alignment="left" text="130bpm" id="NAP-yn-MaE">
+                        <label height="28.5" alignment="left" text="130bpm" id="NAP-yn-MaE">
                             <fontDescription key="font" type="system" weight="medium" pointSize="26"/>
                         </label>
                         <button width="1" alignment="left" title="Save" id="N6V-zG-5kL">
@@ -186,10 +201,11 @@
                         <outlet property="Heartrate" destination="NAP-yn-MaE" id="IhJ-kv-jAb"/>
                         <outlet property="Pace" destination="56D-6a-TMx" id="SUH-Bg-oQg"/>
                         <outlet property="Time" destination="9TD-yL-f8J" id="6EI-1C-bQ6"/>
+                        <outlet property="milisecondsLabel" destination="q7y-qp-MgI" id="4av-TW-hee"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="897" y="476"/>
+            <point key="canvasLocation" x="908" y="479.5"/>
         </scene>
         <!--notice-->
         <scene sceneID="bFD-Ga-RnT">
@@ -209,7 +225,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="1086" y="476"/>
+            <point key="canvasLocation" x="1134" y="466"/>
         </scene>
         <!--data-->
         <scene sceneID="nh4-Xl-QKd">
@@ -237,23 +253,27 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="418" y="727.5"/>
+            <point key="canvasLocation" x="418" y="811.5"/>
         </scene>
-        <!--outdoor run-->
+        <!--indoor run-->
         <scene sceneID="0GS-CR-qLW">
             <objects>
-                <controller title="outdoor run" id="2bW-gH-Rss" customClass="IndoorRunInterfaceController">
+                <controller title="indoor run" id="2bW-gH-Rss" customClass="IndoorRunInterfaceController">
                     <items>
                         <label height="33" alignment="left" text="00.00mi" id="IoV-Pc-m1N">
                             <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
                             <variation key="device=watch42mm" height="37"/>
                         </label>
-                        <label height="30" alignment="left" text="00:00" id="3kE-XI-Ur2">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
-                            <variation key="device=watch42mm" height="37"/>
-                        </label>
+                        <group width="1" height="31.5" alignment="left" spacing="0.0" id="3bp-SY-wSE">
+                            <items>
+                                <label height="1" alignment="left" text="00:00" id="7rF-RX-uau">
+                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                </label>
+                                <label alignment="left" text=":00" id="QW0-JL-Vvy"/>
+                            </items>
+                        </group>
                         <label height="37" alignment="left" text="0:00m/mi" id="NCY-ZE-xmD">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                            <fontDescription key="font" type="system" weight="medium" pointSize="29"/>
                             <variation key="device=watch42mm" height="40"/>
                         </label>
                         <button width="1" height="37" alignment="left" title="Split" id="157-gr-EP4">
@@ -283,12 +303,13 @@
                     </menu>
                     <connections>
                         <outlet property="distLabel" destination="IoV-Pc-m1N" id="VHP-BN-VJi"/>
+                        <outlet property="milisecondsLabel" destination="QW0-JL-Vvy" id="TnH-hz-Wml"/>
                         <outlet property="paceLabel" destination="NCY-ZE-xmD" id="sPv-UW-qjB"/>
-                        <outlet property="timeLabel" destination="3kE-XI-Ur2" id="syk-I0-j90"/>
+                        <outlet property="timeLabel" destination="7rF-RX-uau" id="aNE-ZL-ggH"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="680" y="727.75"/>
+            <point key="canvasLocation" x="680" y="761"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

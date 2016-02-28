@@ -20,4 +20,6 @@
 
 + (NSString *)stringifyCaloriesFromDist:(float)meters;
 
++ (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds;
+
 @end

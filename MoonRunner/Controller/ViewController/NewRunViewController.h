@@ -10,11 +10,11 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AudioToolbox/AudioToolbox.h>
 #import <MapKit/MapKit.h>
+#import <CoreMotion/CoreMotion.h>
 #import "MathController.h"
 #import "Run.h"
 #import "Location.h"
 #import "RunDetailsViewController.h"
-#import <CoreMotion/CoreMotion.h>
 
 @interface NewRunViewController : UIViewController <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource>{
     NSTimer *timer;

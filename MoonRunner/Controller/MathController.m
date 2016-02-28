@@ -132,6 +132,12 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
 
 }
 
++ (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds{
+    
+    
+    return [NSString stringWithFormat:@"%i", steps / seconds * 60];
+}
+
 + (NSArray *)colorSegmentsForLocations:(NSArray *)locations
 {
     if (locations.count == 1){
@@ -149,6 +155,8 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     
     // make array of all speeds
     NSMutableArray *rawSpeeds = [NSMutableArray array];
+    
+    NSLog(@"%@", rawSpeeds);
     
     for (int i = 1; i < locations.count; i++) {
         Location *firstLoc = [locations objectAtIndex:(i-1)];

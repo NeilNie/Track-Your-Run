@@ -9,6 +9,7 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 #import <HealthKit/HealthKit.h>
+#import <CoreMotion/CoreMotion.h>
 #import "Math.h"
 #import "InterfaceController.h"
 #import "DetailInterfaceController.h"
@@ -23,10 +24,14 @@ BOOL started;
     HKAnchoredObjectQuery *distanceQuery;
     NSPredicate *Predicate;
     
+    CMPedometer *Pedometer;
+    
     NSTimer *timerIndoor;
+    NSTimer *Timer;
 }
 
 @property int seconds;
+@property int miliseconds;
 @property float distance;
 @property NSMutableArray *heartBeatArray;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
@@ -34,7 +39,6 @@ BOOL started;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timeLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *distLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *paceLabel;
-@property (nonatomic, weak) IBOutlet WKInterfaceButton *stopButton;
-@property (nonatomic, weak) IBOutlet WKInterfaceButton *splits;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondsLabel;
 
 @end

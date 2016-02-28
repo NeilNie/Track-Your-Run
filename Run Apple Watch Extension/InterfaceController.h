@@ -9,6 +9,7 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 #import <HealthKit/HealthKit.h>
+#import <CoreMotion/CoreMotion.h>
 #import "Math.h"
 #import "IndoorRunInterfaceController.h"
 #import "DetailInterfaceController.h"
@@ -23,10 +24,14 @@ NSDictionary *data;
     HKAnchoredObjectQuery *distanceQuery;
     NSPredicate *Predicate;
     
-    NSTimer *timer;
+    CMPedometer *Pedometer;
+    
+    NSTimer *RunTimer;
+    NSTimer *Timer;
 }
 
 @property int seconds;
+@property int miliseconds;
 @property float distance;
 @property NSMutableArray *heartBeatArray;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
@@ -34,5 +39,6 @@ NSDictionary *data;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timeLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *distLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *paceLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondsLabel;
 
 @end

@@ -14,6 +14,21 @@
 
 @implementation HeartMonitorInterfaceController
 
+#pragma mark - Private
+
+-(IBAction)stop{
+    
+    [timer invalidate];
+    CGFloat low = 0.00;
+    for (int i = 0; i < self.heartBeatArray.count; i++) {
+        CGFloat val = [[self.heartBeatArray objectAtIndex:i] floatValue];
+        if (val < low && val != 0) {
+            low = val;
+        }
+    }
+    [self.LowestLabel setText:[NSString stringWithFormat:@"%f", low]];
+}
+
 -(void)updateHeartbeat{
     
     __weak typeof(self) weakSelf = self;
@@ -25,11 +40,26 @@
         if (!error && sampleObjects.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
             HKQuantity *quantity = sample.quantity;
-            [weakSelf.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [self.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [self.currentLabel setText:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
         }else{
             NSLog(@"query %@", error);
         }
         
+    }];
+    
+    [heartQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *SampleArray, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *Anchor, NSError *error) {
+        
+        if (!error) {
+            HKQuantitySample *sample = (HKQuantitySample *)[SampleArray objectAtIndex:0];
+            HKQuantity *quantity = sample.quantity;
+            [weakSelf.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [weakSelf.currentLabel setText:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            NSLog(@"update %f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
+        }else{
+            NSLog(@"query %@", error);
+        }
     }];
     
     [healthStore executeQuery:heartQuery];
@@ -61,7 +91,11 @@
         }
     });
 }
-
+-(void)count{
+    
+    NSLog(@"one second");
+    [self updateHeartbeat];
+}
 
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
@@ -74,7 +108,7 @@
     if (started == NO) {
         self.heartBeatArray = [[NSMutableArray alloc] init];
         
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
         healthStore = [[HKHealthStore alloc] init];
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];

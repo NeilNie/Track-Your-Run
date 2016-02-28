@@ -22,6 +22,7 @@ BOOL re;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Pace;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Heartrate;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *warning;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondsLabel;
 - (IBAction)save;
 - (IBAction)back;
 

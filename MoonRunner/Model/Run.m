@@ -17,7 +17,7 @@
 @dynamic timestamp;
 @dynamic locations;
 @dynamic splits;
-@dynamic max_heart_rate;
+@dynamic heart_rate;
 @dynamic stride_rate;
 
 @end

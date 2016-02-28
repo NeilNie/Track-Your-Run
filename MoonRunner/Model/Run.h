@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSNumber *stride_rate;
 @property (nonatomic, retain) NSDate * timestamp;
 @property (nonatomic, retain) NSData *splits;
-@property (nonatomic, retain) NSString *max_heart_rate;
+@property (nonatomic, retain) NSData *heart_rate;
 @property (nonatomic, retain) NSOrderedSet *locations;
 @end
 

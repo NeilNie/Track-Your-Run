@@ -49,6 +49,7 @@
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
             HKQuantity *quantity = sample.quantity;
             [self.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            NSLog(@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]);
 
         }else{
             NSLog(@"query %@", error);
@@ -113,6 +114,7 @@
 -(IBAction)discard{
     
     [timerIndoor invalidate];
+    [Pedometer stopPedometerUpdates];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
     
@@ -124,16 +126,14 @@
     [timerIndoor invalidate];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
+    [Pedometer stopPedometerUpdates];
     
-    float hightest = 0.0;
-    for (int i = 0; i < self.heartBeatArray.count; i++) {
-        if ([[self.heartBeatArray objectAtIndex:i] floatValue] > hightest) {
-            hightest = [[self.heartBeatArray objectAtIndex:i] floatValue];
-        }
-    }
     //float energy = [[self.EnergyArray lastObject] floatValue] / 4.148;
-    NSLog(@"highest heart beat %f", hightest);
-    data = @{@"time": [NSString stringWithFormat:@"%i", self.seconds], @"distance": [NSString stringWithFormat:@"%f", self.distance], @"splits": self.splitsArray, @"max": [NSString stringWithFormat:@"%f", hightest]};
+    data = @{@"time": [NSString stringWithFormat:@"%i", self.seconds],
+             @"distance": [NSString stringWithFormat:@"%f", self.distance],
+             @"splits": self.splitsArray,
+             @"max": self.heartBeatArray};
+    
     NSLog(@"data %@", data);
     
     started = NO;
@@ -141,14 +141,40 @@
     [self pushControllerWithName:@"detail" context:nil];
     
 }
+
+-(void)startPedometer{
+    
+    Pedometer = [[CMPedometer alloc] init];
+    [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
+        if (!error) {
+            NSLog(@"steps %@", [Math stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]);
+        }else{
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+
 -(void)count{
     
-    self.seconds++;
     [self updateHeartbeat];
     [self updateDistance];
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
     });
+}
+
+-(void)timerCount{
+    
+    self.miliseconds++;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
+        [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.miliseconds]];
+    });
+    if (self.miliseconds == 100) {
+        self.miliseconds = 0;
+        self.seconds++;
+    }
 }
 
 - (void)willActivate {
@@ -163,13 +189,16 @@
         self.distance = 0.00;
         self.seconds = 0;
         
-        timerIndoor = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        timerIndoor = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        Timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
         healthStore = [[HKHealthStore alloc] init];
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
         workoutSession.delegate = self;
         [healthStore startWorkoutSession:workoutSession];
+        
+        [self startPedometer];
         re = NO;
         started = YES;
         NSLog(@"started workout");

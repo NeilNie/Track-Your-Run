@@ -14,10 +14,48 @@
 
 @implementation DetailInterfaceController
 
+- (void)willActivate {
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+        if (![session isReachable] && re == NO) {
+            [self pushControllerWithName:@"notice" context:nil];
+            re = YES;
+        }
+        
+    }else{
+        NSLog(@"not supported");
+    }
+    [self setUpView];
+    [super willActivate];
+}
+
+- (void)didDeactivate {
+    // This method is called when watch view controller is no longer visible
+    [super didDeactivate];
+}
+
 - (void)awakeWithContext:(id)context {
     [super awakeWithContext:context];
     
     // Configure interface objects here.
+}
+
+-(void)setUpView{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [self.Distance setText:[Math stringifyDistance:[[data objectForKey:@"distance"] floatValue]]];
+        [self.Time setText:[Math stringifySecondCount:[[data objectForKey:@"time"] intValue] usingLongFormat:NO]];
+        [self.Pace setText:[Math stringifyAvgPaceFromDist:[[data objectForKey:@"distance"] floatValue] overTime:[[data objectForKey:@"time"] intValue]]];
+        [self.Heartrate setText:[NSString stringWithFormat:@"%@bpm", [[data objectForKey:@"max"] lastObject]]];
+        [self.milisecondsLabel setText:[NSString stringWithFormat:@"%@", [data objectForKey:@"mili"]]];
+    });
+    
 }
 
 - (IBAction)saveagain {
@@ -31,7 +69,7 @@
         if ([session isReachable]) {
             
             //save data to iphone
-            [session sendMessage:[[NSUserDefaults standardUserDefaults] objectForKey:@"localData"] replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+            [[WCSession defaultSession] sendMessage:[[NSUserDefaults standardUserDefaults] objectForKey:@"localData"] replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
                 
             } errorHandler:^(NSError * _Nonnull error) {
                 NSLog(@"error %@", error);
@@ -50,37 +88,6 @@
     }
 }
 
-
-- (void)willActivate {
-    
-    if ([WCSession isSupported]) {
-        NSLog(@"Activated");
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
-        
-        if (![session isReachable] && re == NO) {
-            [self pushControllerWithName:@"notice" context:nil];
-            re = YES;
-        }
-        
-    }else{
-        NSLog(@"not supported");
-    }
-    NSLog(@"data %@", data);
-    [self.Distance setText:[Math stringifyDistance:[[data objectForKey:@"distance"] floatValue]]];
-    [self.Time setText:[Math stringifySecondCount:[[data objectForKey:@"time"] intValue] usingLongFormat:NO]];
-    [self.Pace setText:[Math stringifyAvgPaceFromDist:[[data objectForKey:@"distance"] floatValue] overTime:[[data objectForKey:@"time"] intValue]]];
-    [self.Heartrate setText:[NSString stringWithFormat:@"%ibpm", [[data objectForKey:@"max"] intValue]]];
-    // This method is called when watch view controller is about to be visible to user
-    [super willActivate];
-}
-
-- (void)didDeactivate {
-    // This method is called when watch view controller is no longer visible
-    [super didDeactivate];
-}
-
 - (IBAction)save {
     
     if ([WCSession isSupported]) {
@@ -90,7 +97,7 @@
         [session activateSession];
         
         //save data to iphone
-        [session sendMessage:data replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
+        [[WCSession defaultSession] sendMessage:data replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
             
         } errorHandler:^(NSError * _Nonnull error) {
             NSLog(@"error %@", error);
@@ -105,6 +112,7 @@
 }
 
 - (IBAction)back {
+    
     
 }
 @end

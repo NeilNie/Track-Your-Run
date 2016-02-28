@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		001A52101C7A17920060095B /* running-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 001A520F1C7A17920060095B /* running-blue.png */; };
+		002A0DE71C827FE4001DE96E /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DDE1C827FE4001DE96E /* GKBar.m */; };
+		002A0DE81C827FE4001DE96E /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE01C827FE4001DE96E /* GKBarGraph.m */; };
+		002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE41C827FE4001DE96E /* GKLineGraph.m */; };
+		002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */; };
+		002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002BDB701C8106E800F051E2 /* AnalysisViewController.m */; };
 		00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00357ECE1C77D02F0046B8BC /* HealthKitManager.m */; };
 		00C80B631C79249E005C4E39 /* Run Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00C80B621C79249E005C4E39 /* Run Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00C80B731C79249E005C4E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B721C79249E005C4E39 /* Assets.xcassets */; };
@@ -22,6 +27,7 @@
 		00C80B961C79258F005C4E39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168D1C768E920024770E /* HealthKit.framework */; };
 		00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
+		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
 		00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
 		00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F709C61C77B17300743BEE /* PastRunsViewController.m */; };
@@ -40,12 +46,12 @@
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
 		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
+		F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6625D9E8FE39F3DBEAFB8379 /* libPods.a */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
 		FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950A1929CF2600A0179A /* Foundation.framework */; };
 		FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950C1929CF2600A0179A /* CoreGraphics.framework */; };
 		FA1F950F1929CF2600A0179A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950E1929CF2600A0179A /* UIKit.framework */; };
 		FA1F95111929CF2600A0179A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F95101929CF2600A0179A /* CoreData.framework */; };
-		FA1F95171929CF2600A0179A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA1F95151929CF2600A0179A /* InfoPlist.strings */; };
 		FA1F95191929CF2600A0179A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F95181929CF2600A0179A /* main.m */; };
 		FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F951C1929CF2600A0179A /* AppDelegate.m */; };
 		FA1F95231929CF2600A0179A /* RunMaster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA1F95211929CF2600A0179A /* RunMaster.xcdatamodeld */; };
@@ -109,6 +115,17 @@
 
 /* Begin PBXFileReference section */
 		001A520F1C7A17920060095B /* running-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-blue.png"; sourceTree = "<group>"; };
+		002A0DDD1C827FE4001DE96E /* GKBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBar.h; sourceTree = "<group>"; };
+		002A0DDE1C827FE4001DE96E /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
+		002A0DDF1C827FE4001DE96E /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
+		002A0DE01C827FE4001DE96E /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
+		002A0DE11C827FE4001DE96E /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
+		002A0DE31C827FE4001DE96E /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
+		002A0DE41C827FE4001DE96E /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
+		002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GraphKit.h"; sourceTree = "<group>"; };
+		002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GraphKit.m"; sourceTree = "<group>"; };
+		002BDB6F1C8106E800F051E2 /* AnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalysisViewController.h; sourceTree = "<group>"; };
+		002BDB701C8106E800F051E2 /* AnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalysisViewController.m; sourceTree = "<group>"; };
 		00357ECD1C77D02F0046B8BC /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = ViewController/HealthKitManager.h; sourceTree = "<group>"; };
 		00357ECE1C77D02F0046B8BC /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = ViewController/HealthKitManager.m; sourceTree = "<group>"; };
 		00357ED11C77D4740046B8BC /* Run.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Run.entitlements; sourceTree = "<group>"; };
@@ -134,6 +151,7 @@
 		00C80B8C1C792542005C4E39 /* NoticeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeInterfaceController.m; sourceTree = "<group>"; };
 		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
+		00CAE2B11C82029800DDC425 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		00DEDBAD1C7A425700023BF8 /* IndoorRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndoorRunViewController.h; sourceTree = "<group>"; };
 		00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndoorRunViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
@@ -163,6 +181,9 @@
 		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCell.h; sourceTree = "<group>"; };
 		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCell.m; sourceTree = "<group>"; };
 		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
+		454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		47F3606791750BCD67244390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6625D9E8FE39F3DBEAFB8379 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
 		FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 		FA1F95071929CF2600A0179A /* Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,7 +192,6 @@
 		FA1F950E1929CF2600A0179A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA1F95101929CF2600A0179A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FA1F95141929CF2600A0179A /* Run-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run-Info.plist"; sourceTree = "<group>"; };
-		FA1F95161929CF2600A0179A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FA1F95181929CF2600A0179A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA1F951A1929CF2600A0179A /* Run-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run-Prefix.pch"; sourceTree = "<group>"; };
 		FA1F951B1929CF2600A0179A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -193,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */,
 				00C80B961C79258F005C4E39 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +231,7 @@
 				281730411C74E0460036901C /* StoreKit.framework in Frameworks */,
 				FA1F950F1929CF2600A0179A /* UIKit.framework in Frameworks */,
 				FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */,
+				F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +248,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002A0DDC1C827FE4001DE96E /* BarGraph */ = {
+			isa = PBXGroup;
+			children = (
+				002A0DDD1C827FE4001DE96E /* GKBar.h */,
+				002A0DDE1C827FE4001DE96E /* GKBar.m */,
+				002A0DDF1C827FE4001DE96E /* GKBarGraph.h */,
+				002A0DE01C827FE4001DE96E /* GKBarGraph.m */,
+			);
+			path = BarGraph;
+			sourceTree = "<group>";
+		};
+		002A0DE21C827FE4001DE96E /* LineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				002A0DE31C827FE4001DE96E /* GKLineGraph.h */,
+				002A0DE41C827FE4001DE96E /* GKLineGraph.m */,
+			);
+			path = LineGraph;
+			sourceTree = "<group>";
+		};
 		00C80B571C79249E005C4E39 /* Run Apple Watch */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,9 +321,23 @@
 			name = "Interface Controllers";
 			sourceTree = "<group>";
 		};
+		173E65D0E341B580DE38E463 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */,
+				47F3606791750BCD67244390 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		281816491C7666350024770E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				002A0DDC1C827FE4001DE96E /* BarGraph */,
+				002A0DE11C827FE4001DE96E /* GraphKit.h */,
+				002A0DE21C827FE4001DE96E /* LineGraph */,
+				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
+				002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -295,6 +351,7 @@
 				00C80B661C79249E005C4E39 /* Run Apple Watch Extension */,
 				FA1F95091929CF2600A0179A /* Frameworks */,
 				FA1F95081929CF2600A0179A /* Products */,
+				173E65D0E341B580DE38E463 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -312,6 +369,7 @@
 		FA1F95091929CF2600A0179A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00CAE2B11C82029800DDC425 /* CoreMotion.framework */,
 				28BB79111C7B814E00D669F6 /* CoreMotion.framework */,
 				00F64F591C78E65B00851B49 /* WatchConnectivity.framework */,
 				2818168F1C768E990024770E /* HealthKit.framework */,
@@ -325,6 +383,7 @@
 				FA1F950C1929CF2600A0179A /* CoreGraphics.framework */,
 				FA1F950E1929CF2600A0179A /* UIKit.framework */,
 				FA1F95101929CF2600A0179A /* CoreData.framework */,
+				6625D9E8FE39F3DBEAFB8379 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -348,7 +407,6 @@
 				00F898821C793FFA0036481C /* Media.xcassets */,
 				281816471C7617CF0024770E /* bar_chart.png */,
 				FA1F95141929CF2600A0179A /* Run-Info.plist */,
-				FA1F95151929CF2600A0179A /* InfoPlist.strings */,
 				FA1F95181929CF2600A0179A /* main.m */,
 				FA1F951A1929CF2600A0179A /* Run-Prefix.pch */,
 			);
@@ -410,6 +468,8 @@
 				28716EC71C75518E000834C6 /* RunDetailsViewController.m */,
 				00F709C51C77B17300743BEE /* PastRunsViewController.h */,
 				00F709C61C77B17300743BEE /* PastRunsViewController.m */,
+				002BDB6F1C8106E800F051E2 /* AnalysisViewController.h */,
+				002BDB701C8106E800F051E2 /* AnalysisViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -455,10 +515,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA1F95421929CF2600A0179A /* Build configuration list for PBXNativeTarget "Run" */;
 			buildPhases = (
+				692ECD43EE43EBFC26BFA408 /* Check Pods Manifest.lock */,
 				FA1F95031929CF2600A0179A /* Sources */,
 				FA1F95041929CF2600A0179A /* Frameworks */,
 				FA1F95051929CF2600A0179A /* Resources */,
 				282B17FD1C740FFF0099F010 /* Embed Watch Content */,
+				71841D0957A43CAE0BD12CD1 /* Embed Pods Frameworks */,
+				5F4801959C4A217A7C35A2DD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -576,7 +639,6 @@
 				00F898831C793FFA0036481C /* Media.xcassets in Resources */,
 				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
 				281816481C7617CF0024770E /* bar_chart.png in Resources */,
-				FA1F95171929CF2600A0179A /* InfoPlist.strings in Resources */,
 				001A52101C7A17920060095B /* running-blue.png in Resources */,
 				28716EC31C75358D000834C6 /* Main.storyboard in Resources */,
 				28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */,
@@ -591,6 +653,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F4801959C4A217A7C35A2DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		692ECD43EE43EBFC26BFA408 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		71841D0957A43CAE0BD12CD1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00C80B5E1C79249E005C4E39 /* Sources */ = {
@@ -614,10 +724,13 @@
 			files = (
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
 				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
+				002A0DE81C827FE4001DE96E /* GKBarGraph.m in Sources */,
+				002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */,
 				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
 				00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */,
 				FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */,
 				00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */,
+				002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */,
 				FA24F25519481C6200500593 /* Run.m in Sources */,
 				2818168A1C7678180024770E /* MathController.m in Sources */,
 				00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */,
@@ -627,6 +740,8 @@
 				28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */,
 				28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */,
 				FA1F95191929CF2600A0179A /* main.m in Sources */,
+				002A0DE71C827FE4001DE96E /* GKBar.m in Sources */,
+				002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,17 +771,6 @@
 			targetProxy = FA1F95361929CF2600A0179A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		FA1F95151929CF2600A0179A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA1F95161929CF2600A0179A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		00C80B791C79249E005C4E39 /* Debug */ = {
@@ -828,11 +932,13 @@
 		};
 		FA1F95431929CF2600A0179A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
@@ -842,26 +948,31 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running;
 				PRODUCT_NAME = Run;
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		FA1F95441929CF2600A0179A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47F3606791750BCD67244390 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "MoonRunner/Run-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running;
 				PRODUCT_NAME = Run;
 				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 arm64 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

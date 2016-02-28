@@ -137,7 +137,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     Pedometer = [[CMPedometer alloc] init];
     [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
         if (!error) {
-            NSLog(@"%i", pedometerData.numberOfSteps.intValue);
+            NSLog(@"steps %@", [MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]);
         }else{
             NSLog(@"%@", error);
         }
@@ -147,12 +147,12 @@ static NSString * const detailSegueName = @"NewRunDetails";
 - (void)saveRun{
     
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
-    
+    NSArray *array = [[NSArray alloc] init];
     newRun.distance = [NSNumber numberWithFloat:self.distance];
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.timestamp = [NSDate date];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
-    newRun.max_heart_rate = [NSString stringWithFormat:@"N/A bpm"];
+    newRun.heart_rate = [NSPropertyListSerialization dataWithPropertyList:array format:NSPropertyListBinaryFormat_v1_0 options:0 error:nil];
     
     NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {
@@ -307,6 +307,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     UILabel *distance = (UILabel *)[cell.contentView viewWithTag:2];
     UILabel *number = (UILabel *)[cell.contentView viewWithTag:3];
     UILabel *pace = (UILabel *)[cell.contentView viewWithTag:4];
+    
     NSDictionary *dict = [self.splitsArray objectAtIndex:indexPath.row];
     time.text = [dict objectForKey:@"time"];
     distance.text = [dict objectForKey:@"distance"];

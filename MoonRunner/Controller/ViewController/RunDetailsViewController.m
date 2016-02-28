@@ -26,14 +26,16 @@ static float const mapPadding = 1.1f;
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self configureView];
     [self loadMap];
+    
+    
     name = [[NSMutableArray alloc] initWithObjects:@"Time", @"Average pace", @"Calories", @"Stride rate", @"Average heartbeat", @"Max heartbeat", nil];
     valueA = [[NSMutableArray alloc] initWithObjects:
               [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES],
               [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
               [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
               @"N/A",
-              @"N/A",
-              [NSString stringWithFormat:@"%d", self.run.max_heart_rate.intValue],
+              [self getAverageHeartbeatFromArray:self.run.heart_rate],
+              [self getMaxHeartbeatFromArray:self.run.heart_rate],
               nil];
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
     masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
@@ -41,12 +43,45 @@ static float const mapPadding = 1.1f;
     NSLog(@"data %@ %@", name, valueA);
 }
 
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
+        [(AnalysisViewController *)[segue destinationViewController] setHeartbeat:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
+    }
+}
+
+
 -(void)configureView{
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
+}
+-(NSString *)getMaxHeartbeatFromArray:(NSData *)data{
+    
+    NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSLog(@"heartarray %@", data);
+    int hightest = 0;
+    for (int i = 0; i < HeartArray.count; i++) {
+        if ([[HeartArray objectAtIndex:i] intValue] > hightest) {
+            hightest = [[HeartArray objectAtIndex:i] intValue];
+        }
+    }
+    return [NSString stringWithFormat:@"%i", hightest];
+}
+-(NSString *)getAverageHeartbeatFromArray:(NSData *)data{
+    
+    NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    int total = 0;
+    int average = 0;
+    for (int i = 0; i < HeartArray.count; i++) {
+        total += [[HeartArray objectAtIndex:i] intValue];
+    }
+    average = total / HeartArray.count;
+    return [NSString stringWithFormat:@"%i", average];
 }
 
 #pragma mark - Private

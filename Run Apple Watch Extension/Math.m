@@ -90,7 +90,7 @@ static float const metersInMile = 1609.344;
     // metric
     if (isMetric) {
         
-        unitName = @"min/km";
+        unitName = @"m/km";
         
         // to get from meters to kilometers divide by this
         unitMultiplier = metersInKM;
@@ -98,7 +98,7 @@ static float const metersInMile = 1609.344;
         // U.S.
     } else {
         
-        unitName = @"min/mi";
+        unitName = @"m/mi";
         
         // to get from meters to miles divide by this
         unitMultiplier = metersInMile;
@@ -107,7 +107,13 @@ static float const metersInMile = 1609.344;
     int paceMin = (int) ((avgPaceSecMeters * unitMultiplier) / 60);
     int paceSec = (int) (avgPaceSecMeters * unitMultiplier - (paceMin*60));
     
-    return [NSString stringWithFormat:@"%i:%02i %@", paceMin, paceSec, unitName];
+    return [NSString stringWithFormat:@"%i:%02i%@", paceMin, paceSec, unitName];
+}
+
++ (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds{
+    
+    
+    return [NSString stringWithFormat:@"%i", steps / seconds * 60];
 }
 
 

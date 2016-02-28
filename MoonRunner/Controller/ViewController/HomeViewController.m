@@ -91,6 +91,17 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     RunCell *cell = (RunCell *)[tableView dequeueReusableCellWithIdentifier:@"RunCell"];
+    
+    if (self.runArray.count > 0) {
+        Run *runObject = [self.runArray objectAtIndex:indexPath.row];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterMediumStyle];
+        cell.date.text = [formatter stringFromDate:runObject.timestamp];
+        cell.distance.text = [MathController stringifyDistance:runObject.distance.floatValue];
+        cell.pace.text = [MathController stringifyAvgPaceFromDist:runObject.distance.floatValue overTime:runObject.duration.intValue];
+
+    }
     return cell;
 }
 

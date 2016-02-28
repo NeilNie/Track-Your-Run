@@ -16,4 +16,6 @@
 
 + (NSString *)stringifyAvgPaceFromDist:(float)meters overTime:(int)seconds;
 
++ (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds;
+
 @end
