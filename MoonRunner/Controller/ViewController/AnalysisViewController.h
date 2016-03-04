@@ -9,14 +9,29 @@
 #import <UIKit/UIKit.h>
 
 #import "GraphKit.h"
+#import "MathController.h"
 
-@interface AnalysisViewController : UIViewController <GKLineGraphDataSource>
+@interface AnalysisViewController : UIViewController <GKLineGraphDataSource, UITableViewDataSource, UITableViewDelegate>{
+    
+    NSArray *TitleArray;
+    NSArray *Info;
+}
 
 @property (nonatomic, weak) IBOutlet GKLineGraph *graph;
 
 @property (nonatomic, strong) NSArray *heartbeat;
-@property (nonatomic, strong) NSArray *data;
-@property (nonatomic, strong) NSArray *speed;
+@property (nonatomic, strong) NSArray *striderate;
+@property (nonatomic, strong) NSArray *location;
+@property (nonatomic, strong) NSArray *elevation;
+
 @property (nonatomic, strong) NSArray *labels;
+@property (nonatomic, strong) NSArray *data;
+
+@property (weak, nonatomic) IBOutlet UIButton *heartButton;
+@property (weak, nonatomic) IBOutlet UIButton *elevationButton;
+@property (weak, nonatomic) IBOutlet UIButton *speedButton;
+@property (weak, nonatomic) IBOutlet UIButton *strideButton;
+
+- (void)setSpeedArray:(NSArray *)speed;
 
 @end

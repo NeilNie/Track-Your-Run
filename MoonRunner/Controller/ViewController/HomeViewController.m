@@ -38,7 +38,26 @@
     mapRegion.center = self.map.userLocation.coordinate;
     mapRegion.span.latitudeDelta = 0.015;
     mapRegion.span.longitudeDelta = 0.015;
-    [self.map setRegion:mapRegion animated: YES];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.map setRegion:mapRegion animated:YES];
+    });
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+    }else{
+        NSLog(@"not supported");
+    }
+    [self setUpView];
+    [[HealthKitManager sharedManager] requestAuthorization];
+    //[self setUpView];
+    [super viewDidLoad];
+}
+
+-(void)setUpView{
     
     float distance = 0.00;
     int INT = 0;
@@ -49,9 +68,6 @@
     }
     self.totalDistance.text = [NSString stringWithFormat:@"%@", [MathController stringifyDistance:distance]];
     self.totalRuns.text = [NSString stringWithFormat:@"%i", INT + 1];
-    
-    [[HealthKitManager sharedManager] requestAuthorization];
-    [super viewDidLoad];
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
@@ -73,6 +89,19 @@
     }
 }
 
+#pragma mark - WCSession Delegate
+
+-(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
+    
+    NSLog(@"got it");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"outdoorRun" sender:nil];
+    });
+}
+
+-(void)message{
+    
+}
 
 #pragma mark - TableView Delegate
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

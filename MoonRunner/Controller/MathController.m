@@ -138,6 +138,31 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     return [NSString stringWithFormat:@"%i", steps / seconds * 60];
 }
 
++ (NSArray *)getSpeedArrayFromLocations:(NSArray *)array;{
+    
+    if (array.count <= 1){
+            return nil;
+    }
+        
+    // make array of all speeds
+    NSMutableArray *rawSpeeds = [NSMutableArray array];
+
+    for (int i = 1; i < array.count; i++) {
+        Location *firstLoc = [array objectAtIndex:(i-1)];
+        Location *secondLoc = [array objectAtIndex:i];
+            
+        CLLocation *firstLocCL = [[CLLocation alloc] initWithLatitude:firstLoc.latitude.doubleValue longitude:firstLoc.longitude.doubleValue];
+        CLLocation *secondLocCL = [[CLLocation alloc] initWithLatitude:secondLoc.latitude.doubleValue longitude:secondLoc.longitude.doubleValue];
+            
+        double distance = [secondLocCL distanceFromLocation:firstLocCL];
+        double time = [secondLoc.timestamp timeIntervalSinceDate:firstLoc.timestamp];
+        double speed = distance/time;
+            
+        [rawSpeeds addObject:[NSNumber numberWithDouble:speed]];
+    }
+    return rawSpeeds;
+}
+
 + (NSArray *)colorSegmentsForLocations:(NSArray *)locations
 {
     if (locations.count == 1){

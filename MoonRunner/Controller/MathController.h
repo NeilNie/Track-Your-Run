@@ -22,4 +22,6 @@
 
 + (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds;
 
++ (NSArray *)getSpeedArrayFromLocations:(NSArray *)array;
+
 @end

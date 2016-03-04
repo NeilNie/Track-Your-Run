@@ -16,9 +16,25 @@
 
 @implementation HomeInterfaceController
 
+-(IBAction)RunWithPhone{
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+        //save data to iphone
+        [[WCSession defaultSession] updateApplicationContext:@{@"key": @"start"} error:nil];
+        [self pushControllerWithName:@"iPhone" context:nil];
+        NSLog(@"sent");
+    }else{
+        NSLog(@"not supported");
+    }
+}
+
 - (void)awakeWithContext:(id)context {
-    
-    
+
     [super awakeWithContext:context];
     
     // Configure interface objects here.

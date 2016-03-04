@@ -142,6 +142,7 @@
     newRun.timestamp = [NSDate date];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"splits"]];
     newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"max"]];
+    newRun.miliseconds = [NSNumber numberWithInt:[[message objectForKey:@"mili"] intValue]];
     
     self.run = newRun;
     
@@ -151,7 +152,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-    
 }
 
 @end

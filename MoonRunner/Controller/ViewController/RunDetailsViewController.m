@@ -27,20 +27,18 @@ static float const mapPadding = 1.1f;
     [self configureView];
     [self loadMap];
     
-    
     name = [[NSMutableArray alloc] initWithObjects:@"Time", @"Average pace", @"Calories", @"Stride rate", @"Average heartbeat", @"Max heartbeat", nil];
     valueA = [[NSMutableArray alloc] initWithObjects:
-              [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES],
+              [NSString stringWithFormat:@"%@'%@", [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES], self.run.miliseconds],
               [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
               [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
-              @"N/A",
+              [self getAverageStride:self.run.stride_rate],
               [self getAverageHeartbeatFromArray:self.run.heart_rate],
               [self getMaxHeartbeatFromArray:self.run.heart_rate],
               nil];
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
     masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
     [self.table reloadData];
-    NSLog(@"data %@ %@", name, valueA);
 }
 
 #pragma mark - Navigation
@@ -49,9 +47,10 @@ static float const mapPadding = 1.1f;
 {
     if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
         [(AnalysisViewController *)[segue destinationViewController] setHeartbeat:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
+        [(AnalysisViewController *)[segue destinationViewController] setSpeedArray:self.run.locations.array];
+        [(AnalysisViewController *)[segue destinationViewController] setStriderate:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate]];
     }
 }
-
 
 -(void)configureView{
     
@@ -60,42 +59,71 @@ static float const mapPadding = 1.1f;
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
 }
+-(NSString *)getAverageStride:(NSData *)data{
+    
+    NSArray *stride = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    if (stride.count > 1) {
+        int total = 0;
+        int average = 0;
+        for (int i = 0; i < stride.count; i++) {
+            total += [[stride objectAtIndex:i] intValue];
+        }
+        average = total / stride.count;
+        return [NSString stringWithFormat:@"%i", average];
+    }else{
+        return @"N/A";
+    }
+}
+
 -(NSString *)getMaxHeartbeatFromArray:(NSData *)data{
     
     NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    NSLog(@"heartarray %@", data);
-    int hightest = 0;
-    for (int i = 0; i < HeartArray.count; i++) {
-        if ([[HeartArray objectAtIndex:i] intValue] > hightest) {
-            hightest = [[HeartArray objectAtIndex:i] intValue];
+    
+    if (HeartArray.count > 1) {
+        int hightest = 0;
+        for (int i = 0; i < HeartArray.count; i++) {
+            if ([[HeartArray objectAtIndex:i] intValue] > hightest) {
+                hightest = [[HeartArray objectAtIndex:i] intValue];
+            }
         }
+        return [NSString stringWithFormat:@"%i", hightest];
+    }else{
+        return @"N/A";
     }
-    return [NSString stringWithFormat:@"%i", hightest];
+    
 }
 -(NSString *)getAverageHeartbeatFromArray:(NSData *)data{
     
     NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    int total = 0;
-    int average = 0;
-    for (int i = 0; i < HeartArray.count; i++) {
-        total += [[HeartArray objectAtIndex:i] intValue];
+    
+    if (HeartArray.count > 1) {
+        int total = 0;
+        int average = 0;
+        for (int i = 0; i < HeartArray.count; i++) {
+            total += [[HeartArray objectAtIndex:i] intValue];
+        }
+        average = total / HeartArray.count;
+        return [NSString stringWithFormat:@"%i", average];
+    }else{
+        return @"N/A";
     }
-    average = total / HeartArray.count;
-    return [NSString stringWithFormat:@"%i", average];
+    
 }
 
 #pragma mark - Private
 
 - (void)loadMap
 {
-    NSLog(@"loaded map");
-    self.mapView.hidden = NO;
-    
-    // set the map bounds
-    [self.mapView setRegion:[self mapRegion]];
-    
-    // make the line(s!) on the map
-    [self.mapView addOverlays:self.colorSegmentArray];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.mapView.hidden = NO;
+        
+        // set the map bounds
+        [self.mapView setRegion:[self mapRegion]];
+        
+        // make the line(s!) on the map
+        [self.mapView addOverlays:self.colorSegmentArray];
+    });
 }
 
 #pragma mark - Public
@@ -179,7 +207,7 @@ static float const mapPadding = 1.1f;
             cell.heart.hidden = NO;
             cell.number.hidden = NO;
             
-            cell.time.text = [dict objectForKey:@"time"];
+            cell.time.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
             cell.distance.text = [dict objectForKey:@"distance"];
             cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
             cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];

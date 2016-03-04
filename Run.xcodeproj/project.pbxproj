@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		001A52101C7A17920060095B /* running-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 001A520F1C7A17920060095B /* running-blue.png */; };
-		002A0DE71C827FE4001DE96E /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DDE1C827FE4001DE96E /* GKBar.m */; };
-		002A0DE81C827FE4001DE96E /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE01C827FE4001DE96E /* GKBarGraph.m */; };
 		002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE41C827FE4001DE96E /* GKLineGraph.m */; };
 		002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */; };
 		002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002BDB701C8106E800F051E2 /* AnalysisViewController.m */; };
@@ -23,12 +21,10 @@
 		00C80B901C792542005C4E39 /* IndoorRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C80B861C792542005C4E39 /* IndoorRunInterfaceController.m */; };
 		00C80B911C792542005C4E39 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C80B881C792542005C4E39 /* InterfaceController.m */; };
 		00C80B921C792542005C4E39 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C80B8A1C792542005C4E39 /* Math.m */; };
-		00C80B931C792542005C4E39 /* NoticeInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C80B8C1C792542005C4E39 /* NoticeInterfaceController.m */; };
 		00C80B961C79258F005C4E39 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168D1C768E920024770E /* HealthKit.framework */; };
 		00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
-		00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
 		00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F709C61C77B17300743BEE /* PastRunsViewController.m */; };
 		00F898831C793FFA0036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898821C793FFA0036481C /* Media.xcassets */; };
@@ -46,6 +42,9 @@
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
 		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
+		28D848F91C872EC300BF2119 /* greedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D848F71C872EC300BF2119 /* greedot.png */; };
+		28D848FA1C872EC300BF2119 /* reddot.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D848F81C872EC300BF2119 /* reddot.png */; };
+		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
 		F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6625D9E8FE39F3DBEAFB8379 /* libPods.a */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
 		FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950A1929CF2600A0179A /* Foundation.framework */; };
@@ -115,10 +114,6 @@
 
 /* Begin PBXFileReference section */
 		001A520F1C7A17920060095B /* running-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-blue.png"; sourceTree = "<group>"; };
-		002A0DDD1C827FE4001DE96E /* GKBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBar.h; sourceTree = "<group>"; };
-		002A0DDE1C827FE4001DE96E /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
-		002A0DDF1C827FE4001DE96E /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
-		002A0DE01C827FE4001DE96E /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
 		002A0DE11C827FE4001DE96E /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
 		002A0DE31C827FE4001DE96E /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
 		002A0DE41C827FE4001DE96E /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
@@ -147,13 +142,9 @@
 		00C80B881C792542005C4E39 /* InterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		00C80B891C792542005C4E39 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		00C80B8A1C792542005C4E39 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
-		00C80B8B1C792542005C4E39 /* NoticeInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoticeInterfaceController.h; sourceTree = "<group>"; };
-		00C80B8C1C792542005C4E39 /* NoticeInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoticeInterfaceController.m; sourceTree = "<group>"; };
 		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
 		00CAE2B11C82029800DDC425 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		00DEDBAD1C7A425700023BF8 /* IndoorRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndoorRunViewController.h; sourceTree = "<group>"; };
-		00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndoorRunViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		00F709C51C77B17300743BEE /* PastRunsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastRunsViewController.h; sourceTree = "<group>"; };
 		00F709C61C77B17300743BEE /* PastRunsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastRunsViewController.m; sourceTree = "<group>"; };
@@ -181,6 +172,10 @@
 		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCell.h; sourceTree = "<group>"; };
 		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCell.m; sourceTree = "<group>"; };
 		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
+		28D848F71C872EC300BF2119 /* greedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greedot.png; sourceTree = "<group>"; };
+		28D848F81C872EC300BF2119 /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
+		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
+		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
 		454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		47F3606791750BCD67244390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6625D9E8FE39F3DBEAFB8379 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -248,17 +243,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		002A0DDC1C827FE4001DE96E /* BarGraph */ = {
-			isa = PBXGroup;
-			children = (
-				002A0DDD1C827FE4001DE96E /* GKBar.h */,
-				002A0DDE1C827FE4001DE96E /* GKBar.m */,
-				002A0DDF1C827FE4001DE96E /* GKBarGraph.h */,
-				002A0DE01C827FE4001DE96E /* GKBarGraph.m */,
-			);
-			path = BarGraph;
-			sourceTree = "<group>";
-		};
 		002A0DE21C827FE4001DE96E /* LineGraph */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,8 +289,6 @@
 		00C80B941C79254C005C4E39 /* Interface Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				00C80B8B1C792542005C4E39 /* NoticeInterfaceController.h */,
-				00C80B8C1C792542005C4E39 /* NoticeInterfaceController.m */,
 				00C80B7F1C792542005C4E39 /* DetailInterfaceController.h */,
 				00C80B801C792542005C4E39 /* DetailInterfaceController.m */,
 				00C80B831C792542005C4E39 /* HomeInterfaceController.h */,
@@ -317,6 +299,8 @@
 				00C80B881C792542005C4E39 /* InterfaceController.m */,
 				28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */,
 				28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */,
+				28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */,
+				28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -333,7 +317,6 @@
 		281816491C7666350024770E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				002A0DDC1C827FE4001DE96E /* BarGraph */,
 				002A0DE11C827FE4001DE96E /* GraphKit.h */,
 				002A0DE21C827FE4001DE96E /* LineGraph */,
 				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
@@ -403,6 +386,8 @@
 		FA1F95131929CF2600A0179A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28D848F71C872EC300BF2119 /* greedot.png */,
+				28D848F81C872EC300BF2119 /* reddot.png */,
 				001A520F1C7A17920060095B /* running-blue.png */,
 				00F898821C793FFA0036481C /* Media.xcassets */,
 				281816471C7617CF0024770E /* bar_chart.png */,
@@ -462,8 +447,6 @@
 				FA30BD11192B319400CD453E /* HomeViewController.m */,
 				28716EC41C75518E000834C6 /* NewRunViewController.h */,
 				28716EC51C75518E000834C6 /* NewRunViewController.m */,
-				00DEDBAD1C7A425700023BF8 /* IndoorRunViewController.h */,
-				00DEDBAE1C7A425700023BF8 /* IndoorRunViewController.m */,
 				28716EC61C75518E000834C6 /* RunDetailsViewController.h */,
 				28716EC71C75518E000834C6 /* RunDetailsViewController.m */,
 				00F709C51C77B17300743BEE /* PastRunsViewController.h */,
@@ -636,12 +619,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D848F91C872EC300BF2119 /* greedot.png in Resources */,
 				00F898831C793FFA0036481C /* Media.xcassets in Resources */,
 				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
 				281816481C7617CF0024770E /* bar_chart.png in Resources */,
 				001A52101C7A17920060095B /* running-blue.png in Resources */,
 				28716EC31C75358D000834C6 /* Main.storyboard in Resources */,
 				28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */,
+				28D848FA1C872EC300BF2119 /* reddot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,7 +692,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C80B931C792542005C4E39 /* NoticeInterfaceController.m in Sources */,
+				28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */,
 				00C80B8F1C792542005C4E39 /* HomeInterfaceController.m in Sources */,
 				00C80B921C792542005C4E39 /* Math.m in Sources */,
 				00C80B8E1C792542005C4E39 /* ExtensionDelegate.m in Sources */,
@@ -724,7 +709,6 @@
 			files = (
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
 				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
-				002A0DE81C827FE4001DE96E /* GKBarGraph.m in Sources */,
 				002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */,
 				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
 				00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */,
@@ -733,14 +717,12 @@
 				002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */,
 				FA24F25519481C6200500593 /* Run.m in Sources */,
 				2818168A1C7678180024770E /* MathController.m in Sources */,
-				00DEDBAF1C7A425700023BF8 /* IndoorRunViewController.m in Sources */,
 				FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */,
 				FA30BD12192B319400CD453E /* HomeViewController.m in Sources */,
 				FA1F95231929CF2600A0179A /* RunMaster.xcdatamodeld in Sources */,
 				28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */,
 				28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */,
 				FA1F95191929CF2600A0179A /* main.m in Sources */,
-				002A0DE71C827FE4001DE96E /* GKBar.m in Sources */,
 				002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,32 +14,125 @@
 
 @implementation AnalysisViewController
 
+#pragma mark - UITableView Controller
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50.0;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return [TitleArray count];
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return nil;
+}
+
 #pragma mark - Public
 
-- (void)setHeartArray:(NSArray *)heartArray
-{
+- (void)setHeartArray:(NSArray *)heartArray{
+    
     if (heartArray.count > 0) {
         _heartbeat = heartArray;
     }
 }
 
-- (void)setSpeedArray:(NSArray *)speed
-{
+- (void)setSpeedArray:(NSArray *)speed{
+    
     if (speed.count > 0) {
-        _speed = speed;
+        self.location = speed;
     }
 }
 
-- (void)_setupExampleGraph {
+- (void)setStrideArray:(NSArray *)stride{
+    
+    if (stride.count > 0) {
+        self.striderate = stride;
+    }
+}
+
+#pragma Private
+
+- (void)_setupHeartrateGraph {
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i = 0; i < self.heartbeat.count; i++) {
+        NSInteger st = [[self.heartbeat objectAtIndex:i] integerValue];
+        [array addObject:[NSNumber numberWithInteger:st]];
+    }
+    self.data = @[array,];
+    
+    self.graph.dataSource = self;
+    self.graph.lineWidth = 3.0;
+    
+    self.graph.valueLabelCount = 4;
+    
+    [self.graph draw];
+}
+
+- (void)_setupStrideGraph {
+    
+    self.data = @[self.striderate,];
     
     self.labels = @[@"2001", @"2002", @"2006", @"2007"];
     
     self.graph.dataSource = self;
     self.graph.lineWidth = 3.0;
     
-    self.graph.valueLabelCount = 6;
+    self.graph.valueLabelCount = 4;
     
     [self.graph draw];
+}
+
+- (void)_setupSpeedGraph {
+    
+    NSMutableArray *speed = [[NSMutableArray alloc] initWithArray:[MathController getSpeedArrayFromLocations:self.location]];
+    
+    self.data = @[speed,];
+    
+    self.labels = @[@"2001", @"2002", @"2006", @"2007"];
+    
+    self.graph.dataSource = self;
+    self.graph.lineWidth = 3.0;
+    
+    self.graph.valueLabelCount = 4;
+    
+    [self.graph draw];
+}
+
+- (void)_setupElevationGraph {
+    
+    self.data = @[self.elevation,];
+    
+    self.graph.dataSource = self;
+    self.graph.lineWidth = 3.0;
+    
+    [self.graph draw];
+}
+
+-(void)setUpView{
+    
+    if (_heartbeat.count > 1) {
+        self.heartButton.enabled = YES;
+    }else{
+        self.heartButton.enabled = NO;
+    }
+    if (_striderate.count > 1) {
+        self.strideButton.enabled = YES;
+    }else{
+        self.strideButton.enabled = NO;
+    }
+    if (_elevation.count > 1) {
+        self.elevationButton.enabled = YES;
+    }else{
+        self.elevationButton.enabled = NO;
+    }
+    if (_location.count > 1) {
+        self.speedButton.enabled = YES;
+    }else{
+        self.speedButton.enabled = NO;
+    }
 }
 
 #pragma mark - GKLineGraphDataSource
@@ -67,25 +160,32 @@
     return nil;
 }
 
-#pragma mark - Private
+#pragma mark - IBActions
+
+-(IBAction)heartRate:(id)sender{
+    
+    [self _setupHeartrateGraph];
+}
+-(IBAction)strideRate:(id)sender{
+    
+    [self _setupStrideGraph];
+}
+-(IBAction)speed:(id)sender{
+    
+    [self _setupSpeedGraph];
+}
+-(IBAction)elevation:(id)sender{
+    
+    [self _setupElevationGraph];
+}
+
+#pragma mark - Life cycle
 
 - (void)viewDidLoad {
     
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i < self.heartbeat.count; i++) {
-        NSInteger st = [[self.heartbeat objectAtIndex:i] integerValue];
-        [array addObject:[NSNumber numberWithInteger:st]];
-    }
-    self.data = @[array,
-                  @[@100, @90, @110, @100, @120, @98, @122],
-                  ];
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    self.graph.valueLabelCount = 4;
-    [self _setupExampleGraph];
-    NSLog(@"%@", self.heartbeat);
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+    [self setUpView];
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

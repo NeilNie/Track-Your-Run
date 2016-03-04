@@ -15,30 +15,40 @@
 
 @implementation InterfaceController
 
+#pragma mark - Query HealthKit
+
 -(void)updateDistance{
+    
+    __weak typeof(self) weakSelf = self;
     
     HKSampleType *object = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
     
-    heartQuery = [[HKAnchoredObjectQuery alloc] initWithType:object predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+    distanceQuery = [[HKAnchoredObjectQuery alloc] initWithType:object predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
         
-        if (!error && sampleObjects.count > 0) {
+        if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            HKQuantity *quantity = sample.quantity;
-            self.distance = self.distance + [quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.distLabel setText:[Math stringifyDistance:self.distance]];
-                [self.paceLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
-            });
-            
+            self.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
         
     }];
-    [healthStore executeQuery:heartQuery];
+    [distanceQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+        
+        if (!error && sampleObjects) {
+            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
+            weakSelf.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+        }else{
+            NSLog(@"error %@", error);
+        }
+    }];
+    
+    [healthStore executeQuery:distanceQuery];
 }
 
 -(void)updateHeartbeat{
+    
+    __weak typeof(self) weakSelf = self;
     
     HKSampleType *object = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
     
@@ -52,6 +62,16 @@
             NSLog(@"query %@", error);
         }
         
+    }];
+    [heartQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error){
+        
+        if (!error && sampleObjects.count > 0) {
+            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
+            HKQuantity *quantity = sample.quantity;
+            [weakSelf.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+        }else{
+            NSLog(@"query %@", error);
+        }
     }];
     
     [healthStore executeQuery:heartQuery];
@@ -85,12 +105,7 @@
     });
 }
 
-
-- (void)awakeWithContext:(id)context {
-    [super awakeWithContext:context];
-    
-    // Configure interface objects here.
-}
+#pragma mark - Private Methods
 
 - (IBAction)splitPressed:(id)sender{
     
@@ -100,17 +115,17 @@
             hightest = [[self.heartBeatArray objectAtIndex:i] floatValue];
         }
     }
-    NSDictionary *dict = @{@"distance": [Math stringifyDistance:self.distance], @"time": [Math stringifySecondCount:self.seconds usingLongFormat:NO], @"heart": self.heartBeatArray};
+    NSDictionary *dict = @{@"distance": [Math stringifyDistance:self.distance],
+                           @"time": [Math stringifySecondCount:self.seconds usingLongFormat:NO],
+                           @"heart": self.heartBeatArray,
+                           @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
     [self.heartBeatArray removeAllObjects];
     [self.splitsArray addObject:dict];
     self.distance = 0;
     self.seconds = 0;
     [self.timeLabel setText:@"00:00"];
-    [self.distLabel setText:@"0.00mi"];
-    NSLog(@"splits: %@", self.splitsArray);
     
 }
-
 
 -(IBAction)stop{
     
@@ -119,10 +134,12 @@
     [Timer invalidate];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
+    [healthStore stopQuery:distanceQuery];
     
     data = @{@"time": [NSString stringWithFormat:@"%i", self.seconds],
              @"distance": [NSString stringWithFormat:@"%f", self.distance],
-             @"splits": self.splitsArray, @"max": self.heartBeatArray,
+             @"splits": self.splitsArray,
+             @"max": self.heartBeatArray,
              @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
 
     NSLog(@"data %@", data);
@@ -160,23 +177,90 @@
     [self updateHeartbeat];
     [self updateDistance];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
+        if (disBo) {
+            [self.timeLabel setText:[Math stringifyDistance:self.distance]];
+        }
+        if (paceBo) {
+            [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+        }
     });
 }
 
 -(void)timerCount{
     
     self.miliseconds++;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
-        [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.miliseconds]];
-    });
-    if (self.miliseconds == 100) {
+    [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.miliseconds]];
+    if (self.miliseconds == 10) {
         self.miliseconds = 0;
         self.seconds++;
-        NSLog(@"one second");
+        if (timeBo) {
+            [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
+        }
     }
 }
+
+- (IBAction)leftClick {
+    
+    //set distance
+    if (disBo == NO && paceBo == NO && timeBo == YES) {
+        timeBo = NO;
+        disBo = YES;
+        [self.timeLabel setText:[Math stringifyDistance:self.distance]];
+        [self.unitLabel setText:@"miles"];
+        [self.milisecondsLabel setHidden:YES];
+        NSLog(@"changed to distance");
+        return;
+    }
+    if (disBo == YES && timeBo == NO && paceBo == NO) {
+        paceBo = YES;
+        disBo = NO;
+        [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+        [self.unitLabel setText:@"m/mi"];
+        [self.milisecondsLabel setHidden:YES];
+        NSLog(@"changed to pace");
+        return;
+    }
+    if (paceBo == YES && disBo == NO && timeBo == NO) {
+        paceBo = NO;
+        timeBo = YES;
+        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
+        [self.unitLabel setText:@"sec"];
+        [self.milisecondsLabel setHidden:NO];
+        return;
+    }
+}
+- (IBAction)rightClick {
+    
+    //set distance
+    if (disBo == NO && paceBo == NO && timeBo == YES) {
+        timeBo = NO;
+        disBo = YES;
+        [self.timeLabel setText:[Math stringifyDistance:self.distance]];
+        [self.milisecondsLabel setHidden:YES];
+        [self.unitLabel setText:@"miles"];
+        return;
+    }
+    //set pace
+    if (disBo == YES && timeBo == NO && paceBo == NO) {
+        paceBo = YES;
+        disBo = NO;
+        [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
+        [self.unitLabel setText:@"m/mi"];
+        [self.milisecondsLabel setHidden:YES];
+        return;
+    }
+    //set time
+    if (paceBo == YES && disBo == NO && timeBo == NO) {
+        paceBo = NO;
+        timeBo = YES;
+        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
+        [self.unitLabel setText:@"sec"];
+        [self.milisecondsLabel setHidden:NO];
+        return;
+    }
+}
+
+#pragma mark - Life Cycle
 
 - (void)willActivate {
     
@@ -190,8 +274,9 @@
         self.distance = 0.00;
         self.seconds = 0;
         
-        RunTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
-        Timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
+        //start timers
+        RunTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
         healthStore = [[HKHealthStore alloc] init];
@@ -200,6 +285,9 @@
         [healthStore startWorkoutSession:workoutSession];
         [self startPedometer];
         
+        disBo = NO;
+        paceBo = NO;
+        timeBo = YES;
         started = YES;
         re = NO;
         NSLog(@"started workout");
@@ -211,8 +299,13 @@
 
 - (void)didDeactivate {
     
-    NSLog(@"deactivated");
     [super didDeactivate];
 }
+- (void)awakeWithContext:(id)context {
+    [super awakeWithContext:context];
+    
+    // Configure interface objects here.
+}
+
 
 @end

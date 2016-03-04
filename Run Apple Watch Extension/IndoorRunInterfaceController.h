@@ -28,6 +28,10 @@ BOOL started;
     
     NSTimer *timerIndoor;
     NSTimer *Timer;
+    
+    BOOL disBo;
+    BOOL timeBo;
+    BOOL paceBo;
 }
 
 @property int seconds;
@@ -37,8 +41,9 @@ BOOL started;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
 
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timeLabel;
-@property (nonatomic, weak) IBOutlet WKInterfaceLabel *distLabel;
-@property (nonatomic, weak) IBOutlet WKInterfaceLabel *paceLabel;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondsLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *unitLabel;
+@property (nonatomic, weak) IBOutlet WKInterfaceLabel *milisecondsLabel;
+- (IBAction)leftClick;
+- (IBAction)rightClick;
 
 @end

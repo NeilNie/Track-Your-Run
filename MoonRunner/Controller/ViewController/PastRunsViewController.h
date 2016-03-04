@@ -11,6 +11,7 @@
 @interface PastRunsViewController : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *runArray;
+
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

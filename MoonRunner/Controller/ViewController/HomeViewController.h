@@ -15,7 +15,9 @@
 #import "HealthKitManager.h"
 #import "MathController.h"
 
-@interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, WCSessionDelegate>
+@interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, WCSessionDelegate>{
+    NSTimer *timer;
+}
 
 @property (nonatomic, strong) Run *run;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

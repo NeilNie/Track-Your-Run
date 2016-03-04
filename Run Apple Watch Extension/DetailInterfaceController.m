@@ -52,7 +52,7 @@
         [self.Distance setText:[Math stringifyDistance:[[data objectForKey:@"distance"] floatValue]]];
         [self.Time setText:[Math stringifySecondCount:[[data objectForKey:@"time"] intValue] usingLongFormat:NO]];
         [self.Pace setText:[Math stringifyAvgPaceFromDist:[[data objectForKey:@"distance"] floatValue] overTime:[[data objectForKey:@"time"] intValue]]];
-        [self.Heartrate setText:[NSString stringWithFormat:@"%@bpm", [[data objectForKey:@"max"] lastObject]]];
+        [self.Heartrate setText:[NSString stringWithFormat:@"%ibpm", [[[data objectForKey:@"max"] lastObject] integerValue]]];
         [self.milisecondsLabel setText:[NSString stringWithFormat:@"%@", [data objectForKey:@"mili"]]];
     });
     

@@ -1,22 +1,20 @@
 //
-//  InterfaceController.h
-//  Run Apple Watch Extension
+//  iPhoneRunInterfaceController.h
+//  Run
 //
-//  Created by Yongyang Nie on 2/18/16.
+//  Created by Yongyang Nie on 3/2/16.
 //  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
-#import <HealthKit/HealthKit.h>
+#import <WatchConnectivity/WatchConnectivity.h>
 #import <CoreMotion/CoreMotion.h>
+#import <HealthKit/HealthKit.h>
 #import "Math.h"
 #import "IndoorRunInterfaceController.h"
-#import "DetailInterfaceController.h"
 
-NSDictionary *data;
-
-@interface InterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
+@interface iPhoneRunInterfaceController : WKInterfaceController <WCSessionDelegate, HKWorkoutSessionDelegate>{
     
     HKHealthStore *healthStore;
     HKWorkoutSession *workoutSession;
@@ -26,18 +24,20 @@ NSDictionary *data;
     
     CMPedometer *Pedometer;
     
-    NSTimer *RunTimer;
     NSTimer *Timer;
-
+    NSTimer *QueryTimer;
+    NSTimer *countTimer;
+    
     BOOL disBo;
     BOOL timeBo;
     BOOL paceBo;
+    int countDown;
 }
 
-@property int seconds;
-@property int miliseconds;
-@property float distance;
-@property NSMutableArray *heartBeatArray;
+@property int Seconds;
+@property int Miliseconds;
+@property float Distance;
+@property NSMutableArray *HeartBeatArray;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
 
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timeLabel;

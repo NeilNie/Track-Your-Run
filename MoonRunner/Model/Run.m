@@ -19,5 +19,6 @@
 @dynamic splits;
 @dynamic heart_rate;
 @dynamic stride_rate;
+@dynamic miliseconds;
 
 @end

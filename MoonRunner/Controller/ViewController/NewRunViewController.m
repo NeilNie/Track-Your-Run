@@ -8,7 +8,7 @@
 
 #import "NewRunViewController.h"
 
-int it = 3;
+int it;
 
 static NSString * const detailSegueName = @"NewRunDetails";
 
@@ -23,17 +23,18 @@ static NSString * const detailSegueName = @"NewRunDetails";
 -(void)viewDidLoad {
     
     //modify view
-    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
     self.seconds = 0;
     self.distance = 0;
+    self.miliseconds = 0;
+    it = 3;
     
     self.locations = [NSMutableArray array];
-    if (!self.splitsArray) {
-        self.splitsArray = [[NSMutableArray alloc] init];
-    }
-    [self.splitsArray removeAllObjects];
+    self.splitsArray = [NSMutableArray array];
+    self.strides = [NSMutableArray array];
+    self.altitude = [NSMutableArray array];
+    self.heartRate = [NSMutableArray array];
     
     // initialize the timer
     startTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
@@ -45,7 +46,24 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [self.view addGestureRecognizer:swipeLeft];
     [self.view addGestureRecognizer:swipeRight];
     
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+    }else{
+        NSLog(@"not supported");
+    }
+    
     self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.015;
+    mapRegion.span.longitudeDelta = 0.015;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.mapView setRegion:mapRegion animated:YES];
+    });
     
     [super viewDidLoad];
 }
@@ -73,6 +91,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 {
     [super viewWillDisappear:animated];
     [timer invalidate];
+    [timeTimer invalidate];
 }
 
 #pragma mark - IBActions
@@ -83,10 +102,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Save", @"Discard", nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
     [actionSheet showInView:self.view];
+    
 }
 -(IBAction)splitPressed:(id)sender{
     
-    NSDictionary *dict = @{@"distance": [MathController stringifyDistance:self.distance], @"time": [MathController stringifySecondCount:self.seconds usingLongFormat:NO], @"heart": @"N/A bmp"};
+    NSDictionary *dict = @{@"distance": [MathController stringifyDistance:self.distance],
+                           @"time": [MathController stringifySecondCount:self.seconds usingLongFormat:NO],
+                           @"heart": @"N/A bmp",
+                           @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
     [self.splitsArray addObject:dict];
     self.distance = 0;
     self.seconds = 0;
@@ -116,19 +139,11 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
         [startTimer invalidate];
         [self startPedometer];
-        timer = [NSTimer scheduledTimerWithTimeInterval:(1.0) target:self selector:@selector(eachSecond) userInfo:nil repeats:YES];
+        timer = [NSTimer scheduledTimerWithTimeInterval:(2.0) target:self selector:@selector(updateLabels) userInfo:nil repeats:YES];
+        timeTimer = [NSTimer scheduledTimerWithTimeInterval:(0.1) target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
+        
         self.countDownLabel.hidden = YES;
-        self.timeLabel.hidden = NO;
-        self.distLabel.hidden = NO;
-        self.paceLabel.hidden = NO;
-        self.stopButton.hidden = NO;
-        self.calories.hidden = NO;
-        self.mapView.hidden = NO;
-        self.label1.hidden = NO;
-        self.Label2.hidden = NO;
-        self.Label3.hidden = NO;
-        self.Label4.hidden = NO;
-        self.split.hidden = NO;
+        self.cover.hidden = YES;
     }
 }
 
@@ -137,9 +152,18 @@ static NSString * const detailSegueName = @"NewRunDetails";
     Pedometer = [[CMPedometer alloc] init];
     [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
         if (!error) {
-            NSLog(@"steps %@", [MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]);
+            [self.strides addObject:[MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]];
         }else{
             NSLog(@"%@", error);
+        }
+    }];
+    
+    [altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData * _Nullable altitudeData, NSError * _Nullable error) {
+        if (!error) {
+            [self.altitude addObject:altitudeData.relativeAltitude];
+            NSLog(@"altitude %@", altitudeData.relativeAltitude);
+        }else{
+            NSLog(@"altitude error");
         }
     }];
 }
@@ -147,12 +171,13 @@ static NSString * const detailSegueName = @"NewRunDetails";
 - (void)saveRun{
     
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
-    NSArray *array = [[NSArray alloc] init];
     newRun.distance = [NSNumber numberWithFloat:self.distance];
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.timestamp = [NSDate date];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
-    newRun.heart_rate = [NSPropertyListSerialization dataWithPropertyList:array format:NSPropertyListBinaryFormat_v1_0 options:0 error:nil];
+    newRun.stride_rate = [NSKeyedArchiver archivedDataWithRootObject:self.strides];
+    newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:self.heartRate];
+    newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
     
     NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {
@@ -166,19 +191,12 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
     self.run = newRun;
     
-    NSLog(@"new run %@", newRun);
     // Save the context.
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
-}
-
-- (void)eachSecond{
-    
-    self.seconds ++;
-    [self updateLabels];
 }
 
 - (void)updateLabels{
@@ -189,6 +207,18 @@ static NSString * const detailSegueName = @"NewRunDetails";
         self.paceLabel.text = [NSString stringWithFormat:@"%@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
         self.calories.text = [NSString stringWithFormat:@"%@", [MathController stringifyCaloriesFromDist:self.distance]];
     });
+}
+
+-(void)timerCount{
+    
+    self.miliseconds+=10;
+    
+    self.milisecLabel.text = [NSString stringWithFormat:@"%i", self.miliseconds];
+    if (self.miliseconds == 100) {
+        self.miliseconds = 0;
+        self.seconds++;
+        self.timeLabel.text = [MathController stringifySecondCount:self.seconds usingLongFormat:NO];
+    }
 }
 
 - (void)startLocationUpdates
@@ -229,6 +259,15 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
+#pragma mark - MK MapKit Delegate
+
+#pragma mark - MapView Delegate
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 900, 900);
+    [mapView setRegion:[mapView regionThatFits:region] animated:YES];
+}
+
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
@@ -248,11 +287,10 @@ static NSString * const detailSegueName = @"NewRunDetails";
                 CLLocationCoordinate2D coords[2];
                 coords[0] = ((CLLocation *)self.locations.lastObject).coordinate;
                 coords[1] = newLocation.coordinate;
-
-                MKCoordinateRegion region =
-                MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
-                [self.mapView setRegion:region animated:YES];
-                
+                MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(newLocation.coordinate, 500, 500);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.mapView setRegion:region animated:YES];
+                });
                 [self.mapView addOverlay:[MKPolyline polylineWithCoordinates:coords count:2]];
             }
             
@@ -285,6 +323,28 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
+#pragma mark - WCSession Delegate
+
+-(void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo{
+    
+    if ([[userInfo objectForKey:@"key"] isEqualToString:@"heart"]) {
+        [self.heartRate addObject:[userInfo objectForKey:@"heart"]];
+        NSLog(@"recieved heart");
+    }
+    
+}
+-(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
+    
+    if ([[applicationContext objectForKey:@"key"] isEqualToString:@"stop"]) {
+        
+        [self saveRun];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:detailSegueName sender:nil];
+        });
+        NSLog(@"received stop request");
+    }
+}
+
 #pragma mark - TableView Delegate
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -301,7 +361,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
     UILabel *time = (UILabel *)[cell.contentView viewWithTag:1];
     UILabel *distance = (UILabel *)[cell.contentView viewWithTag:2];
