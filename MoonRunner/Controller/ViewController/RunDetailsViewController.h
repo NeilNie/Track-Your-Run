@@ -14,9 +14,11 @@
 #import "MulticolorPolylineSegment.h"
 #import "SplitCell.h"
 #import "AnalysisViewController.h"
-
+#import "SettingViewController.h"
 
 @class Run;
+
+@import GoogleMobileAds;
 
 @interface RunDetailsViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>{
     NSMutableArray *masterArray;
@@ -25,11 +27,14 @@
     NSArray *valueA;
 }
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
 @property (strong, nonatomic) NSArray *colorSegmentArray;
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property (nonatomic, weak) IBOutlet UITableView *table;
+
+@property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
 
 @end

@@ -26,7 +26,7 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            self.Distance = self.Distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            self.Distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -36,7 +36,7 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.Distance = self.Distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            weakSelf.Distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -160,10 +160,11 @@
     //save data for interface
     started = NO;
     data = @{@"time": [NSString stringWithFormat:@"%i", self.Seconds],
-             @"Distance": [NSString stringWithFormat:@"%f", self.Distance],
+             @"distance": [NSString stringWithFormat:@"%f", self.Distance],
              @"splits": self.splitsArray,
              @"max": self.HeartBeatArray,
              @"mili": [NSString stringWithFormat:@"%i", self.Miliseconds]};
+    NSLog(@"%@", data);
     
     //start WCSession
     if ([WCSession isSupported]) {
@@ -178,7 +179,7 @@
     }
     
     //push interfaceController
-    [self pushControllerWithName:@"detail" context:nil];
+    [self pushControllerWithName:@"home" context:nil];
 }
 
 -(IBAction)discard{
@@ -197,7 +198,7 @@
         [session activateSession];
         
         //save data to iphone
-        [[WCSession defaultSession] updateApplicationContext:@{@"key":@"stop"} error:nil];
+        [[WCSession defaultSession] updateApplicationContext:@{@"key":@"discard"} error:nil];
         NSLog(@"sent");
     }
     
@@ -230,6 +231,9 @@
         [self.milisecondsLabel setHidden:NO];
         [self.unitLabel setHidden:NO];
         
+        self.HeartBeatArray = [NSMutableArray array];
+        self.splitsArray = [NSMutableArray array];
+        
         QueryTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
         Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
@@ -238,15 +242,20 @@
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
         workoutSession.delegate = self;
         [healthStore startWorkoutSession:workoutSession];
+        
+        self.Distance = 0.00;
+        self.Seconds = 0;
+        self.Miliseconds = 0;
         //[self startPedometer];
     }
 }
 
 -(void)timerCount{
     
-    self.Miliseconds++;
+    self.Miliseconds+=10;
     [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.Miliseconds]];
-    if (self.Miliseconds == 10) {
+    
+    if (self.Miliseconds == 100) {
         self.Miliseconds = 0;
         self.Seconds++;
         if (timeBo) {
@@ -321,30 +330,24 @@
 - (void)awakeWithContext:(id)context {
     
     [super awakeWithContext:context];
-    [self.milisecondsLabel setHidden:YES];
-    [self.unitLabel setHidden:YES];
-    
-    countDown = 4;
-    countTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     // Configure interface objects here.
 }
 
 - (void)willActivate {
-    // This method is called when watch view controller is about to be visible to user
-    
-    self.HeartBeatArray = [NSMutableArray array];
-    self.splitsArray = [NSMutableArray array];
-    
-    self.Distance = 0.00;
-    self.Seconds = 0;
-    self.Miliseconds = 0;
-    
-    disBo = NO;
-    paceBo = NO;
-    timeBo = YES;
-    started = YES;
-    re = NO;
-    
+
+    if (!started) {
+        [self.milisecondsLabel setHidden:YES];
+        [self.unitLabel setHidden:YES];
+        
+        countDown = 4;
+        countTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+        
+        disBo = NO;
+        paceBo = NO;
+        timeBo = YES;
+        started = YES;
+        re = NO;
+    }
     [super willActivate];
 }
 

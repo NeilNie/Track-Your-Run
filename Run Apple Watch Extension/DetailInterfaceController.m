@@ -22,11 +22,6 @@
         session.delegate = self;
         [session activateSession];
         
-        if (![session isReachable] && re == NO) {
-            [self pushControllerWithName:@"notice" context:nil];
-            re = YES;
-        }
-        
     }else{
         NSLog(@"not supported");
     }

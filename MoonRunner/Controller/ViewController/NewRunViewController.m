@@ -65,6 +65,16 @@ static NSString * const detailSegueName = @"NewRunDetails";
         [self.mapView setRegion:mapRegion animated:YES];
     });
     
+    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (!areAdsRemoved) {
+        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
+    
     [super viewDidLoad];
 }
 
@@ -161,7 +171,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData * _Nullable altitudeData, NSError * _Nullable error) {
         if (!error) {
             [self.altitude addObject:altitudeData.relativeAltitude];
-            NSLog(@"altitude %@", altitudeData.relativeAltitude);
         }else{
             NSLog(@"altitude error");
         }
@@ -178,6 +187,8 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.stride_rate = [NSKeyedArchiver archivedDataWithRootObject:self.strides];
     newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:self.heartRate];
     newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
+    newRun.speed = [NSNumber numberWithFloat:self.distance / self.seconds];
+    newRun.elevation = [NSKeyedArchiver archivedDataWithRootObject:self.altitude];
     
     NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {
@@ -264,7 +275,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 #pragma mark - MapView Delegate
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 900, 900);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 500, 500);
     [mapView setRegion:[mapView regionThatFits:region] animated:YES];
 }
 
@@ -320,6 +331,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     
     if ([[segue identifier] isEqualToString:detailSegueName]) {
         [[segue destinationViewController] setRun:self.run];
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
     }
 }
 
@@ -342,6 +354,12 @@ static NSString * const detailSegueName = @"NewRunDetails";
             [self performSegueWithIdentifier:detailSegueName sender:nil];
         });
         NSLog(@"received stop request");
+    }
+    if ([[applicationContext objectForKey:@"key"] isEqualToString:@"discard"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        });
+        NSLog(@"received discard request");
     }
 }
 

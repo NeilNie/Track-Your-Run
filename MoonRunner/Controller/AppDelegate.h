@@ -1,9 +1,9 @@
 //
 //  AppDelegate.h
-//  RunmasterGeneral
+//  Track your run
 //
 //  Created by Matt Luedke on 5/18/14.
-//  Copyright (c) 2014 Matt Luedke. All rights reserved.
+//  Copyright (c) 2014 Yongyang Nie. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

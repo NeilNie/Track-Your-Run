@@ -20,5 +20,7 @@
 @dynamic heart_rate;
 @dynamic stride_rate;
 @dynamic miliseconds;
+@dynamic speed;
+@dynamic elevation;
 
 @end

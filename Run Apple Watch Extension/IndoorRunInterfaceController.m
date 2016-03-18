@@ -26,8 +26,7 @@
         
         if (!error && sampleObjects.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
-            HKQuantity *quantity = sample.quantity;
-            self.distance = self.distance + [quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            self.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
             
         }else{
             NSLog(@"error %@", error);
@@ -39,7 +38,7 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            weakSelf.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -179,7 +178,7 @@
 }
 
 
--(void)count{
+-(void)query{
     
     [self updateHeartbeat];
     [self updateDistance];
@@ -195,9 +194,9 @@
 
 -(void)timerCount{
     
-    self.miliseconds++;
+    self.miliseconds+=10;
     [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.miliseconds]];
-    if (self.miliseconds == 10) {
+    if (self.miliseconds == 100) {
         self.miliseconds = 0;
         self.seconds++;
         if (timeBo) {
@@ -275,7 +274,7 @@
         self.distance = 0.00;
         self.seconds = 0;
         
-        timerIndoor = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        timerIndoor = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(query) userInfo:nil repeats:YES];
         Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];

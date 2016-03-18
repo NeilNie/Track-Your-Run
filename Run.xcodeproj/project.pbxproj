@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001A52101C7A17920060095B /* running-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 001A520F1C7A17920060095B /* running-blue.png */; };
 		002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE41C827FE4001DE96E /* GKLineGraph.m */; };
 		002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */; };
 		002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002BDB701C8106E800F051E2 /* AnalysisViewController.m */; };
 		00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00357ECE1C77D02F0046B8BC /* HealthKitManager.m */; };
+		006E9F7D1C8F61B4002B8B37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */; };
+		0076951B1C8E6F2A007CB823 /* PastRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0076951A1C8E6F2A007CB823 /* PastRunViewController.m */; };
+		00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C221C8A40AE0096B5EC /* bar_chart.png */; };
+		00937C291C8A40AE0096B5EC /* greedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C231C8A40AE0096B5EC /* greedot.png */; };
+		00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C241C8A40AE0096B5EC /* reddot.png */; };
+		00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C251C8A40AE0096B5EC /* running-blue.png */; };
+		00937C2C1C8A40AE0096B5EC /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C261C8A40AE0096B5EC /* save.png */; };
+		00937C2D1C8A40AE0096B5EC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C271C8A40AE0096B5EC /* settings.png */; };
 		00C80B631C79249E005C4E39 /* Run Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00C80B621C79249E005C4E39 /* Run Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00C80B731C79249E005C4E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B721C79249E005C4E39 /* Assets.xcassets */; };
 		00C80B771C79249E005C4E39 /* Run Apple Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 00C80B561C79249E005C4E39 /* Run Apple Watch.app */; };
@@ -25,13 +32,12 @@
 		00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
+		00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
-		00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F709C61C77B17300743BEE /* PastRunsViewController.m */; };
 		00F898831C793FFA0036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898821C793FFA0036481C /* Media.xcassets */; };
 		00F898851C7940810036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898841C7940810036481C /* Media.xcassets */; };
 		2817303F1C74E0120036901C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2817303E1C74E0120036901C /* MapKit.framework */; };
 		281730411C74E0460036901C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281730401C74E0460036901C /* StoreKit.framework */; };
-		281816481C7617CF0024770E /* bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 281816471C7617CF0024770E /* bar_chart.png */; };
 		2818168A1C7678180024770E /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281816891C7678180024770E /* MathController.m */; };
 		281816901C768E990024770E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168F1C768E990024770E /* HealthKit.framework */; };
 		28716EC31C75358D000834C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28716EC21C75358D000834C6 /* Main.storyboard */; };
@@ -42,8 +48,6 @@
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
 		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
-		28D848F91C872EC300BF2119 /* greedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D848F71C872EC300BF2119 /* greedot.png */; };
-		28D848FA1C872EC300BF2119 /* reddot.png in Resources */ = {isa = PBXBuildFile; fileRef = 28D848F81C872EC300BF2119 /* reddot.png */; };
 		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
 		F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6625D9E8FE39F3DBEAFB8379 /* libPods.a */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
@@ -113,7 +117,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		001A520F1C7A17920060095B /* running-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-blue.png"; sourceTree = "<group>"; };
 		002A0DE11C827FE4001DE96E /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
 		002A0DE31C827FE4001DE96E /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
 		002A0DE41C827FE4001DE96E /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
@@ -124,6 +127,16 @@
 		00357ECD1C77D02F0046B8BC /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = ViewController/HealthKitManager.h; sourceTree = "<group>"; };
 		00357ECE1C77D02F0046B8BC /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = ViewController/HealthKitManager.m; sourceTree = "<group>"; };
 		00357ED11C77D4740046B8BC /* Run.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Run.entitlements; sourceTree = "<group>"; };
+		006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		007695191C8E6F2A007CB823 /* PastRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastRunViewController.h; sourceTree = "<group>"; };
+		0076951A1C8E6F2A007CB823 /* PastRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastRunViewController.m; sourceTree = "<group>"; };
+		00937C221C8A40AE0096B5EC /* bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_chart.png; sourceTree = "<group>"; };
+		00937C231C8A40AE0096B5EC /* greedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greedot.png; sourceTree = "<group>"; };
+		00937C241C8A40AE0096B5EC /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
+		00937C251C8A40AE0096B5EC /* running-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-blue.png"; sourceTree = "<group>"; };
+		00937C261C8A40AE0096B5EC /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
+		00937C271C8A40AE0096B5EC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RunMaster 2.xcdatamodel"; sourceTree = "<group>"; };
 		00C80B561C79249E005C4E39 /* Run Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C80B5D1C79249E005C4E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C80B621C79249E005C4E39 /* Run Apple Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Run Apple Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,14 +158,13 @@
 		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
 		00CAE2B11C82029800DDC425 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
-		00F709C51C77B17300743BEE /* PastRunsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastRunsViewController.h; sourceTree = "<group>"; };
-		00F709C61C77B17300743BEE /* PastRunsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastRunsViewController.m; sourceTree = "<group>"; };
 		00F898821C793FFA0036481C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		00F898841C7940810036481C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		2817303E1C74E0120036901C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		281730401C74E0460036901C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		281816471C7617CF0024770E /* bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_chart.png; sourceTree = "<group>"; };
 		281816771C76725B0024770E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		281816791C76726A0024770E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		281816881C7678180024770E /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathController.h; sourceTree = "<group>"; };
@@ -172,8 +184,6 @@
 		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCell.h; sourceTree = "<group>"; };
 		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCell.m; sourceTree = "<group>"; };
 		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
-		28D848F71C872EC300BF2119 /* greedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greedot.png; sourceTree = "<group>"; };
-		28D848F81C872EC300BF2119 /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
 		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
 		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
 		454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -297,10 +307,10 @@
 				00C80B861C792542005C4E39 /* IndoorRunInterfaceController.m */,
 				00C80B871C792542005C4E39 /* InterfaceController.h */,
 				00C80B881C792542005C4E39 /* InterfaceController.m */,
-				28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */,
-				28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */,
 				28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */,
 				28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */,
+				28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */,
+				28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -321,6 +331,12 @@
 				002A0DE21C827FE4001DE96E /* LineGraph */,
 				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
 				002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */,
+				00937C221C8A40AE0096B5EC /* bar_chart.png */,
+				00937C231C8A40AE0096B5EC /* greedot.png */,
+				00937C241C8A40AE0096B5EC /* reddot.png */,
+				00937C251C8A40AE0096B5EC /* running-blue.png */,
+				00937C261C8A40AE0096B5EC /* save.png */,
+				00937C271C8A40AE0096B5EC /* settings.png */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -386,11 +402,8 @@
 		FA1F95131929CF2600A0179A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28D848F71C872EC300BF2119 /* greedot.png */,
-				28D848F81C872EC300BF2119 /* reddot.png */,
-				001A520F1C7A17920060095B /* running-blue.png */,
+				006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */,
 				00F898821C793FFA0036481C /* Media.xcassets */,
-				281816471C7617CF0024770E /* bar_chart.png */,
 				FA1F95141929CF2600A0179A /* Run-Info.plist */,
 				FA1F95181929CF2600A0179A /* main.m */,
 				FA1F951A1929CF2600A0179A /* Run-Prefix.pch */,
@@ -449,10 +462,12 @@
 				28716EC51C75518E000834C6 /* NewRunViewController.m */,
 				28716EC61C75518E000834C6 /* RunDetailsViewController.h */,
 				28716EC71C75518E000834C6 /* RunDetailsViewController.m */,
-				00F709C51C77B17300743BEE /* PastRunsViewController.h */,
-				00F709C61C77B17300743BEE /* PastRunsViewController.m */,
 				002BDB6F1C8106E800F051E2 /* AnalysisViewController.h */,
 				002BDB701C8106E800F051E2 /* AnalysisViewController.m */,
+				00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */,
+				00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */,
+				007695191C8E6F2A007CB823 /* PastRunViewController.h */,
+				0076951A1C8E6F2A007CB823 /* PastRunViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -619,14 +634,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D848F91C872EC300BF2119 /* greedot.png in Resources */,
+				00937C2D1C8A40AE0096B5EC /* settings.png in Resources */,
+				00937C291C8A40AE0096B5EC /* greedot.png in Resources */,
+				00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */,
 				00F898831C793FFA0036481C /* Media.xcassets in Resources */,
+				00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */,
+				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
+				006E9F7D1C8F61B4002B8B37 /* GoogleService-Info.plist in Resources */,
 				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
-				281816481C7617CF0024770E /* bar_chart.png in Resources */,
-				001A52101C7A17920060095B /* running-blue.png in Resources */,
 				28716EC31C75358D000834C6 /* Main.storyboard in Resources */,
+				00937C2C1C8A40AE0096B5EC /* save.png in Resources */,
 				28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */,
-				28D848FA1C872EC300BF2119 /* reddot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,9 +727,10 @@
 			files = (
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
 				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
+				0076951B1C8E6F2A007CB823 /* PastRunViewController.m in Sources */,
 				002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */,
 				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
-				00F709C71C77B17300743BEE /* PastRunsViewController.m in Sources */,
+				00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */,
 				FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */,
 				00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */,
 				002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */,
@@ -924,7 +943,7 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "MoonRunner/Run-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running;
@@ -947,7 +966,7 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
-				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "MoonRunner/Run-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1051,9 +1070,10 @@
 		FA1F95211929CF2600A0179A /* RunMaster.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */,
 				FA1F95221929CF2600A0179A /* RunMaster.xcdatamodel */,
 			);
-			currentVersion = FA1F95221929CF2600A0179A /* RunMaster.xcdatamodel */;
+			currentVersion = 00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */;
 			path = RunMaster.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

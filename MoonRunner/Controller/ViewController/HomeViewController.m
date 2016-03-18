@@ -19,6 +19,7 @@
 
 -(void)viewDidLoad{
     
+    NSLog(@"view started loading");
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
@@ -32,29 +33,43 @@
     swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
     [self.view addGestureRecognizer:swipeRight];
-    
-    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
-    MKCoordinateRegion mapRegion;
-    mapRegion.center = self.map.userLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.015;
-    mapRegion.span.longitudeDelta = 0.015;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.map setRegion:mapRegion animated:YES];
-    });
-    
+
     if ([WCSession isSupported]) {
         NSLog(@"Activated");
         WCSession *session = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
         
-    }else{
-        NSLog(@"not supported");
     }
+    
+    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (!areAdsRemoved) {
+        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
+    
     [self setUpView];
     [[HealthKitManager sharedManager] requestAuthorization];
-    //[self setUpView];
+    
     [super viewDidLoad];
+    
+    NSLog(@"did finishe");
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.map.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.015;
+    mapRegion.span.longitudeDelta = 0.015;
+    [self.map setRegion:mapRegion animated:YES];
+    
+    [super viewWillAppear:YES];
 }
 
 -(void)setUpView{
@@ -141,10 +156,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UIViewController *nextController = [segue destinationViewController];
-    if ([nextController isKindOfClass:[NewRunViewController class]]) {
-        ((NewRunViewController *) nextController).managedObjectContext = self.managedObjectContext;
-    } else if ([nextController isKindOfClass:[PastRunsViewController class]]) {
-        ((PastRunsViewController *) nextController).runArray = self.runArray;
+    
+    if ([nextController isKindOfClass:[PastRunViewController class]]) {
+        ((PastRunViewController *) nextController).runArray = self.runArray;
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    }else if ([nextController isKindOfClass:[NewRunViewController class]]){
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
     }
 }
 

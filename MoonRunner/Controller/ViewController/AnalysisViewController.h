@@ -7,21 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MKFoundationKit/MKFoundationKit.h>
 
 #import "GraphKit.h"
 #import "MathController.h"
+#import "Run.h"
+#import "SettingViewController.h"
+
+float distance;
+
+@import GoogleMobileAds;
 
 @interface AnalysisViewController : UIViewController <GKLineGraphDataSource, UITableViewDataSource, UITableViewDelegate>{
     
-    NSArray *TitleArray;
-    NSArray *Info;
+    NSMutableArray *TitleArray;
+    NSMutableArray *Info;
+    
+    NSFetchRequest *fetchRequest;
+    NSEntityDescription *entity;
 }
 
 @property (nonatomic, weak) IBOutlet GKLineGraph *graph;
 
-@property (nonatomic, strong) NSArray *heartbeat;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) Run *run;
+
+@property (nonatomic, strong) NSMutableArray *heartbeat;
 @property (nonatomic, strong) NSArray *striderate;
-@property (nonatomic, strong) NSArray *location;
+@property (nonatomic, strong) NSArray *speed;
 @property (nonatomic, strong) NSArray *elevation;
 
 @property (nonatomic, strong) NSArray *labels;
@@ -31,7 +44,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *elevationButton;
 @property (weak, nonatomic) IBOutlet UIButton *speedButton;
 @property (weak, nonatomic) IBOutlet UIButton *strideButton;
-
-- (void)setSpeedArray:(NSArray *)speed;
 
 @end

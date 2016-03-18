@@ -1,22 +1,18 @@
 //
-//  RunDetailsViewController.h
-//  RunMaster
+//  PastRunsViewController.m
+//  
 //
-//  Created by Matt Luedke on 5/19/14.
-//  Copyright (c) 2014 Yongyang Nie. All rights reserved.
+//  Created by Yongyang Nie on 3/7/16.
+//
 //
 
-#import "PastRunsViewController.h"
-#import "RunDetailsViewController.h"
-#import "Run.h"
-#import "RunCell.h"
-#import "MathController.h"
+#import "PastRunViewController.h"
 
-@interface PastRunsViewController ()
+@interface PastRunViewController ()
 
 @end
 
-@implementation PastRunsViewController
+@implementation PastRunViewController
 
 #pragma mark - Table View
 
@@ -39,8 +35,10 @@
     cell.date.text = [formatter stringFromDate:runObject.timestamp];
     cell.distance.text = [MathController stringifyDistance:runObject.distance.floatValue];
     cell.pace.text = [MathController stringifyAvgPaceFromDist:runObject.distance.floatValue overTime:runObject.duration.intValue];
+    cell.time.text = [MathController stringifySecondCount:runObject.duration.intValue usingLongFormat:NO];
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath*)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -58,9 +56,9 @@
             
             // Remove device from table view
             [self.runArray removeObjectAtIndex:indexPath.row];
-            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            }
+            [self.table deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
         }
+    }
 }
 
 #pragma mark - Navigation
@@ -68,11 +66,28 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue destinationViewController] isKindOfClass:[RunDetailsViewController class]]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSIndexPath *indexPath = [self.table indexPathForSelectedRow];
         Run *run = [self.runArray objectAtIndex:indexPath.row];
         [(RunDetailsViewController *)[segue destinationViewController] setRun:run];
         NSLog(@"run %@", run);
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
     }
 }
 
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidLoad {
+    
+    if (!areAdsRemoved) {
+        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
+    [super viewDidLoad];
+}
 @end

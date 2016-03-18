@@ -17,7 +17,7 @@
 #pragma mark - UITableView Controller
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50.0;
+    return 120;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -26,43 +26,21 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return nil;
-}
-
-#pragma mark - Public
-
-- (void)setHeartArray:(NSArray *)heartArray{
-    
-    if (heartArray.count > 0) {
-        _heartbeat = heartArray;
-    }
-}
-
-- (void)setSpeedArray:(NSArray *)speed{
-    
-    if (speed.count > 0) {
-        self.location = speed;
-    }
-}
-
-- (void)setStrideArray:(NSArray *)stride{
-    
-    if (stride.count > 0) {
-        self.striderate = stride;
-    }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
+    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
+    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
+    title.text = TitleArray[indexPath.row];
+    text.text = [Info objectAtIndex:indexPath.row];
+    return cell;
 }
 
 #pragma Private
 
-- (void)_setupHeartrateGraph {
+//setup graphs
+
+- (void)_setupGraphWithArray:(NSArray *)array {
     
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    for (int i = 0; i < self.heartbeat.count; i++) {
-        NSInteger st = [[self.heartbeat objectAtIndex:i] integerValue];
-        [array addObject:[NSNumber numberWithInteger:st]];
-    }
     self.data = @[array,];
-    
     self.graph.dataSource = self;
     self.graph.lineWidth = 3.0;
     
@@ -71,65 +49,185 @@
     [self.graph draw];
 }
 
-- (void)_setupStrideGraph {
+
+-(NSNumber *)getMinNumber:(NSArray *)array{
     
-    self.data = @[self.striderate,];
-    
-    self.labels = @[@"2001", @"2002", @"2006", @"2007"];
-    
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    
-    self.graph.valueLabelCount = 4;
-    
-    [self.graph draw];
+    NSNumber *min = [array objectAtIndex:0];
+    for (NSNumber *x in array) {
+        if (x < min) {
+            min = x;
+        }
+    }
+    return min;
 }
 
-- (void)_setupSpeedGraph {
+-(NSNumber *)getMaxNumber:(NSArray *)array{
     
-    NSMutableArray *speed = [[NSMutableArray alloc] initWithArray:[MathController getSpeedArrayFromLocations:self.location]];
-    
-    self.data = @[speed,];
-    
-    self.labels = @[@"2001", @"2002", @"2006", @"2007"];
-    
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    
-    self.graph.valueLabelCount = 4;
-    
-    [self.graph draw];
+    NSNumber *max = 0;
+    for (NSNumber *x in array) {
+        if (x > max) {
+            max = x;
+        }
+    }
+    return max;
 }
 
-- (void)_setupElevationGraph {
+-(NSNumber *)getAverageNumber:(NSArray *)array{
     
-    self.data = @[self.elevation,];
-    
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    
-    [self.graph draw];
+    if (array.count > 1) {
+        int total = 0;
+        int average = 0;
+        for (int i = 0; i < array.count; i++) {
+            total += [[array objectAtIndex:i] intValue];
+        }
+        average = total / array.count;
+        return [NSNumber numberWithInt:average];
+    }else{
+        return @00;
+    }
 }
+
+
+//analyze data
+
+-(NSString *)analyzeStride{
+    
+
+    return nil;
+}
+-(NSString *)analyzeSpeed{
+    
+    NSLog(@"started operation");
+    
+    BOOL evenSpeed;
+    BOOL fast;
+    
+    //compare with past runs
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"speed" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
+    
+    //find the fast object
+    Run *Fastest = [runArray objectAtIndex:0];
+    
+    //find the middle object
+    NSUInteger middle = runArray.count / 2;
+    Run *middleObject = [runArray objectAtIndex:middle];
+    
+    //calculate if fast and even
+    if ([self getMaxNumber:self.speed].floatValue > middleObject.speed.floatValue) {
+        fast = YES;
+    }else{
+        fast = NO;
+    }
+    int difference = [self getMaxNumber:self.speed].intValue - [self getMinNumber:self.speed].intValue;
+    if (difference < 3) {
+        evenSpeed = YES;
+    }else{
+        evenSpeed = NO;
+    }
+    
+    //get date
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"yyyy-MM-dd"];
+    
+    //generate return string
+    NSString *returnValue;
+    NSString *evenspeed = @"You ran at a even speed today, nice job!";
+    NSString *unevenSpeed = [NSString stringWithFormat:@"Your best speed is %@mph on %@. Since you did a long run. Next time you should run at a even space.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
+    NSString *highSpeed = [NSString stringWithFormat:@"By the way, your pace is amazing. Your best speed is %@mph on %@.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
+    
+    if (self.run.distance.intValue > 2000) {
+        returnValue = [NSString stringWithFormat:@"%@ %@ %@",
+                       (evenSpeed) ? evenspeed : unevenSpeed,
+                       (fast) ? highSpeed : nil,
+                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!"];
+    }else{
+        returnValue = [NSString stringWithFormat:@"%@ %@",
+                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!",
+                       ([self getMaxNumber:self.speed].intValue > 13) ? @"It seems like you did a fast workout, remember to warm up and cool down properly." : nil
+                       ];
+        
+    }
+    
+    
+    return returnValue;
+
+}
+-(NSString *)analyzeHeartrate{
+    
+    BOOL evenHeartRate = ([self getMaxNumber:_heartbeat].intValue - [self getMinNumber:_heartbeat].intValue < 60);
+    BOOL hardWorkout = ([self getMaxNumber:self.heartbeat].intValue > 160);
+    BOOL longRun = (self.run.distance.intValue > 2000);
+    
+    //fetch all runs
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
+
+    int number;
+    //find runs that is in similiar distance
+    for (Run *runs in runArray) {
+        if (runs.distance.intValue > self.run.distance.intValue - 500 && runs.distance.intValue < self.run.distance.intValue + 500) {
+            
+            NSNumber *average = [self getAverageNumber:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
+            NSNumber *averageThisRun = [self getAverageNumber:self.heartbeat];
+            if (longRun && averageThisRun < average) {
+                number ++;
+            }
+            
+        }
+    }
+    
+    NSString *returnValue = [NSString stringWithFormat:@"%@ %@ %@",
+                             (hardWorkout) ? @"Based on your heart rate, you did a hard workout today." : nil,
+                             (longRun && evenHeartRate) ? @"You heart beat is every even for a long run. Nice job" : nil,
+                             (number > 0) ? [NSString stringWithFormat:@"You heart rate is low than %i runs that you did at the similar distance", number] : [NSString stringWithFormat:@"You heart rate is higher than %i runs that you did at the similar distance", number]];
+    
+    
+    return returnValue;
+}
+-(NSString *)analyzeElevation{
+    
+    
+    return nil;
+}
+
+
+//setup view
 
 -(void)setUpView{
     
     if (_heartbeat.count > 1) {
+        
         self.heartButton.enabled = YES;
+        [TitleArray addObject:@"Heart rate"];
+        [Info addObject:[self analyzeHeartrate]];
     }else{
         self.heartButton.enabled = NO;
     }
+    
     if (_striderate.count > 1) {
+        
         self.strideButton.enabled = YES;
+        [TitleArray addObject:@"Stride rate"];
     }else{
         self.strideButton.enabled = NO;
     }
+    
     if (_elevation.count > 1) {
+        
         self.elevationButton.enabled = YES;
+        [TitleArray addObject:@"Elevation"];
     }else{
         self.elevationButton.enabled = NO;
     }
-    if (_location.count > 1) {
+    
+    if (_speed.count > 1) {
+        
         self.speedButton.enabled = YES;
+        [TitleArray addObject:@"Speed"];
+        [Info addObject:[self analyzeSpeed]];
     }else{
         self.speedButton.enabled = NO;
     }
@@ -164,26 +262,43 @@
 
 -(IBAction)heartRate:(id)sender{
     
-    [self _setupHeartrateGraph];
+    [self _setupGraphWithArray:_heartbeat];
 }
 -(IBAction)strideRate:(id)sender{
     
-    [self _setupStrideGraph];
+    [self _setupGraphWithArray:_striderate];
 }
 -(IBAction)speed:(id)sender{
     
-    [self _setupSpeedGraph];
+    [self _setupGraphWithArray:_speed];
 }
 -(IBAction)elevation:(id)sender{
     
-    [self _setupElevationGraph];
+    [self _setupGraphWithArray:_elevation];
 }
 
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
     
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+    TitleArray = [NSMutableArray array];
+    Info = [NSMutableArray array];
+    
+    //fetch all run data
+    fetchRequest = [[NSFetchRequest alloc] init];
+    entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    self.striderate = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate];
+    self.elevation = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.elevation];
+    self.speed = [MathController getSpeedArrayFromLocations:self.run.locations.array];
+    self.heartbeat = [NSMutableArray array];
+    NSMutableArray *values = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate];
+    for (int i = 0; i < values.count; i++) {
+        NSInteger st = [[values objectAtIndex:i] integerValue];
+        [_heartbeat addObject:[NSNumber numberWithInteger:st]];
+    }
+    
     [self setUpView];
     [super viewDidLoad];
 }

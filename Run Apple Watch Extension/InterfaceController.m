@@ -27,7 +27,7 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            self.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            self.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -37,7 +37,7 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            weakSelf.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -188,9 +188,9 @@
 
 -(void)timerCount{
     
-    self.miliseconds++;
+    self.miliseconds+=10;
     [self.milisecondsLabel setText:[NSString stringWithFormat:@"%i", self.miliseconds]];
-    if (self.miliseconds == 10) {
+    if (self.miliseconds == 100) {
         self.miliseconds = 0;
         self.seconds++;
         if (timeBo) {

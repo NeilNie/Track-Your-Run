@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9532" systemVersion="15E49a" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ti-B1-dx7">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10115" systemVersion="15E61b" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1ti-B1-dx7">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
     </dependencies>
     <scenes>
         <!--home-->
@@ -229,54 +229,6 @@
             </objects>
             <point key="canvasLocation" x="908" y="479.5"/>
         </scene>
-        <!--notice-->
-        <scene sceneID="bFD-Ga-RnT">
-            <objects>
-                <controller identifier="notice" title="notice" id="r3B-zr-CKF" customClass="NoticeInterfaceController">
-                    <items>
-                        <label height="145.5" alignment="left" numberOfLines="9" id="yaw-cP-06b">
-                            <string key="text">We are unable to connect to your iPhone. Make sure your iPhone is connected, otherwise you are at risk of losing this workout data</string>
-                            <fontDescription key="font" type="system" pointSize="15"/>
-                        </label>
-                        <button width="1" alignment="left" title="Understand &amp; Save data locally" id="EK5-wc-1Aq">
-                            <connections>
-                                <action selector="saveLocally" destination="r3B-zr-CKF" id="PYU-OB-4cD"/>
-                                <segue destination="7qm-hX-h4C" kind="push" id="RxB-Tx-etI"/>
-                            </connections>
-                        </button>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="1134" y="466"/>
-        </scene>
-        <!--data-->
-        <scene sceneID="nh4-Xl-QKd">
-            <objects>
-                <controller identifier="data" id="Hy9-tQ-vNH" customClass="DetailInterfaceController">
-                    <items>
-                        <label width="136" height="143.5" alignment="left" text="You have unsaved data on your watch. Please connect your iPhone and click save data. Or, your data will be deleted. " numberOfLines="9" id="eHB-cz-z9b">
-                            <fontDescription key="font" type="system" pointSize="15"/>
-                            <variation key="device=watch38mm" height="104.5"/>
-                            <variation key="device=watch42mm" height="109.5" width="152"/>
-                        </label>
-                        <button width="1" alignment="left" title="Save Data" id="mDR-9Y-jdD">
-                            <connections>
-                                <action selector="saveagain" destination="Hy9-tQ-vNH" id="8jS-4z-H7v"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Delete" id="LiO-eM-dAv">
-                            <connections>
-                                <segue destination="1ti-B1-dx7" kind="push" id="lIL-dF-BfJ"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="warning" destination="eHB-cz-z9b" id="n6a-xo-cmN"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="418" y="811.5"/>
-        </scene>
         <!--indoor run-->
         <scene sceneID="0GS-CR-qLW">
             <objects>
@@ -352,9 +304,9 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="milisecondsLabel" destination="eyM-I4-vmS" id="1hu-Db-yUe"/>
-                        <outlet property="timeLabel" destination="ywl-zr-XlQ" id="keY-nK-W2Z"/>
-                        <outlet property="unitLabel" destination="tKO-1U-1Sv" id="bXZ-pw-ytm"/>
+                        <outlet property="milisecondsLabel" destination="eyM-I4-vmS" id="iJn-UM-0Ty"/>
+                        <outlet property="timeLabel" destination="ywl-zr-XlQ" id="bO2-Ml-6ET"/>
+                        <outlet property="unitLabel" destination="tKO-1U-1Sv" id="hmf-vr-QeE"/>
                     </connections>
                 </controller>
             </objects>
@@ -365,83 +317,83 @@
             <objects>
                 <controller identifier="iPhone" title="with iPhone" id="Xfp-lB-TiJ" customClass="iPhoneRunInterfaceController">
                     <items>
-                        <group width="1" height="108" alignment="left" id="H3B-zI-vSE">
+                        <group width="1" height="108" alignment="left" id="IGW-qo-bnD">
                             <items>
-                                <button width="27" height="1" alignment="left" title="&lt;" id="jTb-EZ-2Nd">
+                                <button width="27" height="1" alignment="left" title="&lt;" id="Adl-BL-Tv0">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <variation key="device=watch42mm" width="30"/>
                                     <connections>
-                                        <action selector="leftClick" destination="Xfp-lB-TiJ" id="qhd-Gj-1Mj"/>
+                                        <action selector="leftClick" destination="Xfp-lB-TiJ" id="gDo-sL-tvC"/>
                                     </connections>
                                 </button>
-                                <group width="76" height="100" alignment="left" layout="vertical" id="vef-HM-4MU">
+                                <group width="76" height="100" alignment="left" layout="vertical" id="7hj-ta-X36">
                                     <items>
-                                        <label width="1" height="85" alignment="left" hidden="YES" text="00.00" textAlignment="center" numberOfLines="2" id="u7E-EB-5Xl">
+                                        <label width="1" height="85" alignment="left" hidden="YES" text="00.00" textAlignment="center" numberOfLines="2" id="uUJ-Co-EEm">
                                             <fontDescription key="font" type="system" weight="medium" pointSize="28"/>
                                             <variation key="device=watch42mm">
                                                 <fontDescription key="font" type="system" weight="medium" pointSize="40"/>
                                             </variation>
                                         </label>
-                                        <label width="1" height="84" alignment="left" hidden="YES" text="00:00" textAlignment="center" numberOfLines="2" id="Y98-a9-ecT">
+                                        <label width="1" height="84" alignment="left" hidden="YES" text="00:00" textAlignment="center" numberOfLines="2" id="vo9-x5-Gql">
                                             <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
                                             <variation key="device=watch42mm">
                                                 <fontDescription key="font" type="system" weight="medium" pointSize="40"/>
                                             </variation>
                                         </label>
-                                        <label alignment="left" text="00" id="dNQ-jZ-REQ">
+                                        <label alignment="left" text="00" id="7Si-1y-4v8">
                                             <fontDescription key="font" type="system" pointSize="20"/>
                                         </label>
-                                        <label width="100" height="49" alignment="left" text="00:00" textAlignment="center" numberOfLines="2" id="Rv8-b8-3rk">
+                                        <label width="100" height="49" alignment="left" text="00:00" textAlignment="center" numberOfLines="2" id="xHS-0f-RUs">
                                             <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
                                             <variation key="device=watch42mm" width="90">
                                                 <fontDescription key="font" type="system" weight="medium" pointSize="33"/>
                                             </variation>
                                         </label>
-                                        <label width="1" alignment="left" text="sec" textAlignment="center" id="9ce-ct-nVI"/>
+                                        <label width="1" alignment="left" text="sec" textAlignment="center" id="pqa-YY-rO1"/>
                                     </items>
                                     <variation key="device=watch38mm" width="76"/>
                                     <variation key="device=watch42mm" height="125" width="90"/>
                                 </group>
-                                <button width="27" height="1" alignment="left" title="&gt;" id="Zyz-Zu-SRz">
+                                <button width="27" height="1" alignment="left" title="&gt;" id="JDa-Uw-tUc">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <variation key="device=watch42mm" width="30"/>
                                     <connections>
-                                        <action selector="rightClick" destination="Xfp-lB-TiJ" id="WrI-bW-ydY"/>
+                                        <action selector="rightClick" destination="Xfp-lB-TiJ" id="Wru-iy-gyJ"/>
                                     </connections>
                                 </button>
                             </items>
                             <variation key="device=watch42mm" height="124"/>
                         </group>
-                        <button width="1" height="38" alignment="left" title="Split" id="vf2-cg-GG7">
+                        <button width="1" height="38" alignment="left" title="Split" id="pbH-sM-Reg">
                             <fontDescription key="font" type="system" pointSize="18"/>
                             <variation key="device=watch42mm" height="44.5"/>
+                            <connections>
+                                <action selector="splitPressed:" destination="Xfp-lB-TiJ" id="d7b-oc-hMY"/>
+                            </connections>
                         </button>
                     </items>
-                    <menu key="menu" id="dJ5-mk-k7O">
+                    <menu key="menu" id="z4n-Ju-7yc">
                         <items>
-                            <menuItem title="Discard" icon="trash" id="1ly-ia-Dzq">
+                            <menuItem title="Discard" icon="trash" id="0fM-06-fSD">
                                 <connections>
-                                    <action selector="discard" destination="Xfp-lB-TiJ" id="4ke-pd-tJq"/>
+                                    <action selector="discard" destination="Xfp-lB-TiJ" id="uDW-id-3gx"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Save" icon="accept" id="HVj-EM-Iqi">
+                            <menuItem title="Save" icon="accept" id="MJl-Ng-l4I">
                                 <connections>
-                                    <action selector="stop" destination="Xfp-lB-TiJ" id="JgQ-oU-haS"/>
+                                    <action selector="stop" destination="Xfp-lB-TiJ" id="bFp-4O-mHl"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="milisecondsLabel" destination="dNQ-jZ-REQ" id="L0L-As-Q81"/>
-                        <outlet property="timeLabel" destination="Rv8-b8-3rk" id="14t-UX-B21"/>
-                        <outlet property="unitLabel" destination="9ce-ct-nVI" id="NKa-sI-GAe"/>
+                        <outlet property="milisecondsLabel" destination="7Si-1y-4v8" id="ftb-jp-dGv"/>
+                        <outlet property="timeLabel" destination="xHS-0f-RUs" id="X9Y-Aj-5WA"/>
+                        <outlet property="unitLabel" destination="pqa-YY-rO1" id="Nx9-VP-2RI"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="680" y="956"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="lIL-dF-BfJ"/>
-    </inferredMetricsTieBreakers>
 </document>

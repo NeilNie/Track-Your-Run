@@ -38,6 +38,16 @@ static float const mapPadding = 1.1f;
               nil];
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
     masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
+    
+    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (!areAdsRemoved) {
+        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
     [self.table reloadData];
 }
 
@@ -46,9 +56,10 @@ static float const mapPadding = 1.1f;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
-        [(AnalysisViewController *)[segue destinationViewController] setHeartbeat:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
-        [(AnalysisViewController *)[segue destinationViewController] setSpeedArray:self.run.locations.array];
-        [(AnalysisViewController *)[segue destinationViewController] setStriderate:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate]];
+        AnalysisViewController *controller = (AnalysisViewController *)[segue destinationViewController];
+        controller.run = self.run;
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        NSLog(@"completed");
     }
 }
 

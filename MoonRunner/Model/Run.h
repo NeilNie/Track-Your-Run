@@ -13,13 +13,18 @@
 
 @interface Run : NSManagedObject
 
+//data
 @property (nonatomic, retain) NSNumber *distance;
 @property (nonatomic, retain) NSNumber *duration;
 @property (nonatomic, retain) NSNumber *miliseconds;
-@property (nonatomic, retain) NSData *stride_rate;
+@property (nonatomic, retain) NSNumber *speed;
 @property (nonatomic, retain) NSDate * timestamp;
-@property (nonatomic, retain) NSData *splits;
+
+//arrays
 @property (nonatomic, retain) NSData *heart_rate;
+@property (nonatomic, retain) NSData *elevation;
+@property (nonatomic, retain) NSData *stride_rate;
+@property (nonatomic, retain) NSData *splits;
 @property (nonatomic, retain) NSOrderedSet *locations;
 @end
 
