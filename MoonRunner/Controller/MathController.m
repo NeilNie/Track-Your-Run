@@ -123,7 +123,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         
     } else {
         
-        unitName = @"mi";
+        //unitName = @"mi";
         unitDivider = metersInMile;
     }
     

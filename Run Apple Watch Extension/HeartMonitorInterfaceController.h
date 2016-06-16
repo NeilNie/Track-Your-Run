@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <HealthKit/HealthKit.h>
 #import "IndoorRunInterfaceController.h"
+#import "Math.h"
 
 @interface HeartMonitorInterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
     
@@ -20,9 +21,15 @@
     NSPredicate *Predicate;
     
     NSTimer *timer;
+    NSTimer *timeTimer;
+    BOOL isClear;
 }
+@property int Seconds;
+@property int Miliseconds;
 @property NSMutableArray *heartBeatArray;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *currentLabel;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *LowestLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *secondLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondLabel;
 
 @end

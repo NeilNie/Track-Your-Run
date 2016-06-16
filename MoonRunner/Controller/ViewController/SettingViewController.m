@@ -7,6 +7,7 @@
 //
 
 #import "SettingViewController.h"
+#import "AppDelegate.h"
 
 #define kRemoveAdsProductIdentifier1 @"com.Yongyang.run.noads"
 #define kRemoveAdsProductIdentifier2 @"com.Yongyang.run.analysis"
@@ -77,6 +78,10 @@
     //this is called when the user restores purchases, you should hook this up to a button
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    areAdsRemoved = NO;
+    [[NSUserDefaults standardUserDefaults] setBool:areAdsRemoved forKey:@"areAdsRemoved"];
+    //use NSUserDefaults so that you can load wether or not they bought it
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
@@ -162,6 +167,10 @@
 - (IBAction)secret:(id)sender {
     
     [self doRemoveAds];
+}
+
+-(IBAction)showMenu:(id)sender{
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
 }
 
 - (void)viewDidLoad {

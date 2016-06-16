@@ -26,8 +26,8 @@
         
         if (!error && sampleObjects.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects objectAtIndex:0];
-            self.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-            
+            self.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            NSLog(@"distance: %f", self.distance);
         }else{
             NSLog(@"error %@", error);
         }
@@ -38,7 +38,8 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            weakSelf.distance = weakSelf.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            NSLog(@"distance: %f", weakSelf.distance);
         }else{
             NSLog(@"error %@", error);
         }
@@ -181,7 +182,7 @@
 -(void)query{
     
     [self updateHeartbeat];
-    [self updateDistance];
+    //[self updateDistance];
     dispatch_async(dispatch_get_main_queue(), ^{
         if (disBo) {
             [self.timeLabel setText:[Math stringifyDistance:self.distance]];
@@ -290,6 +291,8 @@
         timeBo = YES;
         started = YES;
         NSLog(@"started workout");
+        
+        [self updateDistance];
     }
    
     // This method is called when watch view controller is about to be visible to user

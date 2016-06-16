@@ -59,6 +59,7 @@
 }
 
 - (NSDate *)readBirthDate {
+    
     NSError *error;
     NSDate *dateOfBirth = [self.healthStore dateOfBirthWithError:&error];   // Convenience method of HKHealthStore to get date of birth directly.
     

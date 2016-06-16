@@ -10,6 +10,9 @@
 #import <HealthKit/HealthKit.h>
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "Run.h"
+#import "MainViewController.h"
+
+#define kMainViewController (MainViewController *)[UIApplication sharedApplication].delegate.window.rootViewController
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, WCSessionDelegate>{
     HKHealthStore *healthStore;

@@ -34,22 +34,53 @@
 		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
 		00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
-		00F898831C793FFA0036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898821C793FFA0036481C /* Media.xcassets */; };
-		00F898851C7940810036481C /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00F898841C7940810036481C /* Media.xcassets */; };
 		2817303F1C74E0120036901C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2817303E1C74E0120036901C /* MapKit.framework */; };
 		281730411C74E0460036901C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281730401C74E0460036901C /* StoreKit.framework */; };
 		2818168A1C7678180024770E /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281816891C7678180024770E /* MathController.m */; };
 		281816901C768E990024770E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168F1C768E990024770E /* HealthKit.framework */; };
+		283334791D121FEB00F76C5A /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334761D121FEB00F76C5A /* GKBar.m */; };
+		2833347A1D121FEB00F76C5A /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334781D121FEB00F76C5A /* GKBarGraph.m */; };
+		2833347D1D1220A000F76C5A /* trophyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */; };
+		28422E431D10F5E80070E982 /* classpass-icon-sneaker.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */; };
+		28422E441D10F5E80070E982 /* icon-39-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E401D10F5E80070E982 /* icon-39-512.png */; };
+		28422E451D10F5E80070E982 /* speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E411D10F5E80070E982 /* speed.png */; };
+		28422E461D10F5E80070E982 /* two_hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E421D10F5E80070E982 /* two_hearts.png */; };
+		28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28422E481D10F7FE0070E982 /* RunAnalyzer.m */; };
 		28716EC31C75358D000834C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28716EC21C75358D000834C6 /* Main.storyboard */; };
 		28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC51C75518E000834C6 /* NewRunViewController.m */; };
 		28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC71C75518E000834C6 /* RunDetailsViewController.m */; };
-		28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28716ECD1C756154000834C6 /* Launch Screen.storyboard */; };
+		2879C9AB1D122E140088118A /* award-fastest.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A21D122E140088118A /* award-fastest.png */; };
+		2879C9AC1D122E140088118A /* award-longest.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A31D122E140088118A /* award-longest.png */; };
+		2879C9AD1D122E140088118A /* award.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A41D122E140088118A /* award.png */; };
+		2879C9AE1D122E140088118A /* award_highest_speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A51D122E140088118A /* award_highest_speed.png */; };
+		2879C9B01D122E140088118A /* trophy_10m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A71D122E140088118A /* trophy_10m.png */; };
+		2879C9B11D122E140088118A /* trophy_1m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A81D122E140088118A /* trophy_1m.png */; };
+		2879C9B21D122E140088118A /* trophy_5m.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9A91D122E140088118A /* trophy_5m.png */; };
+		2879C9B31D122E140088118A /* trophy_award_ribon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9AA1D122E140088118A /* trophy_award_ribon-512.png */; };
+		2879C9B61D124B410088118A /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B41D124B410088118A /* lock.png */; };
+		2879C9B71D124B410088118A /* unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B51D124B410088118A /* unlock.png */; };
+		2879C9B91D124F550088118A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B81D124F550088118A /* Media.xcassets */; };
+		2879C9BB1D124F5C0088118A /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9BA1D124F5C0088118A /* Media1.xcassets */; };
+		287E2F961D11F17B00D45488 /* progressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287E2F951D11F17B00D45488 /* progressViewController.m */; };
+		288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E9F251D107E490056B4F9 /* Launch Screen.storyboard */; };
 		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
 		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
 		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
-		F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6625D9E8FE39F3DBEAFB8379 /* libPods.a */; };
+		28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784031D1103BB00C17A4F /* LeftViewController.m */; };
+		28E784071D1103BB00C17A4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784051D1103BB00C17A4F /* MainViewController.m */; };
+		28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */; };
+		28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840D1D11054F00C17A4F /* LeftViewCell.m */; };
+		28E784101D11084600C17A4F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7840F1D11084600C17A4F /* menu.png */; };
+		28E784121D11085000C17A4F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E784111D11085000C17A4F /* image.png */; };
+		28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517C1D11AE5B000C3955 /* Media.xcassets */; };
+		28F051821D11B35E000C3955 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517E1D11B35E000C3955 /* history.png */; };
+		28F051831D11B35E000C3955 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517F1D11B35E000C3955 /* home.png */; };
+		28F051841D11B35E000C3955 /* preference.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F051801D11B35E000C3955 /* preference.png */; };
+		28F051851D11B35E000C3955 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F051811D11B35E000C3955 /* progress.png */; };
+		28F051871D11BADC000C3955 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F051861D11BADC000C3955 /* Reveal.framework */; };
+		E4F7149FC9BAA4B1E055FCF3 /* libPods-Run.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A6F26E3336578E10B9ECC6 /* libPods-Run.a */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
 		FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950A1929CF2600A0179A /* Foundation.framework */; };
 		FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950C1929CF2600A0179A /* CoreGraphics.framework */; };
@@ -118,14 +149,14 @@
 
 /* Begin PBXFileReference section */
 		002A0DE11C827FE4001DE96E /* GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphKit.h; sourceTree = "<group>"; };
-		002A0DE31C827FE4001DE96E /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKLineGraph.h; sourceTree = "<group>"; };
-		002A0DE41C827FE4001DE96E /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKLineGraph.m; sourceTree = "<group>"; };
+		002A0DE31C827FE4001DE96E /* GKLineGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GKLineGraph.h; path = LineGraph/GKLineGraph.h; sourceTree = "<group>"; };
+		002A0DE41C827FE4001DE96E /* GKLineGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GKLineGraph.m; path = LineGraph/GKLineGraph.m; sourceTree = "<group>"; };
 		002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GraphKit.h"; sourceTree = "<group>"; };
 		002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GraphKit.m"; sourceTree = "<group>"; };
 		002BDB6F1C8106E800F051E2 /* AnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnalysisViewController.h; sourceTree = "<group>"; };
 		002BDB701C8106E800F051E2 /* AnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnalysisViewController.m; sourceTree = "<group>"; };
-		00357ECD1C77D02F0046B8BC /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = ViewController/HealthKitManager.h; sourceTree = "<group>"; };
-		00357ECE1C77D02F0046B8BC /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = ViewController/HealthKitManager.m; sourceTree = "<group>"; };
+		00357ECD1C77D02F0046B8BC /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HealthKitManager.h; path = Controller/ViewController/HealthKitManager.h; sourceTree = "<group>"; };
+		00357ECE1C77D02F0046B8BC /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HealthKitManager.m; path = Controller/ViewController/HealthKitManager.m; sourceTree = "<group>"; };
 		00357ED11C77D4740046B8BC /* Run.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Run.entitlements; sourceTree = "<group>"; };
 		006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		007695191C8E6F2A007CB823 /* PastRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastRunViewController.h; sourceTree = "<group>"; };
@@ -161,46 +192,86 @@
 		00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
-		00F898821C793FFA0036481C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
-		00F898841C7940810036481C /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		2817303E1C74E0120036901C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		281730401C74E0460036901C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		281816771C76725B0024770E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 		281816791C76726A0024770E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
-		281816881C7678180024770E /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathController.h; sourceTree = "<group>"; };
-		281816891C7678180024770E /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathController.m; sourceTree = "<group>"; };
+		281816881C7678180024770E /* MathController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathController.h; path = Controller/MathController.h; sourceTree = "<group>"; };
+		281816891C7678180024770E /* MathController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathController.m; path = Controller/MathController.m; sourceTree = "<group>"; };
 		2818168B1C767C840024770E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		2818168D1C768E920024770E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		2818168F1C768E990024770E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		283334751D121FEB00F76C5A /* GKBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBar.h; sourceTree = "<group>"; };
+		283334761D121FEB00F76C5A /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
+		283334771D121FEB00F76C5A /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
+		283334781D121FEB00F76C5A /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
+		2833347B1D1220A000F76C5A /* trophyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trophyCollectionViewCell.h; sourceTree = "<group>"; };
+		2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trophyCollectionViewCell.m; sourceTree = "<group>"; };
+		28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "classpass-icon-sneaker.png"; sourceTree = "<group>"; };
+		28422E401D10F5E80070E982 /* icon-39-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-39-512.png"; sourceTree = "<group>"; };
+		28422E411D10F5E80070E982 /* speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speed.png; sourceTree = "<group>"; };
+		28422E421D10F5E80070E982 /* two_hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two_hearts.png; sourceTree = "<group>"; };
+		28422E471D10F7FE0070E982 /* RunAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunAnalyzer.h; path = Controller/ViewController/RunAnalyzer.h; sourceTree = "<group>"; };
+		28422E481D10F7FE0070E982 /* RunAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunAnalyzer.m; path = Controller/ViewController/RunAnalyzer.m; sourceTree = "<group>"; };
 		28716EC21C75358D000834C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28716EC41C75518E000834C6 /* NewRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunViewController.h; sourceTree = "<group>"; };
 		28716EC51C75518E000834C6 /* NewRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunViewController.m; sourceTree = "<group>"; };
 		28716EC61C75518E000834C6 /* RunDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunDetailsViewController.h; sourceTree = "<group>"; };
 		28716EC71C75518E000834C6 /* RunDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunDetailsViewController.m; sourceTree = "<group>"; };
-		28716ECD1C756154000834C6 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../../Launch Screen.storyboard"; sourceTree = "<group>"; };
+		2879C9A21D122E140088118A /* award-fastest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "award-fastest.png"; sourceTree = "<group>"; };
+		2879C9A31D122E140088118A /* award-longest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "award-longest.png"; sourceTree = "<group>"; };
+		2879C9A41D122E140088118A /* award.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = award.png; sourceTree = "<group>"; };
+		2879C9A51D122E140088118A /* award_highest_speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = award_highest_speed.png; sourceTree = "<group>"; };
+		2879C9A71D122E140088118A /* trophy_10m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_10m.png; sourceTree = "<group>"; };
+		2879C9A81D122E140088118A /* trophy_1m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_1m.png; sourceTree = "<group>"; };
+		2879C9A91D122E140088118A /* trophy_5m.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_5m.png; sourceTree = "<group>"; };
+		2879C9AA1D122E140088118A /* trophy_award_ribon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trophy_award_ribon-512.png"; sourceTree = "<group>"; };
+		2879C9B41D124B410088118A /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		2879C9B51D124B410088118A /* unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock.png; sourceTree = "<group>"; };
+		2879C9B81D124F550088118A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		2879C9BA1D124F5C0088118A /* Media1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media1.xcassets; sourceTree = "<group>"; };
+		287E2F941D11F17B00D45488 /* progressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = progressViewController.h; sourceTree = "<group>"; };
+		287E2F951D11F17B00D45488 /* progressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = progressViewController.m; sourceTree = "<group>"; };
+		288E9F251D107E490056B4F9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
 		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
 		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplitCell.h; sourceTree = "<group>"; };
-		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplitCell.m; sourceTree = "<group>"; };
+		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplitCell.h; path = View/SplitCell.h; sourceTree = "<group>"; };
+		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplitCell.m; path = View/SplitCell.m; sourceTree = "<group>"; };
 		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
 		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
 		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
-		454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		47F3606791750BCD67244390 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		6625D9E8FE39F3DBEAFB8379 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticolorPolylineSegment.h; sourceTree = "<group>"; };
-		FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticolorPolylineSegment.m; sourceTree = "<group>"; };
+		28E784021D1103BB00C17A4F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		28E784031D1103BB00C17A4F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		28E784041D1103BB00C17A4F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		28E784051D1103BB00C17A4F /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		28E784091D1104DB00C17A4F /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
+		28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
+		28E7840C1D11054F00C17A4F /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
+		28E7840D1D11054F00C17A4F /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
+		28E7840F1D11084600C17A4F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		28E784111D11085000C17A4F /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
+		28F0517C1D11AE5B000C3955 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		28F0517E1D11B35E000C3955 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		28F0517F1D11B35E000C3955 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		28F051801D11B35E000C3955 /* preference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preference.png; sourceTree = "<group>"; };
+		28F051811D11B35E000C3955 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
+		28F051861D11BADC000C3955 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		64CC42117DEFED8EC4DD933E /* Pods-Run.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Run/Pods-Run.debug.xcconfig"; sourceTree = "<group>"; };
+		8EAE9943CD2A555783BCC69E /* Pods-Run.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run.release.xcconfig"; path = "Pods/Target Support Files/Pods-Run/Pods-Run.release.xcconfig"; sourceTree = "<group>"; };
+		C1A6F26E3336578E10B9ECC6 /* libPods-Run.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Run.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MulticolorPolylineSegment.h; path = View/MulticolorPolylineSegment.h; sourceTree = "<group>"; };
+		FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MulticolorPolylineSegment.m; path = View/MulticolorPolylineSegment.m; sourceTree = "<group>"; };
 		FA1F95071929CF2600A0179A /* Run.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Run.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1F950A1929CF2600A0179A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA1F950C1929CF2600A0179A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FA1F950E1929CF2600A0179A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA1F95101929CF2600A0179A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		FA1F95141929CF2600A0179A /* Run-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Run-Info.plist"; sourceTree = "<group>"; };
+		FA1F95141929CF2600A0179A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA1F95181929CF2600A0179A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FA1F951A1929CF2600A0179A /* Run-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Run-Prefix.pch"; sourceTree = "<group>"; };
-		FA1F951B1929CF2600A0179A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FA1F951C1929CF2600A0179A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FA1F951B1929CF2600A0179A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Controller/AppDelegate.h; sourceTree = "<group>"; };
+		FA1F951C1929CF2600A0179A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Controller/AppDelegate.m; sourceTree = "<group>"; };
 		FA1F95221929CF2600A0179A /* RunMaster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RunMaster.xcdatamodel; sourceTree = "<group>"; };
 		FA1F95301929CF2600A0179A /* Run.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Run.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1F954B1929E36F00A0179A /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
@@ -209,8 +280,8 @@
 		FA24F25419481C6200500593 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		FA30BD10192B319400CD453E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		FA30BD11192B319400CD453E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		FAB9AA20192DB4CC00FF8E47 /* RunCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunCell.h; sourceTree = "<group>"; };
-		FAB9AA21192DB4CC00FF8E47 /* RunCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunCell.m; sourceTree = "<group>"; };
+		FAB9AA20192DB4CC00FF8E47 /* RunCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunCell.h; path = View/RunCell.h; sourceTree = "<group>"; };
+		FAB9AA21192DB4CC00FF8E47 /* RunCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunCell.m; path = View/RunCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,11 +294,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1E37BEE91360CF009330ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA1F95041929CF2600A0179A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */,
+				28F051871D11BADC000C3955 /* Reveal.framework in Frameworks */,
 				00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */,
 				281816901C768E990024770E /* HealthKit.framework in Frameworks */,
 				FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */,
@@ -236,7 +315,7 @@
 				281730411C74E0460036901C /* StoreKit.framework in Frameworks */,
 				FA1F950F1929CF2600A0179A /* UIKit.framework in Frameworks */,
 				FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */,
-				F3D82D1CCE2BDD7C1DDB3CBA /* libPods.a in Frameworks */,
+				E4F7149FC9BAA4B1E055FCF3 /* libPods-Run.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,19 +332,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		002A0DE21C827FE4001DE96E /* LineGraph */ = {
-			isa = PBXGroup;
-			children = (
-				002A0DE31C827FE4001DE96E /* GKLineGraph.h */,
-				002A0DE41C827FE4001DE96E /* GKLineGraph.m */,
-			);
-			path = LineGraph;
-			sourceTree = "<group>";
-		};
 		00C80B571C79249E005C4E39 /* Run Apple Watch */ = {
 			isa = PBXGroup;
 			children = (
-				00F898841C7940810036481C /* Media.xcassets */,
+				2879C9BA1D124F5C0088118A /* Media1.xcassets */,
 				00C80B5D1C79249E005C4E39 /* Info.plist */,
 				00C80B971C79262B005C4E39 /* storyboard.storyboard */,
 			);
@@ -275,8 +345,8 @@
 		00C80B661C79249E005C4E39 /* Run Apple Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
-				00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */,
 				00C80B941C79254C005C4E39 /* Interface Controllers */,
+				00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */,
 				00C80B811C792542005C4E39 /* ExtensionDelegate.h */,
 				00C80B821C792542005C4E39 /* ExtensionDelegate.m */,
 				00C80B891C792542005C4E39 /* Math.h */,
@@ -315,22 +385,62 @@
 			name = "Interface Controllers";
 			sourceTree = "<group>";
 		};
-		173E65D0E341B580DE38E463 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */,
-				47F3606791750BCD67244390 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		281816491C7666350024770E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				002A0DE11C827FE4001DE96E /* GraphKit.h */,
-				002A0DE21C827FE4001DE96E /* LineGraph */,
+				002A0DE31C827FE4001DE96E /* GKLineGraph.h */,
+				002A0DE41C827FE4001DE96E /* GKLineGraph.m */,
 				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
 				002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */,
+				283334751D121FEB00F76C5A /* GKBar.h */,
+				283334761D121FEB00F76C5A /* GKBar.m */,
+				283334771D121FEB00F76C5A /* GKBarGraph.h */,
+				283334781D121FEB00F76C5A /* GKBarGraph.m */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		28422E3D1D10C94F0070E982 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
+				FA1F951C1929CF2600A0179A /* AppDelegate.m */,
+				28E7840C1D11054F00C17A4F /* LeftViewCell.h */,
+				28E7840D1D11054F00C17A4F /* LeftViewCell.m */,
+				28422E471D10F7FE0070E982 /* RunAnalyzer.h */,
+				28422E481D10F7FE0070E982 /* RunAnalyzer.m */,
+				281816881C7678180024770E /* MathController.h */,
+				281816891C7678180024770E /* MathController.m */,
+				00357ECD1C77D02F0046B8BC /* HealthKitManager.h */,
+				00357ECE1C77D02F0046B8BC /* HealthKitManager.m */,
+				28BF33141C7CD4F4002CE706 /* SplitCell.h */,
+				28BF33151C7CD4F4002CE706 /* SplitCell.m */,
+				FAB9AA20192DB4CC00FF8E47 /* RunCell.h */,
+				FAB9AA21192DB4CC00FF8E47 /* RunCell.m */,
+				FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */,
+				FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */,
+				2833347B1D1220A000F76C5A /* trophyCollectionViewCell.h */,
+				2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		28422E3E1D10F5D70070E982 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				2879C9B81D124F550088118A /* Media.xcassets */,
+				2879C9A11D122E140088118A /* trophy */,
+				28F0517E1D11B35E000C3955 /* history.png */,
+				28F0517F1D11B35E000C3955 /* home.png */,
+				28F051801D11B35E000C3955 /* preference.png */,
+				28F051811D11B35E000C3955 /* progress.png */,
+				28E784111D11085000C17A4F /* image.png */,
+				28E7840F1D11084600C17A4F /* menu.png */,
+				28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */,
+				28422E401D10F5E80070E982 /* icon-39-512.png */,
+				28422E411D10F5E80070E982 /* speed.png */,
+				28422E421D10F5E80070E982 /* two_hearts.png */,
 				00937C221C8A40AE0096B5EC /* bar_chart.png */,
 				00937C231C8A40AE0096B5EC /* greedot.png */,
 				00937C241C8A40AE0096B5EC /* reddot.png */,
@@ -338,19 +448,60 @@
 				00937C261C8A40AE0096B5EC /* save.png */,
 				00937C271C8A40AE0096B5EC /* settings.png */,
 			);
+			name = Media;
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		2879C9A11D122E140088118A /* trophy */ = {
+			isa = PBXGroup;
+			children = (
+				2879C9B41D124B410088118A /* lock.png */,
+				2879C9B51D124B410088118A /* unlock.png */,
+				2879C9A21D122E140088118A /* award-fastest.png */,
+				2879C9A31D122E140088118A /* award-longest.png */,
+				2879C9A41D122E140088118A /* award.png */,
+				2879C9A51D122E140088118A /* award_highest_speed.png */,
+				2879C9A71D122E140088118A /* trophy_10m.png */,
+				2879C9A81D122E140088118A /* trophy_1m.png */,
+				2879C9A91D122E140088118A /* trophy_5m.png */,
+				2879C9AA1D122E140088118A /* trophy_award_ribon-512.png */,
+			);
+			path = trophy;
+			sourceTree = "<group>";
+		};
+		28E784081D1103BF00C17A4F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				28E784091D1104DB00C17A4F /* LGSideMenuController.h */,
+				28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */,
+				28E784021D1103BB00C17A4F /* LeftViewController.h */,
+				28E784031D1103BB00C17A4F /* LeftViewController.m */,
+				28E784041D1103BB00C17A4F /* MainViewController.h */,
+				28E784051D1103BB00C17A4F /* MainViewController.m */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		D13C3B5371D1E4B8BAF59616 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64CC42117DEFED8EC4DD933E /* Pods-Run.debug.xcconfig */,
+				8EAE9943CD2A555783BCC69E /* Pods-Run.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		FA1F94FE1929CF2600A0179A = {
 			isa = PBXGroup;
 			children = (
+				28F051861D11BADC000C3955 /* Reveal.framework */,
 				00357ED11C77D4740046B8BC /* Run.entitlements */,
 				FA1F95121929CF2600A0179A /* MoonRunner */,
 				00C80B571C79249E005C4E39 /* Run Apple Watch */,
 				00C80B661C79249E005C4E39 /* Run Apple Watch Extension */,
 				FA1F95091929CF2600A0179A /* Frameworks */,
 				FA1F95081929CF2600A0179A /* Products */,
-				173E65D0E341B580DE38E463 /* Pods */,
+				D13C3B5371D1E4B8BAF59616 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -382,7 +533,7 @@
 				FA1F950C1929CF2600A0179A /* CoreGraphics.framework */,
 				FA1F950E1929CF2600A0179A /* UIKit.framework */,
 				FA1F95101929CF2600A0179A /* CoreData.framework */,
-				6625D9E8FE39F3DBEAFB8379 /* libPods.a */,
+				C1A6F26E3336578E10B9ECC6 /* libPods-Run.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -390,8 +541,10 @@
 		FA1F95121929CF2600A0179A /* MoonRunner */ = {
 			isa = PBXGroup;
 			children = (
+				28422E3E1D10F5D70070E982 /* Media */,
 				281816491C7666350024770E /* Resource */,
-				FA30BD0E192B17F600CD453E /* Controller */,
+				FAB9AA29192DCFDF00FF8E47 /* ViewController */,
+				28422E3D1D10C94F0070E982 /* Classes */,
 				FA30BD0D192B17EC00CD453E /* View */,
 				FA30BD0C192B17DC00CD453E /* Model */,
 				FA1F95131929CF2600A0179A /* Supporting Files */,
@@ -402,9 +555,9 @@
 		FA1F95131929CF2600A0179A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28F0517C1D11AE5B000C3955 /* Media.xcassets */,
 				006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */,
-				00F898821C793FFA0036481C /* Media.xcassets */,
-				FA1F95141929CF2600A0179A /* Run-Info.plist */,
+				FA1F95141929CF2600A0179A /* Info.plist */,
 				FA1F95181929CF2600A0179A /* main.m */,
 				FA1F951A1929CF2600A0179A /* Run-Prefix.pch */,
 			);
@@ -427,30 +580,10 @@
 			isa = PBXGroup;
 			children = (
 				28716EC21C75358D000834C6 /* Main.storyboard */,
-				28BF33141C7CD4F4002CE706 /* SplitCell.h */,
-				28BF33151C7CD4F4002CE706 /* SplitCell.m */,
 				28BF33171C7CD4FF002CE706 /* SplitCell.xib */,
-				FAB9AA20192DB4CC00FF8E47 /* RunCell.h */,
-				FAB9AA21192DB4CC00FF8E47 /* RunCell.m */,
-				28716ECD1C756154000834C6 /* Launch Screen.storyboard */,
-				FA0B80BE1939189600CDCA53 /* MulticolorPolylineSegment.h */,
-				FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */,
+				288E9F251D107E490056B4F9 /* Launch Screen.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		FA30BD0E192B17F600CD453E /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FAB9AA29192DCFDF00FF8E47 /* ViewController */,
-				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
-				FA1F951C1929CF2600A0179A /* AppDelegate.m */,
-				281816881C7678180024770E /* MathController.h */,
-				281816891C7678180024770E /* MathController.m */,
-				00357ECD1C77D02F0046B8BC /* HealthKitManager.h */,
-				00357ECE1C77D02F0046B8BC /* HealthKitManager.m */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		FAB9AA29192DCFDF00FF8E47 /* ViewController */ = {
@@ -468,8 +601,12 @@
 				00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */,
 				007695191C8E6F2A007CB823 /* PastRunViewController.h */,
 				0076951A1C8E6F2A007CB823 /* PastRunViewController.m */,
+				287E2F941D11F17B00D45488 /* progressViewController.h */,
+				287E2F951D11F17B00D45488 /* progressViewController.m */,
+				28E784081D1103BF00C17A4F /* Helper */,
 			);
-			path = ViewController;
+			name = ViewController;
+			path = Controller/ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +618,7 @@
 			buildPhases = (
 				00C80B541C79249E005C4E39 /* Resources */,
 				00C80B7B1C79249E005C4E39 /* Embed App Extensions */,
+				A1E37BEE91360CF009330ABB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -513,13 +651,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA1F95421929CF2600A0179A /* Build configuration list for PBXNativeTarget "Run" */;
 			buildPhases = (
-				692ECD43EE43EBFC26BFA408 /* Check Pods Manifest.lock */,
+				97F571E6192805372108EC33 /* 📦 Check Pods Manifest.lock */,
 				FA1F95031929CF2600A0179A /* Sources */,
 				FA1F95041929CF2600A0179A /* Frameworks */,
 				FA1F95051929CF2600A0179A /* Resources */,
 				282B17FD1C740FFF0099F010 /* Embed Watch Content */,
-				71841D0957A43CAE0BD12CD1 /* Embed Pods Frameworks */,
-				5F4801959C4A217A7C35A2DD /* Copy Pods Resources */,
+				5D387A8E23A3DE9074ADC095 /* 📦 Embed Pods Frameworks */,
+				780F23C5784747E930475AEE /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -616,7 +754,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00F898851C7940810036481C /* Media.xcassets in Resources */,
+				2879C9BB1D124F5C0088118A /* Media1.xcassets in Resources */,
 				00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,17 +772,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2879C9B01D122E140088118A /* trophy_10m.png in Resources */,
+				28F051841D11B35E000C3955 /* preference.png in Resources */,
+				2879C9AD1D122E140088118A /* award.png in Resources */,
+				28F051821D11B35E000C3955 /* history.png in Resources */,
+				28E784101D11084600C17A4F /* menu.png in Resources */,
+				2879C9B11D122E140088118A /* trophy_1m.png in Resources */,
 				00937C2D1C8A40AE0096B5EC /* settings.png in Resources */,
 				00937C291C8A40AE0096B5EC /* greedot.png in Resources */,
+				2879C9B31D122E140088118A /* trophy_award_ribon-512.png in Resources */,
+				2879C9B71D124B410088118A /* unlock.png in Resources */,
+				2879C9B91D124F550088118A /* Media.xcassets in Resources */,
+				28F051851D11B35E000C3955 /* progress.png in Resources */,
+				28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */,
+				2879C9AE1D122E140088118A /* award_highest_speed.png in Resources */,
+				28422E461D10F5E80070E982 /* two_hearts.png in Resources */,
 				00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */,
-				00F898831C793FFA0036481C /* Media.xcassets in Resources */,
+				28422E451D10F5E80070E982 /* speed.png in Resources */,
 				00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */,
+				28422E441D10F5E80070E982 /* icon-39-512.png in Resources */,
+				2879C9AB1D122E140088118A /* award-fastest.png in Resources */,
+				28E784121D11085000C17A4F /* image.png in Resources */,
+				2879C9B21D122E140088118A /* trophy_5m.png in Resources */,
 				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
+				2879C9B61D124B410088118A /* lock.png in Resources */,
+				28F051831D11B35E000C3955 /* home.png in Resources */,
+				28422E431D10F5E80070E982 /* classpass-icon-sneaker.png in Resources */,
+				288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */,
 				006E9F7D1C8F61B4002B8B37 /* GoogleService-Info.plist in Resources */,
+				2879C9AC1D122E140088118A /* award-longest.png in Resources */,
 				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
 				28716EC31C75358D000834C6 /* Main.storyboard in Resources */,
 				00937C2C1C8A40AE0096B5EC /* save.png in Resources */,
-				28716ECE1C756154000834C6 /* Launch Screen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,49 +817,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F4801959C4A217A7C35A2DD /* Copy Pods Resources */ = {
+		5D387A8E23A3DE9074ADC095 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		692ECD43EE43EBFC26BFA408 /* Check Pods Manifest.lock */ = {
+		780F23C5784747E930475AEE /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97F571E6192805372108EC33 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		71841D0957A43CAE0BD12CD1 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -726,15 +885,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
+				28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */,
+				283334791D121FEB00F76C5A /* GKBar.m in Sources */,
+				28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */,
+				2833347D1D1220A000F76C5A /* trophyCollectionViewCell.m in Sources */,
+				2833347A1D121FEB00F76C5A /* GKBarGraph.m in Sources */,
+				28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */,
 				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
 				0076951B1C8E6F2A007CB823 /* PastRunViewController.m in Sources */,
+				28E784071D1103BB00C17A4F /* MainViewController.m in Sources */,
 				002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */,
+				28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */,
 				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
 				00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */,
 				FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */,
 				00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */,
 				002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */,
 				FA24F25519481C6200500593 /* Run.m in Sources */,
+				287E2F961D11F17B00D45488 /* progressViewController.m in Sources */,
 				2818168A1C7678180024770E /* MathController.m in Sources */,
 				FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */,
 				FA30BD12192B319400CD453E /* HomeViewController.m in Sources */,
@@ -818,7 +986,7 @@
 		00C80B7D1C79249E005C4E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -840,7 +1008,7 @@
 		00C80B7E1C79249E005C4E39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = WatchIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -933,19 +1101,23 @@
 		};
 		FA1F95431929CF2600A0179A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 454CE82FB3AAB7D5301D9BBB /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 64CC42117DEFED8EC4DD933E /* Pods-Run.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcons;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				INFOPLIST_FILE = "MoonRunner/Run-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				INFOPLIST_FILE = "$(SRCROOT)/MoonRunner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running;
 				PRODUCT_NAME = Run;
 				PROVISIONING_PROFILE = "";
@@ -956,19 +1128,23 @@
 		};
 		FA1F95441929CF2600A0179A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47F3606791750BCD67244390 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8EAE9943CD2A555783BCC69E /* Pods-Run.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcons;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MoonRunner/Run-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				INFOPLIST_FILE = "MoonRunner/Run-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				INFOPLIST_FILE = "$(SRCROOT)/MoonRunner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running;
 				PRODUCT_NAME = Run;

@@ -7,6 +7,7 @@
 //
 
 #import "PastRunViewController.h"
+#import "AppDelegate.h"
 
 @interface PastRunViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation PastRunViewController
 
-#pragma mark - Table View
+#pragma mark - TableView Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -62,6 +63,10 @@
 }
 
 #pragma mark - Navigation
+
+-(IBAction)showMenu:(id)sender{
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

@@ -15,6 +15,7 @@
 #import "HealthKitManager.h"
 #import "MathController.h"
 #import "SettingViewController.h"
+#import "AppDelegate.h"
 
 @import GoogleMobileAds;
 

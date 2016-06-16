@@ -25,6 +25,128 @@ static NSString * const detailSegueName = @"NewRunDetails";
     //modify view
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
+    [self setUpData];
+    [self setUpGestures];
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+    }
+    
+    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = self.mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.015;
+    mapRegion.span.longitudeDelta = 0.015;
+    [self.mapView setRegion:mapRegion animated:YES];
+    
+    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self GoogleAdsBanner:areAdsRemoved withID:@"ca-app-pub-7942613644553368/1835128737"];
+    
+    // initialize the timer
+    startTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    
+    [super viewDidLoad];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [timer invalidate];
+    [timeTimer invalidate];
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:YES];
+}
+
+#pragma mark - IBActions
+
+- (IBAction)stopPressed:(id)sender
+{
+    [self.locationManager stopUpdatingLocation];
+    [timer invalidate];
+    [timeTimer invalidate];
+    if ([CMPedometer isPaceAvailable]) {
+        [Pedometer stopPedometerUpdates];
+    }
+    
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+        //pause the run
+        [self startLocationUpdates];
+        [self startPedometer];
+        timer = [NSTimer scheduledTimerWithTimeInterval:(2.0) target:self selector:@selector(updateLabels) userInfo:nil repeats:YES];
+        timeTimer = [NSTimer scheduledTimerWithTimeInterval:(0.1) target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
+        
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        //save the run
+        [self saveRun];
+        [self performSegueWithIdentifier:detailSegueName sender:nil];
+        
+    }]];
+    [actionSheet addAction:[UIAlertAction actionWithTitle:@"Discard" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.navigationController popViewControllerAnimated:YES];
+        
+    }]];
+    [self presentViewController:actionSheet animated:YES completion:nil];
+    
+}
+-(IBAction)splitPressed:(id)sender{
+    [self splitbutton];
+}
+
+-(void)splitbutton{
+    
+    NSDictionary *dict = @{@"distance": [MathController stringifyDistance:self.distance],
+                           @"time": [MathController stringifySecondCount:self.seconds usingLongFormat:NO],
+                           @"heart": @"N/A bmp",
+                           @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
+    [self.splitsArray insertObject:dict atIndex:0];
+    self.distance = 0;
+    self.seconds = 0;
+    [self.timeLabel setText:@"00:00"];
+    [self.distLabel setText:@"0.00mi"];
+    NSLog(@"splits: %@", self.splitsArray);
+    
+    [self.table reloadData];
+    [UIView animateWithDuration:1 animations:^{
+        self.MapWidth.constant = 0;
+        [self.view layoutIfNeeded];
+    }];
+    [self.mapView removeOverlays:self.mapView.overlays];
+    
+    //modify view
+}
+
+#pragma mark - Private
+
+-(void)GoogleAdsBanner:(BOOL)display withID:(NSString *)adUnitID{
+    
+    if (!display) {
+        self.bannerView.adUnitID = adUnitID;
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
+}
+-(void)setUpGestures{
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
+    [self.view addGestureRecognizer:swipeLeft];
+    [self.view addGestureRecognizer:swipeRight];
+}
+
+-(void)setUpData{
+    
     self.seconds = 0;
     self.distance = 0;
     self.miliseconds = 0;
@@ -35,47 +157,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
     self.strides = [NSMutableArray array];
     self.altitude = [NSMutableArray array];
     self.heartRate = [NSMutableArray array];
-    
-    // initialize the timer
-    startTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
-    
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    [self.view addGestureRecognizer:swipeRight];
-    
-    if ([WCSession isSupported]) {
-        NSLog(@"Activated");
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
-        
-    }else{
-        NSLog(@"not supported");
-    }
-    
-    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
-    MKCoordinateRegion mapRegion;
-    mapRegion.center = self.mapView.userLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.015;
-    mapRegion.span.longitudeDelta = 0.015;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.mapView setRegion:mapRegion animated:YES];
-    });
-    
-    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    if (!areAdsRemoved) {
-        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
-        self.bannerView.rootViewController = self;
-        [self.bannerView loadRequest:[GADRequest request]];
-    }else{
-        self.bannerView.hidden = YES;
-    }
-    
-    [super viewDidLoad];
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
@@ -96,47 +177,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
         }];
     }
 }
-
-- (void) viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [timer invalidate];
-    [timeTimer invalidate];
-}
-
-#pragma mark - IBActions
-
-- (IBAction)stopPressed:(id)sender
-{
-    [Pedometer stopPedometerUpdates];
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Save", @"Discard", nil];
-    actionSheet.actionSheetStyle = UIActionSheetStyleDefault;
-    [actionSheet showInView:self.view];
-    
-}
--(IBAction)splitPressed:(id)sender{
-    
-    NSDictionary *dict = @{@"distance": [MathController stringifyDistance:self.distance],
-                           @"time": [MathController stringifySecondCount:self.seconds usingLongFormat:NO],
-                           @"heart": @"N/A bmp",
-                           @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
-    [self.splitsArray addObject:dict];
-    self.distance = 0;
-    self.seconds = 0;
-    [self.timeLabel setText:@"00:00"];
-    [self.distLabel setText:@"0.00mi"];
-    NSLog(@"splits: %@", self.splitsArray);
-    
-    //modify view
-    [self.table reloadData];
-    [UIView animateWithDuration:1 animations:^{
-        self.MapWidth.constant = 0;
-    }];
-    
-    [self.mapView removeOverlays:self.mapView.overlays];
-}
-
-#pragma mark - Private
 
 -(void)countDown{
     
@@ -160,13 +200,15 @@ static NSString * const detailSegueName = @"NewRunDetails";
 -(void)startPedometer{
     
     Pedometer = [[CMPedometer alloc] init];
-    [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
-        if (!error) {
-            [self.strides addObject:[MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]];
-        }else{
-            NSLog(@"%@", error);
-        }
-    }];
+    if ([CMPedometer isPaceAvailable]){
+        [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
+            if (!error) {
+                [self.strides addObject:[MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]];
+            }else{
+                NSLog(@"%@", error);
+            }
+        }];
+    }
     
     [altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData * _Nullable altitudeData, NSError * _Nullable error) {
         if (!error) {
@@ -179,17 +221,25 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 - (void)saveRun{
     
+    //create a new run object
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    
+    //store date
+    newRun.timestamp = [NSDate date];
+    
+    //store numeric values
     newRun.distance = [NSNumber numberWithFloat:self.distance];
     newRun.duration = [NSNumber numberWithInt:self.seconds];
-    newRun.timestamp = [NSDate date];
+    newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
+    newRun.speed = [NSNumber numberWithFloat:self.distance / self.seconds];
+    
+    //store arrays
+    newRun.elevation = [NSKeyedArchiver archivedDataWithRootObject:self.altitude];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
     newRun.stride_rate = [NSKeyedArchiver archivedDataWithRootObject:self.strides];
     newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:self.heartRate];
-    newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
-    newRun.speed = [NSNumber numberWithFloat:self.distance / self.seconds];
-    newRun.elevation = [NSKeyedArchiver archivedDataWithRootObject:self.altitude];
-    
+
+    //save locations as NSOrderSet
     NSMutableArray *locationArray = [NSMutableArray array];
     for (CLLocation *location in self.locations) {
         Location *locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
@@ -200,9 +250,11 @@ static NSString * const detailSegueName = @"NewRunDetails";
         [locationArray addObject:locationObject];
     }
     newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
+    
+    //save run object
     self.run = newRun;
     
-    // Save the context.
+    //error handling
     NSError *error = nil;
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
@@ -218,11 +270,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
         self.paceLabel.text = [NSString stringWithFormat:@"%@",  [MathController stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
         self.calories.text = [NSString stringWithFormat:@"%@", [MathController stringifyCaloriesFromDist:self.distance]];
     });
+    
+    [self sendWorkoutInfo:self.distance];
+    
 }
 
 -(void)timerCount{
     
-    self.miliseconds+=10;
+    self.miliseconds += 10;
     
     self.milisecLabel.text = [NSString stringWithFormat:@"%i", self.miliseconds];
     if (self.miliseconds == 100) {
@@ -234,8 +289,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 - (void)startLocationUpdates
 {
-    // Create the location manager if this object does not
-    // already have one.
+    // Create the location manager if this object does not already have one.
     if (self.locationManager == nil) {
         self.locationManager = [[CLLocationManager alloc] init];
     }
@@ -252,25 +306,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
     [self.locationManager startUpdatingLocation];
 }
-
-#pragma mark - UIActionSheetDelegate
-
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self.locationManager stopUpdatingLocation];
-    
-    // save
-    if (buttonIndex == 0) {
-        [self saveRun];
-        [self performSegueWithIdentifier:detailSegueName sender:nil];
-        
-    // discard
-    } else if (buttonIndex == 1) {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }
-}
-
-#pragma mark - MK MapKit Delegate
 
 #pragma mark - MapView Delegate
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
@@ -337,25 +372,42 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 #pragma mark - WCSession Delegate
 
+-(void)sendWorkoutInfo:(float)meters{
+    
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+        //save data to iphone
+        [[WCSession defaultSession] updateApplicationContext:@{@"distance":[NSNumber numberWithFloat:meters]} error:nil];
+        NSLog(@"sent");
+    }
+}
+
 -(void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo{
     
-    if ([[userInfo objectForKey:@"key"] isEqualToString:@"heart"]) {
-        [self.heartRate addObject:[userInfo objectForKey:@"heart"]];
-        NSLog(@"recieved heart");
-    }
+    [self splitbutton];
+    NSLog(@"received split request");
     
 }
 -(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
     
+    //recieve stop & save request -- stop & save the run
     if ([[applicationContext objectForKey:@"key"] isEqualToString:@"stop"]) {
         
+        self.heartRate = [applicationContext objectForKey:@"data"];
         [self saveRun];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self performSegueWithIdentifier:detailSegueName sender:nil];
         });
         NSLog(@"received stop request");
     }
+    
+    //recieve discard request -- discard the run
     if ([[applicationContext objectForKey:@"key"] isEqualToString:@"discard"]) {
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.navigationController popToRootViewControllerAnimated:YES];
         });
@@ -374,7 +426,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
     return self.splitsArray.count;
 }
 
@@ -387,6 +438,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     UILabel *pace = (UILabel *)[cell.contentView viewWithTag:4];
     
     NSDictionary *dict = [self.splitsArray objectAtIndex:indexPath.row];
+    NSLog(@"split %@", dict);
     time.text = [dict objectForKey:@"time"];
     distance.text = [dict objectForKey:@"distance"];
     number.text = [NSString stringWithFormat:@"Split %li", indexPath.row + 1];

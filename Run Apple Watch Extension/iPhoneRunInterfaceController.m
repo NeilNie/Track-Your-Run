@@ -14,67 +14,59 @@
 
 @implementation iPhoneRunInterfaceController
 
-#pragma mark - Query HealthKit
-
--(void)updateDistance{
-    
-    __weak typeof(self) weakSelf = self;
-    
-    HKSampleType *object = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierDistanceWalkingRunning];
-    
-    distanceQuery = [[HKAnchoredObjectQuery alloc] initWithType:object predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
-        
-        if (!error && sampleObjects) {
-            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            self.Distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-        }else{
-            NSLog(@"error %@", error);
-        }
-        
-    }];
-    [distanceQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
-        
-        if (!error && sampleObjects) {
-            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.Distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-        }else{
-            NSLog(@"error %@", error);
-        }
-    }];
-    
-    [healthStore executeQuery:distanceQuery];
-}
+#pragma mark - HealthKit Delegate
 
 -(void)updateHeartbeat{
     
-    __weak typeof(self) weakSelf = self;
+    //__weak typeof(self) weakSelf = self;
     
+    NSLog(@"update heart beat called");
     HKSampleType *object = [HKSampleType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRate];
     
     heartQuery = [[HKAnchoredObjectQuery alloc] initWithType:object predicate:Predicate anchor:0 limit:0 resultsHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
         
-        if (!error && sampleObjects.count > 0) {
-            HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            HKQuantity *quantity = sample.quantity;
-            [self.HeartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
-        }else{
-            NSLog(@"query %@", error);
-        }
-        
-    }];
-    [heartQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error){
-        
         HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
         NSNumber *val = [NSNumber numberWithFloat:[sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]];
-        if (!error && val != nil) {
-            [weakSelf.HeartBeatArray addObject:val];
-            [weakSelf sendHeartData:val];
+        if (!error && val > 0) {
+            [self.HeartBeatArray addObject:val];
         }else{
             NSLog(@"query %@", error);
         }
     }];
     
+    [heartQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
+        if (!error && sampleObjects) {
+            NSLog(@"heart rate: %@", sampleObjects);
+        }else{
+            NSLog(@"error %@", error);
+        }
+    }];
     [healthStore executeQuery:heartQuery];
+}
+
+-(void)workoutSession:(HKWorkoutSession *)workoutSession didFailWithError:(NSError *)error{
+    
+    NSLog(@"session error %@", error);
+}
+
+-(void)workoutSession:(HKWorkoutSession *)workoutSession didChangeToState:(HKWorkoutSessionState)toState fromState:(HKWorkoutSessionState)fromState date:(NSDate *)date{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        switch (toState) {
+            case HKWorkoutSessionStateRunning:
+                NSLog(@"started workout");
+                break;
+            case HKWorkoutSessionStateEnded:
+                NSLog(@"ended");
+                break;
+            case HKWorkoutSessionStateNotStarted:
+                NSLog(@"not started");
+                break;
+                
+            default:
+                break;
+        }
+    });
 }
 
 #pragma WatchKit Connectivity
@@ -97,30 +89,18 @@
 
 }
 
-#pragma mark - HealthKit Delegate
--(void)workoutSession:(HKWorkoutSession *)workoutSession didFailWithError:(NSError *)error{
+-(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
     
-    NSLog(@"session error %@", error);
-}
-
--(void)workoutSession:(HKWorkoutSession *)workoutSession didChangeToState:(HKWorkoutSessionState)toState fromState:(HKWorkoutSessionState)fromState date:(NSDate *)date{
+    if (applicationContext) {
+        self.Distance = [[applicationContext objectForKey:@"distance"] floatValue];
+    }
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        switch (toState) {
-            case HKWorkoutSessionStateRunning:
-                [self updateHeartbeat];
-                [self updateDistance];
-                NSLog(@"started workout");
-                break;
-            case HKWorkoutSessionStateEnded:
-                NSLog(@"ended");
-                break;
-            case HKWorkoutSessionStateNotStarted:
-                NSLog(@"not started");
-                break;
-                
-            default:
-                break;
+        if (disBo) {
+            [self.timeLabel setText:[Math stringifyDistance:self.Distance]];
+        }
+        if (paceBo) {
+            [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.Distance overTime:self.Seconds]];
         }
     });
 }
@@ -129,33 +109,27 @@
 
 - (IBAction)splitPressed:(id)sender{
     
-    float hightest = 0.0;
-    for (int i = 0; i < self.HeartBeatArray.count; i++) {
-        if ([[self.HeartBeatArray objectAtIndex:i] floatValue] > hightest) {
-            hightest = [[self.HeartBeatArray objectAtIndex:i] floatValue];
-        }
-    }
-    NSDictionary *dict = @{@"Distance": [Math stringifyDistance:self.Distance],
-                           @"time": [Math stringifySecondCount:self.Seconds usingLongFormat:NO],
-                           @"heart": self.HeartBeatArray,
-                           @"mili": [NSString stringWithFormat:@"%i", self.Miliseconds]};
-    [self.HeartBeatArray removeAllObjects];
-    [self.splitsArray addObject:dict];
-    self.Distance = 0;
     self.Seconds = 0;
-    [self.timeLabel setText:@"00:00"];
     
+    if ([WCSession isSupported]) {
+        NSLog(@"Activated");
+        WCSession *session = [WCSession defaultSession];
+        session.delegate = self;
+        [session activateSession];
+        
+        //save data to iphone
+        [[WCSession defaultSession] transferUserInfo:@{@"key":@"split"}];
+        NSLog(@"split sent");
+    }
 }
 
 -(IBAction)stop{
     
     //stop everything
-    [Pedometer stopPedometerUpdates];
     [QueryTimer invalidate];
     [Timer invalidate];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
-    [healthStore stopQuery:distanceQuery];
     
     //save data for interface
     started = NO;
@@ -174,7 +148,7 @@
         [session activateSession];
         
         //save data to iphone
-        [[WCSession defaultSession] updateApplicationContext:@{@"key":@"stop"} error:nil];
+        [[WCSession defaultSession] updateApplicationContext:@{@"key":@"stop", @"data":self.HeartBeatArray} error:nil];
         NSLog(@"sent");
     }
     
@@ -189,7 +163,6 @@
     [Pedometer stopPedometerUpdates];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
-    [healthStore stopQuery:distanceQuery];
     
     if ([WCSession isSupported]) {
         NSLog(@"Activated");
@@ -205,36 +178,19 @@
     [self pushControllerWithName:@"home" context:nil];
 }
 
--(void)count{
-    
-    [self updateHeartbeat];
-    [self updateDistance];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (disBo) {
-            [self.timeLabel setText:[Math stringifyDistance:self.Distance]];
-        }
-        if (paceBo) {
-            [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.Distance overTime:self.Seconds]];
-        }
-    });
-}
-
 -(void)countDown{
     
     countDown = countDown - 1;
     [self.timeLabel setText:[NSString stringWithFormat:@"%i", countDown]];
     if (countDown == 0) {
         
+        NSLog(@"will start workout");
         [countTimer invalidate];
         
         [self.timeLabel setText:@"00:00"];
         [self.milisecondsLabel setHidden:NO];
         [self.unitLabel setHidden:NO];
         
-        self.HeartBeatArray = [NSMutableArray array];
-        self.splitsArray = [NSMutableArray array];
-        
-        QueryTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
         Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
@@ -242,12 +198,20 @@
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
         workoutSession.delegate = self;
         [healthStore startWorkoutSession:workoutSession];
+        [self updateHeartbeat];
         
-        self.Distance = 0.00;
-        self.Seconds = 0;
-        self.Miliseconds = 0;
-        //[self startPedometer];
+        
     }
+}
+
+-(void)setUpData{
+    
+    self.HeartBeatArray = [NSMutableArray array];
+    self.splitsArray = [NSMutableArray array];
+    
+    self.Distance = 0.00;
+    self.Seconds = 0;
+    self.Miliseconds = 0;
 }
 
 -(void)timerCount{
@@ -336,6 +300,14 @@
 - (void)willActivate {
 
     if (!started) {
+        
+        if ([WCSession isSupported]) {
+            NSLog(@"Activated");
+            WCSession *session = [WCSession defaultSession];
+            session.delegate = self;
+            [session activateSession];
+        }
+        
         [self.milisecondsLabel setHidden:YES];
         [self.unitLabel setHidden:YES];
         
@@ -345,8 +317,8 @@
         disBo = NO;
         paceBo = NO;
         timeBo = YES;
-        started = YES;
         re = NO;
+        started = YES;
     }
     [super willActivate];
 }
@@ -357,6 +329,3 @@
 }
 
 @end
-
-
-

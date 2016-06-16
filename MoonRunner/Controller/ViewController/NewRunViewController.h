@@ -26,12 +26,14 @@
     NSTimer *timer;
     NSTimer *startTimer;
     NSTimer *timeTimer;
+    
     CMPedometer *Pedometer;
     CMAltimeter *altimeter;
 }
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property BOOL WatchRun;
 @property int seconds;
 @property float distance;
 @property int miliseconds;

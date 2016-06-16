@@ -27,7 +27,7 @@
         //save data to iphone
         [[WCSession defaultSession] updateApplicationContext:@{@"key": @"start"} error:nil];
         [self pushControllerWithName:@"iPhone" context:nil];
-        NSLog(@"sent");
+        NSLog(@"start sent");
     }else{
         NSLog(@"not supported");
     }
@@ -51,6 +51,7 @@
         
         NSLog(@"requested");
         if (success) {
+           
             NSLog(@"health data request success");
             
         }else{
@@ -62,7 +63,6 @@
         [self pushControllerWithName:@"data" context:nil];
     }
     started = NO;
-    
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }
@@ -73,6 +73,3 @@
 }
 
 @end
-
-
-

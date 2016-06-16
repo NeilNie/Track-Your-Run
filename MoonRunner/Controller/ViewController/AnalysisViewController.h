@@ -37,7 +37,7 @@ float distance;
 @property (nonatomic, strong) NSArray *speed;
 @property (nonatomic, strong) NSArray *elevation;
 
-@property (nonatomic, strong) NSArray *labels;
+//@property (nonatomic, strong) NSArray *labels;
 @property (nonatomic, strong) NSArray *data;
 
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;

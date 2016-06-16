@@ -83,7 +83,7 @@ static float const metersInMile = 1609.344;
         // U.S.
     } else {
         
-        unitName = @"m/mi";
+        //unitName = @"m/mi";
         
         // to get from meters to miles divide by this
         unitMultiplier = metersInMile;

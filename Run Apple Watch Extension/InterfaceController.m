@@ -28,6 +28,7 @@
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
             self.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            NSLog(@"distance %f", self.distance);
         }else{
             NSLog(@"error %@", error);
         }
@@ -38,6 +39,7 @@
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
             weakSelf.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            NSLog(@"distance %f", weakSelf.distance);
         }else{
             NSLog(@"error %@", error);
         }
@@ -174,8 +176,6 @@
 
 -(void)count{
     
-    [self updateHeartbeat];
-    [self updateDistance];
     dispatch_async(dispatch_get_main_queue(), ^{
         if (disBo) {
             [self.timeLabel setText:[Math stringifyDistance:self.distance]];
@@ -283,6 +283,9 @@
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
         workoutSession.delegate = self;
         [healthStore startWorkoutSession:workoutSession];
+        
+        [self updateHeartbeat];
+        [self updateDistance];
         [self startPedometer];
         
         disBo = NO;

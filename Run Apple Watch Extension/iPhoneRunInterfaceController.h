@@ -16,14 +16,11 @@
 
 @interface iPhoneRunInterfaceController : WKInterfaceController <WCSessionDelegate, HKWorkoutSessionDelegate>{
     
+    CMPedometer *Pedometer;
     HKHealthStore *healthStore;
     HKWorkoutSession *workoutSession;
     HKAnchoredObjectQuery *heartQuery;
-    HKAnchoredObjectQuery *distanceQuery;
     NSPredicate *Predicate;
-    
-    CMPedometer *Pedometer;
-    
     NSTimer *Timer;
     NSTimer *QueryTimer;
     NSTimer *countTimer;

@@ -2,25 +2,41 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>TRACKING_ID</key>
-	<string>UA-74138512-8</string>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>901761972907-gpc15g5im0mp4j37ju6b89qcdi7a83qe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.901761972907-gpc15g5im0mp4j37ju6b89qcdi7a83qe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB6cYyJszITvO92gvPU7mYDi6EubZ2Nj1w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>901761972907</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.yongyang.running</string>
+	<key>PROJECT_ID</key>
+	<string>track-your-run</string>
+	<key>STORAGE_BUCKET</key>
+	<string>track-your-run.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
-	<key>IS_ANALYTICS_ENABLED</key>
 	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
 	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<false/>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<false/>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:977845440338:ios:78013ee5f9f6079a</string>
-	<key>PROJECT_ID</key>
-	<string>track-your-runs</string>
+	<string>1:901761972907:ios:27104736dbfdb544</string>
+	<key>DATABASE_URL</key>
+	<string>https://track-your-run.firebaseio.com</string>
+	<key>TRACKING_ID</key>
+	<string>UA-74138512-8</string>
 </dict>
 </plist>

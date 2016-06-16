@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 
-
 @interface HomeViewController ()
 
 @property (strong, nonatomic) NSMutableArray *runArray;
@@ -19,7 +18,9 @@
 
 -(void)viewDidLoad{
     
-    NSLog(@"view started loading");
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    _managedObjectContext = delegate.managedObjectContext;
+    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
@@ -27,13 +28,6 @@
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     self.runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
     
-    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.view addGestureRecognizer:swipeLeft];
-    [self.view addGestureRecognizer:swipeRight];
-
     if ([WCSession isSupported]) {
         NSLog(@"Activated");
         WCSession *session = [WCSession defaultSession];
@@ -51,13 +45,12 @@
     }else{
         self.bannerView.hidden = YES;
     }
-    
-    [self setUpView];
     [[HealthKitManager sharedManager] requestAuthorization];
     
+    [self setUpGestures];
+    [self setUpView];
     [super viewDidLoad];
-    
-    NSLog(@"did finishe");
+    NSLog(@"did finish");
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -65,8 +58,8 @@
     self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
     MKCoordinateRegion mapRegion;
     mapRegion.center = self.map.userLocation.coordinate;
-    mapRegion.span.latitudeDelta = 0.015;
-    mapRegion.span.longitudeDelta = 0.015;
+    mapRegion.span.latitudeDelta = 0.010;
+    mapRegion.span.longitudeDelta = 0.010;
     [self.map setRegion:mapRegion animated:YES];
     
     [super viewWillAppear:YES];
@@ -83,6 +76,16 @@
     }
     self.totalDistance.text = [NSString stringWithFormat:@"%@", [MathController stringifyDistance:distance]];
     self.totalRuns.text = [NSString stringWithFormat:@"%i", INT + 1];
+}
+
+-(void)setUpGestures{
+    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
+    [self.view addGestureRecognizer:swipeRight];
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
@@ -104,18 +107,17 @@
     }
 }
 
+-(IBAction)showMenu:(id)sender{
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
+}
+
 #pragma mark - WCSession Delegate
 
 -(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
-    
-    NSLog(@"got it");
+
     dispatch_async(dispatch_get_main_queue(), ^{
         [self performSegueWithIdentifier:@"outdoorRun" sender:nil];
     });
-}
-
--(void)message{
-    
 }
 
 #pragma mark - TableView Delegate
@@ -160,15 +162,17 @@
     if ([nextController isKindOfClass:[PastRunViewController class]]) {
         ((PastRunViewController *) nextController).runArray = self.runArray;
         [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+    
     }else if ([nextController isKindOfClass:[NewRunViewController class]]){
-        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        NewRunViewController *controller = (NewRunViewController *)[segue destinationViewController];
+        [controller setManagedObjectContext:self.managedObjectContext];
     }
 }
 
 #pragma mark - MapView Delegate
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 900, 900);
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1100, 1100);
     [mapView setRegion:[mapView regionThatFits:region] animated:YES];
 }
 
