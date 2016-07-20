@@ -18,6 +18,8 @@
 
 @implementation SettingViewController
 
+#pragma mark - SKProductsRequestDelegate, SKPaymentTransactionObserver Delegates
+
 - (IBAction)tapsRemoveAds{
     NSLog(@"User requests to remove ads");
     
@@ -72,16 +74,6 @@
     
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
-}
-
-- (IBAction) restore{
-    //this is called when the user restores purchases, you should hook this up to a button
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
-    areAdsRemoved = NO;
-    [[NSUserDefaults standardUserDefaults] setBool:areAdsRemoved forKey:@"areAdsRemoved"];
-    //use NSUserDefaults so that you can load wether or not they bought it
-    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void) paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue *)queue
@@ -139,6 +131,9 @@
         }
     }
 }
+
+#pragma mark - Private
+
 - (IBAction)request:(id)sender {
     
     if([MFMailComposeViewController canSendMail]) {
@@ -159,11 +154,22 @@
 }
 
 - (void)doRemoveAds{
-
+    
     areAdsRemoved = YES;
     [[NSUserDefaults standardUserDefaults] setBool:areAdsRemoved forKey:@"areAdsRemoved"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
+
+- (IBAction) restore{
+    //this is called when the user restores purchases, you should hook this up to a button
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    [[SKPaymentQueue defaultQueue] restoreCompletedTransactions];
+    areAdsRemoved = NO;
+    [[NSUserDefaults standardUserDefaults] setBool:areAdsRemoved forKey:@"areAdsRemoved"];
+    //use NSUserDefaults so that you can load wether or not they bought it
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 - (IBAction)secret:(id)sender {
     
     [self doRemoveAds];
@@ -172,6 +178,8 @@
 -(IBAction)showMenu:(id)sender{
     [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
 }
+
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     

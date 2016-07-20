@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2818164B1C7671850024770E"
+               BlueprintIdentifier = "00C80B551C79249E005C4E39"
                BuildableName = "Run Apple Watch.app"
                BlueprintName = "Run Apple Watch"
                ReferencedContainer = "container:Run.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "281816571C7671850024770E"
+               BlueprintIdentifier = "00C80B611C79249E005C4E39"
                BuildableName = "Run Apple Watch Extension.appex"
                BlueprintName = "Run Apple Watch Extension"
                ReferencedContainer = "container:Run.xcodeproj">
@@ -56,11 +56,21 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "286E667D1D1309BA008B4BDE"
+               BuildableName = "RunUITests.xctest"
+               BlueprintName = "RunUITests"
+               ReferencedContainer = "container:Run.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2818164B1C7671850024770E"
+            BlueprintIdentifier = "00C80B551C79249E005C4E39"
             BuildableName = "Run Apple Watch.app"
             BlueprintName = "Run Apple Watch"
             ReferencedContainer = "container:Run.xcodeproj">
@@ -86,7 +96,7 @@
          RemotePath = "/Run">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2818164B1C7671850024770E"
+            BlueprintIdentifier = "00C80B551C79249E005C4E39"
             BuildableName = "Run Apple Watch.app"
             BlueprintName = "Run Apple Watch"
             ReferencedContainer = "container:Run.xcodeproj">
@@ -95,7 +105,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2818164B1C7671850024770E"
+            BlueprintIdentifier = "00C80B551C79249E005C4E39"
             BuildableName = "Run Apple Watch.app"
             BlueprintName = "Run Apple Watch"
             ReferencedContainer = "container:Run.xcodeproj">
@@ -120,7 +130,7 @@
          RemotePath = "/Run">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2818164B1C7671850024770E"
+            BlueprintIdentifier = "00C80B551C79249E005C4E39"
             BuildableName = "Run Apple Watch.app"
             BlueprintName = "Run Apple Watch"
             ReferencedContainer = "container:Run.xcodeproj">
@@ -129,7 +139,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2818164B1C7671850024770E"
+            BlueprintIdentifier = "00C80B551C79249E005C4E39"
             BuildableName = "Run Apple Watch.app"
             BlueprintName = "Run Apple Watch"
             ReferencedContainer = "container:Run.xcodeproj">

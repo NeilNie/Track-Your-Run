@@ -96,61 +96,61 @@
 }
 -(NSString *)analyzeSpeed{
     
-    NSLog(@"started operation");
+//    NSLog(@"started operation");
+//    
+//    BOOL evenSpeed;
+//    BOOL fast;
+//    
+//    //compare with past runs
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"speed" ascending:NO];
+//    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+//    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
+//    
+//    //find the fast object
+//    Run *Fastest = [runArray objectAtIndex:0];
+//    
+//    //find the middle object
+//    NSUInteger middle = runArray.count / 2;
+//    Run *middleObject = [runArray objectAtIndex:middle];
+//    
+//    //calculate if fast and even
+//    if ([self getMaxNumber:self.speed].floatValue > middleObject.speed.floatValue) {
+//        fast = YES;
+//    }else{
+//        fast = NO;
+//    }
+//    int difference = [self getMaxNumber:self.speed].intValue - [self getMinNumber:self.speed].intValue;
+//    if (difference < 3) {
+//        evenSpeed = YES;
+//    }else{
+//        evenSpeed = NO;
+//    }
+//    
+//    //get date
+//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+//    [df setDateFormat:@"yyyy-MM-dd"];
+//    
+//    //generate return string
+//    NSString *returnValue;
+//    NSString *evenspeed = @"You ran at a even speed today, nice job!";
+//    NSString *unevenSpeed = [NSString stringWithFormat:@"Your best speed is %@mph on %@. Since you did a long run. Next time you should run at a even space.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
+//    NSString *highSpeed = [NSString stringWithFormat:@"By the way, your pace is amazing. Your best speed is %@mph on %@.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
+//    
+//    if (self.run.distance.intValue > 2000) {
+//        returnValue = [NSString stringWithFormat:@"%@ %@ %@",
+//                       (evenSpeed) ? evenspeed : unevenSpeed,
+//                       (fast) ? highSpeed : nil,
+//                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!"];
+//    }else{
+//        returnValue = [NSString stringWithFormat:@"%@ %@",
+//                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!",
+//                       ([self getMaxNumber:self.speed].intValue > 13) ? @"It seems like you did a fast workout, remember to warm up and cool down properly." : nil
+//                       ];
+//        
+//    }
     
-    BOOL evenSpeed;
-    BOOL fast;
-    
-    //compare with past runs
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"speed" ascending:NO];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
-    
-    //find the fast object
-    Run *Fastest = [runArray objectAtIndex:0];
-    
-    //find the middle object
-    NSUInteger middle = runArray.count / 2;
-    Run *middleObject = [runArray objectAtIndex:middle];
-    
-    //calculate if fast and even
-    if ([self getMaxNumber:self.speed].floatValue > middleObject.speed.floatValue) {
-        fast = YES;
-    }else{
-        fast = NO;
-    }
-    int difference = [self getMaxNumber:self.speed].intValue - [self getMinNumber:self.speed].intValue;
-    if (difference < 3) {
-        evenSpeed = YES;
-    }else{
-        evenSpeed = NO;
-    }
-    
-    //get date
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"yyyy-MM-dd"];
-    
-    //generate return string
-    NSString *returnValue;
-    NSString *evenspeed = @"You ran at a even speed today, nice job!";
-    NSString *unevenSpeed = [NSString stringWithFormat:@"Your best speed is %@mph on %@. Since you did a long run. Next time you should run at a even space.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
-    NSString *highSpeed = [NSString stringWithFormat:@"By the way, your pace is amazing. Your best speed is %@mph on %@.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
-    
-    if (self.run.distance.intValue > 2000) {
-        returnValue = [NSString stringWithFormat:@"%@ %@ %@",
-                       (evenSpeed) ? evenspeed : unevenSpeed,
-                       (fast) ? highSpeed : nil,
-                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!"];
-    }else{
-        returnValue = [NSString stringWithFormat:@"%@ %@",
-                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!",
-                       ([self getMaxNumber:self.speed].intValue > 13) ? @"It seems like you did a fast workout, remember to warm up and cool down properly." : nil
-                       ];
-        
-    }
-    
-    
-    return returnValue;
+    return nil;
+    //return returnValue;
 
 }
 -(NSString *)analyzeHeartrate{
@@ -190,7 +190,6 @@
     
     return nil;
 }
-
 
 //setup view
 

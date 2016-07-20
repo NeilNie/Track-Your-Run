@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "HomeViewController.h"
-#import <Google/Analytics.h>
 
 @implementation AppDelegate
 
@@ -19,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    [FIRApp configure];
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"idRunHome"];
     MainViewController *mainViewController = [storyboard instantiateInitialViewController];

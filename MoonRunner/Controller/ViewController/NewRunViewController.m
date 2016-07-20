@@ -231,7 +231,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.distance = [NSNumber numberWithFloat:self.distance];
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
-    newRun.speed = [NSNumber numberWithFloat:self.distance / self.seconds];
+    //newRun.speed = [NSNumber numberWithFloat:self.distance / self.seconds];
     
     //store arrays
     newRun.elevation = [NSKeyedArchiver archivedDataWithRootObject:self.altitude];

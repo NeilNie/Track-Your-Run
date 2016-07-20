@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idButtonCell" rowHeight="126" id="ksQ-OT-qrL" customClass="buttonTableCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ksQ-OT-qrL" id="zLH-2K-90a">
+                <frame key="frameInset" width="375" height="125"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did that run feel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWV-j7-oMs">
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhZ-HU-xa1">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="11n-Jp-grb"/>
+                            <constraint firstAttribute="width" constant="60" id="wCo-1g-SwL"/>
+                        </constraints>
+                        <state key="normal" image="sad.png"/>
+                        <connections>
+                            <action selector="terrible:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="A0j-63-XdN"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afC-cR-0RP">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="9I0-aQ-OXS"/>
+                            <constraint firstAttribute="height" constant="60" id="URK-pt-zuu"/>
+                        </constraints>
+                        <state key="normal" image="confused.png"/>
+                        <connections>
+                            <action selector="ok:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="2KG-Hw-Qba"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBE-QH-yL0">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="0Gc-Uc-8pR"/>
+                            <constraint firstAttribute="height" constant="60" id="ZUj-jN-Nvz"/>
+                        </constraints>
+                        <state key="normal" image="LOL.png"/>
+                        <connections>
+                            <action selector="great:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="7Ql-Dt-65s"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-A3-pPl">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Am~" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMS-fQ-tcO">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terrible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FqU-4U-kH4">
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FqU-4U-kH4" firstAttribute="centerX" secondItem="rhZ-HU-xa1" secondAttribute="centerX" id="3Ur-8s-a39"/>
+                    <constraint firstItem="afC-cR-0RP" firstAttribute="centerX" secondItem="zLH-2K-90a" secondAttribute="centerX" id="8P7-bI-JtJ"/>
+                    <constraint firstItem="FqU-4U-kH4" firstAttribute="top" secondItem="rhZ-HU-xa1" secondAttribute="bottom" id="CqV-Dd-hkx"/>
+                    <constraint firstItem="SWV-j7-oMs" firstAttribute="top" secondItem="zLH-2K-90a" secondAttribute="topMargin" id="E2a-Rt-tqa"/>
+                    <constraint firstItem="eBE-QH-yL0" firstAttribute="leading" secondItem="zLH-2K-90a" secondAttribute="leading" constant="8" id="H8i-ZC-1tL"/>
+                    <constraint firstItem="SWV-j7-oMs" firstAttribute="trailing" secondItem="zLH-2K-90a" secondAttribute="trailingMargin" id="V04-a7-AzY"/>
+                    <constraint firstItem="eBE-QH-yL0" firstAttribute="top" secondItem="SWV-j7-oMs" secondAttribute="bottom" constant="8" id="VCm-Gj-VpE"/>
+                    <constraint firstItem="afC-cR-0RP" firstAttribute="top" secondItem="SWV-j7-oMs" secondAttribute="bottom" constant="8" id="WuZ-Jn-Cav"/>
+                    <constraint firstItem="I0s-A3-pPl" firstAttribute="centerX" secondItem="eBE-QH-yL0" secondAttribute="centerX" id="WyQ-gd-wly"/>
+                    <constraint firstAttribute="trailing" secondItem="rhZ-HU-xa1" secondAttribute="trailing" constant="8" id="a7P-Aw-UL7"/>
+                    <constraint firstItem="SWV-j7-oMs" firstAttribute="leading" secondItem="zLH-2K-90a" secondAttribute="leadingMargin" id="fpP-RI-DJC"/>
+                    <constraint firstItem="EMS-fQ-tcO" firstAttribute="top" secondItem="afC-cR-0RP" secondAttribute="bottom" id="ooP-Hh-UZP"/>
+                    <constraint firstItem="rhZ-HU-xa1" firstAttribute="top" secondItem="SWV-j7-oMs" secondAttribute="bottom" constant="8" id="qGc-Ok-f2u"/>
+                    <constraint firstItem="EMS-fQ-tcO" firstAttribute="centerX" secondItem="afC-cR-0RP" secondAttribute="centerX" id="tlb-Zb-m1o"/>
+                    <constraint firstItem="I0s-A3-pPl" firstAttribute="top" secondItem="eBE-QH-yL0" secondAttribute="bottom" id="xj2-wP-Jpp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="greatButton" destination="eBE-QH-yL0" id="hHC-1T-JGl"/>
+                <outlet property="okButton" destination="afC-cR-0RP" id="ebS-KW-m4P"/>
+                <outlet property="terribleButton" destination="rhZ-HU-xa1" id="IkV-7z-b7E"/>
+            </connections>
+            <point key="canvasLocation" x="-59.5" y="149"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="LOL.png" width="96" height="96"/>
+        <image name="confused.png" width="96" height="96"/>
+        <image name="sad.png" width="96" height="96"/>
+    </resources>
+</document>

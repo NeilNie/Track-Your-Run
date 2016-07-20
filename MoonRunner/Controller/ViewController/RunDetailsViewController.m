@@ -48,6 +48,7 @@ static float const mapPadding = 1.1f;
     }else{
         self.bannerView.hidden = YES;
     }
+    
     [self.table reloadData];
 }
 
@@ -129,7 +130,6 @@ static float const mapPadding = 1.1f;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.mapView.hidden = NO;
         
-        // set the map bounds
         [self.mapView setRegion:[self mapRegion]];
         
         // make the line(s!) on the map
@@ -232,6 +232,20 @@ static float const mapPadding = 1.1f;
 }
 
 #pragma mark - MKMapViewDelegate
+
+-(void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered{
+    
+//    MKMapSnapshotOptions *options = [[MKMapSnapshotOptions alloc] init];
+//    options.region = mapView.region;
+//    options.scale = [UIScreen mainScreen].scale;
+//    options.size = mapView.frame.size;
+//    
+//    MKMapSnapshotter *snapshotter = [[MKMapSnapshotter alloc] initWithOptions:options];
+//    [snapshotter startWithCompletionHandler:^(MKMapSnapshot * _Nullable snapshot, NSError * _Nullable error) {
+//        self.mapSnapShot.image = snapshot.image;
+//    }];
+//    mapView.hidden = YES;
+}
 
 - (MKCoordinateRegion)mapRegion{
     

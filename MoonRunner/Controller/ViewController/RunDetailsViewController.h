@@ -27,6 +27,7 @@
     NSArray *valueA;
 }
 
+@property (weak, nonatomic) IBOutlet UIImageView *mapSnapShot;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
 @property (strong, nonatomic) NSArray *colorSegmentArray;

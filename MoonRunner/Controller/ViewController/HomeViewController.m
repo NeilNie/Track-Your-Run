@@ -17,23 +17,12 @@
 @implementation HomeViewController
 
 -(void)viewDidLoad{
-    
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    _managedObjectContext = delegate.managedObjectContext;
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    self.runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
-    
+
     if ([WCSession isSupported]) {
         NSLog(@"Activated");
         WCSession *session = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
-        
     }
     
     areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
@@ -47,8 +36,9 @@
     }
     [[HealthKitManager sharedManager] requestAuthorization];
     
-    [self setUpGestures];
+    [self setUpCoreData];
     [self setUpView];
+    [self setUpGestures];
     [super viewDidLoad];
     NSLog(@"did finish");
 }
@@ -86,6 +76,19 @@
     swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
     [self.view addGestureRecognizer:swipeRight];
+}
+
+-(void)setUpCoreData{
+    
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    _managedObjectContext = delegate.managedObjectContext;
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+    self.runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
+    
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
