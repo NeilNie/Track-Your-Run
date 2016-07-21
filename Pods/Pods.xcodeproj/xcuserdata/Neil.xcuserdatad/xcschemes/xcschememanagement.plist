@@ -3,10 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>MKFoundationKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Run.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0F7B1940DE10624DFABB6A65D0BE9B4A</key>
+		<key>26AA608F146B5FC7AF025B139FBC9335</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -16,7 +32,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DAC45B3B6A4C09F44CEF8ADA3CD5EA63</key>
+		<key>DBF1E5C6C9F971879DF64D4146B9B12E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
