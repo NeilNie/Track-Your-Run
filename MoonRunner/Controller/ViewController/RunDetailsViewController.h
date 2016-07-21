@@ -18,8 +18,6 @@
 
 @class Run;
 
-@import GoogleMobileAds;
-
 @interface RunDetailsViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>{
     NSMutableArray *masterArray;
     NSArray *array;
@@ -35,7 +33,5 @@
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property (nonatomic, weak) IBOutlet UITableView *table;
-
-@property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
 
 @end

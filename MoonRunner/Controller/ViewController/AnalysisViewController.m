@@ -155,36 +155,36 @@
 }
 -(NSString *)analyzeHeartrate{
     
-    BOOL evenHeartRate = ([self getMaxNumber:_heartbeat].intValue - [self getMinNumber:_heartbeat].intValue < 60);
-    BOOL hardWorkout = ([self getMaxNumber:self.heartbeat].intValue > 160);
-    BOOL longRun = (self.run.distance.intValue > 2000);
-    
-    //fetch all runs
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
+//    BOOL evenHeartRate = ([self getMaxNumber:_heartbeat].intValue - [self getMinNumber:_heartbeat].intValue < 60);
+//    BOOL hardWorkout = ([self getMaxNumber:self.heartbeat].intValue > 160);
+//    BOOL longRun = (self.run.distance.intValue > 2000);
+//    
+//    //fetch all runs
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
+//    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+//    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
 
-    int number;
-    //find runs that is in similiar distance
-    for (Run *runs in runArray) {
-        if (runs.distance.intValue > self.run.distance.intValue - 500 && runs.distance.intValue < self.run.distance.intValue + 500) {
-            
-            NSNumber *average = [self getAverageNumber:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
-            NSNumber *averageThisRun = [self getAverageNumber:self.heartbeat];
-            if (longRun && averageThisRun < average) {
-                number ++;
-            }
-            
-        }
-    }
+//    int number;
+//    //find runs that is in similiar distance
+//    for (Run *runs in runArray) {
+//        if (runs.distance.intValue > self.run.distance.intValue - 500 && runs.distance.intValue < self.run.distance.intValue + 500) {
+//            
+//            NSNumber *average = [self getAverageNumber:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
+//            NSNumber *averageThisRun = [self getAverageNumber:self.heartbeat];
+//            if (longRun && averageThisRun < average) {
+//                number ++;
+//            }
+//            
+//        }
+//    }
+//    
+//    NSString *returnValue = [NSString stringWithFormat:@"%@ %@ %@",
+//                             (hardWorkout) ? @"Based on your heart rate, you did a hard workout today." : nil,
+//                             (longRun && evenHeartRate) ? @"You heart beat is every even for a long run. Nice job" : nil,
+//                             (number > 0) ? [NSString stringWithFormat:@"You heart rate is low than %i runs that you did at the similar distance", number] : [NSString stringWithFormat:@"You heart rate is higher than %i runs that you did at the similar distance", number]];
+//    
     
-    NSString *returnValue = [NSString stringWithFormat:@"%@ %@ %@",
-                             (hardWorkout) ? @"Based on your heart rate, you did a hard workout today." : nil,
-                             (longRun && evenHeartRate) ? @"You heart beat is every even for a long run. Nice job" : nil,
-                             (number > 0) ? [NSString stringWithFormat:@"You heart rate is low than %i runs that you did at the similar distance", number] : [NSString stringWithFormat:@"You heart rate is higher than %i runs that you did at the similar distance", number]];
-    
-    
-    return returnValue;
+    return nil;
 }
 -(NSString *)analyzeElevation{
     

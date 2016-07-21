@@ -25,7 +25,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GKBar : UIView
+@interface GKBar : UIView <CAAnimationDelegate>
 
 + (instancetype)create;
 + (instancetype)createWithFrame:(CGRect)frame;

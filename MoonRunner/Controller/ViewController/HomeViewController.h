@@ -17,8 +17,6 @@
 #import "SettingViewController.h"
 #import "AppDelegate.h"
 
-@import GoogleMobileAds;
-
 @interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, WCSessionDelegate>{
     NSTimer *timer;
 }
@@ -34,5 +32,4 @@
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *MapWidth;
 
-@property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
 @end

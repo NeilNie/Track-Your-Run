@@ -270,7 +270,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         coords[1].longitude = secondLoc.longitude.doubleValue;
         
         NSNumber *speed = [smoothSpeeds objectAtIndex:(i-1)];
-        UIColor *color = [UIColor blackColor];
+        UIColor *color;
         
         // between red and yellow
         if (speed.doubleValue < medianSpeed) {

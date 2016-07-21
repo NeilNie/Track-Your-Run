@@ -19,8 +19,6 @@
 #import "RunDetailsViewController.h"
 #import "SettingViewController.h"
 
-@import GoogleMobileAds;
-
 @interface NewRunViewController : UIViewController <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, WCSessionDelegate>{
     
     NSTimer *timer;
@@ -58,7 +56,5 @@
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UITableView *table;
 @property (nonatomic, weak) IBOutlet UIImageView *cover;
-
-@property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
 
 @end

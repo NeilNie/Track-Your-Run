@@ -85,14 +85,7 @@
 }
 
 - (void)viewDidLoad {
-    
-    if (!areAdsRemoved) {
-        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
-        self.bannerView.rootViewController = self;
-        [self.bannerView loadRequest:[GADRequest request]];
-    }else{
-        self.bannerView.hidden = YES;
-    }
+
     [super viewDidLoad];
 }
 @end

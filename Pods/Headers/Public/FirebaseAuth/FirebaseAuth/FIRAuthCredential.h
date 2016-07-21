@@ -1,1 +1,1 @@
-../../../../FirebaseAuth/Frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h
+../../../../FirebaseAuth/Frameworks/frameworks/FirebaseAuth.framework/Headers/FIRAuthCredential.h

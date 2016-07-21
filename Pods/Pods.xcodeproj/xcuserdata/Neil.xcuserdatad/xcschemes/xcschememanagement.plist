@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FrameAccessor.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MKFoundationKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,7 +27,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>26AA608F146B5FC7AF025B139FBC9335</key>
+		<key>0F7B1940DE10624DFABB6A65D0BE9B4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -32,7 +37,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DBF1E5C6C9F971879DF64D4146B9B12E</key>
+		<key>633E13D500A51DA54FA54184A935F06F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>692530C4E3572085BF16486A9162330F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

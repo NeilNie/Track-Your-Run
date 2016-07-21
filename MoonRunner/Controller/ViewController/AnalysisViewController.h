@@ -16,8 +16,6 @@
 
 float distance;
 
-@import GoogleMobileAds;
-
 @interface AnalysisViewController : UIViewController <GKLineGraphDataSource, UITableViewDataSource, UITableViewDelegate>{
     
     NSMutableArray *TitleArray;

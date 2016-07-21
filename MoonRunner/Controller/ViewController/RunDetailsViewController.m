@@ -39,16 +39,6 @@ static float const mapPadding = 1.1f;
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
     masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
     
-    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    if (!areAdsRemoved) {
-        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
-        self.bannerView.rootViewController = self;
-        [self.bannerView loadRequest:[GADRequest request]];
-    }else{
-        self.bannerView.hidden = YES;
-    }
-    
     [self.table reloadData];
 }
 
@@ -283,15 +273,11 @@ static float const mapPadding = 1.1f;
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay{
     
-    if ([overlay isKindOfClass:[MulticolorPolylineSegment class]]) {
-        MulticolorPolylineSegment *polyLine = (MulticolorPolylineSegment *)overlay;
-        MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-        aRenderer.strokeColor = polyLine.color;
-        aRenderer.lineWidth = 5;
-        return aRenderer;
-    }
-    
-    return nil;
+    MulticolorPolylineSegment *polyLine = (MulticolorPolylineSegment *)overlay;
+    MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+    aRenderer.strokeColor = polyLine.color;
+    aRenderer.lineWidth = 5;
+    return aRenderer;
 }
 
 @end

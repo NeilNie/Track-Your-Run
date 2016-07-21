@@ -24,16 +24,7 @@
         session.delegate = self;
         [session activateSession];
     }
-    
-    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    if (!areAdsRemoved) {
-        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
-        self.bannerView.rootViewController = self;
-        [self.bannerView loadRequest:[GADRequest request]];
-    }else{
-        self.bannerView.hidden = YES;
-    }
+
     [[HealthKitManager sharedManager] requestAuthorization];
     
     [self setUpCoreData];

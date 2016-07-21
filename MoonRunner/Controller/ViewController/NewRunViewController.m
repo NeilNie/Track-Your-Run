@@ -41,11 +41,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     mapRegion.span.latitudeDelta = 0.015;
     mapRegion.span.longitudeDelta = 0.015;
     [self.mapView setRegion:mapRegion animated:YES];
-    
-    areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [self GoogleAdsBanner:areAdsRemoved withID:@"ca-app-pub-7942613644553368/1835128737"];
-    
+
     // initialize the timer
     startTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
@@ -127,16 +123,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 #pragma mark - Private
 
--(void)GoogleAdsBanner:(BOOL)display withID:(NSString *)adUnitID{
-    
-    if (!display) {
-        self.bannerView.adUnitID = adUnitID;
-        self.bannerView.rootViewController = self;
-        [self.bannerView loadRequest:[GADRequest request]];
-    }else{
-        self.bannerView.hidden = YES;
-    }
-}
 -(void)setUpGestures{
     
     UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc]  initWithTarget:self action:@selector(didSwipe:)];
@@ -349,15 +335,12 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 - (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id < MKOverlay >)overlay{
 
-    if ([overlay isKindOfClass:[MKPolyline class]]) {
-        MKPolyline *polyLine = (MKPolyline *)overlay;
-        MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
-        aRenderer.strokeColor = [UIColor blueColor];
-        aRenderer.lineWidth = 5;
-        return aRenderer;
-    }
+    MKPolyline *polyLine = (MKPolyline *)overlay;
+    MKPolylineRenderer *aRenderer = [[MKPolylineRenderer alloc] initWithPolyline:polyLine];
+    aRenderer.strokeColor = [UIColor blueColor];
+    aRenderer.lineWidth = 5;
+    return aRenderer;
     
-    return nil;
 }
 
 #pragma mark - Navigation
