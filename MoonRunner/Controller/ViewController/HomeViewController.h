@@ -11,7 +11,7 @@
 #import <WatchConnectivity/WatchConnectivity.h>
 #import "NewRunViewController.h"
 #import "PastRunViewController.h"
-#import "RunCell.h"
+#import "InfoTableViewCell.h"
 #import "HealthKitManager.h"
 #import "MathController.h"
 #import "SettingViewController.h"

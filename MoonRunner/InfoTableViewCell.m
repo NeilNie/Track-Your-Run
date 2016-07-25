@@ -1,18 +1,18 @@
 //
-//  SplitCell.m
+//  InfoTableViewCell.m
 //  Run
 //
-//  Created by Yongyang Nie on 2/23/16.
+//  Created by Yongyang Nie on 7/25/16.
 //  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
-#import "SplitCell.h"
+#import "InfoTableViewCell.h"
 
-@implementation SplitCell
+@implementation InfoTableViewCell
 
 - (void)awakeFromNib {
-    // Initialization code
     [super awakeFromNib];
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

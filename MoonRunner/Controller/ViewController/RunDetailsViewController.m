@@ -18,101 +18,6 @@ static float const mapPadding = 1.1f;
 
 @implementation RunDetailsViewController
 
-#pragma mark - Lifecycle
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [self.navigationItem setHidesBackButton:YES animated:YES];
-    [self configureView];
-    [self loadMap];
-    
-    name = [[NSMutableArray alloc] initWithObjects:@"Time", @"Average pace", @"Calories", @"Stride rate", @"Average heartbeat", @"Max heartbeat", nil];
-    valueA = [[NSMutableArray alloc] initWithObjects:
-              [NSString stringWithFormat:@"%@'%@", [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES], self.run.miliseconds],
-              [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
-              [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
-              [self getAverageStride:self.run.stride_rate],
-              [self getAverageHeartbeatFromArray:self.run.heart_rate],
-              [self getMaxHeartbeatFromArray:self.run.heart_rate],
-              nil];
-    array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
-    masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
-    
-    [self.table reloadData];
-}
-
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
-        AnalysisViewController *controller = (AnalysisViewController *)[segue destinationViewController];
-        controller.run = self.run;
-        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
-        NSLog(@"completed");
-    }
-}
-
--(void)configureView{
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
-    self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
-}
--(NSString *)getAverageStride:(NSData *)data{
-    
-    NSArray *stride = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    
-    if (stride.count > 1) {
-        int total = 0;
-        int average = 0;
-        for (int i = 0; i < stride.count; i++) {
-            total += [[stride objectAtIndex:i] intValue];
-        }
-        average = total / stride.count;
-        return [NSString stringWithFormat:@"%i", average];
-    }else{
-        return @"N/A";
-    }
-}
-
--(NSString *)getMaxHeartbeatFromArray:(NSData *)data{
-    
-    NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    
-    if (HeartArray.count > 1) {
-        int hightest = 0;
-        for (int i = 0; i < HeartArray.count; i++) {
-            if ([[HeartArray objectAtIndex:i] intValue] > hightest) {
-                hightest = [[HeartArray objectAtIndex:i] intValue];
-            }
-        }
-        return [NSString stringWithFormat:@"%i", hightest];
-    }else{
-        return @"N/A";
-    }
-    
-}
--(NSString *)getAverageHeartbeatFromArray:(NSData *)data{
-    
-    NSArray *HeartArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    
-    if (HeartArray.count > 1) {
-        int total = 0;
-        int average = 0;
-        for (int i = 0; i < HeartArray.count; i++) {
-            total += [[HeartArray objectAtIndex:i] intValue];
-        }
-        average = total / HeartArray.count;
-        return [NSString stringWithFormat:@"%i", average];
-    }else{
-        return @"N/A";
-    }
-    
-}
-
 #pragma mark - Private
 
 - (void)loadMap
@@ -125,6 +30,31 @@ static float const mapPadding = 1.1f;
         // make the line(s!) on the map
         [self.mapView addOverlays:self.colorSegmentArray];
     });
+}
+
+-(void)setUpData{
+    
+    valueA = [[NSMutableArray alloc] initWithObjects:
+              [NSString stringWithFormat:@"%@'%@", [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES], self.run.miliseconds],
+              [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
+              [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
+              [RunHelper getAverageStride:self.run.stride_rate],
+              [RunHelper getAverageHeartbeatFromArray:self.run.heart_rate],
+              [RunHelper getMaxHeartbeatFromArray:self.run.heart_rate],
+              nil];
+    array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
+    masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
+}
+
+-(void)configureView{
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
+    self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
+    
+    [self.table registerNib:[UINib nibWithNibName:@"SummaryCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
+    [self.table registerNib:[UINib nibWithNibName:@"SummaryCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
 }
 
 #pragma mark - Public
@@ -181,43 +111,19 @@ static float const mapPadding = 1.1f;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    SplitCell *cell = (SplitCell *)[tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
+    SummaryTableViewCell *cell = (SummaryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
     
     NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
     NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
 
-    switch (indexPath.section) {
-        case 0:
-            
-            cell.nameLabel.hidden = NO;
-            cell.value.hidden = NO;
-            cell.time.hidden = YES;
-            cell.distance.hidden = YES;
-            cell.heart.hidden = YES;
-            cell.number.hidden = YES;
-            
-            cell.nameLabel.text = [name objectAtIndex:indexPath.row];
-            cell.value.text = [valueA objectAtIndex:indexPath.row];
-            break;
-        case 1:
-            
-            cell.nameLabel.hidden = YES;
-            cell.value.hidden = YES;
-            cell.time.hidden = NO;
-            cell.distance.hidden = NO;
-            cell.heart.hidden = NO;
-            cell.number.hidden = NO;
-            
-            cell.time.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
-            cell.distance.text = [dict objectForKey:@"distance"];
-            cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
-            cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
-            break;
-            
-        default:
-            break;
-    }
-    
+//    cell.nameLabel.text = [name objectAtIndex:indexPath.row];
+//    cell.value.text = [valueA objectAtIndex:indexPath.row];
+//    
+//    cell.time.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
+//    cell.distance.text = [dict objectForKey:@"distance"];
+//    cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
+//    cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
+
     return cell;
 }
 
@@ -279,5 +185,31 @@ static float const mapPadding = 1.1f;
     aRenderer.lineWidth = 5;
     return aRenderer;
 }
+
+#pragma mark - Lifecycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self configureView];
+    [self loadMap];
+    [self setUpData];
+    
+    [self.table reloadData];
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
+        AnalysisViewController *controller = (AnalysisViewController *)[segue destinationViewController];
+        controller.run = self.run;
+        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        NSLog(@"completed");
+    }
+}
+
 
 @end

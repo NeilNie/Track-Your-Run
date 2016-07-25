@@ -6,8 +6,8 @@
 //  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
-#import "trophyCollectionViewCell.h"
+#import "TrophyCollectionViewCell.h"
 
-@implementation trophyCollectionViewCell
+@implementation TrophyCollectionViewCell
 
 @end

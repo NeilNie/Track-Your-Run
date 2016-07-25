@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "MDTextField.h"
 
-@import Firebase;
 @import FirebaseAuth;
+@import FirebaseDatabase;
 
 @interface UserAuthViewController : UIViewController <MDTextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *background;

@@ -34,13 +34,16 @@
 		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
 		00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
+		2808B80E1D46960300296E4C /* RunHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808B80D1D46960300296E4C /* RunHelper.m */; };
+		2808B8121D4697A700296E4C /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808B8101D4697A700296E4C /* InfoTableViewCell.m */; };
+		2808B8131D4697A700296E4C /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2808B8111D4697A700296E4C /* InfoTableViewCell.xib */; };
 		2817303F1C74E0120036901C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2817303E1C74E0120036901C /* MapKit.framework */; };
 		281730411C74E0460036901C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281730401C74E0460036901C /* StoreKit.framework */; };
 		2818168A1C7678180024770E /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281816891C7678180024770E /* MathController.m */; };
 		281816901C768E990024770E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168F1C768E990024770E /* HealthKit.framework */; };
 		283334791D121FEB00F76C5A /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334761D121FEB00F76C5A /* GKBar.m */; };
 		2833347A1D121FEB00F76C5A /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334781D121FEB00F76C5A /* GKBarGraph.m */; };
-		2833347D1D1220A000F76C5A /* trophyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */; };
+		2833347D1D1220A000F76C5A /* TrophyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833347C1D1220A000F76C5A /* TrophyCollectionViewCell.m */; };
 		2834DAF01D41604800BB4233 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2834DACF1D41604800BB4233 /* PNBar.m */; };
 		2834DAF11D41604800BB4233 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 2834DAD11D41604800BB4233 /* PNBarChart.m */; };
 		2834DAF21D41604800BB4233 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2834DAD51D41604800BB4233 /* PNChartLabel.m */; };
@@ -86,13 +89,12 @@
 		28422E461D10F5E80070E982 /* two_hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E421D10F5E80070E982 /* two_hearts.png */; };
 		28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28422E481D10F7FE0070E982 /* RunAnalyzer.m */; };
 		284CFACA1D13482600BFDCBE /* UserAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CFAC91D13482600BFDCBE /* UserAuthViewController.m */; };
-		286E666C1D13034E008B4BDE /* summeryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666B1D13034E008B4BDE /* summeryTableCell.xib */; };
-		286E666E1D13035C008B4BDE /* buttonTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666D1D13035C008B4BDE /* buttonTableCell.xib */; };
-		286E66701D1303AF008B4BDE /* normalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666F1D1303AF008B4BDE /* normalTableCell.xib */; };
+		286E666C1D13034E008B4BDE /* SummeryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666B1D13034E008B4BDE /* SummeryTableCell.xib */; };
+		286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666D1D13035C008B4BDE /* ButtonTableCell.xib */; };
 		286E66741D130573008B4BDE /* LOL.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66711D130572008B4BDE /* LOL.png */; };
 		286E66751D130573008B4BDE /* confused.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66721D130573008B4BDE /* confused.png */; };
 		286E66761D130573008B4BDE /* sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66731D130573008B4BDE /* sad.png */; };
-		286E66791D130740008B4BDE /* buttonTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286E66781D130740008B4BDE /* buttonTableCell.m */; };
+		286E66791D130740008B4BDE /* ButtonTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 286E66781D130740008B4BDE /* ButtonTableCell.m */; };
 		28716EC31C75358D000834C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28716EC21C75358D000834C6 /* Main.storyboard */; };
 		28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC51C75518E000834C6 /* NewRunViewController.m */; };
 		28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28716EC71C75518E000834C6 /* RunDetailsViewController.m */; };
@@ -112,8 +114,6 @@
 		288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E9F251D107E490056B4F9 /* Launch Screen.storyboard */; };
 		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
-		28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BF33151C7CD4F4002CE706 /* SplitCell.m */; };
-		28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28BF33171C7CD4FF002CE706 /* SplitCell.xib */; };
 		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
 		28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784031D1103BB00C17A4F /* LeftViewController.m */; };
 		28E784071D1103BB00C17A4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784051D1103BB00C17A4F /* MainViewController.m */; };
@@ -126,7 +126,7 @@
 		28F051831D11B35E000C3955 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517F1D11B35E000C3955 /* home.png */; };
 		28F051841D11B35E000C3955 /* preference.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F051801D11B35E000C3955 /* preference.png */; };
 		28F051851D11B35E000C3955 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F051811D11B35E000C3955 /* progress.png */; };
-		28F051871D11BADC000C3955 /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F051861D11BADC000C3955 /* Reveal.framework */; };
+		28F4337C1D46927400690C7C /* SummaryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F4337B1D46927400690C7C /* SummaryTableViewCell.m */; };
 		E4F7149FC9BAA4B1E055FCF3 /* libPods-Run.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1A6F26E3336578E10B9ECC6 /* libPods-Run.a */; };
 		FA0B80C01939189600CDCA53 /* MulticolorPolylineSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */; };
 		FA1F950B1929CF2600A0179A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1F950A1929CF2600A0179A /* Foundation.framework */; };
@@ -139,7 +139,6 @@
 		FA1F954D1929E36F00A0179A /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1F954C1929E36F00A0179A /* Location.m */; };
 		FA24F25519481C6200500593 /* Run.m in Sources */ = {isa = PBXBuildFile; fileRef = FA24F25419481C6200500593 /* Run.m */; };
 		FA30BD12192B319400CD453E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA30BD11192B319400CD453E /* HomeViewController.m */; };
-		FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB9AA21192DB4CC00FF8E47 /* RunCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,6 +228,11 @@
 		00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		2808B80C1D46960300296E4C /* RunHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunHelper.h; sourceTree = "<group>"; };
+		2808B80D1D46960300296E4C /* RunHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunHelper.m; sourceTree = "<group>"; };
+		2808B80F1D4697A700296E4C /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
+		2808B8101D4697A700296E4C /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
+		2808B8111D4697A700296E4C /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoTableViewCell.xib; path = ../InfoTableViewCell.xib; sourceTree = "<group>"; };
 		2817303E1C74E0120036901C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		281730401C74E0460036901C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		281816771C76725B0024770E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -242,8 +246,8 @@
 		283334761D121FEB00F76C5A /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
 		283334771D121FEB00F76C5A /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
 		283334781D121FEB00F76C5A /* GKBarGraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBarGraph.m; sourceTree = "<group>"; };
-		2833347B1D1220A000F76C5A /* trophyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trophyCollectionViewCell.h; sourceTree = "<group>"; };
-		2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = trophyCollectionViewCell.m; sourceTree = "<group>"; };
+		2833347B1D1220A000F76C5A /* TrophyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrophyCollectionViewCell.h; sourceTree = "<group>"; };
+		2833347C1D1220A000F76C5A /* TrophyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrophyCollectionViewCell.m; sourceTree = "<group>"; };
 		2834DACE1D41604800BB4233 /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
 		2834DACF1D41604800BB4233 /* PNBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBar.m; sourceTree = "<group>"; };
 		2834DAD01D41604800BB4233 /* PNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBarChart.h; sourceTree = "<group>"; };
@@ -333,14 +337,13 @@
 		28422E481D10F7FE0070E982 /* RunAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunAnalyzer.m; path = Controller/ViewController/RunAnalyzer.m; sourceTree = "<group>"; };
 		284CFAC81D13482600BFDCBE /* UserAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthViewController.h; sourceTree = "<group>"; };
 		284CFAC91D13482600BFDCBE /* UserAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthViewController.m; sourceTree = "<group>"; };
-		286E666B1D13034E008B4BDE /* summeryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = summeryTableCell.xib; sourceTree = "<group>"; };
-		286E666D1D13035C008B4BDE /* buttonTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = buttonTableCell.xib; sourceTree = "<group>"; };
-		286E666F1D1303AF008B4BDE /* normalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = normalTableCell.xib; sourceTree = "<group>"; };
+		286E666B1D13034E008B4BDE /* SummeryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummeryTableCell.xib; sourceTree = "<group>"; };
+		286E666D1D13035C008B4BDE /* ButtonTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableCell.xib; sourceTree = "<group>"; };
 		286E66711D130572008B4BDE /* LOL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOL.png; sourceTree = "<group>"; };
 		286E66721D130573008B4BDE /* confused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confused.png; sourceTree = "<group>"; };
 		286E66731D130573008B4BDE /* sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sad.png; sourceTree = "<group>"; };
-		286E66771D130740008B4BDE /* buttonTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buttonTableCell.h; sourceTree = "<group>"; };
-		286E66781D130740008B4BDE /* buttonTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = buttonTableCell.m; sourceTree = "<group>"; };
+		286E66771D130740008B4BDE /* ButtonTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonTableCell.h; sourceTree = "<group>"; };
+		286E66781D130740008B4BDE /* ButtonTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonTableCell.m; sourceTree = "<group>"; };
 		28716EC21C75358D000834C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		28716EC41C75518E000834C6 /* NewRunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRunViewController.h; sourceTree = "<group>"; };
 		28716EC51C75518E000834C6 /* NewRunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRunViewController.m; sourceTree = "<group>"; };
@@ -364,9 +367,6 @@
 		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
 		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
 		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		28BF33141C7CD4F4002CE706 /* SplitCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplitCell.h; path = View/SplitCell.h; sourceTree = "<group>"; };
-		28BF33151C7CD4F4002CE706 /* SplitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplitCell.m; path = View/SplitCell.m; sourceTree = "<group>"; };
-		28BF33171C7CD4FF002CE706 /* SplitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitCell.xib; sourceTree = "<group>"; };
 		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
 		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
 		28E784021D1103BB00C17A4F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -384,7 +384,8 @@
 		28F0517F1D11B35E000C3955 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		28F051801D11B35E000C3955 /* preference.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preference.png; sourceTree = "<group>"; };
 		28F051811D11B35E000C3955 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
-		28F051861D11BADC000C3955 /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
+		28F4337A1D46927400690C7C /* SummaryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SummaryTableViewCell.h; sourceTree = "<group>"; };
+		28F4337B1D46927400690C7C /* SummaryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SummaryTableViewCell.m; sourceTree = "<group>"; };
 		64CC42117DEFED8EC4DD933E /* Pods-Run.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Run/Pods-Run.debug.xcconfig"; sourceTree = "<group>"; };
 		8EAE9943CD2A555783BCC69E /* Pods-Run.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Run.release.xcconfig"; path = "Pods/Target Support Files/Pods-Run/Pods-Run.release.xcconfig"; sourceTree = "<group>"; };
 		C1A6F26E3336578E10B9ECC6 /* libPods-Run.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Run.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,8 +408,6 @@
 		FA24F25419481C6200500593 /* Run.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Run.m; sourceTree = "<group>"; };
 		FA30BD10192B319400CD453E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		FA30BD11192B319400CD453E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		FAB9AA20192DB4CC00FF8E47 /* RunCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunCell.h; path = View/RunCell.h; sourceTree = "<group>"; };
-		FAB9AA21192DB4CC00FF8E47 /* RunCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunCell.m; path = View/RunCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -433,7 +432,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */,
-				28F051871D11BADC000C3955 /* Reveal.framework in Frameworks */,
 				00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */,
 				281816901C768E990024770E /* HealthKit.framework in Frameworks */,
 				FA1F950D1929CF2600A0179A /* CoreGraphics.framework in Frameworks */,
@@ -507,15 +505,7 @@
 			children = (
 				2834DB001D41608200BB4233 /* iOSUILib */,
 				2834DACD1D41604800BB4233 /* PNChart */,
-				002A0DE11C827FE4001DE96E /* GraphKit.h */,
-				002A0DE31C827FE4001DE96E /* GKLineGraph.h */,
-				002A0DE41C827FE4001DE96E /* GKLineGraph.m */,
-				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
-				002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */,
-				283334751D121FEB00F76C5A /* GKBar.h */,
-				283334761D121FEB00F76C5A /* GKBar.m */,
-				283334771D121FEB00F76C5A /* GKBarGraph.h */,
-				283334781D121FEB00F76C5A /* GKBarGraph.m */,
+				28EB1A9F1D42A68700703970 /* GKGraph */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -650,6 +640,8 @@
 		28422E3D1D10C94F0070E982 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2808B80C1D46960300296E4C /* RunHelper.h */,
+				2808B80D1D46960300296E4C /* RunHelper.m */,
 				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
 				FA1F951C1929CF2600A0179A /* AppDelegate.m */,
 				28422E471D10F7FE0070E982 /* RunAnalyzer.h */,
@@ -660,7 +652,7 @@
 				FA0B80BF1939189600CDCA53 /* MulticolorPolylineSegment.m */,
 				00357ECD1C77D02F0046B8BC /* HealthKitManager.h */,
 				00357ECE1C77D02F0046B8BC /* HealthKitManager.m */,
-				2879C9BC1D125ACB0088118A /* View Classes */,
+				2879C9BC1D125ACB0088118A /* Views */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -711,26 +703,32 @@
 			path = trophy;
 			sourceTree = "<group>";
 		};
-		2879C9BC1D125ACB0088118A /* View Classes */ = {
+		2879C9BC1D125ACB0088118A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				28E7840C1D11054F00C17A4F /* LeftViewCell.h */,
 				28E7840D1D11054F00C17A4F /* LeftViewCell.m */,
-				28BF33141C7CD4F4002CE706 /* SplitCell.h */,
-				28BF33151C7CD4F4002CE706 /* SplitCell.m */,
-				FAB9AA20192DB4CC00FF8E47 /* RunCell.h */,
-				FAB9AA21192DB4CC00FF8E47 /* RunCell.m */,
-				2833347B1D1220A000F76C5A /* trophyCollectionViewCell.h */,
-				2833347C1D1220A000F76C5A /* trophyCollectionViewCell.m */,
-				286E66771D130740008B4BDE /* buttonTableCell.h */,
-				286E66781D130740008B4BDE /* buttonTableCell.m */,
+				2833347B1D1220A000F76C5A /* TrophyCollectionViewCell.h */,
+				2833347C1D1220A000F76C5A /* TrophyCollectionViewCell.m */,
+				286E66771D130740008B4BDE /* ButtonTableCell.h */,
+				286E66781D130740008B4BDE /* ButtonTableCell.m */,
+				28F4337A1D46927400690C7C /* SummaryTableViewCell.h */,
+				28F4337B1D46927400690C7C /* SummaryTableViewCell.m */,
+				2808B80F1D4697A700296E4C /* InfoTableViewCell.h */,
+				2808B8101D4697A700296E4C /* InfoTableViewCell.m */,
 			);
-			name = "View Classes";
+			name = Views;
 			sourceTree = "<group>";
 		};
 		28E784081D1103BF00C17A4F /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */,
+				00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */,
+				007695191C8E6F2A007CB823 /* PastRunViewController.h */,
+				0076951A1C8E6F2A007CB823 /* PastRunViewController.m */,
+				284CFAC81D13482600BFDCBE /* UserAuthViewController.h */,
+				284CFAC91D13482600BFDCBE /* UserAuthViewController.m */,
 				28E784091D1104DB00C17A4F /* LGSideMenuController.h */,
 				28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */,
 				28E784021D1103BB00C17A4F /* LeftViewController.h */,
@@ -739,6 +737,22 @@
 				28E784051D1103BB00C17A4F /* MainViewController.m */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		28EB1A9F1D42A68700703970 /* GKGraph */ = {
+			isa = PBXGroup;
+			children = (
+				002A0DE11C827FE4001DE96E /* GraphKit.h */,
+				002A0DE31C827FE4001DE96E /* GKLineGraph.h */,
+				002A0DE41C827FE4001DE96E /* GKLineGraph.m */,
+				002A0DE51C827FE4001DE96E /* UIColor+GraphKit.h */,
+				002A0DE61C827FE4001DE96E /* UIColor+GraphKit.m */,
+				283334751D121FEB00F76C5A /* GKBar.h */,
+				283334761D121FEB00F76C5A /* GKBar.m */,
+				283334771D121FEB00F76C5A /* GKBarGraph.h */,
+				283334781D121FEB00F76C5A /* GKBarGraph.m */,
+			);
+			name = GKGraph;
 			sourceTree = "<group>";
 		};
 		D13C3B5371D1E4B8BAF59616 /* Pods */ = {
@@ -753,7 +767,6 @@
 		FA1F94FE1929CF2600A0179A = {
 			isa = PBXGroup;
 			children = (
-				28F051861D11BADC000C3955 /* Reveal.framework */,
 				00357ED11C77D4740046B8BC /* Run.entitlements */,
 				FA1F95121929CF2600A0179A /* MoonRunner */,
 				00C80B571C79249E005C4E39 /* Run Apple Watch */,
@@ -838,11 +851,10 @@
 			isa = PBXGroup;
 			children = (
 				28716EC21C75358D000834C6 /* Main.storyboard */,
-				28BF33171C7CD4FF002CE706 /* SplitCell.xib */,
-				286E666F1D1303AF008B4BDE /* normalTableCell.xib */,
 				288E9F251D107E490056B4F9 /* Launch Screen.storyboard */,
-				286E666B1D13034E008B4BDE /* summeryTableCell.xib */,
-				286E666D1D13035C008B4BDE /* buttonTableCell.xib */,
+				286E666B1D13034E008B4BDE /* SummeryTableCell.xib */,
+				286E666D1D13035C008B4BDE /* ButtonTableCell.xib */,
+				2808B8111D4697A700296E4C /* InfoTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -858,14 +870,8 @@
 				28716EC71C75518E000834C6 /* RunDetailsViewController.m */,
 				002BDB6F1C8106E800F051E2 /* AnalysisViewController.h */,
 				002BDB701C8106E800F051E2 /* AnalysisViewController.m */,
-				00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */,
-				00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */,
-				007695191C8E6F2A007CB823 /* PastRunViewController.h */,
-				0076951A1C8E6F2A007CB823 /* PastRunViewController.m */,
 				287E2F941D11F17B00D45488 /* ProgressViewController.h */,
 				287E2F951D11F17B00D45488 /* ProgressViewController.m */,
-				284CFAC81D13482600BFDCBE /* UserAuthViewController.h */,
-				284CFAC91D13482600BFDCBE /* UserAuthViewController.m */,
 				28E784081D1103BF00C17A4F /* Helper */,
 			);
 			name = ViewController;
@@ -1026,28 +1032,27 @@
 				2879C9B71D124B410088118A /* unlock.png in Resources */,
 				2879C9B91D124F550088118A /* Media.xcassets in Resources */,
 				28F051851D11B35E000C3955 /* progress.png in Resources */,
+				2808B8131D4697A700296E4C /* InfoTableViewCell.xib in Resources */,
 				28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */,
 				286E66761D130573008B4BDE /* sad.png in Resources */,
 				2879C9AE1D122E140088118A /* award_highest_speed.png in Resources */,
 				28422E461D10F5E80070E982 /* two_hearts.png in Resources */,
 				00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */,
-				286E666C1D13034E008B4BDE /* summeryTableCell.xib in Resources */,
+				286E666C1D13034E008B4BDE /* SummeryTableCell.xib in Resources */,
 				28422E451D10F5E80070E982 /* speed.png in Resources */,
 				00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */,
 				28422E441D10F5E80070E982 /* icon-39-512.png in Resources */,
-				286E666E1D13035C008B4BDE /* buttonTableCell.xib in Resources */,
+				286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */,
 				2879C9AB1D122E140088118A /* award-fastest.png in Resources */,
 				28E784121D11085000C17A4F /* image.png in Resources */,
 				2879C9B21D122E140088118A /* trophy_5m.png in Resources */,
 				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
 				2879C9B61D124B410088118A /* lock.png in Resources */,
-				286E66701D1303AF008B4BDE /* normalTableCell.xib in Resources */,
 				28F051831D11B35E000C3955 /* home.png in Resources */,
 				28422E431D10F5E80070E982 /* classpass-icon-sneaker.png in Resources */,
 				288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */,
 				006E9F7D1C8F61B4002B8B37 /* GoogleService-Info.plist in Resources */,
 				2879C9AC1D122E140088118A /* award-longest.png in Resources */,
-				28BF33181C7CD4FF002CE706 /* SplitCell.xib in Resources */,
 				286E66751D130573008B4BDE /* confused.png in Resources */,
 				28716EC31C75358D000834C6 /* Main.storyboard in Resources */,
 				00937C2C1C8A40AE0096B5EC /* save.png in Resources */,
@@ -1140,21 +1145,20 @@
 				2834DB3A1D41608200BB4233 /* MDButton.m in Sources */,
 				2834DB351D41608200BB4233 /* MDDeviceHelper.m in Sources */,
 				2834DB3E1D41608200BB4233 /* MDSnackbar.m in Sources */,
-				2833347D1D1220A000F76C5A /* trophyCollectionViewCell.m in Sources */,
+				2833347D1D1220A000F76C5A /* TrophyCollectionViewCell.m in Sources */,
 				2834DB441D41608200BB4233 /* MDTouchGestureRecognizer.m in Sources */,
 				2834DAF81D41604800BB4233 /* PNLineChartDataItem.m in Sources */,
 				2833347A1D121FEB00F76C5A /* GKBarGraph.m in Sources */,
 				2834DAF71D41604800BB4233 /* PNLineChartData.m in Sources */,
 				28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */,
-				28BF33161C7CD4F4002CE706 /* SplitCell.m in Sources */,
 				0076951B1C8E6F2A007CB823 /* PastRunViewController.m in Sources */,
+				2808B8121D4697A700296E4C /* InfoTableViewCell.m in Sources */,
 				28E784071D1103BB00C17A4F /* MainViewController.m in Sources */,
 				2834DAFA1D41604800BB4233 /* PNPieChartDataItem.m in Sources */,
 				2834DAF41D41604800BB4233 /* PNColor.m in Sources */,
 				2834DAF51D41604800BB4233 /* PNGenericChart.m in Sources */,
 				002A0DEA1C827FE4001DE96E /* UIColor+GraphKit.m in Sources */,
 				28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */,
-				FAB9AA22192DB4CC00FF8E47 /* RunCell.m in Sources */,
 				2834DB421D41608200BB4233 /* MDTableViewCell.m in Sources */,
 				2834DAFC1D41604800BB4233 /* PNRadarChartDataItem.m in Sources */,
 				00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */,
@@ -1163,9 +1167,10 @@
 				FA1F951D1929CF2600A0179A /* AppDelegate.m in Sources */,
 				2834DB3F1D41608200BB4233 /* MDSwitch.m in Sources */,
 				2834DB471D41608200BB4233 /* MDProgressLayer.m in Sources */,
+				28F4337C1D46927400690C7C /* SummaryTableViewCell.m in Sources */,
 				00357ECF1C77D02F0046B8BC /* HealthKitManager.m in Sources */,
 				2834DAF61D41604800BB4233 /* PNLineChart.m in Sources */,
-				286E66791D130740008B4BDE /* buttonTableCell.m in Sources */,
+				286E66791D130740008B4BDE /* ButtonTableCell.m in Sources */,
 				2834DB411D41608200BB4233 /* MDTabBarViewController.m in Sources */,
 				002BDB711C8106E800F051E2 /* AnalysisViewController.m in Sources */,
 				2834DAFB1D41604800BB4233 /* PNRadarChart.m in Sources */,
@@ -1189,6 +1194,7 @@
 				28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */,
 				28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */,
 				FA1F95191929CF2600A0179A /* main.m in Sources */,
+				2808B80E1D46960300296E4C /* RunHelper.m in Sources */,
 				2834DB481D41608200BB4233 /* MDSuggestPopupView.m in Sources */,
 				002A0DE91C827FE4001DE96E /* GKLineGraph.m in Sources */,
 				2834DB451D41608200BB4233 /* MDCircularProgressLayer.m in Sources */,

@@ -125,12 +125,16 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 5;
+    if (self.runArray.count > 0) {
+        return 5;
+    }else{
+        return 0;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    RunCell *cell = (RunCell *)[tableView dequeueReusableCellWithIdentifier:@"RunCell"];
+    InfoTableViewCell *cell = (InfoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"RunCell"];
     
     if (self.runArray.count > 0) {
         Run *runObject = [self.runArray objectAtIndex:indexPath.row];
@@ -169,6 +173,5 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 1100, 1100);
     [mapView setRegion:[mapView regionThatFits:region] animated:YES];
 }
-
 
 @end

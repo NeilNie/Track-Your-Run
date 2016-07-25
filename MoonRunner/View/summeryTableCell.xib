@@ -1,10 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11173.2" systemVersion="16A254g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="dno-Fw-TKW">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dno-Fw-TKW" id="Uwd-UG-RoI">
+                <frame key="frameInset" width="375" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn1-u0-Weo">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="83K-nX-STr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34:34:09" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-no-mCd">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="97" id="avj-EB-9fF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trainers" translatesAutoresizingMaskIntoConstraints="NO" id="nf4-07-6ag">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="OXA-QE-uBf"/>
+                            <constraint firstAttribute="height" constant="30" id="iWh-u6-9ld"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="time" translatesAutoresizingMaskIntoConstraints="NO" id="2SJ-e3-w7L">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="33" id="1RD-KP-Iq5"/>
+                            <constraint firstAttribute="height" constant="33" id="WqO-x5-QV9"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caloric_energy" translatesAutoresizingMaskIntoConstraints="NO" id="4x4-Ne-nVg">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="dom-aK-D6h"/>
+                            <constraint firstAttribute="width" constant="33" id="kJJ-hw-5pK"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6:45" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vo-PV-QW2">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="U4R-l0-Ygk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4x4-Ne-nVg" firstAttribute="top" secondItem="Uwd-UG-RoI" secondAttribute="topMargin" id="01G-tK-aYY"/>
+                    <constraint firstItem="nf4-07-6ag" firstAttribute="centerX" secondItem="9vo-PV-QW2" secondAttribute="centerX" id="09J-58-TFX"/>
+                    <constraint firstItem="2SJ-e3-w7L" firstAttribute="top" secondItem="Uwd-UG-RoI" secondAttribute="topMargin" id="1mq-ZD-a9P"/>
+                    <constraint firstItem="9vo-PV-QW2" firstAttribute="bottom" secondItem="Uwd-UG-RoI" secondAttribute="bottomMargin" id="5fl-7g-jtD"/>
+                    <constraint firstItem="Dqt-no-mCd" firstAttribute="centerX" secondItem="Uwd-UG-RoI" secondAttribute="centerX" id="6SQ-Pl-dh3"/>
+                    <constraint firstItem="nf4-07-6ag" firstAttribute="top" secondItem="Uwd-UG-RoI" secondAttribute="topMargin" id="CZB-Q0-2cq"/>
+                    <constraint firstItem="jn1-u0-Weo" firstAttribute="trailing" secondItem="Uwd-UG-RoI" secondAttribute="trailingMargin" id="QzL-Sj-m5d"/>
+                    <constraint firstItem="2SJ-e3-w7L" firstAttribute="centerX" secondItem="Dqt-no-mCd" secondAttribute="centerX" id="Yki-l7-n3W"/>
+                    <constraint firstItem="Dqt-no-mCd" firstAttribute="bottom" secondItem="Uwd-UG-RoI" secondAttribute="bottomMargin" id="dVS-IX-Q1H"/>
+                    <constraint firstItem="4x4-Ne-nVg" firstAttribute="centerX" secondItem="jn1-u0-Weo" secondAttribute="centerX" id="fvD-Hw-PVY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jn1-u0-Weo" secondAttribute="bottom" id="mzW-Jj-pPJ"/>
+                    <constraint firstItem="9vo-PV-QW2" firstAttribute="leading" secondItem="Uwd-UG-RoI" secondAttribute="leading" constant="8" id="v4Y-Bv-BeN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="9.5" y="41"/>
+        </tableViewCell>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Loe-EP-uRc">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="26" y="131"/>
+        </label>
     </objects>
+    <resources>
+        <image name="caloric_energy" width="33" height="33"/>
+        <image name="time" width="33" height="33"/>
+        <image name="trainers" width="33" height="33"/>
+    </resources>
 </document>

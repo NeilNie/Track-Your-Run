@@ -1,14 +1,14 @@
 //
-//  RunCell.h
-//  RunMaster
+//  InfoTableViewCell.h
+//  Run
 //
-//  Created by Matt Luedke on 5/21/14.
-//  Copyright (c) 2014 Matt Luedke. All rights reserved.
+//  Created by Yongyang Nie on 7/25/16.
+//  Copyright © 2016 Yongyang Nie. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface RunCell : UITableViewCell
+@interface InfoTableViewCell : UITableViewCell
 
 @property (nonatomic, weak) IBOutlet UILabel *date;
 @property (nonatomic, weak) IBOutlet UILabel *distance;

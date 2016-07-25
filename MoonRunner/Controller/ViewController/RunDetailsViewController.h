@@ -12,9 +12,10 @@
 #import "MathController.h"
 #import "Location.h"
 #import "MulticolorPolylineSegment.h"
-#import "SplitCell.h"
+#import "SummaryTableViewCell.h"
 #import "AnalysisViewController.h"
 #import "SettingViewController.h"
+#import "RunHelper.h"
 
 @class Run;
 
@@ -25,7 +26,6 @@
     NSArray *valueA;
 }
 
-@property (weak, nonatomic) IBOutlet UIImageView *mapSnapShot;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
 @property (strong, nonatomic) NSArray *colorSegmentArray;

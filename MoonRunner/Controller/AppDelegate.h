@@ -14,7 +14,7 @@
 
 #define kMainViewController (MainViewController *)[UIApplication sharedApplication].delegate.window.rootViewController
 
-@import Firebase;
+@import FirebaseAnalytics;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, WCSessionDelegate>{
     HKHealthStore *healthStore;

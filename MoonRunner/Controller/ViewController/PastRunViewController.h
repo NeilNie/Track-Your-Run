@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "RunDetailsViewController.h"
 #import "Run.h"
-#import "RunCell.h"
+#import "InfoTableViewCell.h"
 #import "MathController.h"
 #import "SettingViewController.h"
 
