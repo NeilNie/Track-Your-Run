@@ -486,7 +486,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYR-Mq-Tco">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="nHH-Au-bwk"/>
+                                    <constraint firstAttribute="height" constant="240" id="nHH-Au-bwk"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="fOi-p9-m5g" id="61V-2p-NzU"/>
@@ -494,6 +494,24 @@
                             </mapView>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XWN-MO-vME">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="idCell" id="nYo-SC-k84">
+                                        <frame key="frameInset" minY="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYo-SC-k84" id="p9j-Om-xmE">
+                                            <frame key="frameInset" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="idCellinfo" id="U7V-rc-yq1">
+                                        <frame key="frameInset" minY="72" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U7V-rc-yq1" id="3Sp-uL-1Wa">
+                                            <frame key="frameInset" width="343" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="fOi-p9-m5g" id="9Xb-we-YCL"/>
                                     <outlet property="delegate" destination="fOi-p9-m5g" id="WYZ-TF-5Dq"/>
@@ -747,7 +765,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A9R-Er-P4I">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RunCell" rowHeight="70" id="oZ0-Zl-1Eb" customClass="RunCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idInfoCell" rowHeight="70" id="oZ0-Zl-1Eb" customClass="InfoTableViewCell">
                                         <frame key="frameInset" minY="28" width="363" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oZ0-Zl-1Eb" id="QKh-br-qjw">
@@ -799,10 +817,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="date" destination="Wuh-Rf-e7r" id="WBV-cK-B30"/>
-                                            <outlet property="distance" destination="42e-eW-EXt" id="HVm-qM-weY"/>
-                                            <outlet property="pace" destination="ZvW-7w-Y55" id="wEe-Xa-DfN"/>
-                                            <outlet property="time" destination="t6o-8s-LXx" id="jDl-tZ-Lsu"/>
+                                            <outlet property="date" destination="Wuh-Rf-e7r" id="rtg-m3-5Oi"/>
+                                            <outlet property="distance" destination="42e-eW-EXt" id="vqo-ft-BXX"/>
+                                            <outlet property="pace" destination="t6o-8s-LXx" id="8wz-yL-CZz"/>
+                                            <outlet property="time" destination="ZvW-7w-Y55" id="TJy-kF-c2l"/>
                                             <segue destination="fOi-p9-m5g" kind="show" id="AF5-EG-4cg"/>
                                         </connections>
                                     </tableViewCell>
@@ -1259,6 +1277,6 @@
         <image name="two_hearts.png" width="96" height="96"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="53a-SB-0Tj"/>
+        <segue reference="AF5-EG-4cg"/>
     </inferredMetricsTieBreakers>
 </document>

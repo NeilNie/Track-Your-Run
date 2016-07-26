@@ -43,6 +43,7 @@ static float const mapPadding = 1.1f;
               [RunHelper getMaxHeartbeatFromArray:self.run.heart_rate],
               nil];
     array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
+    name = [[NSMutableArray alloc] initWithObjects:@"Stride Rate",@"Average Heart Rate", @"Max Heart Rate", nil];
     masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
 }
 
@@ -53,8 +54,9 @@ static float const mapPadding = 1.1f;
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
     
-    [self.table registerNib:[UINib nibWithNibName:@"SummaryCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
-    [self.table registerNib:[UINib nibWithNibName:@"SummaryCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
+    [self.table registerNib:[UINib nibWithNibName:@"SummaryTableCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
+    [self.table registerNib:[UINib nibWithNibName:@"ButtonTableCell" bundle:nil] forCellReuseIdentifier:@"idCellButton"];
+    [self.table registerNib:[UINib nibWithNibName:@"InfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"idCellinfo"];
 }
 
 #pragma mark - Public
@@ -110,12 +112,35 @@ static float const mapPadding = 1.1f;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    SummaryTableViewCell *cell = (SummaryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"TableCellID" forIndexPath:indexPath];
-    
+//    
     NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
     NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
 
+    if (indexPath.section == 0) {
+        
+        if (indexPath.row == 0) {
+            SummaryTableViewCell *cell = (SummaryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idCellSummary" forIndexPath:indexPath];
+            cell.time.text = [valueA objectAtIndex:0];
+            cell.pace.text = [valueA objectAtIndex:1];
+            cell.pace.text = [valueA objectAtIndex:3];
+            return cell;
+        }else if (indexPath.row == 1){
+            ButtonTableCell *cell = (ButtonTableCell *)[tableView dequeueReusableCellWithIdentifier:@"idCellButton" forIndexPath:indexPath];
+            return cell;
+        }
+//        else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4){
+//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
+//            cell.textLabel.text = [valueA objectAtIndex:indexPath.row + 1];
+//            cell.detailTextLabel.text = [name objectAtIndex:indexPath.row - 2];
+//            return cell;
+//        }
+    }else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellinfo" forIndexPath:indexPath];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
+        cell.detailTextLabel.text = [dict objectForKey:@"distance"];
+        return cell;
+    }
+    
 //    cell.nameLabel.text = [name objectAtIndex:indexPath.row];
 //    cell.value.text = [valueA objectAtIndex:indexPath.row];
 //    
@@ -123,25 +148,10 @@ static float const mapPadding = 1.1f;
 //    cell.distance.text = [dict objectForKey:@"distance"];
 //    cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
 //    cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
-
-    return cell;
+    return nil;
 }
 
 #pragma mark - MKMapViewDelegate
-
--(void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered{
-    
-//    MKMapSnapshotOptions *options = [[MKMapSnapshotOptions alloc] init];
-//    options.region = mapView.region;
-//    options.scale = [UIScreen mainScreen].scale;
-//    options.size = mapView.frame.size;
-//    
-//    MKMapSnapshotter *snapshotter = [[MKMapSnapshotter alloc] initWithOptions:options];
-//    [snapshotter startWithCompletionHandler:^(MKMapSnapshot * _Nullable snapshot, NSError * _Nullable error) {
-//        self.mapSnapShot.image = snapshot.image;
-//    }];
-//    mapView.hidden = YES;
-}
 
 - (MKCoordinateRegion)mapRegion{
     

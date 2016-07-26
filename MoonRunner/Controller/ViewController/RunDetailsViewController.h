@@ -15,6 +15,8 @@
 #import "SummaryTableViewCell.h"
 #import "AnalysisViewController.h"
 #import "SettingViewController.h"
+#import "ButtonTableCell.h"
+#import "InfoTableViewCell.h"
 #import "RunHelper.h"
 
 @class Run;

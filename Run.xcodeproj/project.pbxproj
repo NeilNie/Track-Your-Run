@@ -89,7 +89,7 @@
 		28422E461D10F5E80070E982 /* two_hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E421D10F5E80070E982 /* two_hearts.png */; };
 		28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28422E481D10F7FE0070E982 /* RunAnalyzer.m */; };
 		284CFACA1D13482600BFDCBE /* UserAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CFAC91D13482600BFDCBE /* UserAuthViewController.m */; };
-		286E666C1D13034E008B4BDE /* SummeryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666B1D13034E008B4BDE /* SummeryTableCell.xib */; };
+		286E666C1D13034E008B4BDE /* SummaryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666B1D13034E008B4BDE /* SummaryTableCell.xib */; };
 		286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666D1D13035C008B4BDE /* ButtonTableCell.xib */; };
 		286E66741D130573008B4BDE /* LOL.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66711D130572008B4BDE /* LOL.png */; };
 		286E66751D130573008B4BDE /* confused.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66721D130573008B4BDE /* confused.png */; };
@@ -337,7 +337,7 @@
 		28422E481D10F7FE0070E982 /* RunAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunAnalyzer.m; path = Controller/ViewController/RunAnalyzer.m; sourceTree = "<group>"; };
 		284CFAC81D13482600BFDCBE /* UserAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthViewController.h; sourceTree = "<group>"; };
 		284CFAC91D13482600BFDCBE /* UserAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthViewController.m; sourceTree = "<group>"; };
-		286E666B1D13034E008B4BDE /* SummeryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummeryTableCell.xib; sourceTree = "<group>"; };
+		286E666B1D13034E008B4BDE /* SummaryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryTableCell.xib; sourceTree = "<group>"; };
 		286E666D1D13035C008B4BDE /* ButtonTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableCell.xib; sourceTree = "<group>"; };
 		286E66711D130572008B4BDE /* LOL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOL.png; sourceTree = "<group>"; };
 		286E66721D130573008B4BDE /* confused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confused.png; sourceTree = "<group>"; };
@@ -768,7 +768,7 @@
 			isa = PBXGroup;
 			children = (
 				00357ED11C77D4740046B8BC /* Run.entitlements */,
-				FA1F95121929CF2600A0179A /* MoonRunner */,
+				FA1F95121929CF2600A0179A /* Run */,
 				00C80B571C79249E005C4E39 /* Run Apple Watch */,
 				00C80B661C79249E005C4E39 /* Run Apple Watch Extension */,
 				FA1F95091929CF2600A0179A /* Frameworks */,
@@ -809,7 +809,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FA1F95121929CF2600A0179A /* MoonRunner */ = {
+		FA1F95121929CF2600A0179A /* Run */ = {
 			isa = PBXGroup;
 			children = (
 				28422E3E1D10F5D70070E982 /* Media */,
@@ -820,6 +820,7 @@
 				FA30BD0C192B17DC00CD453E /* Model */,
 				FA1F95131929CF2600A0179A /* Supporting Files */,
 			);
+			name = Run;
 			path = MoonRunner;
 			sourceTree = "<group>";
 		};
@@ -852,7 +853,7 @@
 			children = (
 				28716EC21C75358D000834C6 /* Main.storyboard */,
 				288E9F251D107E490056B4F9 /* Launch Screen.storyboard */,
-				286E666B1D13034E008B4BDE /* SummeryTableCell.xib */,
+				286E666B1D13034E008B4BDE /* SummaryTableCell.xib */,
 				286E666D1D13035C008B4BDE /* ButtonTableCell.xib */,
 				2808B8111D4697A700296E4C /* InfoTableViewCell.xib */,
 			);
@@ -1038,7 +1039,7 @@
 				2879C9AE1D122E140088118A /* award_highest_speed.png in Resources */,
 				28422E461D10F5E80070E982 /* two_hearts.png in Resources */,
 				00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */,
-				286E666C1D13034E008B4BDE /* SummeryTableCell.xib in Resources */,
+				286E666C1D13034E008B4BDE /* SummaryTableCell.xib in Resources */,
 				28422E451D10F5E80070E982 /* speed.png in Resources */,
 				00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */,
 				28422E441D10F5E80070E982 /* icon-39-512.png in Resources */,

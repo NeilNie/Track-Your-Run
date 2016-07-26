@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface buttonTableCell : UITableViewCell
+@interface ButtonTableCell : UITableViewCell
 
 @property (assign, nonatomic) id delegate;
 @property (weak, nonatomic) IBOutlet UIButton *greatButton;

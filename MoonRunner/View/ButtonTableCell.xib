@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11129.15" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11173.2" systemVersion="16A254g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idButtonCell" rowHeight="126" id="ksQ-OT-qrL" customClass="buttonTableCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellButton" rowHeight="126" id="ksQ-OT-qrL" customClass="ButtonTableCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ksQ-OT-qrL" id="zLH-2K-90a">
-                <frame key="frameInset" width="375" height="125"/>
+                <frame key="frameInset" width="375" height="125.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How did that run feel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWV-j7-oMs">
@@ -26,9 +26,6 @@
                             <constraint firstAttribute="width" constant="60" id="wCo-1g-SwL"/>
                         </constraints>
                         <state key="normal" image="sad.png"/>
-                        <connections>
-                            <action selector="terrible:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="A0j-63-XdN"/>
-                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afC-cR-0RP">
                         <constraints>
@@ -36,9 +33,6 @@
                             <constraint firstAttribute="height" constant="60" id="URK-pt-zuu"/>
                         </constraints>
                         <state key="normal" image="confused.png"/>
-                        <connections>
-                            <action selector="ok:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="2KG-Hw-Qba"/>
-                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBE-QH-yL0">
                         <constraints>
@@ -46,9 +40,6 @@
                             <constraint firstAttribute="height" constant="60" id="ZUj-jN-Nvz"/>
                         </constraints>
                         <state key="normal" image="LOL.png"/>
-                        <connections>
-                            <action selector="great:" destination="ksQ-OT-qrL" eventType="touchUpInside" id="7Ql-Dt-65s"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0s-A3-pPl">
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -84,11 +75,6 @@
                     <constraint firstItem="I0s-A3-pPl" firstAttribute="top" secondItem="eBE-QH-yL0" secondAttribute="bottom" id="xj2-wP-Jpp"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="greatButton" destination="eBE-QH-yL0" id="hHC-1T-JGl"/>
-                <outlet property="okButton" destination="afC-cR-0RP" id="ebS-KW-m4P"/>
-                <outlet property="terribleButton" destination="rhZ-HU-xa1" id="IkV-7z-b7E"/>
-            </connections>
             <point key="canvasLocation" x="-59.5" y="149"/>
         </tableViewCell>
     </objects>

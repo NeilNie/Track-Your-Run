@@ -157,11 +157,7 @@
 {
     UIViewController *nextController = [segue destinationViewController];
     
-    if ([nextController isKindOfClass:[PastRunViewController class]]) {
-        ((PastRunViewController *) nextController).runArray = self.runArray;
-        [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
-    
-    }else if ([nextController isKindOfClass:[NewRunViewController class]]){
+    if ([nextController isKindOfClass:[NewRunViewController class]]){
         NewRunViewController *controller = (NewRunViewController *)[segue destinationViewController];
         [controller setManagedObjectContext:self.managedObjectContext];
     }

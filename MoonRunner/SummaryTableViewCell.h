@@ -10,4 +10,8 @@
 
 @interface SummaryTableViewCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel *time;
+@property (nonatomic, weak) IBOutlet UILabel *pace;
+@property (nonatomic, weak) IBOutlet UILabel *calories;
+
 @end

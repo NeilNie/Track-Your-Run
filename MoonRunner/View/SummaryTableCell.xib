@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="dno-Fw-TKW">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCellSummary" rowHeight="80" id="dno-Fw-TKW" customClass="SummaryTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dno-Fw-TKW" id="Uwd-UG-RoI">
@@ -73,16 +73,13 @@
                     <constraint firstItem="9vo-PV-QW2" firstAttribute="leading" secondItem="Uwd-UG-RoI" secondAttribute="leading" constant="8" id="v4Y-Bv-BeN"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="calories" destination="jn1-u0-Weo" id="6Om-su-eTm"/>
+                <outlet property="pace" destination="9vo-PV-QW2" id="YQs-7J-Jed"/>
+                <outlet property="time" destination="Dqt-no-mCd" id="pM9-di-yEk"/>
+            </connections>
             <point key="canvasLocation" x="9.5" y="41"/>
         </tableViewCell>
-        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Loe-EP-uRc">
-            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-            <nil key="textColor"/>
-            <nil key="highlightedColor"/>
-            <point key="canvasLocation" x="26" y="131"/>
-        </label>
     </objects>
     <resources>
         <image name="caloric_energy" width="33" height="33"/>
