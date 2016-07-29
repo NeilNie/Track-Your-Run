@@ -21,72 +21,25 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [TitleArray count];
+    //return [TitleArray count];
+    return 0;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
-    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
-    title.text = TitleArray[indexPath.row];
-    text.text = [Info objectAtIndex:indexPath.row];
-    return cell;
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
+//    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
+//    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
+//    title.text = TitleArray[indexPath.row];
+//    text.text = [Info objectAtIndex:indexPath.row];
+    return nil;
 }
+
+#pragma PNChart Delegates
+
+-(void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex pointIndex:(NSInteger)pointIndex{}
 
 #pragma Private
-
-//setup graphs
-
-- (void)_setupGraphWithArray:(NSArray *)array {
-    
-    self.data = @[array,];
-    self.graph.dataSource = self;
-    self.graph.lineWidth = 3.0;
-    
-    self.graph.valueLabelCount = 4;
-    
-    [self.graph draw];
-}
-
-
--(NSNumber *)getMinNumber:(NSArray *)array{
-    
-    NSNumber *min = [array objectAtIndex:0];
-    for (NSNumber *x in array) {
-        if (x < min) {
-            min = x;
-        }
-    }
-    return min;
-}
-
--(NSNumber *)getMaxNumber:(NSArray *)array{
-    
-    NSNumber *max = 0;
-    for (NSNumber *x in array) {
-        if (x > max) {
-            max = x;
-        }
-    }
-    return max;
-}
-
--(NSNumber *)getAverageNumber:(NSArray *)array{
-    
-    if (array.count > 1) {
-        int total = 0;
-        int average = 0;
-        for (int i = 0; i < array.count; i++) {
-            total += [[array objectAtIndex:i] intValue];
-        }
-        average = total / array.count;
-        return [NSNumber numberWithInt:average];
-    }else{
-        return @00;
-    }
-}
-
 
 //analyze data
 
@@ -193,13 +146,147 @@
 
 //setup view
 
+-(NSMutableArray *)getXArray:(NSArray *)array{
+    
+    NSMutableArray *returnArray = [NSMutableArray array];
+    
+    for (int i = 0; i < array.count; i++) {
+        [returnArray addObject:[NSString stringWithFormat:@"%i", i]];
+    }
+    
+    return returnArray;
+}
+
+-(void)setUpGraphs:(NSArray *)array{
+    
+    self.lineChart = [[PNLineChart alloc] initWithFrame:CGRectMake(0, 35, self.view.frame.size.width, 250.0)];
+    self.lineChart.yLabelFormat = @"%1.1f";
+    self.lineChart.backgroundColor = [UIColor clearColor];
+    [self.lineChart setXLabels:[self getXArray:array]];
+    self.lineChart.showCoordinateAxis = YES;
+    self.lineChart.showYGridLines = YES;
+}
+
+-(void)graphSpeed{
+    
+    NSArray * data01Array = self.speed;
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.dataTitle = @"Speed";
+    data01.color = PNDarkBlue;
+    data01.alpha = 0.3f;
+    data01.lineWidth = 4.0f;
+    data01.itemCount = data01Array.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    if (self.lineChart.chartData == nil) {
+        [self.lineChart setChartData:[NSArray arrayWithObject:data01]];
+    }else{
+        [self.lineChart.chartData arrayByAddingObject:data01];
+    }
+    self.lineChart.delegate = self;
+    [self.lineChart strokeChart];
+    [self.view addSubview:self.lineChart];
+    [self addChartLengend];
+}
+
+-(void)graphHeartRate{
+    
+    NSArray * data01Array = self.heartbeat;
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.dataTitle = @"Heart Rate";
+    data01.color = PNRed;
+    data01.alpha = 0.3f;
+    data01.lineWidth = 4.0f;
+    data01.itemCount = data01Array.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    [self.lineChart.chartData arrayByAddingObject:data01];
+    [self.lineChart strokeChart];
+    self.lineChart.delegate = self;
+    [self.view addSubview:self.lineChart];
+    [self addChartLengend];
+}
+
+-(void)graphStrideRate{
+    
+    NSArray * data01Array = self.striderate;
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.dataTitle = @"Stride Rate";
+    data01.color = PNGreen;
+    data01.alpha = 0.3f;
+    data01.lineWidth = 4.0f;
+    data01.itemCount = data01Array.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    [self.lineChart.chartData arrayByAddingObject:data01];
+    [self.lineChart strokeChart];
+    self.lineChart.delegate = self;
+    [self.view addSubview:self.lineChart];
+    [self addChartLengend];
+}
+
+
+-(void)graphElevation{
+    
+    NSArray * data01Array = self.elevation;
+    PNLineChartData *data01 = [PNLineChartData new];
+    data01.dataTitle = @"Elevation";
+    data01.color = PNBrown;
+    data01.alpha = 0.3f;
+    data01.lineWidth = 4.0f;
+    data01.itemCount = data01Array.count;
+    data01.getData = ^(NSUInteger index) {
+        CGFloat yValue = [data01Array[index] floatValue];
+        return [PNLineChartDataItem dataItemWithY:yValue];
+    };
+    [self.lineChart.chartData arrayByAddingObject:data01];
+    [self.lineChart strokeChart];
+    self.lineChart.delegate = self;
+    [self.view addSubview:self.lineChart];
+    [self addChartLengend];
+}
+
+-(void)addChartLengend{
+    
+    self.lineChart.legendStyle = PNLegendItemStyleStacked;
+    self.lineChart.legendFont = [UIFont boldSystemFontOfSize:12.0f];
+    self.lineChart.legendFontColor = [UIColor darkGrayColor];
+    
+    UIView *legend = [self.lineChart getLegendWithMaxWidth:200];
+    [legend setFrame:CGRectMake(self.lineChart.frame.origin.x, self.lineChart.frame.origin.y + 210, legend.frame.size.width, legend.frame.size.width)];
+    [self.view addSubview:legend];
+}
+
+-(void)setUpData{
+    
+    self.striderate = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate];
+    self.elevation = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.elevation];
+    if (self.run.locations.array.count < 30) {
+        self.speed = [MathController getSpeedArrayFromLocations:self.run.locations.array];
+    }else{
+        self.speed = [MathController getLimitedSpeedArrayFromLocations:self.run.locations.array];
+    }
+    self.heartbeat = [NSMutableArray array];
+    NSMutableArray *values = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate];
+    for (int i = 0; i < values.count; i++) {
+        NSInteger st = [[values objectAtIndex:i] integerValue];
+        [_heartbeat addObject:[NSNumber numberWithInteger:st]];
+    }
+}
+
 -(void)setUpView{
     
     if (_heartbeat.count > 1) {
         
         self.heartButton.enabled = YES;
         [TitleArray addObject:@"Heart rate"];
-        [Info addObject:[self analyzeHeartrate]];
+        //[Info addObject:[self analyzeHeartrate]];
     }else{
         self.heartButton.enabled = NO;
     }
@@ -224,67 +311,29 @@
         
         self.speedButton.enabled = YES;
         [TitleArray addObject:@"Speed"];
-        [Info addObject:[self analyzeSpeed]];
+        //[Info addObject:[self analyzeSpeed]];
     }else{
         self.speedButton.enabled = NO;
     }
-}
-
-#pragma mark - GKLineGraphDataSource
-
-- (NSInteger)numberOfLines {
-    return [self.data count];
-}
-
-- (UIColor *)colorForLineAtIndex:(NSInteger)index {
-    id colors = @[[UIColor gk_turquoiseColor],
-                  [UIColor gk_peterRiverColor],
-                  ];
-    return [colors objectAtIndex:index];
-}
-
-- (NSArray *)valuesForLineAtIndex:(NSInteger)index {
-    return [self.data objectAtIndex:index];
-}
-
-- (CFTimeInterval)animationDurationForLineAtIndex:(NSInteger)index {
-    return [[@[@1, @1.6] objectAtIndex:index] doubleValue];
-}
-
-- (NSString *)titleForLineAtIndex:(NSInteger)index {
-    return nil;
 }
 
 #pragma mark - IBActions
 
 -(IBAction)heartRate:(id)sender{
     
-    [self _setupGraphWithArray:_heartbeat];
+//    [self _setupGraphWithArray:_heartbeat];
 }
 -(IBAction)strideRate:(id)sender{
     
-    [self _setupGraphWithArray:_striderate];
+//    [self _setupGraphWithArray:_striderate];
 }
 -(IBAction)speed:(id)sender{
     
-    [self _setupGraphWithArray:_speed];
+//    [self _setupGraphWithArray:_speed];
 }
 -(IBAction)elevation:(id)sender{
     
-    [self _setupGraphWithArray:_elevation];
-}
-
--(void)setUpData{
-    
-    self.striderate = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate];
-    self.elevation = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.elevation];
-    self.speed = [MathController getSpeedArrayFromLocations:self.run.locations.array];
-    self.heartbeat = [NSMutableArray array];
-    NSMutableArray *values = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate];
-    for (int i = 0; i < values.count; i++) {
-        NSInteger st = [[values objectAtIndex:i] integerValue];
-        [_heartbeat addObject:[NSNumber numberWithInteger:st]];
-    }
+//    [self _setupGraphWithArray:_elevation];
 }
 
 #pragma mark - Life cycle
@@ -301,6 +350,8 @@
     
     [self setUpData];
     [self setUpView];
+    [self setUpGraphs:self.speed];
+    [self graphSpeed];
     [super viewDidLoad];
 }
 

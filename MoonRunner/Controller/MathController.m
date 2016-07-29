@@ -111,6 +111,15 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     return [NSString stringWithFormat:@"%i:%02i %@", paceMin, paceSec, unitName];
 }
 
++(NSString *)stringifyPaceFromSpeed:(float)speed{
+    
+    int minute = 60 / speed;
+    float seconds = 60 / speed - minute;
+    float actualSeconds = seconds * 60;
+    NSString *returnString = [NSString stringWithFormat:@"%i:%fmin/mile", minute, actualSeconds];
+    return returnString;
+}
+
 + (NSString *)stringifyCaloriesFromDist:(float)meters{
     
     float unitDivider;
@@ -161,6 +170,52 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         [rawSpeeds addObject:[NSNumber numberWithDouble:speed]];
     }
     return rawSpeeds;
+}
+
++ (NSArray *)getLimitedSpeedArrayFromLocations:(NSArray *)array{
+    
+    if (array.count <= 1){
+        return nil;
+    }
+    
+    // make array of all speeds
+    NSMutableArray *rawSpeeds = (NSMutableArray *)[MathController getSpeedArrayFromLocations:array];
+    
+    //return array
+    NSMutableArray *returnArray = [NSMutableArray array];
+    
+    if (rawSpeeds.count > 30 && rawSpeeds.count < 60) {
+        
+        //get first 10 object in array
+        for (int i = 0; i < 10; i++) {
+            [returnArray addObject:[rawSpeeds objectAtIndex:i]];
+        }
+        
+        //get middle 10 objects in array
+        for (int x = (int) rawSpeeds.count / 2 - 5; x < rawSpeeds.count / 2 + 5; x++) {
+            [returnArray addObject:[rawSpeeds objectAtIndex:x]];
+        }
+        
+        //get last 10 objects in array.
+        for (int y = (int) rawSpeeds.count - 10; y < rawSpeeds.count; y++) {
+            [returnArray addObject:[rawSpeeds objectAtIndex:y]];
+        }
+    }else{
+        
+        //how many numbers do I have to add together to calculate the average.
+        int numberOfnumbers = (int) (rawSpeeds.count - 1 ) / 30;
+        
+        for (int i = 0; i < rawSpeeds.count; i = i + numberOfnumbers) {
+            
+            float sum = 0.0f;
+            for (int x = i; i < i + numberOfnumbers; i++) {
+                sum = sum + [[rawSpeeds objectAtIndex:x] floatValue];
+            }
+            float average = sum / numberOfnumbers;
+            [returnArray addObject:[NSNumber numberWithFloat:average]];
+        }
+    }
+    return returnArray;
 }
 
 + (NSArray *)colorSegmentsForLocations:(NSArray *)locations

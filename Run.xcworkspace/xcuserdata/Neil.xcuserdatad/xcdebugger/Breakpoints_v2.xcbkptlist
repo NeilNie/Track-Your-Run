@@ -99,13 +99,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoonRunner/Controller/ViewController/RunDetailsViewController.m"
-            timestampString = "491228478.983204"
+            filePath = "MoonRunner/Controller/ViewController/AnalysisViewController.m"
+            timestampString = "491409992.641446"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "-setUpData"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

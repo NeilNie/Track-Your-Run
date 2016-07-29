@@ -114,6 +114,7 @@
 		288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E9F251D107E490056B4F9 /* Launch Screen.storyboard */; };
 		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
+		28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */; };
 		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
 		28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784031D1103BB00C17A4F /* LeftViewController.m */; };
 		28E784071D1103BB00C17A4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784051D1103BB00C17A4F /* MainViewController.m */; };
@@ -367,6 +368,8 @@
 		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
 		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
 		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		28D137691D4829DD00467B97 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewCell.h; sourceTree = "<group>"; };
+		28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewCell.m; sourceTree = "<group>"; };
 		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
 		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
 		28E784021D1103BB00C17A4F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
@@ -716,6 +719,8 @@
 				28F4337B1D46927400690C7C /* SummaryTableViewCell.m */,
 				2808B80F1D4697A700296E4C /* InfoTableViewCell.h */,
 				2808B8101D4697A700296E4C /* InfoTableViewCell.m */,
+				28D137691D4829DD00467B97 /* BasicTableViewCell.h */,
+				28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1134,6 +1139,7 @@
 				2834DB4A1D41608200BB4233 /* UIView+MDExtension.m in Sources */,
 				FA1F954D1929E36F00A0179A /* Location.m in Sources */,
 				2834DAFD1D41604800BB4233 /* PNScatterChart.m in Sources */,
+				28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */,
 				2834DAFF1D41604800BB4233 /* PNScatterChartDataItem.m in Sources */,
 				284CFACA1D13482600BFDCBE /* UserAuthViewController.m in Sources */,
 				2834DAFE1D41604800BB4233 /* PNScatterChartData.m in Sources */,

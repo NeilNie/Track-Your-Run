@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11147.23" systemVersion="16A201w" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11198.3" systemVersion="16A254g" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Location" representedClassName="Location">
         <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
@@ -15,7 +15,6 @@
         <attribute name="elevation" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="heart_rate" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="miliseconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="speed" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="splits" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="stride_rate" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
@@ -23,6 +22,6 @@
     </entity>
     <elements>
         <element name="Location" positionX="0" positionY="0" width="128" height="105"/>
-        <element name="Run" positionX="-0" positionY="126" width="128" height="195"/>
+        <element name="Run" positionX="-0" positionY="126" width="128" height="180"/>
     </elements>
 </model>

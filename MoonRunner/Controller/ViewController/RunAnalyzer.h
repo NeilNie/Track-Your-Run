@@ -10,9 +10,13 @@
 #import <CoreData/CoreData.h>
 
 #import "Run.h"
+#import "AppDelegate.h"
+#import "RunHelper.h"
+#import "MathController.h"
 
 @interface RunAnalyzer : NSObject{
-    
+    NSMutableString *returnString;
+    RunHelper *runHelper;
 }
 
 -(NSString * _Nonnull)returnAnalysisResult;
@@ -21,7 +25,7 @@
 -(void)beginAnalyzeElevation;
 -(void)beginAnalyzeHeartStrides;
 
-
 @property (strong, nonatomic, nonnull) Run *run;
+@property (strong, nonatomic, nonnull) NSMutableArray *runData;
 
 @end

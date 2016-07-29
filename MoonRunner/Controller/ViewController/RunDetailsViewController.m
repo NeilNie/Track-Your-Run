@@ -53,10 +53,6 @@ static float const mapPadding = 1.1f;
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     self.dateLabel.text = [formatter stringFromDate:self.run.timestamp];
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
-    
-    [self.table registerNib:[UINib nibWithNibName:@"SummaryTableCell" bundle:nil] forCellReuseIdentifier:@"idCellSummary"];
-    [self.table registerNib:[UINib nibWithNibName:@"ButtonTableCell" bundle:nil] forCellReuseIdentifier:@"idCellButton"];
-    [self.table registerNib:[UINib nibWithNibName:@"InfoTableViewCell" bundle:nil] forCellReuseIdentifier:@"idCellinfo"];
 }
 
 #pragma mark - Public
@@ -77,9 +73,19 @@ static float const mapPadding = 1.1f;
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (indexPath.section == 0) {
-        return 55;
+        switch (indexPath.row) {
+            case 0:
+                return 80;
+                break;
+            case 1:
+                return 125;
+                break;
+            default:
+                return 55;
+                break;
+        }
     }else{
-        return 70;
+        return 65;
     }
 }
 
@@ -91,7 +97,7 @@ static float const mapPadding = 1.1f;
     
     switch (section) {
         case 0:
-            return [name count];
+            return 5;
             break;
         case 1:
             return [array count];
@@ -112,9 +118,6 @@ static float const mapPadding = 1.1f;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-    NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
-    NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
 
     if (indexPath.section == 0) {
         
@@ -127,28 +130,20 @@ static float const mapPadding = 1.1f;
         }else if (indexPath.row == 1){
             ButtonTableCell *cell = (ButtonTableCell *)[tableView dequeueReusableCellWithIdentifier:@"idCellButton" forIndexPath:indexPath];
             return cell;
+        }else{
+            BasicTableViewCell *cell = (BasicTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
+            cell.subtitle.text = [valueA objectAtIndex:indexPath.row + 1];
+            cell.title.text = [name objectAtIndex:indexPath.row - 2];
+            return cell;
         }
-//        else if (indexPath.row == 2 || indexPath.row == 3 || indexPath.row == 4){
-//            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
-//            cell.textLabel.text = [valueA objectAtIndex:indexPath.row + 1];
-//            cell.detailTextLabel.text = [name objectAtIndex:indexPath.row - 2];
-//            return cell;
-//        }
     }else{
+        NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
+        NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellinfo" forIndexPath:indexPath];
         cell.textLabel.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
         cell.detailTextLabel.text = [dict objectForKey:@"distance"];
         return cell;
     }
-    
-//    cell.nameLabel.text = [name objectAtIndex:indexPath.row];
-//    cell.value.text = [valueA objectAtIndex:indexPath.row];
-//    
-//    cell.time.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
-//    cell.distance.text = [dict objectForKey:@"distance"];
-//    cell.heart.text = [NSString stringWithFormat:@"%ibpm", [[dict objectForKey:@"heart"] intValue]];
-//    cell.number.text = [NSString stringWithFormat:@"Split %li", (long)indexPath.row + 1];
-    return nil;
 }
 
 #pragma mark - MKMapViewDelegate
@@ -200,13 +195,13 @@ static float const mapPadding = 1.1f;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
     [self.navigationItem setHidesBackButton:YES animated:YES];
     [self configureView];
     [self loadMap];
     [self setUpData];
     
     [self.table reloadData];
+    [super viewDidLoad];
 }
 
 #pragma mark - Navigation

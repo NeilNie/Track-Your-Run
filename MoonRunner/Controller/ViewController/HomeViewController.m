@@ -27,11 +27,10 @@
 
     [[HealthKitManager sharedManager] requestAuthorization];
     
-    [self setUpCoreData];
+    self.runArray = [[RunHelper new] retrieveAllObjects];
     [self setUpView];
     [self setUpGestures];
     [super viewDidLoad];
-    NSLog(@"did finish");
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -67,19 +66,6 @@
     swipeRight.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.view addGestureRecognizer:swipeLeft];
     [self.view addGestureRecognizer:swipeRight];
-}
-
--(void)setUpCoreData{
-    
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    _managedObjectContext = delegate.managedObjectContext;
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    self.runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
-    
 }
 
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe{
@@ -133,7 +119,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
     InfoTableViewCell *cell = (InfoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"RunCell"];
     
     if (self.runArray.count > 0) {

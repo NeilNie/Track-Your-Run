@@ -8,13 +8,30 @@
 
 #import <Foundation/Foundation.h>
 #import "Run.h"
+#import "AppDelegate.h"
 
 @interface RunHelper : NSObject
 
-+(NSString *)getAverageHeartbeatFromArray:(NSData *)data;
+@property (readonly, strong, nonatomic, nonnull) NSManagedObjectContext *managedObjectContext;
 
-+(NSString *)getMaxHeartbeatFromArray:(NSData *)data;
++(NSString * __nullable)getAverageHeartbeatFromArray:(NSData * _Nonnull)data;
 
-+(NSString *)getAverageStride:(NSData *)data;
++(NSString * __nullable)getMaxHeartbeatFromArray:(NSData * _Nonnull)data;
+
++(NSString * __nullable )getAverageStride:(NSData * _Nonnull)data;
+
+-(NSMutableArray * __nullable)retrieveAllObjects;
+
+-(NSMutableArray * __nullable)calculateSpeed:(NSMutableArray * __nullable)array;
+
+-(NSMutableArray * __nullable)retrieveObjectsWithDistanceRange:(int)min andMax:(int)max;
+
+////Math functions
+
++(NSNumber * _Nonnull)getMinNumber:(NSArray * _Nonnull)array;
+
++(NSNumber * _Nonnull)getMaxNumber:(NSArray * _Nonnull)array;
+
++(NSNumber * _Nonnull)getAverageNumber:(NSArray * _Nonnull)array;
 
 @end

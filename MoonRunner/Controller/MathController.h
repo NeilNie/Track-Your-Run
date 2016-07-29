@@ -24,4 +24,8 @@
 
 + (NSArray *)getSpeedArrayFromLocations:(NSArray *)array;
 
++ (NSArray *)getLimitedSpeedArrayFromLocations:(NSArray *)array;
+
++(NSString *)stringifyPaceFromSpeed:(float)speed;
+
 @end

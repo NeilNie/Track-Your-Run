@@ -17,7 +17,6 @@
 @property (nonatomic, retain) NSNumber *distance;
 @property (nonatomic, retain) NSNumber *duration;
 @property (nonatomic, retain) NSNumber *miliseconds;
-//@property (nonatomic, retain) NSNumber *speed;
 @property (nonatomic, retain) NSDate * timestamp;
 
 //arrays

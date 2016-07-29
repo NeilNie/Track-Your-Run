@@ -13,10 +13,11 @@
 #import "MathController.h"
 #import "Run.h"
 #import "SettingViewController.h"
+#import "PNChart.h"
 
 float distance;
 
-@interface AnalysisViewController : UIViewController <GKLineGraphDataSource, UITableViewDataSource, UITableViewDelegate>{
+@interface AnalysisViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PNChartDelegate>{
     
     NSMutableArray *TitleArray;
     NSMutableArray *Info;
@@ -25,7 +26,7 @@ float distance;
     NSEntityDescription *entity;
 }
 
-@property (nonatomic, weak) IBOutlet GKLineGraph *graph;
+@property (nonatomic, strong) PNLineChart *lineChart;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
@@ -34,8 +35,6 @@ float distance;
 @property (nonatomic, strong) NSArray *striderate;
 @property (nonatomic, strong) NSArray *speed;
 @property (nonatomic, strong) NSArray *elevation;
-
-//@property (nonatomic, strong) NSArray *labels;
 @property (nonatomic, strong) NSArray *data;
 
 @property (weak, nonatomic) IBOutlet UIButton *heartButton;
