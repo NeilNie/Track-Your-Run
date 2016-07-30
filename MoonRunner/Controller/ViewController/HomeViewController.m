@@ -139,16 +139,6 @@
 
 - (IBAction)unwindToRed:(UIStoryboardSegue *)unwindSegue{}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *nextController = [segue destinationViewController];
-    
-    if ([nextController isKindOfClass:[NewRunViewController class]]){
-        NewRunViewController *controller = (NewRunViewController *)[segue destinationViewController];
-        [controller setManagedObjectContext:self.managedObjectContext];
-    }
-}
-
 #pragma mark - MapView Delegate
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation{
     

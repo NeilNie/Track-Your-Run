@@ -68,11 +68,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MoonRunner/Controller/ViewController/NewRunViewController.m"
-            timestampString = "487640081.129662"
+            timestampString = "491536037.14596"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "-stopPressed:"
             landmarkType = "7">
          </BreakpointContent>

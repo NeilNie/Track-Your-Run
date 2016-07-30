@@ -23,6 +23,8 @@ static NSString * const detailSegueName = @"NewRunDetails";
 -(void)viewDidLoad {
     
     //modify view
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    self.managedObjectContext = delegate.managedObjectContext;
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
     [self setUpData];
