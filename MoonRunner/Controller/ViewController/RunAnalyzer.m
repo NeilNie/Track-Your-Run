@@ -55,6 +55,7 @@
     NSNumber *averageSpeed = [RunHelper getAverageNumber:speedArray];
     NSNumber *currentSpeed = [NSNumber numberWithFloat:self.run.distance.floatValue / self.run.duration.floatValue];
     
+    //calculate pave based on speed.
     NSString *currentPace  = [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue];
     NSString *averagePace = [MathController stringifyPaceFromSpeed:averageSpeed.floatValue];
     if (currentSpeed > averageSpeed) {
@@ -62,6 +63,13 @@
     }else{
         string = [NSString stringWithFormat:@"The pace for workouts at similar distance is %@", averagePace];
     }
+    return string;
+}
+
+-(NSString *)relativeEnvironmentAnalysis{
+    
+    NSString *string;
+    
     return string;
 }
 

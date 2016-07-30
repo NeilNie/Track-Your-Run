@@ -88,7 +88,6 @@
 		28422E451D10F5E80070E982 /* speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E411D10F5E80070E982 /* speed.png */; };
 		28422E461D10F5E80070E982 /* two_hearts.png in Resources */ = {isa = PBXBuildFile; fileRef = 28422E421D10F5E80070E982 /* two_hearts.png */; };
 		28422E491D10F7FE0070E982 /* RunAnalyzer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28422E481D10F7FE0070E982 /* RunAnalyzer.m */; };
-		284CFACA1D13482600BFDCBE /* UserAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284CFAC91D13482600BFDCBE /* UserAuthViewController.m */; };
 		286E666C1D13034E008B4BDE /* SummaryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666B1D13034E008B4BDE /* SummaryTableCell.xib */; };
 		286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286E666D1D13035C008B4BDE /* ButtonTableCell.xib */; };
 		286E66741D130573008B4BDE /* LOL.png in Resources */ = {isa = PBXBuildFile; fileRef = 286E66711D130572008B4BDE /* LOL.png */; };
@@ -336,8 +335,6 @@
 		28422E421D10F5E80070E982 /* two_hearts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = two_hearts.png; sourceTree = "<group>"; };
 		28422E471D10F7FE0070E982 /* RunAnalyzer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunAnalyzer.h; path = Controller/ViewController/RunAnalyzer.h; sourceTree = "<group>"; };
 		28422E481D10F7FE0070E982 /* RunAnalyzer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunAnalyzer.m; path = Controller/ViewController/RunAnalyzer.m; sourceTree = "<group>"; };
-		284CFAC81D13482600BFDCBE /* UserAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAuthViewController.h; sourceTree = "<group>"; };
-		284CFAC91D13482600BFDCBE /* UserAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAuthViewController.m; sourceTree = "<group>"; };
 		286E666B1D13034E008B4BDE /* SummaryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummaryTableCell.xib; sourceTree = "<group>"; };
 		286E666D1D13035C008B4BDE /* ButtonTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableCell.xib; sourceTree = "<group>"; };
 		286E66711D130572008B4BDE /* LOL.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOL.png; sourceTree = "<group>"; };
@@ -732,8 +729,6 @@
 				00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */,
 				007695191C8E6F2A007CB823 /* PastRunViewController.h */,
 				0076951A1C8E6F2A007CB823 /* PastRunViewController.m */,
-				284CFAC81D13482600BFDCBE /* UserAuthViewController.h */,
-				284CFAC91D13482600BFDCBE /* UserAuthViewController.m */,
 				28E784091D1104DB00C17A4F /* LGSideMenuController.h */,
 				28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */,
 				28E784021D1103BB00C17A4F /* LeftViewController.h */,
@@ -1141,7 +1136,6 @@
 				2834DAFD1D41604800BB4233 /* PNScatterChart.m in Sources */,
 				28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */,
 				2834DAFF1D41604800BB4233 /* PNScatterChartDataItem.m in Sources */,
-				284CFACA1D13482600BFDCBE /* UserAuthViewController.m in Sources */,
 				2834DAFE1D41604800BB4233 /* PNScatterChartData.m in Sources */,
 				2834DB391D41608200BB4233 /* UIViewHelper.m in Sources */,
 				2834DB431D41608200BB4233 /* MDTextField.m in Sources */,
