@@ -188,6 +188,7 @@
     if (elevationDiff > 40)  {
         string = [string stringByAppendingString:[NSString stringWithFormat:@"You ran on tough terrane today. The elevation different is %i", elevationDiff]];
         
+        
         NSMutableArray *allSpeeds = [RunHelper calculateSpeed:[runHelper retrieveAllObjects]];
         NSNumber *averageSpeed = [RunHelper getAverageNumber:allSpeeds];
         if (currentSpeed > averageSpeed) {
