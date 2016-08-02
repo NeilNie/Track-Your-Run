@@ -19,7 +19,7 @@
     RunHelper *runHelper;
 }
 
--(NSString * _Nonnull)returnAnalysisResult;
+//-(NSString * _Nonnull)returnAnalysisResult;
 -(void)beginAnalyzeSpeed;
 -(void)beginAnalyzeHeartRate;
 -(void)beginAnalyzeElevation;

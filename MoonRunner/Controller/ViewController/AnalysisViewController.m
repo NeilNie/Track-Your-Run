@@ -27,12 +27,12 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
 //    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
 //    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
 //    title.text = TitleArray[indexPath.row];
 //    text.text = [Info objectAtIndex:indexPath.row];
-    return nil;
+    return cell;
 }
 
 #pragma PNChart Delegates

@@ -21,5 +21,7 @@
 @dynamic stride_rate;
 @dynamic miliseconds;
 @dynamic elevation;
+@dynamic weather;
+@dynamic feedback;
 
 @end

@@ -48,22 +48,26 @@
     //Find relative runs
     NSMutableArray *array = [runHelper retrieveObjectsWithDistanceRange:self.run.distance.intValue - 300 andMax:self.run.distance.intValue + 300];
     
-    //get an array of speed from the array calculated above.
-    NSMutableArray *speedArray = [runHelper calculateSpeed:array];
-    
-    //find the average of speed array // then find the speed for this run.
-    NSNumber *averageSpeed = [RunHelper getAverageNumber:speedArray];
-    NSNumber *currentSpeed = [NSNumber numberWithFloat:self.run.distance.floatValue / self.run.duration.floatValue];
-    
-    //calculate pave based on speed.
-    NSString *currentPace  = [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue];
-    NSString *averagePace = [MathController stringifyPaceFromSpeed:averageSpeed.floatValue];
-    if (currentSpeed > averageSpeed) {
-        string = [NSString stringWithFormat:@"Your pace %@ is above the average pace %@ of your workouts at similar distance.", currentPace, averagePace];
+    if (array.count >= 1) {
+        //get an array of speed from the array calculated above.
+        NSMutableArray *speedArray = [runHelper calculateSpeed:array];
+        
+        //find the average of speed array // then find the speed for this run.
+        NSNumber *averageSpeed = [RunHelper getAverageNumber:speedArray];
+        NSNumber *currentSpeed = [NSNumber numberWithFloat:self.run.distance.floatValue / self.run.duration.floatValue];
+        
+        //calculate pave based on speed.
+        NSString *currentPace  = [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue];
+        NSString *averagePace = [MathController stringifyPaceFromSpeed:averageSpeed.floatValue];
+        if (currentSpeed > averageSpeed) {
+            string = [NSString stringWithFormat:@"Your pace %@ is above the average pace %@ of your workouts at similar distance.", currentPace, averagePace];
+        }else{
+            string = [NSString stringWithFormat:@"The pace for workouts at similar distance is %@", averagePace];
+        }
+        return string;
     }else{
-        string = [NSString stringWithFormat:@"The pace for workouts at similar distance is %@", averagePace];
+        return nil;
     }
-    return string;
 }
 
 -(NSString *)relativeEnvironmentAnalysis{
