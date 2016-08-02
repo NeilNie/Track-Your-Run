@@ -83,29 +83,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MoonRunner/Controller/ViewController/AnalysisViewController.m"
-            timestampString = "491409992.641446"
+            filePath = "MoonRunner/Controller/ViewController/RunAnalyzer.m"
+            timestampString = "491859078.7129"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "275"
-            endingLineNumber = "275"
-            landmarkName = "-setUpData"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MoonRunner/Controller/ViewController/NewRunViewController.m"
-            timestampString = "491799861.848068"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
-            landmarkName = "-saveRun"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-returnAnalysisResult"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

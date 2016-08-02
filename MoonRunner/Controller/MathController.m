@@ -115,8 +115,8 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     
     int minute = 60 / speed;
     float seconds = 60 / speed - minute;
-    float actualSeconds = seconds * 60;
-    NSString *returnString = [NSString stringWithFormat:@"%i:%fmin/mile", minute, actualSeconds];
+    int actualSeconds = seconds * 60;
+    NSString *returnString = [NSString stringWithFormat:@"%i:%im/mi", minute, actualSeconds];
     return returnString;
 }
 

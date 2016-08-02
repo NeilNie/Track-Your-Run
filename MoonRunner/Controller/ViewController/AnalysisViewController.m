@@ -41,111 +41,6 @@
 
 #pragma Private
 
-//analyze data
-
--(NSString *)analyzeStride{
-
-    return nil;
-}
--(NSString *)analyzeSpeed{
-    
-//    NSLog(@"started operation");
-//    
-//    BOOL evenSpeed;
-//    BOOL fast;
-//    
-//    //compare with past runs
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"speed" ascending:NO];
-//    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-//    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
-//    
-//    //find the fast object
-//    Run *Fastest = [runArray objectAtIndex:0];
-//    
-//    //find the middle object
-//    NSUInteger middle = runArray.count / 2;
-//    Run *middleObject = [runArray objectAtIndex:middle];
-//    
-//    //calculate if fast and even
-//    if ([self getMaxNumber:self.speed].floatValue > middleObject.speed.floatValue) {
-//        fast = YES;
-//    }else{
-//        fast = NO;
-//    }
-//    int difference = [self getMaxNumber:self.speed].intValue - [self getMinNumber:self.speed].intValue;
-//    if (difference < 3) {
-//        evenSpeed = YES;
-//    }else{
-//        evenSpeed = NO;
-//    }
-//    
-//    //get date
-//    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-//    [df setDateFormat:@"yyyy-MM-dd"];
-//    
-//    //generate return string
-//    NSString *returnValue;
-//    NSString *evenspeed = @"You ran at a even speed today, nice job!";
-//    NSString *unevenSpeed = [NSString stringWithFormat:@"Your best speed is %@mph on %@. Since you did a long run. Next time you should run at a even space.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
-//    NSString *highSpeed = [NSString stringWithFormat:@"By the way, your pace is amazing. Your best speed is %@mph on %@.", Fastest.speed, [df stringFromDate:Fastest.timestamp]];
-//    
-//    if (self.run.distance.intValue > 2000) {
-//        returnValue = [NSString stringWithFormat:@"%@ %@ %@",
-//                       (evenSpeed) ? evenspeed : unevenSpeed,
-//                       (fast) ? highSpeed : nil,
-//                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!"];
-//    }else{
-//        returnValue = [NSString stringWithFormat:@"%@ %@",
-//                       ([self getMaxNumber:self.speed].intValue > Fastest.speed.intValue) ? @"You have broken your speed record! Keep it up!" : @"You are close to your speed record. Keep it up!",
-//                       ([self getMaxNumber:self.speed].intValue > 13) ? @"It seems like you did a fast workout, remember to warm up and cool down properly." : nil
-//                       ];
-//        
-//    }
-    
-    return nil;
-    //return returnValue;
-
-}
--(NSString *)analyzeHeartrate{
-    
-//    BOOL evenHeartRate = ([self getMaxNumber:_heartbeat].intValue - [self getMinNumber:_heartbeat].intValue < 60);
-//    BOOL hardWorkout = ([self getMaxNumber:self.heartbeat].intValue > 160);
-//    BOOL longRun = (self.run.distance.intValue > 2000);
-//    
-//    //fetch all runs
-//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timestamp" ascending:NO];
-//    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-//    NSMutableArray *runArray = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:fetchRequest error:nil]];
-
-//    int number;
-//    //find runs that is in similiar distance
-//    for (Run *runs in runArray) {
-//        if (runs.distance.intValue > self.run.distance.intValue - 500 && runs.distance.intValue < self.run.distance.intValue + 500) {
-//            
-//            NSNumber *average = [self getAverageNumber:[NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate]];
-//            NSNumber *averageThisRun = [self getAverageNumber:self.heartbeat];
-//            if (longRun && averageThisRun < average) {
-//                number ++;
-//            }
-//            
-//        }
-//    }
-//    
-//    NSString *returnValue = [NSString stringWithFormat:@"%@ %@ %@",
-//                             (hardWorkout) ? @"Based on your heart rate, you did a hard workout today." : nil,
-//                             (longRun && evenHeartRate) ? @"You heart beat is every even for a long run. Nice job" : nil,
-//                             (number > 0) ? [NSString stringWithFormat:@"You heart rate is low than %i runs that you did at the similar distance", number] : [NSString stringWithFormat:@"You heart rate is higher than %i runs that you did at the similar distance", number]];
-//    
-    
-    return nil;
-}
--(NSString *)analyzeElevation{
-    
-    return nil;
-}
-
-//setup view
-
 -(NSMutableArray *)getXArray:(NSArray *)array{
     
     NSMutableArray *returnArray = [NSMutableArray array];
@@ -259,7 +154,7 @@
     self.lineChart.legendFontColor = [UIColor darkGrayColor];
     
     UIView *legend = [self.lineChart getLegendWithMaxWidth:200];
-    [legend setFrame:CGRectMake(self.lineChart.frame.origin.x, self.lineChart.frame.origin.y + 210, legend.frame.size.width, legend.frame.size.width)];
+    [legend setFrame:CGRectMake(self.lineChart.frame.origin.x + 16, self.lineChart.frame.origin.y + 270, legend.frame.size.width, legend.frame.size.width)];
     [self.view addSubview:legend];
 }
 
@@ -352,6 +247,11 @@
     [self setUpView];
     [self setUpGraphs:self.speed];
     [self graphSpeed];
+    
+    self.runAnalyzer = [[RunAnalyzer alloc] initWithRun:self.run];
+    [self.runAnalyzer beginAnalyzeSpeed];
+    NSString *string = [self.runAnalyzer returnAnalysisResult];
+    NSLog(@"analysis result %@", string);
     [super viewDidLoad];
 }
 

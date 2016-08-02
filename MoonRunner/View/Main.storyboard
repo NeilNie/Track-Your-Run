@@ -554,6 +554,11 @@
                                                 <constraint firstItem="x8h-qC-YVy" firstAttribute="top" secondItem="2kE-gb-3iq" secondAttribute="topMargin" id="h8N-0T-i1Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="humidityLabel" destination="o4l-AV-ty7" id="7Dj-3w-WXZ"/>
+                                            <outlet property="tempLabel" destination="Acg-AZ-E5G" id="u4r-tC-20g"/>
+                                            <outlet property="windLabel" destination="AET-e0-jyI" id="hFt-Er-N8l"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" rowHeight="60" id="ccw-Jh-q5q" customClass="BasicTableViewCell">
                                         <frame key="frameInset" minY="111" width="359" height="60"/>
@@ -928,17 +933,17 @@
                             <constraint firstItem="AOh-44-a5E" firstAttribute="trailing" secondItem="651-va-2Oz" secondAttribute="trailingMargin" id="8a1-ZH-Nqc"/>
                             <constraint firstItem="MH4-NH-Z2H" firstAttribute="leading" secondItem="Pmd-iA-a3q" secondAttribute="trailing" constant="70" id="Dze-zK-com"/>
                             <constraint firstItem="qqT-ij-o6B" firstAttribute="centerX" secondItem="651-va-2Oz" secondAttribute="centerX" id="Jt7-fO-azW"/>
-                            <constraint firstItem="MH4-NH-Z2H" firstAttribute="top" secondItem="651-va-2Oz" secondAttribute="top" constant="300" id="R4E-3W-dqy"/>
+                            <constraint firstItem="MH4-NH-Z2H" firstAttribute="top" secondItem="651-va-2Oz" secondAttribute="top" constant="320" id="R4E-3W-dqy"/>
                             <constraint firstItem="qqT-ij-o6B" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="15" id="UNp-Uh-7fG"/>
-                            <constraint firstItem="Pmd-iA-a3q" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="300" id="fy2-oN-t3e"/>
+                            <constraint firstItem="Pmd-iA-a3q" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="320" id="fy2-oN-t3e"/>
                             <constraint firstItem="syn-SC-O4n" firstAttribute="trailing" secondItem="651-va-2Oz" secondAttribute="trailingMargin" id="g9k-vO-Uo8"/>
                             <constraint firstItem="Txo-0n-teG" firstAttribute="top" secondItem="AOh-44-a5E" secondAttribute="bottom" constant="8" id="hUz-tH-r1j"/>
-                            <constraint firstItem="aKW-SM-yqW" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="300" id="i09-v2-JW6"/>
+                            <constraint firstItem="aKW-SM-yqW" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="320" id="i09-v2-JW6"/>
                             <constraint firstItem="AOh-44-a5E" firstAttribute="leading" secondItem="651-va-2Oz" secondAttribute="leadingMargin" id="rdZ-0M-BbS"/>
                             <constraint firstItem="AOh-44-a5E" firstAttribute="top" secondItem="syn-SC-O4n" secondAttribute="bottom" constant="18" id="uHS-Qt-EIS"/>
                             <constraint firstItem="syn-SC-O4n" firstAttribute="leading" secondItem="aKW-SM-yqW" secondAttribute="trailing" constant="70" id="wQy-H1-aUL"/>
                             <constraint firstItem="Pmd-iA-a3q" firstAttribute="leading" secondItem="651-va-2Oz" secondAttribute="leadingMargin" id="xIc-8N-iLs"/>
-                            <constraint firstItem="syn-SC-O4n" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="300" id="yee-zh-Vla"/>
+                            <constraint firstItem="syn-SC-O4n" firstAttribute="top" secondItem="yA3-L5-A2F" secondAttribute="bottom" constant="320" id="yee-zh-Vla"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="RUN ANALYSIS" id="e3D-3L-2LQ"/>
@@ -1322,9 +1327,10 @@
             <objects>
                 <navigationController storyboardIdentifier="idRunHistory" automaticallyAdjustsScrollViewInsets="NO" id="2Eo-lF-Ffz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4H9-Ah-ICz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="4H9-Ah-ICz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1344,9 +1350,10 @@
             <objects>
                 <navigationController storyboardIdentifier="idRunPreference" automaticallyAdjustsScrollViewInsets="NO" id="tbT-rw-XOx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7Or-3a-hnX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="7Or-3a-hnX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
@@ -1367,9 +1374,10 @@
             <objects>
                 <navigationController storyboardIdentifier="idRunProgress" automaticallyAdjustsScrollViewInsets="NO" id="7bP-K3-h7E" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="GDo-BC-Nnv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="GDo-BC-Nnv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>

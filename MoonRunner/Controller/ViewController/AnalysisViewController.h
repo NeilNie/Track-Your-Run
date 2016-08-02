@@ -14,6 +14,7 @@
 #import "Run.h"
 #import "SettingViewController.h"
 #import "PNChart.h"
+#import "RunAnalyzer.h"
 
 float distance;
 
@@ -26,10 +27,11 @@ float distance;
     NSEntityDescription *entity;
 }
 
-@property (nonatomic, strong) PNLineChart *lineChart;
-
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
+@property (strong, nonatomic) RunAnalyzer *runAnalyzer;
+@property (nonatomic, strong) PNLineChart *lineChart;
+
 
 @property (nonatomic, strong) NSMutableArray *heartbeat;
 @property (nonatomic, strong) NSArray *striderate;

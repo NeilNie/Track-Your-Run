@@ -460,7 +460,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     NSLog(@"split %@", dict);
     time.text = [dict objectForKey:@"time"];
     distance.text = [dict objectForKey:@"distance"];
-    number.text = [NSString stringWithFormat:@"Split %li", indexPath.row + 1];
+    number.text = [NSString stringWithFormat:@"Split %i", (int)indexPath.row + 1];
     pace.text = [MathController stringifyAvgPaceFromDist:[[dict objectForKey:@"distance"] floatValue] overTime:[[dict objectForKey:@"time"] intValue]];
     return cell;
 }

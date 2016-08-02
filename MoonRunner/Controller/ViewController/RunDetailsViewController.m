@@ -55,6 +55,18 @@ static float const mapPadding = 1.1f;
     self.distanceLabel.text = [MathController stringifyDistance:self.run.distance.floatValue];
 }
 
+-(void)modifyRunData:(int)feedback{
+    
+    self.run.feedback = [NSNumber numberWithInt:feedback];
+
+    NSError *error = nil;
+    // Save the object to persistent store
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Can't Save! %@ %@", error, [error localizedDescription]);
+    }
+    
+}
+
 #pragma mark - Public
 
 - (void)setRun:(Run *)newDetailRun
@@ -132,6 +144,10 @@ static float const mapPadding = 1.1f;
             return cell;
         }else if (indexPath.row == 1){
             WeatherTableViewCell *cell = (WeatherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idWeatherCell" forIndexPath:indexPath];
+            NSDictionary *dic = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.weather];
+            cell.tempLabel.text = [dic objectForKey:@"temperature"];
+            cell.windLabel.text = [NSString stringWithFormat:@"%@ m/h", [dic objectForKey:@"wind"]];
+            cell.humidityLabel.text = [NSString stringWithFormat:@"%@%%", [dic objectForKey:@"humidity"]];
             return cell;
             
         }else if (indexPath.row == 2){
@@ -139,7 +155,7 @@ static float const mapPadding = 1.1f;
             return cell;
         }else{
             BasicTableViewCell *cell = (BasicTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
-            cell.subtitle.text = [valueA objectAtIndex:indexPath.row + 2];
+            cell.subtitle.text = [valueA objectAtIndex:indexPath.row];
             cell.title.text = [name objectAtIndex:indexPath.row - 3];
             return cell;
         }
@@ -202,7 +218,9 @@ static float const mapPadding = 1.1f;
 
 - (void)viewDidLoad
 {
-    [self.navigationItem setHidesBackButton:YES animated:YES];
+    if ([self.parentViewController isKindOfClass:[NewRunViewController class]]) {
+        [self.navigationItem setHidesBackButton:YES animated:YES];
+    }
     [self configureView];
     [self loadMap];
     [self setUpData];
@@ -222,6 +240,5 @@ static float const mapPadding = 1.1f;
         NSLog(@"completed");
     }
 }
-
 
 @end

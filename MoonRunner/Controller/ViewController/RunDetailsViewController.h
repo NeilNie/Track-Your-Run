@@ -22,6 +22,7 @@
 #import "BasicTableViewCell.h"
 #import "RunHelper.h"
 #import "WeatherTableViewCell.h"
+#import "NewRunViewController.h"
 
 @class Run;
 

@@ -3,19 +3,15 @@ This application makes use of the following third party libraries:
 
 ## Firebase
 
-Copyright 2016 Google Inc.
+Copyright 2016 Google
 
 ## FirebaseAnalytics
 
 Copyright 2016 Google
 
-## FirebaseAuth
-
-Copyright 2016 Google
-
 ## FirebaseInstanceID
 
-Copyright 2016 Google Inc.
+Copyright 2016 Google
 
 ## FrameAccessor
 
@@ -41,14 +37,6 @@ THE SOFTWARE.
 
 
 ## GoogleInterchangeUtilities
-
-Copyright 2015 Google Inc.
-
-## GoogleNetworkingUtilities
-
-Copyright 2015 Google Inc.
-
-## GoogleParsingUtilities
 
 Copyright 2015 Google Inc.
 

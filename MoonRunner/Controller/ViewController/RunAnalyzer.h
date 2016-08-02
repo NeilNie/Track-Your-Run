@@ -15,17 +15,21 @@
 #import "MathController.h"
 
 @interface RunAnalyzer : NSObject{
-    NSMutableString *returnString;
+    
     RunHelper *runHelper;
+    NSString *returnString;
+    NSNumber *currentSpeed;
+    NSMutableArray *elevation;
+    NSMutableArray *heartRate;
 }
 
-//-(NSString * _Nonnull)returnAnalysisResult;
+-(instancetype _Nonnull)initWithRun:(Run *_Nonnull)run;
+-(NSString * _Nonnull)returnAnalysisResult;
 -(void)beginAnalyzeSpeed;
 -(void)beginAnalyzeHeartRate;
 -(void)beginAnalyzeElevation;
--(void)beginAnalyzeHeartStrides;
+-(void)beginAnalyzeWeatherEnvironment;
 
 @property (strong, nonatomic, nonnull) Run *run;
-@property (strong, nonatomic, nonnull) NSMutableArray *runData;
 
 @end
