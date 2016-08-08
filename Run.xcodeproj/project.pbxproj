@@ -123,7 +123,6 @@
 		28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */; };
 		28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840D1D11054F00C17A4F /* LeftViewCell.m */; };
 		28E784101D11084600C17A4F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7840F1D11084600C17A4F /* menu.png */; };
-		28E784121D11085000C17A4F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E784111D11085000C17A4F /* image.png */; };
 		28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517C1D11AE5B000C3955 /* Media.xcassets */; };
 		28F051821D11B35E000C3955 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517E1D11B35E000C3955 /* history.png */; };
 		28F051831D11B35E000C3955 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517F1D11B35E000C3955 /* home.png */; };
@@ -387,7 +386,6 @@
 		28E7840C1D11054F00C17A4F /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
 		28E7840D1D11054F00C17A4F /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
 		28E7840F1D11084600C17A4F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		28E784111D11085000C17A4F /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		28F0517C1D11AE5B000C3955 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		28F0517E1D11B35E000C3955 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		28F0517F1D11B35E000C3955 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -680,7 +678,6 @@
 				28F0517F1D11B35E000C3955 /* home.png */,
 				28F051801D11B35E000C3955 /* preference.png */,
 				28F051811D11B35E000C3955 /* progress.png */,
-				28E784111D11085000C17A4F /* image.png */,
 				28E7840F1D11084600C17A4F /* menu.png */,
 				28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */,
 				28422E401D10F5E80070E982 /* icon-39-512.png */,
@@ -935,6 +932,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA1F95421929CF2600A0179A /* Build configuration list for PBXNativeTarget "Run" */;
 			buildPhases = (
+				DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */,
 				97F571E6192805372108EC33 /* [CP] Check Pods Manifest.lock */,
 				FA1F95031929CF2600A0179A /* Sources */,
 				FA1F95041929CF2600A0179A /* Frameworks */,
@@ -942,6 +940,8 @@
 				282B17FD1C740FFF0099F010 /* Embed Watch Content */,
 				5D387A8E23A3DE9074ADC095 /* [CP] Embed Pods Frameworks */,
 				780F23C5784747E930475AEE /* [CP] Copy Pods Resources */,
+				44D476BC29FAE6B27ED330E6 /* 📦 Embed Pods Frameworks */,
+				70DC6B3B8AEE83D93E67D359 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1060,7 +1060,6 @@
 				28422E441D10F5E80070E982 /* icon-39-512.png in Resources */,
 				286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */,
 				2879C9AB1D122E140088118A /* award-fastest.png in Resources */,
-				28E784121D11085000C17A4F /* image.png in Resources */,
 				2879C9B21D122E140088118A /* trophy_5m.png in Resources */,
 				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
 				2879C9B61D124B410088118A /* lock.png in Resources */,
@@ -1078,6 +1077,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44D476BC29FAE6B27ED330E6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5D387A8E23A3DE9074ADC095 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1091,6 +1105,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70DC6B3B8AEE83D93E67D359 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		780F23C5784747E930475AEE /* [CP] Copy Pods Resources */ = {
@@ -1116,6 +1145,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1334,8 +1378,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1376,8 +1422,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

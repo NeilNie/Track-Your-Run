@@ -160,15 +160,21 @@
 
 -(void)setUpData{
     
+    TitleArray = [NSMutableArray array];
+    Info = [NSMutableArray array];
+    
+    self.heartbeat = [NSMutableArray array];
     self.striderate = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.stride_rate];
     self.elevation = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.elevation];
+    
     if (self.run.locations.array.count < 30) {
         self.speed = [MathController getSpeedArrayFromLocations:self.run.locations.array];
     }else{
         self.speed = [MathController getLimitedSpeedArrayFromLocations:self.run.locations.array];
     }
-    self.heartbeat = [NSMutableArray array];
+    
     NSMutableArray *values = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.heart_rate];
+    
     for (int i = 0; i < values.count; i++) {
         NSInteger st = [[values objectAtIndex:i] integerValue];
         [_heartbeat addObject:[NSNumber numberWithInteger:st]];
@@ -235,10 +241,7 @@
 
 - (void)viewDidLoad {
     
-    TitleArray = [NSMutableArray array];
-    Info = [NSMutableArray array];
-    
-    //fetch all run data
+//    //fetch all run data
     fetchRequest = [[NSFetchRequest alloc] init];
     entity = [NSEntityDescription entityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];

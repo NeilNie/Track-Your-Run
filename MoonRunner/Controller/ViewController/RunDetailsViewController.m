@@ -20,6 +20,12 @@ static float const mapPadding = 1.1f;
 
 #pragma mark - Private
 
+-(IBAction)showAnalysis:(id)sender{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"segueShowAnalysis" sender:nil];
+    });
+}
+
 - (void)loadMap
 {
     dispatch_async(dispatch_get_main_queue(), ^{
