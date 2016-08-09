@@ -20,7 +20,7 @@ float distance;
 
 @interface AnalysisViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PNChartDelegate>{
     
-    NSMutableArray *TitleArray;
+    NSArray *TitleArray;
     NSMutableArray *Info;
     
     NSFetchRequest *fetchRequest;

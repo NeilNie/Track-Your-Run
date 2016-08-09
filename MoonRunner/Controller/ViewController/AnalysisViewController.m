@@ -21,17 +21,16 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    //return [TitleArray count];
-    return 0;
+    return [TitleArray count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TableCell" forIndexPath:indexPath];
-//    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
-//    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
-//    title.text = TitleArray[indexPath.row];
-//    text.text = [Info objectAtIndex:indexPath.row];
+    UILabel *title = (UILabel *)[cell.contentView viewWithTag:1];
+    UILabel *text = (UILabel *)[cell.contentView viewWithTag:2];
+    title.text = TitleArray[indexPath.row];
+    text.text = [Info objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -186,7 +185,7 @@
     if (_heartbeat.count > 1) {
         
         self.heartButton.enabled = YES;
-        [TitleArray addObject:@"Heart rate"];
+        //[TitleArray addObject:@"Heart rate"];
         //[Info addObject:[self analyzeHeartrate]];
     }else{
         self.heartButton.enabled = NO;
@@ -195,7 +194,7 @@
     if (_striderate.count > 1) {
         
         self.strideButton.enabled = YES;
-        [TitleArray addObject:@"Stride rate"];
+        //[TitleArray addObject:@"Stride rate"];
     }else{
         self.strideButton.enabled = NO;
     }
@@ -203,7 +202,7 @@
     if (_elevation.count > 1) {
         
         self.elevationButton.enabled = YES;
-        [TitleArray addObject:@"Elevation"];
+        //[TitleArray addObject:@"Elevation"];
     }else{
         self.elevationButton.enabled = NO;
     }
@@ -211,7 +210,7 @@
     if (_speed.count > 1) {
         
         self.speedButton.enabled = YES;
-        [TitleArray addObject:@"Speed"];
+        //[TitleArray addObject:@"Speed"];
         //[Info addObject:[self analyzeSpeed]];
     }else{
         self.speedButton.enabled = NO;
@@ -237,6 +236,24 @@
 //    [self _setupGraphWithArray:_elevation];
 }
 
+-(void)setupAnalysisData{
+    
+    self.runAnalyzer = [[RunAnalyzer alloc] initWithRun:self.run];
+    [self.runAnalyzer beginAnalyzeSpeed];
+    NSString *string = [self.runAnalyzer returnAnalysisResult];
+    [self.runAnalyzer beginAnalyzeElevation];
+    NSString *elevation = [self.runAnalyzer returnAnalysisResult];
+    [self.runAnalyzer beginAnalyzeHeartRate];
+    NSString *heartRate = [self.runAnalyzer returnAnalysisResult];
+    
+    TitleArray = [NSArray arrayWithObjects:@"Speed", @"Heart Rate", @"Elevation", nil];
+    Info = [NSMutableArray array];
+    [Info addObject:string];
+    [Info addObject:heartRate];
+    [Info addObject:elevation];
+    
+}
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
@@ -250,11 +267,7 @@
     [self setUpView];
     [self setUpGraphs:self.speed];
     [self graphSpeed];
-    
-    self.runAnalyzer = [[RunAnalyzer alloc] initWithRun:self.run];
-    [self.runAnalyzer beginAnalyzeSpeed];
-    NSString *string = [self.runAnalyzer returnAnalysisResult];
-    NSLog(@"analysis result %@", string);
+    [self setupAnalysisData];
     [super viewDidLoad];
 }
 

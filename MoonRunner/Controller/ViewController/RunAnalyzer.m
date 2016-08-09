@@ -104,6 +104,8 @@
 
 -(void)beginAnalyzeSpeed{
     
+    returnString = nil;
+    
     currentSpeed = [NSNumber numberWithFloat:(self.run.distance.floatValue / 1609.344) / (self.run.duration.floatValue / 60.0 / 60.0)];
     
     returnString = [self generalSpeedAnalysis];
@@ -171,8 +173,14 @@
 
 -(void)beginAnalyzeHeartRate{
     
-    NSString *string = [self generalHeartRateAnalysis];
-    string = [string stringByAppendingString:[self relativeHeartRateAnalysis]];
+    returnString = nil;
+    if (heartRate.count > 0) {
+        returnString = [self generalHeartRateAnalysis];
+        returnString = [returnString stringByAppendingString:[self relativeHeartRateAnalysis]];
+    }else{
+        returnString = @"Oops, we can find the heart rate data for this run. Remeinder, you have to have an Apple Watch in order to record heart rate.";
+    }
+    
 }
 
 #pragma mark - Analyze Elevation
@@ -202,7 +210,13 @@
 
 -(void)beginAnalyzeElevation{
     
-    returnString = [self generalElevationAnalysis];
+    returnString = nil;
+    if (elevation.count > 0) {
+        returnString = [self generalElevationAnalysis];
+    }else{
+        returnString = @"Sorry, there is not enough information.";
+    }
+    
 }
 
 #pragma mark - Analyze Strides
