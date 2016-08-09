@@ -18,8 +18,11 @@
 #import "Location.h"
 #import "RunDetailsViewController.h"
 #import "SettingViewController.h"
+#import "YQL.h"
 
 @interface NewRunViewController : UIViewController <UIActionSheetDelegate, CLLocationManagerDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource, WCSessionDelegate>{
+    
+    int temperate;
     
     NSTimer *timer;
     NSTimer *startTimer;
@@ -31,7 +34,6 @@
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property BOOL WatchRun;
 @property int seconds;
 @property float distance;
 @property int miliseconds;

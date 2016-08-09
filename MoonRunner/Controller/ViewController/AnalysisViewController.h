@@ -14,22 +14,24 @@
 #import "Run.h"
 #import "SettingViewController.h"
 #import "PNChart.h"
+#import "RunAnalyzer.h"
 
 float distance;
 
 @interface AnalysisViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, PNChartDelegate>{
     
-    NSMutableArray *TitleArray;
+    NSArray *TitleArray;
     NSMutableArray *Info;
     
     NSFetchRequest *fetchRequest;
     NSEntityDescription *entity;
 }
 
-@property (nonatomic, strong) PNLineChart *lineChart;
-
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
+@property (strong, nonatomic) RunAnalyzer *runAnalyzer;
+@property (nonatomic, strong) PNLineChart *lineChart;
+
 
 @property (nonatomic, strong) NSMutableArray *heartbeat;
 @property (nonatomic, strong) NSArray *striderate;

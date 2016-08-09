@@ -26,12 +26,11 @@ static NSString * const detailSegueName = @"NewRunDetails";
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     self.managedObjectContext = delegate.managedObjectContext;
     [self.navigationItem setHidesBackButton:YES animated:YES];
-    
+
     [self setUpData];
     [self setUpGestures];
     
     if ([WCSession isSupported]) {
-        NSLog(@"Activated");
         WCSession *session = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
@@ -124,6 +123,23 @@ static NSString * const detailSegueName = @"NewRunDetails";
 }
 
 #pragma mark - Private
+
+-(NSDictionary *)queryWeatherAPI{
+    
+    CLLocationCoordinate2D coordinate = [self getLocation]; //select * from weather.forecast where woeid in
+    YQL *yql = [[YQL alloc] init];
+    NSString *queryString = [NSString stringWithFormat:@"select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text=\"(%f,%f)\")", coordinate.latitude, coordinate.longitude];
+    NSDictionary *results = [yql query:queryString];
+    
+    NSString *temperature = results[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"];
+    NSString *humidity = results[@"query"][@"results"][@"channel"][@"atmosphere"][@"humidity"];
+    NSString *wind_speed = results[@"query"][@"results"][@"channel"][@"wind"][@"speed"];
+    
+    NSDictionary *returnResult = @{@"temperature": temperature,
+                     @"humidity": humidity,
+                     @"wind": wind_speed};
+    return returnResult;
+}
 
 -(void)setUpGestures{
     
@@ -220,23 +236,15 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.duration = [NSNumber numberWithInt:self.seconds];
     newRun.miliseconds = [NSNumber numberWithInt:self.miliseconds];
 
-    //store arrays
+    //store arrays or dictionaries
     newRun.elevation = [NSKeyedArchiver archivedDataWithRootObject:self.altitude];
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
     newRun.stride_rate = [NSKeyedArchiver archivedDataWithRootObject:self.strides];
     newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:self.heartRate];
-
+    newRun.weather = [NSKeyedArchiver archivedDataWithRootObject:[self queryWeatherAPI]];
+    
     //save locations as NSOrderSet
-    NSMutableArray *locationArray = [NSMutableArray array];
-    for (CLLocation *location in self.locations) {
-        Location *locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
-        
-        locationObject.timestamp = location.timestamp;
-        locationObject.latitude = [NSNumber numberWithDouble:location.coordinate.latitude];
-        locationObject.longitude = [NSNumber numberWithDouble:location.coordinate.longitude];
-        [locationArray addObject:locationObject];
-    }
-    newRun.locations = [NSOrderedSet orderedSetWithArray:locationArray];
+    newRun.locations = [NSOrderedSet orderedSetWithArray:[self createLocationArray]];
     
     //save run object
     self.run = newRun;
@@ -249,6 +257,20 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
+-(NSMutableArray *)createLocationArray{
+    
+    NSMutableArray *locationArray = [NSMutableArray array];
+    for (CLLocation *location in self.locations) {
+        Location *locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+        
+        locationObject.timestamp = location.timestamp;
+        locationObject.latitude = [NSNumber numberWithDouble:location.coordinate.latitude];
+        locationObject.longitude = [NSNumber numberWithDouble:location.coordinate.longitude];
+        [locationArray addObject:locationObject];
+    }
+    return locationArray;
+}
+
 - (void)updateLabels{
     
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -259,7 +281,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
     });
     
     [self sendWorkoutInfo:self.distance];
-    
 }
 
 -(void)timerCount{
@@ -273,6 +294,20 @@ static NSString * const detailSegueName = @"NewRunDetails";
         self.timeLabel.text = [MathController stringifySecondCount:self.seconds usingLongFormat:NO];
     }
 }
+
+-(CLLocationCoordinate2D) getLocation{
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    [self.locationManager startUpdatingLocation];
+    CLLocation *location = [self.locationManager location];
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    return coordinate;
+}
+
 
 - (void)startLocationUpdates
 {
@@ -425,7 +460,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     NSLog(@"split %@", dict);
     time.text = [dict objectForKey:@"time"];
     distance.text = [dict objectForKey:@"distance"];
-    number.text = [NSString stringWithFormat:@"Split %li", indexPath.row + 1];
+    number.text = [NSString stringWithFormat:@"Split %i", (int)indexPath.row + 1];
     pace.text = [MathController stringifyAvgPaceFromDist:[[dict objectForKey:@"distance"] floatValue] overTime:[[dict objectForKey:@"time"] intValue]];
     return cell;
 }

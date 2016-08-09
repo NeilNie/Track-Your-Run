@@ -39,7 +39,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
         unitDivider = metersInMile;
     }
     
-    return [NSString stringWithFormat:@"%.2f %@", (meters / unitDivider), unitName];
+    return [NSString stringWithFormat:@"%.2f%@", (meters / unitDivider), unitName];
 }
 
 + (NSString *)stringifySecondCount:(int)seconds usingLongFormat:(BOOL)longFormat {
@@ -115,8 +115,8 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     
     int minute = 60 / speed;
     float seconds = 60 / speed - minute;
-    float actualSeconds = seconds * 60;
-    NSString *returnString = [NSString stringWithFormat:@"%i:%fmin/mile", minute, actualSeconds];
+    int actualSeconds = seconds * 60;
+    NSString *returnString = [NSString stringWithFormat:@"%i:%im/mi", minute, actualSeconds];
     return returnString;
 }
 
@@ -173,11 +173,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
 }
 
 + (NSArray *)getLimitedSpeedArrayFromLocations:(NSArray *)array{
-    
-    if (array.count <= 1){
-        return nil;
-    }
-    
+
     // make array of all speeds
     NSMutableArray *rawSpeeds = (NSMutableArray *)[MathController getSpeedArrayFromLocations:array];
     
@@ -203,12 +199,12 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     }else{
         
         //how many numbers do I have to add together to calculate the average.
-        int numberOfnumbers = (int) (rawSpeeds.count - 1 ) / 30;
+        int numberOfnumbers = (int) (rawSpeeds.count + 1 ) / 30;
         
         for (int i = 0; i < rawSpeeds.count; i = i + numberOfnumbers) {
             
             float sum = 0.0f;
-            for (int x = i; i < i + numberOfnumbers; i++) {
+            for (int x = i; x < i + numberOfnumbers; x++) {
                 sum = sum + [[rawSpeeds objectAtIndex:x] floatValue];
             }
             float average = sum / numberOfnumbers;

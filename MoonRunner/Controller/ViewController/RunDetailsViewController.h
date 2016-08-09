@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+
 #import "Run.h"
 #import "MathController.h"
 #import "Location.h"
@@ -15,10 +16,13 @@
 #import "SummaryTableViewCell.h"
 #import "AnalysisViewController.h"
 #import "SettingViewController.h"
+
 #import "ButtonTableCell.h"
 #import "InfoTableViewCell.h"
 #import "BasicTableViewCell.h"
 #import "RunHelper.h"
+#import "WeatherTableViewCell.h"
+#import "NewRunViewController.h"
 
 @class Run;
 

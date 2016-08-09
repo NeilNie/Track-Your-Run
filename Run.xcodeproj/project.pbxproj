@@ -41,6 +41,7 @@
 		281730411C74E0460036901C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 281730401C74E0460036901C /* StoreKit.framework */; };
 		2818168A1C7678180024770E /* MathController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281816891C7678180024770E /* MathController.m */; };
 		281816901C768E990024770E /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2818168F1C768E990024770E /* HealthKit.framework */; };
+		28261E221D4D943200DF4DC5 /* YQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 28261E211D4D943200DF4DC5 /* YQL.m */; };
 		283334791D121FEB00F76C5A /* GKBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334761D121FEB00F76C5A /* GKBar.m */; };
 		2833347A1D121FEB00F76C5A /* GKBarGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 283334781D121FEB00F76C5A /* GKBarGraph.m */; };
 		2833347D1D1220A000F76C5A /* TrophyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833347C1D1220A000F76C5A /* TrophyCollectionViewCell.m */; };
@@ -112,6 +113,8 @@
 		287E2F961D11F17B00D45488 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287E2F951D11F17B00D45488 /* ProgressViewController.m */; };
 		288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E9F251D107E490056B4F9 /* Launch Screen.storyboard */; };
 		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
+		28B852511D503E0500B84881 /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8524F1D503E0500B84881 /* WeatherTableViewCell.m */; };
+		28B852521D503E0500B84881 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B852501D503E0500B84881 /* WeatherTableViewCell.xib */; };
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */; };
 		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
@@ -120,7 +123,6 @@
 		28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */; };
 		28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840D1D11054F00C17A4F /* LeftViewCell.m */; };
 		28E784101D11084600C17A4F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7840F1D11084600C17A4F /* menu.png */; };
-		28E784121D11085000C17A4F /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E784111D11085000C17A4F /* image.png */; };
 		28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517C1D11AE5B000C3955 /* Media.xcassets */; };
 		28F051821D11B35E000C3955 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517E1D11B35E000C3955 /* history.png */; };
 		28F051831D11B35E000C3955 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517F1D11B35E000C3955 /* home.png */; };
@@ -233,6 +235,7 @@
 		2808B80F1D4697A700296E4C /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
 		2808B8101D4697A700296E4C /* InfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoTableViewCell.m; sourceTree = "<group>"; };
 		2808B8111D4697A700296E4C /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfoTableViewCell.xib; path = ../InfoTableViewCell.xib; sourceTree = "<group>"; };
+		280ED1171D4FEEC2005733E1 /* RunMaster3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RunMaster3.xcdatamodel; sourceTree = "<group>"; };
 		2817303E1C74E0120036901C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		281730401C74E0460036901C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		281816771C76725B0024770E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
@@ -242,6 +245,8 @@
 		2818168B1C767C840024770E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		2818168D1C768E920024770E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		2818168F1C768E990024770E /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		28261E201D4D943200DF4DC5 /* YQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YQL.h; sourceTree = "<group>"; };
+		28261E211D4D943200DF4DC5 /* YQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YQL.m; sourceTree = "<group>"; };
 		283334751D121FEB00F76C5A /* GKBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBar.h; sourceTree = "<group>"; };
 		283334761D121FEB00F76C5A /* GKBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBar.m; sourceTree = "<group>"; };
 		283334771D121FEB00F76C5A /* GKBarGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBarGraph.h; sourceTree = "<group>"; };
@@ -364,6 +369,9 @@
 		288E9F251D107E490056B4F9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
 		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
+		28B8524E1D503E0500B84881 /* WeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeatherTableViewCell.h; path = Model/WeatherTableViewCell.h; sourceTree = "<group>"; };
+		28B8524F1D503E0500B84881 /* WeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WeatherTableViewCell.m; path = Model/WeatherTableViewCell.m; sourceTree = "<group>"; };
+		28B852501D503E0500B84881 /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WeatherTableViewCell.xib; path = ../Model/WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		28D137691D4829DD00467B97 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewCell.h; sourceTree = "<group>"; };
 		28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewCell.m; sourceTree = "<group>"; };
@@ -378,7 +386,6 @@
 		28E7840C1D11054F00C17A4F /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
 		28E7840D1D11054F00C17A4F /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
 		28E7840F1D11084600C17A4F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		28E784111D11085000C17A4F /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 		28F0517C1D11AE5B000C3955 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		28F0517E1D11B35E000C3955 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		28F0517F1D11B35E000C3955 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -640,6 +647,8 @@
 		28422E3D1D10C94F0070E982 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				28261E201D4D943200DF4DC5 /* YQL.h */,
+				28261E211D4D943200DF4DC5 /* YQL.m */,
 				2808B80C1D46960300296E4C /* RunHelper.h */,
 				2808B80D1D46960300296E4C /* RunHelper.m */,
 				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
@@ -669,7 +678,6 @@
 				28F0517F1D11B35E000C3955 /* home.png */,
 				28F051801D11B35E000C3955 /* preference.png */,
 				28F051811D11B35E000C3955 /* progress.png */,
-				28E784111D11085000C17A4F /* image.png */,
 				28E7840F1D11084600C17A4F /* menu.png */,
 				28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */,
 				28422E401D10F5E80070E982 /* icon-39-512.png */,
@@ -706,6 +714,8 @@
 		2879C9BC1D125ACB0088118A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28B8524E1D503E0500B84881 /* WeatherTableViewCell.h */,
+				28B8524F1D503E0500B84881 /* WeatherTableViewCell.m */,
 				28E7840C1D11054F00C17A4F /* LeftViewCell.h */,
 				28E7840D1D11054F00C17A4F /* LeftViewCell.m */,
 				2833347B1D1220A000F76C5A /* TrophyCollectionViewCell.h */,
@@ -856,6 +866,7 @@
 				286E666B1D13034E008B4BDE /* SummaryTableCell.xib */,
 				286E666D1D13035C008B4BDE /* ButtonTableCell.xib */,
 				2808B8111D4697A700296E4C /* InfoTableViewCell.xib */,
+				28B852501D503E0500B84881 /* WeatherTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -921,6 +932,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA1F95421929CF2600A0179A /* Build configuration list for PBXNativeTarget "Run" */;
 			buildPhases = (
+				DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */,
 				97F571E6192805372108EC33 /* [CP] Check Pods Manifest.lock */,
 				FA1F95031929CF2600A0179A /* Sources */,
 				FA1F95041929CF2600A0179A /* Frameworks */,
@@ -928,6 +940,8 @@
 				282B17FD1C740FFF0099F010 /* Embed Watch Content */,
 				5D387A8E23A3DE9074ADC095 /* [CP] Embed Pods Frameworks */,
 				780F23C5784747E930475AEE /* [CP] Copy Pods Resources */,
+				44D476BC29FAE6B27ED330E6 /* 📦 Embed Pods Frameworks */,
+				70DC6B3B8AEE83D93E67D359 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1022,6 +1036,7 @@
 			files = (
 				2879C9B01D122E140088118A /* trophy_10m.png in Resources */,
 				28F051841D11B35E000C3955 /* preference.png in Resources */,
+				28B852521D503E0500B84881 /* WeatherTableViewCell.xib in Resources */,
 				2879C9AD1D122E140088118A /* award.png in Resources */,
 				28F051821D11B35E000C3955 /* history.png in Resources */,
 				28E784101D11084600C17A4F /* menu.png in Resources */,
@@ -1045,7 +1060,6 @@
 				28422E441D10F5E80070E982 /* icon-39-512.png in Resources */,
 				286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */,
 				2879C9AB1D122E140088118A /* award-fastest.png in Resources */,
-				28E784121D11085000C17A4F /* image.png in Resources */,
 				2879C9B21D122E140088118A /* trophy_5m.png in Resources */,
 				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
 				2879C9B61D124B410088118A /* lock.png in Resources */,
@@ -1063,6 +1077,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		44D476BC29FAE6B27ED330E6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5D387A8E23A3DE9074ADC095 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1076,6 +1105,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70DC6B3B8AEE83D93E67D359 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Run/Pods-Run-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		780F23C5784747E930475AEE /* [CP] Copy Pods Resources */ = {
@@ -1101,6 +1145,21 @@
 			inputPaths = (
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1136,6 +1195,7 @@
 				2834DAFD1D41604800BB4233 /* PNScatterChart.m in Sources */,
 				28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */,
 				2834DAFF1D41604800BB4233 /* PNScatterChartDataItem.m in Sources */,
+				28261E221D4D943200DF4DC5 /* YQL.m in Sources */,
 				2834DAFE1D41604800BB4233 /* PNScatterChartData.m in Sources */,
 				2834DB391D41608200BB4233 /* UIViewHelper.m in Sources */,
 				2834DB431D41608200BB4233 /* MDTextField.m in Sources */,
@@ -1192,6 +1252,7 @@
 				2834DB381D41608200BB4233 /* UIFontHelper.m in Sources */,
 				2834DAF21D41604800BB4233 /* PNChartLabel.m in Sources */,
 				2834DB3C1D41608200BB4233 /* MDProgress.m in Sources */,
+				28B852511D503E0500B84881 /* WeatherTableViewCell.m in Sources */,
 				28716ECA1C75518E000834C6 /* NewRunViewController.m in Sources */,
 				28716ECB1C75518E000834C6 /* RunDetailsViewController.m in Sources */,
 				FA1F95191929CF2600A0179A /* main.m in Sources */,
@@ -1317,8 +1378,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1359,8 +1422,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1481,10 +1546,11 @@
 		FA1F95211929CF2600A0179A /* RunMaster.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				280ED1171D4FEEC2005733E1 /* RunMaster3.xcdatamodel */,
 				00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */,
 				FA1F95221929CF2600A0179A /* RunMaster.xcdatamodel */,
 			);
-			currentVersion = 00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */;
+			currentVersion = 280ED1171D4FEEC2005733E1 /* RunMaster3.xcdatamodel */;
 			path = RunMaster.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

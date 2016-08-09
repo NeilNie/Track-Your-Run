@@ -22,9 +22,11 @@
 
 -(NSMutableArray * __nullable)retrieveAllObjects;
 
--(NSMutableArray * __nullable)calculateSpeed:(NSMutableArray * __nullable)array;
++(NSMutableArray * __nullable)calculateSpeed:(NSMutableArray * __nullable)array;
 
 -(NSMutableArray * __nullable)retrieveObjectsWithDistanceRange:(int)min andMax:(int)max;
+
+-(NSMutableArray * __nullable)calculateRowMeanMatrix:(NSMutableArray *__nullable)array;
 
 ////Math functions
 

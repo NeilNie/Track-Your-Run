@@ -97,16 +97,27 @@
 +(NSNumber *)getAverageNumber:(NSArray *)array{
     
     if (array.count > 1) {
-        int total = 0;
-        int average = 0;
+        float total = 0.0;
+        float average = 0.0;
         for (int i = 0; i < array.count; i++) {
-            total += [[array objectAtIndex:i] intValue];
+            total = total + [[array objectAtIndex:i] floatValue];
         }
         average = total / array.count;
-        return [NSNumber numberWithInt:average];
+        return [NSNumber numberWithFloat:average];
     }else{
         return @00;
     }
+}
+
+-(NSMutableArray *)calculateRowMeanMatrix:(NSMutableArray *)array{
+    
+    NSMutableArray *result = [NSMutableArray array];
+    for (int i = 0; i < array.count; i++) {
+        Run *run = [array objectAtIndex:i];
+        NSMutableArray *heartRates = [NSKeyedUnarchiver unarchiveObjectWithData:run.heart_rate];
+        [result addObject:[RunHelper getAverageNumber:heartRates]];
+    }
+    return result;
 }
 
 -(NSMutableArray *)retrieveAllObjects{
@@ -120,13 +131,13 @@
     return array;
 }
 
--(NSMutableArray *)calculateSpeed:(NSMutableArray *)array{
++(NSMutableArray *)calculateSpeed:(NSMutableArray *)array{
     
     NSMutableArray *speedArray = [NSMutableArray array];
     
     for (int i = 0; i < array.count; i++) {
         Run *run = [array objectAtIndex:i];
-        float speed = run.distance.floatValue / run.duration.floatValue;
+        float speed = (run.distance.floatValue / 1609.344) / (run.duration.floatValue / 60.0 / 60.0);
         [speedArray addObject:[NSNumber numberWithFloat:speed]];
     }
     return speedArray;

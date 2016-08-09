@@ -76,7 +76,7 @@
     [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
     UINavigationController *today = [self.storyboard instantiateViewControllerWithIdentifier:@"idRunHome"];
     UINavigationController *projects = [self.storyboard instantiateViewControllerWithIdentifier:@"idRunHistory"];
-    UINavigationController *calendar = [self.storyboard instantiateViewControllerWithIdentifier:@"idRunProgress"];
+    UINavigationController *calendar = [self.storyboard instantiateViewControllerWithIdentifier:@"idRunHome"];
     UINavigationController *preference = [self.storyboard instantiateViewControllerWithIdentifier:@"idRunPreference"];
     
     MainViewController *mainViewController = [self.storyboard instantiateInitialViewController];
