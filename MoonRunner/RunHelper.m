@@ -85,7 +85,7 @@
 
 +(NSNumber *)getMaxNumber:(NSArray *)array{
     
-    NSNumber *max = 0;
+    NSNumber *max = [NSNumber numberWithInteger:0];
     for (NSNumber *x in array) {
         if (x > max) {
             max = x;

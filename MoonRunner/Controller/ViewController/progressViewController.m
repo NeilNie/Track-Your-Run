@@ -14,28 +14,29 @@
 
 @implementation ProgressViewController
 
-#pragma mark - GKBarGraphDataSource
-
-- (NSInteger)numberOfBars {
-    return [self.barData count];
-}
-
-- (NSNumber *)valueForBarAtIndex:(NSInteger)index {
-    return [self.barData objectAtIndex:index];
-}
-
-- (UIColor *)colorForBarAtIndex:(NSInteger)index {
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return [UIColor gk_pumpkinColor];
+    if (collectionView == self.planCollectionView) {
+        PlanCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"idPlanCell" forIndexPath:indexPath];
+        return cell;
+    }else{
+        TrophyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"idTrophyCell" forIndexPath:indexPath];
+        return cell;
+    }
 }
 
-- (CFTimeInterval)animationDurationForBarAtIndex:(NSInteger)index {
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     
-    return (1.0);
+    if (collectionView == self.planCollectionView) {
+        return 5;
+    }else{
+        return 5;
+    }
 }
 
-- (NSString *)titleForBarAtIndex:(NSInteger)index {
-    return [self.labels objectAtIndex:index];
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
 }
 
 #pragma mark - Private
@@ -48,7 +49,6 @@
 
 - (void)viewDidLoad {
     
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -58,7 +58,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -66,6 +65,5 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

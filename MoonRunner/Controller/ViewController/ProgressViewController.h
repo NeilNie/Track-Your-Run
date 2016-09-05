@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "GKLineGraph.h"
-#import "GKBarGraph.h"
+#import "PNChart.h"
 #import "UIColor+GraphKit.h"
+#import "PlanCollectionViewCell.h"
+#import "TrophyCollectionViewCell.h"
 
-@interface ProgressViewController : UIViewController
+@interface ProgressViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, PNChartDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (weak, nonatomic) IBOutlet GKBarGraph *barGraph;
-@property (weak, nonatomic) IBOutlet GKLineGraph *lineGraph;
+@property (weak, nonatomic) IBOutlet UICollectionView *planCollectionView;
+@property (weak, nonatomic) IBOutlet UICollectionView *trophyCollectionView;
 
 @property (weak, nonatomic) NSArray *barData;
 @property (weak, nonatomic) NSMutableArray *labels;

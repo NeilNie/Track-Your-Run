@@ -32,6 +32,7 @@
 		00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C80B971C79262B005C4E39 /* storyboard.storyboard */; };
 		00CAE2B21C82029800DDC425 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00CAE2B11C82029800DDC425 /* CoreMotion.framework */; };
+		00DD503E1D5E80CB0029D239 /* PlanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DD503D1D5E80CB0029D239 /* PlanCollectionViewCell.m */; };
 		00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
 		2808B80E1D46960300296E4C /* RunHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808B80D1D46960300296E4C /* RunHelper.m */; };
@@ -227,6 +228,8 @@
 		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
 		00CAE2B11C82029800DDC425 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		00DD503C1D5E80CB0029D239 /* PlanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanCollectionViewCell.h; sourceTree = "<group>"; };
+		00DD503D1D5E80CB0029D239 /* PlanCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanCollectionViewCell.m; sourceTree = "<group>"; };
 		00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
@@ -728,6 +731,8 @@
 				2808B8101D4697A700296E4C /* InfoTableViewCell.m */,
 				28D137691D4829DD00467B97 /* BasicTableViewCell.h */,
 				28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */,
+				00DD503C1D5E80CB0029D239 /* PlanCollectionViewCell.h */,
+				00DD503D1D5E80CB0029D239 /* PlanCollectionViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -932,7 +937,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA1F95421929CF2600A0179A /* Build configuration list for PBXNativeTarget "Run" */;
 			buildPhases = (
-				DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */,
+				DBE817282245F7594B9D3DF7 /* [CP] Check Pods Manifest.lock */,
 				97F571E6192805372108EC33 /* [CP] Check Pods Manifest.lock */,
 				FA1F95031929CF2600A0179A /* Sources */,
 				FA1F95041929CF2600A0179A /* Frameworks */,
@@ -1152,14 +1157,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DBE817282245F7594B9D3DF7 /* 📦 Check Pods Manifest.lock */ = {
+		DBE817282245F7594B9D3DF7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1202,6 +1207,7 @@
 				28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */,
 				2834DB3D1D41608200BB4233 /* MDRippleLayer.m in Sources */,
 				283334791D121FEB00F76C5A /* GKBar.m in Sources */,
+				00DD503E1D5E80CB0029D239 /* PlanCollectionViewCell.m in Sources */,
 				28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */,
 				2834DB3A1D41608200BB4233 /* MDButton.m in Sources */,
 				2834DB351D41608200BB4233 /* MDDeviceHelper.m in Sources */,

@@ -6,5 +6,5 @@ pod 'Firebase'
 pod 'Firebase/Analytics'
 pod 'Firebase/Core'
 pod 'FrameAccessor'
-
+pod 'Firebase/AdMob'
 end
