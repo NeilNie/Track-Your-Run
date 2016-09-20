@@ -12,7 +12,6 @@
 #import "Math.h"
 #import "DetailInterfaceController.h"
 #import "InterfaceController.h"
-#import "IndoorRunInterfaceController.h"
 
 @interface HomeInterfaceController : WKInterfaceController <WCSessionDelegate>
 

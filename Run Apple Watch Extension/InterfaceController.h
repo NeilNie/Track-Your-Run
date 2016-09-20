@@ -11,10 +11,11 @@
 #import <HealthKit/HealthKit.h>
 #import <CoreMotion/CoreMotion.h>
 #import "Math.h"
-#import "IndoorRunInterfaceController.h"
 #import "DetailInterfaceController.h"
 
 NSDictionary *data;
+
+BOOL started;
 
 @interface InterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
     
@@ -28,22 +29,18 @@ NSDictionary *data;
     
     NSTimer *RunTimer;
     NSTimer *Timer;
-
-    BOOL disBo;
-    BOOL timeBo;
-    BOOL paceBo;
 }
-
 @property int seconds;
 @property int miliseconds;
 @property float distance;
-@property NSMutableArray *heartBeatArray;
+@property (nonatomic, strong) NSMutableArray *heartBeatArray;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
 
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *paceLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milageLabel;
+@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *heartLabel;
+@property (weak, nonatomic) IBOutlet WKInterfaceImage *image;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *timeLabel;
-@property (nonatomic, weak) IBOutlet WKInterfaceLabel *unitLabel;
 @property (nonatomic, weak) IBOutlet WKInterfaceLabel *milisecondsLabel;
-- (IBAction)leftClick;
-- (IBAction)rightClick;
 
 @end

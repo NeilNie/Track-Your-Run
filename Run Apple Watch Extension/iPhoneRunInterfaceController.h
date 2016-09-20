@@ -12,7 +12,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import <HealthKit/HealthKit.h>
 #import "Math.h"
-#import "IndoorRunInterfaceController.h"
+#import "InterfaceController.h"
 
 @interface iPhoneRunInterfaceController : WKInterfaceController <WCSessionDelegate, HKWorkoutSessionDelegate>{
     

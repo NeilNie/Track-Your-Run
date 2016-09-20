@@ -16,49 +16,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "Run Apple Watch Extension/iPhoneRunInterfaceController.m"
-            timestampString = "487627962.361597"
+            timestampString = "496001420.317133"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "-updateHeartbeat"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[iPhoneRunInterfaceController updateHeartbeat]"
-                  moduleName = "Run Apple Watch Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Neil/Documents/Developer/Apple/Softwares/Projects/iOS/Run/Run%20Apple%20Watch%20Extension/iPhoneRunInterfaceController.m"
-                  timestampString = "487627962.610434"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
-                  offsetFromSymbolStart = "332">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__47-[iPhoneRunInterfaceController updateHeartbeat]_block_invoke.25"
-                  moduleName = "Run Apple Watch Extension"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Neil/Documents/Developer/Apple/Softwares/Projects/iOS/Run/Run%20Apple%20Watch%20Extension/iPhoneRunInterfaceController.m"
-                  timestampString = "487627962.616171"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "194">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

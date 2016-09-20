@@ -36,7 +36,7 @@
     
     [heartQuery setUpdateHandler:^(HKAnchoredObjectQuery *query, NSArray<__kindof HKSample *> *sampleObjects, NSArray<HKDeletedObject *> *deletedObjects, HKQueryAnchor *newAnchor, NSError *error) {
         if (!error && sampleObjects) {
-            NSLog(@"heart rate: %@", sampleObjects);
+            NSLog(@"Update handler called. Heart rate: %@", sampleObjects);
         }else{
             NSLog(@"error %@", error);
         }

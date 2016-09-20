@@ -92,7 +92,9 @@
             case HKWorkoutSessionStateRunning:
                 [self updateHeartbeat];
                 [self updateDistance];
-                NSLog(@"started workout");
+                [self startPedometer];
+                started = YES;
+                NSLog(@"workout started");
                 break;
             case HKWorkoutSessionStateEnded:
                 NSLog(@"ended");
@@ -174,18 +176,6 @@
     }];
 }
 
--(void)count{
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        if (disBo) {
-            [self.timeLabel setText:[Math stringifyDistance:self.distance]];
-        }
-        if (paceBo) {
-            [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
-        }
-    });
-}
-
 -(void)timerCount{
     
     self.miliseconds+=10;
@@ -193,89 +183,40 @@
     if (self.miliseconds == 100) {
         self.miliseconds = 0;
         self.seconds++;
-        if (timeBo) {
-            [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
-        }
+        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
     }
 }
 
-- (IBAction)leftClick {
-    
-    //set distance
-    if (disBo == NO && paceBo == NO && timeBo == YES) {
-        timeBo = NO;
-        disBo = YES;
-        [self.timeLabel setText:[Math stringifyDistance:self.distance]];
-        [self.unitLabel setText:@"miles"];
-        [self.milisecondsLabel setHidden:YES];
-        NSLog(@"changed to distance");
-        return;
-    }
-    if (disBo == YES && timeBo == NO && paceBo == NO) {
-        paceBo = YES;
-        disBo = NO;
-        [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
-        [self.unitLabel setText:@"m/mi"];
-        [self.milisecondsLabel setHidden:YES];
-        NSLog(@"changed to pace");
-        return;
-    }
-    if (paceBo == YES && disBo == NO && timeBo == NO) {
-        paceBo = NO;
-        timeBo = YES;
-        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
-        [self.unitLabel setText:@"sec"];
-        [self.milisecondsLabel setHidden:NO];
-        return;
-    }
-}
-- (IBAction)rightClick {
-    
-    //set distance
-    if (disBo == NO && paceBo == NO && timeBo == YES) {
-        timeBo = NO;
-        disBo = YES;
-        [self.timeLabel setText:[Math stringifyDistance:self.distance]];
-        [self.milisecondsLabel setHidden:YES];
-        [self.unitLabel setText:@"miles"];
-        return;
-    }
-    //set pace
-    if (disBo == YES && timeBo == NO && paceBo == NO) {
-        paceBo = YES;
-        disBo = NO;
-        [self.timeLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
-        [self.unitLabel setText:@"m/mi"];
-        [self.milisecondsLabel setHidden:YES];
-        return;
-    }
-    //set time
-    if (paceBo == YES && disBo == NO && timeBo == NO) {
-        paceBo = NO;
-        timeBo = YES;
-        [self.timeLabel setText:[Math stringifySecondCount:self.seconds usingLongFormat:NO]];
-        [self.unitLabel setText:@"sec"];
-        [self.milisecondsLabel setHidden:NO];
-        return;
-    }
-}
 
 #pragma mark - Life Cycle
 
 - (void)willActivate {
     
     if (started == NO) {
-        self.heartBeatArray = [[NSMutableArray alloc] init];
-        if (!self.splitsArray) {
-            self.splitsArray = [[NSMutableArray alloc] init];
-        }
-        [self.splitsArray removeAllObjects];
         
+        self.heartBeatArray = [[NSMutableArray alloc] init];
+        self.splitsArray = [[NSMutableArray alloc] init];
         self.distance = 0.00;
         self.seconds = 0;
         
-        //start timers
-        RunTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(count) userInfo:nil repeats:YES];
+        [self.timeLabel setHidden:YES];
+        [self.paceLabel setHidden:YES];
+        [self.milageLabel setHidden:YES];
+        [self.heartLabel setHidden:YES];
+        
+        [self.image setImageNamed:@"single"];
+        for (int i = 1; i < 4; i++) {
+            [self.image startAnimatingWithImagesInRange:NSMakeRange(i, i * 30) duration:0.2 repeatCount:1];
+            [self.image startAnimatingWithImagesInRange:NSMakeRange(i, i * 30 + 3) duration:0.8 repeatCount:1];
+            //[NSThread sleepForTimeInterval:0.8];
+        }
+
+        [self.timeLabel setHidden:NO];
+        [self.paceLabel setHidden:NO];
+        [self.milageLabel setHidden:NO];
+        [self.heartLabel setHidden:NO];
+        //[self.image setHidden:YES];
+        
         Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
@@ -283,17 +224,6 @@
         workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
         workoutSession.delegate = self;
         [healthStore startWorkoutSession:workoutSession];
-        
-        [self updateHeartbeat];
-        [self updateDistance];
-        [self startPedometer];
-        
-        disBo = NO;
-        paceBo = NO;
-        timeBo = YES;
-        started = YES;
-        re = NO;
-        NSLog(@"started workout");
     }
     
     // This method is called when watch view controller is about to be visible to user

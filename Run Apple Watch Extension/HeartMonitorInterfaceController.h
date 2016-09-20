@@ -9,8 +9,8 @@
 #import <WatchKit/WatchKit.h>
 #import <Foundation/Foundation.h>
 #import <HealthKit/HealthKit.h>
-#import "IndoorRunInterfaceController.h"
 #import "Math.h"
+#import "InterfaceController.h"
 
 @interface HeartMonitorInterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
     
