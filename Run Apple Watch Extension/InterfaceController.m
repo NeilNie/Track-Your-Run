@@ -27,8 +27,9 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            self.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-            NSLog(@"distance %f", self.distance);
+            self.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            [self.milageLabel setText:[Math stringifyDistance:weakSelf.distance]];
+            [self.paceLabel setText:[Math stringifyAvgPaceFromDist:self.distance overTime:self.seconds]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -38,8 +39,9 @@
         
         if (!error && sampleObjects) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
-            weakSelf.distance = [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
-            NSLog(@"distance %f", weakSelf.distance);
+            weakSelf.distance = self.distance + [sample.quantity doubleValueForUnit:[HKUnit unitFromString:@"m"]];
+            [weakSelf.milageLabel setText:[Math stringifyDistance:weakSelf.distance]];
+            [weakSelf.paceLabel setText:[Math stringifyAvgPaceFromDist:weakSelf.distance overTime:weakSelf.seconds]];
         }else{
             NSLog(@"error %@", error);
         }
@@ -60,6 +62,7 @@
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
             HKQuantity *quantity = sample.quantity;
             [self.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [self.heartLabel setText:[NSString stringWithFormat:@"%@BPM", [self.heartBeatArray lastObject]]];
         }else{
             NSLog(@"query %@", error);
         }
@@ -70,7 +73,8 @@
         if (!error && sampleObjects.count > 0) {
             HKQuantitySample *sample = (HKQuantitySample *)[sampleObjects lastObject];
             HKQuantity *quantity = sample.quantity;
-            [weakSelf.heartBeatArray addObject:[NSString stringWithFormat:@"%f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [weakSelf.heartBeatArray addObject:[NSString stringWithFormat:@"%.0f", [quantity doubleValueForUnit:[HKUnit unitFromString:@"count/min"]]]];
+            [weakSelf.heartLabel setText:[NSString stringWithFormat:@"%@BPM", [weakSelf.heartBeatArray lastObject]]];
         }else{
             NSLog(@"query %@", error);
         }
@@ -112,13 +116,7 @@
 #pragma mark - Private Methods
 
 - (IBAction)splitPressed:(id)sender{
-    
-    float hightest = 0.0;
-    for (int i = 0; i < self.heartBeatArray.count; i++) {
-        if ([[self.heartBeatArray objectAtIndex:i] floatValue] > hightest) {
-            hightest = [[self.heartBeatArray objectAtIndex:i] floatValue];
-        }
-    }
+
     NSDictionary *dict = @{@"distance": [Math stringifyDistance:self.distance],
                            @"time": [Math stringifySecondCount:self.seconds usingLongFormat:NO],
                            @"heart": self.heartBeatArray,
@@ -128,34 +126,31 @@
     self.distance = 0;
     self.seconds = 0;
     [self.timeLabel setText:@"00:00"];
-    
 }
 
 -(IBAction)stop{
     
     [Pedometer stopPedometerUpdates];
-    [RunTimer invalidate];
     [Timer invalidate];
     [healthStore endWorkoutSession:workoutSession];
     [healthStore stopQuery:heartQuery];
     [healthStore stopQuery:distanceQuery];
     
-    data = @{@"time": [NSString stringWithFormat:@"%i", self.seconds],
+    self.data = @{@"time": [NSString stringWithFormat:@"%i", self.seconds],
              @"distance": [NSString stringWithFormat:@"%f", self.distance],
              @"splits": self.splitsArray,
-             @"max": self.heartBeatArray,
+             @"heart": self.heartBeatArray,
              @"mili": [NSString stringWithFormat:@"%i", self.miliseconds]};
 
-    NSLog(@"data %@", data);
+    NSLog(@"data %@", self.data);
     
     started = NO;
     
-    [self pushControllerWithName:@"detail" context:nil];
+    [self pushControllerWithName:@"detail" context:self.data];
 }
 
 -(IBAction)discard{
     
-    [RunTimer invalidate];
     [Timer invalidate];
     [Pedometer stopPedometerUpdates];
     [healthStore endWorkoutSession:workoutSession];
@@ -187,6 +182,34 @@
     }
 }
 
+-(void)countDown{
+    
+    static int count = 1;
+    static int start = 1;
+    CountDown = [NSTimer scheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
+    [self.image startAnimatingWithImagesInRange:NSMakeRange(start, count * 30) duration:0.3 repeatCount:1];
+    [self.image startAnimatingWithImagesInRange:NSMakeRange(count * 30, count * 30 + 4) duration:0.5 repeatCount:1];
+        count ++;
+        start = start + 34;
+        if (count == 4) {
+            [CountDown invalidate];
+    
+            [self.image setHidden:YES];
+            [self.timeLabel setHidden:NO];
+            [self.paceLabel setHidden:NO];
+            [self.milageLabel setHidden:NO];
+            [self.heartLabel setHidden:NO];
+            
+            Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
+            
+            Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
+            healthStore = [[HKHealthStore alloc] init];
+            workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
+            workoutSession.delegate = self;
+            [healthStore startWorkoutSession:workoutSession];
+        }
+    }];
+}
 
 #pragma mark - Life Cycle
 
@@ -203,27 +226,9 @@
         [self.paceLabel setHidden:YES];
         [self.milageLabel setHidden:YES];
         [self.heartLabel setHidden:YES];
-        
         [self.image setImageNamed:@"single"];
-        for (int i = 1; i < 4; i++) {
-            [self.image startAnimatingWithImagesInRange:NSMakeRange(i, i * 30) duration:0.2 repeatCount:1];
-            [self.image startAnimatingWithImagesInRange:NSMakeRange(i, i * 30 + 3) duration:0.8 repeatCount:1];
-            //[NSThread sleepForTimeInterval:0.8];
-        }
-
-        [self.timeLabel setHidden:NO];
-        [self.paceLabel setHidden:NO];
-        [self.milageLabel setHidden:NO];
-        [self.heartLabel setHidden:NO];
-        //[self.image setHidden:YES];
         
-        Timer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
-        
-        Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
-        healthStore = [[HKHealthStore alloc] init];
-        workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
-        workoutSession.delegate = self;
-        [healthStore startWorkoutSession:workoutSession];
+        CountDown = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     }
     
     // This method is called when watch view controller is about to be visible to user
@@ -239,6 +244,5 @@
     
     // Configure interface objects here.
 }
-
 
 @end

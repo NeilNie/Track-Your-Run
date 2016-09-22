@@ -131,8 +131,6 @@
         timeTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerCount) userInfo:nil repeats:YES];
         
         started = YES;
-        re = NO;
-        NSLog(@"started workout");
     }
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];

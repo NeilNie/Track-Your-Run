@@ -16,23 +16,6 @@
 
 @implementation HomeInterfaceController
 
--(IBAction)RunWithPhone{
-    
-    if ([WCSession isSupported]) {
-        NSLog(@"Activated");
-        WCSession *session = [WCSession defaultSession];
-        session.delegate = self;
-        [session activateSession];
-        
-        //save data to iphone
-        [[WCSession defaultSession] updateApplicationContext:@{@"key": @"start"} error:nil];
-        [self pushControllerWithName:@"iPhone" context:nil];
-        NSLog(@"start sent");
-    }else{
-        NSLog(@"not supported");
-    }
-}
-
 - (void)awakeWithContext:(id)context {
 
     [super awakeWithContext:context];
@@ -58,11 +41,8 @@
             NSLog(@"error %@", error);
         }
     }];
-    
-    if (localData) {
-        [self pushControllerWithName:@"data" context:nil];
-    }
     started = NO;
+
     // This method is called when watch view controller is about to be visible to user
     [super willActivate];
 }

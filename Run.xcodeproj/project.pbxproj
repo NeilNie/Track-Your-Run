@@ -113,13 +113,18 @@
 		2879C9BB1D124F5C0088118A /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9BA1D124F5C0088118A /* Media1.xcassets */; };
 		287E2F961D11F17B00D45488 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287E2F951D11F17B00D45488 /* ProgressViewController.m */; };
 		288496461D90C37B0041BACE /* running-icon-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 288496451D90C37B0041BACE /* running-icon-5.png */; };
+		2886465B1D93191500542E9A /* Green Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 288646591D93191500542E9A /* Green Dot.png */; };
+		2886465C1D93191600542E9A /* Green Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 288646591D93191500542E9A /* Green Dot.png */; };
+		2886465D1D93191600542E9A /* Red Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2886465A1D93191500542E9A /* Red Dot.png */; };
+		2886465E1D93191600542E9A /* Red Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2886465A1D93191500542E9A /* Red Dot.png */; };
+		288646601D93198200542E9A /* Orange Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2886465F1D93198200542E9A /* Orange Dot.png */; };
+		288646611D93198200542E9A /* Orange Dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2886465F1D93198200542E9A /* Orange Dot.png */; };
 		288E9F261D107E490056B4F9 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 288E9F251D107E490056B4F9 /* Launch Screen.storyboard */; };
 		28AE07D01C7CFE530016D436 /* HeartMonitorInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */; };
 		28B852511D503E0500B84881 /* WeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8524F1D503E0500B84881 /* WeatherTableViewCell.m */; };
 		28B852521D503E0500B84881 /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28B852501D503E0500B84881 /* WeatherTableViewCell.xib */; };
 		28BB79121C7B814E00D669F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB79111C7B814E00D669F6 /* CoreMotion.framework */; };
 		28D1376B1D4829DD00467B97 /* BasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */; };
-		28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */; };
 		28E784061D1103BB00C17A4F /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784031D1103BB00C17A4F /* LeftViewController.m */; };
 		28E784071D1103BB00C17A4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784051D1103BB00C17A4F /* MainViewController.m */; };
 		28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */; };
@@ -370,6 +375,9 @@
 		287E2F941D11F17B00D45488 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		287E2F951D11F17B00D45488 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
 		288496451D90C37B0041BACE /* running-icon-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "running-icon-5.png"; path = "Run Apple Watch Extension/running-icon-5.png"; sourceTree = SOURCE_ROOT; };
+		288646591D93191500542E9A /* Green Dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Green Dot.png"; sourceTree = "<group>"; };
+		2886465A1D93191500542E9A /* Red Dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Red Dot.png"; sourceTree = "<group>"; };
+		2886465F1D93198200542E9A /* Orange Dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Orange Dot.png"; sourceTree = "<group>"; };
 		288E9F251D107E490056B4F9 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeartMonitorInterfaceController.h; sourceTree = "<group>"; };
 		28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeartMonitorInterfaceController.m; sourceTree = "<group>"; };
@@ -379,8 +387,6 @@
 		28BB79111C7B814E00D669F6 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		28D137691D4829DD00467B97 /* BasicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicTableViewCell.h; sourceTree = "<group>"; };
 		28D1376A1D4829DD00467B97 /* BasicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicTableViewCell.m; sourceTree = "<group>"; };
-		28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhoneRunInterfaceController.h; sourceTree = "<group>"; };
-		28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iPhoneRunInterfaceController.m; sourceTree = "<group>"; };
 		28E784021D1103BB00C17A4F /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		28E784031D1103BB00C17A4F /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		28E784041D1103BB00C17A4F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -461,6 +467,9 @@
 		00C80B571C79249E005C4E39 /* Run Apple Watch */ = {
 			isa = PBXGroup;
 			children = (
+				2886465F1D93198200542E9A /* Orange Dot.png */,
+				288646591D93191500542E9A /* Green Dot.png */,
+				2886465A1D93191500542E9A /* Red Dot.png */,
 				2879C9BA1D124F5C0088118A /* Media1.xcassets */,
 				288496451D90C37B0041BACE /* running-icon-5.png */,
 				00C80B5D1C79249E005C4E39 /* Info.plist */,
@@ -502,8 +511,6 @@
 				00C80B841C792542005C4E39 /* HomeInterfaceController.m */,
 				00C80B871C792542005C4E39 /* InterfaceController.h */,
 				00C80B881C792542005C4E39 /* InterfaceController.m */,
-				28D848FB1C872F5600BF2119 /* iPhoneRunInterfaceController.h */,
-				28D848FC1C872F5600BF2119 /* iPhoneRunInterfaceController.m */,
 				28AE07CE1C7CFE530016D436 /* HeartMonitorInterfaceController.h */,
 				28AE07CF1C7CFE530016D436 /* HeartMonitorInterfaceController.m */,
 			);
@@ -650,12 +657,12 @@
 		28422E3D1D10C94F0070E982 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
+				FA1F951C1929CF2600A0179A /* AppDelegate.m */,
 				28261E201D4D943200DF4DC5 /* YQL.h */,
 				28261E211D4D943200DF4DC5 /* YQL.m */,
 				2808B80C1D46960300296E4C /* RunHelper.h */,
 				2808B80D1D46960300296E4C /* RunHelper.m */,
-				FA1F951B1929CF2600A0179A /* AppDelegate.h */,
-				FA1F951C1929CF2600A0179A /* AppDelegate.m */,
 				28422E471D10F7FE0070E982 /* RunAnalyzer.h */,
 				28422E481D10F7FE0070E982 /* RunAnalyzer.m */,
 				281816881C7678180024770E /* MathController.h */,
@@ -1021,7 +1028,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288646601D93198200542E9A /* Orange Dot.png in Resources */,
 				2879C9BB1D124F5C0088118A /* Media1.xcassets in Resources */,
+				2886465B1D93191500542E9A /* Green Dot.png in Resources */,
+				2886465D1D93191600542E9A /* Red Dot.png in Resources */,
 				00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */,
 				28F9E13D1D90D41B00523D96 /* Assets.xcassets in Resources */,
 				281E8BB91D90CD39009C8CD5 /* running-icon-5.png in Resources */,
@@ -1032,9 +1042,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288646611D93198200542E9A /* Orange Dot.png in Resources */,
+				2886465C1D93191600542E9A /* Green Dot.png in Resources */,
 				00C80B731C79249E005C4E39 /* Assets.xcassets in Resources */,
 				00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */,
 				288496461D90C37B0041BACE /* running-icon-5.png in Resources */,
+				2886465E1D93191600542E9A /* Red Dot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1182,7 +1195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28D848FD1C872F5600BF2119 /* iPhoneRunInterfaceController.m in Sources */,
 				00C80B8F1C792542005C4E39 /* HomeInterfaceController.m in Sources */,
 				00C80B921C792542005C4E39 /* Math.m in Sources */,
 				00C80B8E1C792542005C4E39 /* ExtensionDelegate.m in Sources */,

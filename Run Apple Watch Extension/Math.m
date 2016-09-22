@@ -23,7 +23,7 @@ static float const metersInMile = 1609.344;
     // metric
     unitDivider = metersInMile;
     
-    return [NSString stringWithFormat:@"%.2f", (meters / unitDivider)];
+    return [NSString stringWithFormat:@"%.2fmi", (meters / unitDivider)];
 }
 
 + (NSString *)stringifySecondCount:(int)seconds usingLongFormat:(BOOL)longFormat {
@@ -92,7 +92,7 @@ static float const metersInMile = 1609.344;
     int paceMin = (int) ((avgPaceSecMeters * unitMultiplier) / 60);
     int paceSec = (int) (avgPaceSecMeters * unitMultiplier - (paceMin*60));
     
-    return [NSString stringWithFormat:@"%i:%02i", paceMin, paceSec];
+    return [NSString stringWithFormat:@"%i\"%02i\'MI", paceMin, paceSec];
 }
 
 + (NSString *)stringifyStrideRateFromSteps:(int)steps overTime:(int)seconds{

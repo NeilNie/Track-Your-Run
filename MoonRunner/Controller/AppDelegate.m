@@ -19,6 +19,11 @@
 {
 
     [FIRApp configure];
+    
+    WCSession *session = [WCSession defaultSession];
+    session.delegate = self;
+    [session activateSession];
+    
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UINavigationController *navigationController = [storyboard instantiateViewControllerWithIdentifier:@"idRunHome"];
     MainViewController *mainViewController = [storyboard instantiateInitialViewController];
@@ -52,6 +57,10 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     
     [UIApplication sharedApplication].idleTimerDisabled = NO;
+    
+    WCSession *session = [WCSession defaultSession];
+    session.delegate = self;
+    [session activateSession];
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
@@ -147,18 +156,19 @@
 }
 
 #pragma mark - WCsession delegates
-- (void)session:(nonnull WCSession *)session didReceiveMessage:(nonnull NSDictionary<NSString *,id> *)message replyHandler:(nonnull void (^)(NSDictionary<NSString *,id> * __nonnull))replyHandler {
+
+-(void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo{
     
-    NSLog(@"recieved message %@", message);
+    NSLog(@"recieved message %@", userInfo);
     
     Run *newRun = [NSEntityDescription insertNewObjectForEntityForName:@"Run" inManagedObjectContext:self.managedObjectContext];
     
-    newRun.distance = [NSNumber numberWithFloat:[[message objectForKey:@"distance"] floatValue]];
-    newRun.duration = [NSNumber numberWithInt:[[message objectForKey:@"time"] intValue]];
+    newRun.distance = [NSNumber numberWithFloat:[[userInfo objectForKey:@"distance"] floatValue]];
+    newRun.duration = [NSNumber numberWithInt:[[userInfo objectForKey:@"time"] intValue]];
     newRun.timestamp = [NSDate date];
-    newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"splits"]];
-    newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:[message objectForKey:@"max"]];
-    newRun.miliseconds = [NSNumber numberWithInt:[[message objectForKey:@"mili"] intValue]];
+    newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:[userInfo objectForKey:@"splits"]];
+    newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:[userInfo objectForKey:@"heart"]];
+    newRun.miliseconds = [NSNumber numberWithInt:[[userInfo objectForKey:@"mili"] intValue]];
     
     self.run = newRun;
     
@@ -168,6 +178,13 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+}
+
+-(void)sessionWatchStateDidChange:(WCSession *)session{
+    NSLog(@"watch status changed");
+}
+-(void)sessionDidDeactivate:(WCSession *)session{
+    NSLog(@"session deactivated");
 }
 
 @end

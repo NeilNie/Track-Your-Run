@@ -9,6 +9,8 @@
 #import <WatchKit/WatchKit.h>
 #import <HealthKit/HealthKit.h>
 
+static BOOL connected;
+
 @interface ExtensionDelegate : NSObject <WKExtensionDelegate>
 
 @end

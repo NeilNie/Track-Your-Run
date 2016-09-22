@@ -12,18 +12,16 @@
 #import "Math.h"
 #import "InterfaceController.h"
 
-NSDictionary *localData;
+@interface DetailInterfaceController : WKInterfaceController <WCSessionDelegate>{
+    NSDictionary *localData;
+    NSDictionary *data; 
+}
 
-BOOL re;
-
-@interface DetailInterfaceController : WKInterfaceController <WCSessionDelegate>
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Distance;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Time;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Pace;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *Heartrate;
-@property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *warning;
 @property (unsafe_unretained, nonatomic) IBOutlet WKInterfaceLabel *milisecondsLabel;
 - (IBAction)save;
-- (IBAction)back;
 
 @end

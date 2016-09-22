@@ -16,6 +16,14 @@
                                 <segue destination="Rve-o9-RX5" kind="push" id="j38-YK-9W5"/>
                             </connections>
                         </button>
+                        <group width="1" alignment="left" id="3Ud-wR-AuK">
+                            <items>
+                                <label alignment="left" text="GPS: " id="E4m-qc-Vs5">
+                                    <color key="textColor" red="0.35294117650000001" green="0.86274509799999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <imageView width="10" height="10" alignment="left" verticalAlignment="center" image="Red Dot" id="9uq-uD-hT9"/>
+                            </items>
+                        </group>
                     </items>
                     <menu key="menu" id="bh9-z2-U0J">
                         <items>
@@ -54,7 +62,7 @@
                                 <label alignment="left" text="Current:" id="bhe-rC-k1A">
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
-                                <label width="133.5" height="33" alignment="left" text="000bpm" id="W9x-IB-GIw">
+                                <label width="133.5" height="33" alignment="left" text="---BPM" id="W9x-IB-GIw">
                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="37"/>
                                     <variation key="device=watch38mm">
@@ -71,7 +79,7 @@
                                 <label alignment="left" text="Lowest:" id="FLK-4O-HHu">
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
-                                <label width="124" height="29" alignment="left" text="000bpm" id="gMX-IU-Xnd">
+                                <label width="124" height="29" alignment="left" text="---BPM" id="gMX-IU-Xnd">
                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="25"/>
                                     <variation key="device=watch42mm" height="40" width="153">
@@ -111,39 +119,32 @@
                 <controller identifier="detail" title="detail" id="7qm-hX-h4C" customClass="DetailInterfaceController">
                     <items>
                         <label height="30" alignment="left" text="00.00mi" id="gMK-kn-fn4">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="35"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" weight="light" pointSize="35"/>
                         </label>
                         <group width="1" height="30" alignment="left" spacing="0.0" id="OIT-kj-yLT">
                             <items>
                                 <label height="30" alignment="left" text="00:00" id="9TD-yL-f8J">
-                                    <fontDescription key="font" type="system" weight="medium" pointSize="30"/>
+                                    <fontDescription key="font" type="system" weight="light" pointSize="30"/>
                                 </label>
-                                <label alignment="left" text=":00" id="q7y-qp-MgI">
+                                <label alignment="left" text=".00" id="q7y-qp-MgI">
                                     <fontDescription key="font" type="system" pointSize="15"/>
                                 </label>
                             </items>
                         </group>
-                        <label height="30" alignment="left" text="5'30&quot; MI" id="56D-6a-TMx">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="26"/>
-                        </label>
                         <label height="30" alignment="left" text="130BPM" id="NAP-yn-MaE">
-                            <fontDescription key="font" type="system" weight="medium" pointSize="26"/>
+                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" type="system" pointSize="28"/>
+                        </label>
+                        <label height="30" alignment="left" text="5'30&quot; MI" id="56D-6a-TMx">
+                            <fontDescription key="font" type="system" pointSize="28"/>
                         </label>
                         <button width="1" alignment="left" title="Save" id="N6V-zG-5kL">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="0.98039215690000003" green="0.49019607840000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
+                            <fontDescription key="font" type="system" pointSize="18"/>
                             <connections>
                                 <action selector="save" destination="7qm-hX-h4C" id="ckG-OW-BVe"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Back" id="lZZ-Uw-LcM">
-                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="backgroundColor" red="0.98039215690000003" green="0.49019607840000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                            <connections>
-                                <action selector="back" destination="7qm-hX-h4C" id="XBn-CP-YNs"/>
-                                <segue destination="1ti-B1-dx7" kind="push" id="Uso-eh-7ee"/>
                             </connections>
                         </button>
                     </items>
@@ -156,7 +157,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="908" y="479.5"/>
+            <point key="canvasLocation" x="623" y="508"/>
         </scene>
         <!--New Run-->
         <scene sceneID="7GC-MD-QZS">
@@ -166,29 +167,34 @@
                         <imageView alignment="left" image="single0" id="Fsf-Bj-nPj"/>
                         <group width="1" height="131" alignment="left" layout="vertical" id="reB-Wl-JLB">
                             <items>
-                                <label width="1" height="34" alignment="left" text="52:15.40" textAlignment="left" numberOfLines="2" id="Rcb-5f-XBu">
-                                    <fontDescription key="font" type="system" weight="light" pointSize="32"/>
-                                    <variation key="device=watch42mm">
-                                        <fontDescription key="font" type="system" weight="light" pointSize="33"/>
-                                    </variation>
-                                </label>
-                                <label width="1" height="30" alignment="left" text="6'20&quot; MI" textAlignment="left" numberOfLines="2" id="Ic6-Be-L5Z">
+                                <group width="1" height="31" alignment="left" id="MvE-BV-AYO">
+                                    <items>
+                                        <label height="35" alignment="left" text="00:00" textAlignment="left" numberOfLines="2" id="Rcb-5f-XBu">
+                                            <fontDescription key="font" type="system" weight="light" pointSize="32"/>
+                                            <variation key="device=watch42mm">
+                                                <fontDescription key="font" type="system" weight="light" pointSize="33"/>
+                                            </variation>
+                                        </label>
+                                        <label alignment="left" text=".00" id="4P1-zg-eRc"/>
+                                    </items>
+                                </group>
+                                <label width="1" height="28" alignment="left" text="00'00&quot; MI" textAlignment="left" numberOfLines="2" id="Ic6-Be-L5Z">
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="28"/>
                                     <variation key="device=watch42mm">
                                         <fontDescription key="font" type="system" pointSize="33"/>
                                     </variation>
                                 </label>
-                                <label width="1" height="30" alignment="left" text="4.72 mi" textAlignment="left" numberOfLines="2" id="qh9-Cl-eGv">
-                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <label width="1" height="28" alignment="left" text="--- BPM" textAlignment="left" numberOfLines="2" id="Tzn-Lq-Sd6">
+                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="system" pointSize="28"/>
                                     <variation key="device=watch42mm">
                                         <fontDescription key="font" type="system" pointSize="33"/>
                                     </variation>
                                 </label>
-                                <label width="1" height="30" alignment="left" text="145 BPM" textAlignment="left" numberOfLines="2" id="Tzn-Lq-Sd6">
-                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <fontDescription key="font" type="system" pointSize="28"/>
+                                <label width="1" height="30" alignment="left" text="--.-- mi" textAlignment="left" numberOfLines="2" id="qh9-Cl-eGv">
+                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="33"/>
                                     <variation key="device=watch42mm">
                                         <fontDescription key="font" type="system" pointSize="33"/>
                                     </variation>
@@ -215,35 +221,13 @@
                         <outlet property="heartLabel" destination="Tzn-Lq-Sd6" id="GD6-65-yjE"/>
                         <outlet property="image" destination="Fsf-Bj-nPj" id="Oyn-Xm-zC4"/>
                         <outlet property="milageLabel" destination="qh9-Cl-eGv" id="30U-xO-bFJ"/>
+                        <outlet property="milisecondsLabel" destination="4P1-zg-eRc" id="y0M-eS-Agh"/>
                         <outlet property="paceLabel" destination="Ic6-Be-L5Z" id="zaC-qj-Q5K"/>
                         <outlet property="timeLabel" destination="Rcb-5f-XBu" id="yk9-Bv-V0e"/>
-                        <segue destination="cQI-vR-W2z" kind="relationship" relationship="nextPage" id="Mp2-lb-gpW"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="390" y="535"/>
-        </scene>
-        <!--Interface Controller-->
-        <scene sceneID="heC-O2-LiD">
-            <objects>
-                <controller id="cQI-vR-W2z">
-                    <items>
-                        <group width="1" alignment="left" id="hud-Cx-Jyy">
-                            <items>
-                                <button width="63" alignment="left" title="Pause" id="nbG-dr-LC8"/>
-                                <button width="63" alignment="left" title="Stop" id="zzb-k6-ZKR"/>
-                            </items>
-                        </group>
-                        <group width="1" alignment="left" id="vUd-X6-0cd">
-                            <items>
-                                <button width="60" alignment="left" title="Discard" id="BCG-B3-W4J"/>
-                                <button alignment="left" title="Split" id="0T9-qA-cPz"/>
-                            </items>
-                        </group>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="667" y="772"/>
         </scene>
     </scenes>
 </document>

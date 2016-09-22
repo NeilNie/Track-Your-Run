@@ -34,7 +34,7 @@
 	<key>NSHealthShareUsageDescription</key>
 	<string>We need to access your health data while you are running</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>Hello World </string>
+	<string>We need to access your health data</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Mission Control requests your location coordinates.</string>
 	<key>UIBackgroundModes</key>

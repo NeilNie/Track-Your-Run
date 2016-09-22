@@ -35,6 +35,9 @@
 }
 
 - (void)awakeWithContext:(id)context {
+    
+    data = (NSDictionary *)context;
+    
     [super awakeWithContext:context];
     
     // Configure interface objects here.
@@ -47,10 +50,9 @@
         [self.Distance setText:[Math stringifyDistance:[[data objectForKey:@"distance"] floatValue]]];
         [self.Time setText:[Math stringifySecondCount:[[data objectForKey:@"time"] intValue] usingLongFormat:NO]];
         [self.Pace setText:[Math stringifyAvgPaceFromDist:[[data objectForKey:@"distance"] floatValue] overTime:[[data objectForKey:@"time"] intValue]]];
-        [self.Heartrate setText:[NSString stringWithFormat:@"%ibpm", [[[data objectForKey:@"max"] lastObject] integerValue]]];
+        [self.Heartrate setText:[NSString stringWithFormat:@"%ibpm", [[[data objectForKey:@"heart"] lastObject] integerValue]]];
         [self.milisecondsLabel setText:[NSString stringWithFormat:@"%@", [data objectForKey:@"mili"]]];
     });
-    
 }
 
 - (IBAction)saveagain {
@@ -86,31 +88,18 @@
 - (IBAction)save {
     
     if ([WCSession isSupported]) {
+        
         NSLog(@"Activated");
         WCSession *session = [WCSession defaultSession];
         session.delegate = self;
         [session activateSession];
         
         //save data to iphone
-        [[WCSession defaultSession] sendMessage:data replyHandler:^(NSDictionary<NSString *,id> * _Nonnull replyMessage) {
-            
-        } errorHandler:^(NSError * _Nonnull error) {
-            NSLog(@"error %@", error);
-            
-        }];
+        [[WCSession defaultSession] transferUserInfo:data];
         NSLog(@"sent message %@", data);
-        [self pushControllerWithName:@"home" context:nil];
+        [self popToRootController];
         
-    }else{
-        NSLog(@"not supported");
     }
 }
 
-- (IBAction)back {
-    
-    
-}
 @end
-
-
-

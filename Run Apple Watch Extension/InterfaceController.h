@@ -13,8 +13,6 @@
 #import "Math.h"
 #import "DetailInterfaceController.h"
 
-NSDictionary *data;
-
 BOOL started;
 
 @interface InterfaceController : WKInterfaceController <HKWorkoutSessionDelegate> {
@@ -27,12 +25,13 @@ BOOL started;
     
     CMPedometer *Pedometer;
     
-    NSTimer *RunTimer;
+    NSTimer *CountDown;
     NSTimer *Timer;
 }
 @property int seconds;
 @property int miliseconds;
 @property float distance;
+@property (strong, nonatomic) NSDictionary *data;
 @property (nonatomic, strong) NSMutableArray *heartBeatArray;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
 
