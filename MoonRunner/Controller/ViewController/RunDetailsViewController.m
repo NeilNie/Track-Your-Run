@@ -243,7 +243,6 @@ static float const mapPadding = 1.1f;
         AnalysisViewController *controller = (AnalysisViewController *)[segue destinationViewController];
         controller.run = self.run;
         [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
-        NSLog(@"completed");
     }
 }
 
