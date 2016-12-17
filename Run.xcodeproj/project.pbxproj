@@ -217,9 +217,9 @@
 		00C80B561C79249E005C4E39 /* Run Apple Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Run Apple Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00C80B5D1C79249E005C4E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00C80B621C79249E005C4E39 /* Run Apple Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Run Apple Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		00C80B681C79249E005C4E39 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		00C80B721C79249E005C4E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		00C80B741C79249E005C4E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00C80B681C79249E005C4E39 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; name = PushNotificationPayload.apns; path = "Run Apple Watch Extension/PushNotificationPayload.apns"; sourceTree = SOURCE_ROOT; };
+		00C80B721C79249E005C4E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Run Apple Watch Extension/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
+		00C80B741C79249E005C4E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Run Apple Watch Extension/Info.plist"; sourceTree = SOURCE_ROOT; };
 		00C80B7F1C792542005C4E39 /* DetailInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInterfaceController.h; sourceTree = "<group>"; };
 		00C80B801C792542005C4E39 /* DetailInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInterfaceController.m; sourceTree = "<group>"; };
 		00C80B811C792542005C4E39 /* ExtensionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
@@ -230,7 +230,7 @@
 		00C80B881C792542005C4E39 /* InterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 		00C80B891C792542005C4E39 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		00C80B8A1C792542005C4E39 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
-		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Run Apple Watch Extension.entitlements"; sourceTree = "<group>"; };
+		00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "Run Apple Watch Extension.entitlements"; path = "Run Apple Watch Extension/Run Apple Watch Extension.entitlements"; sourceTree = SOURCE_ROOT; };
 		00C80B971C79262B005C4E39 /* storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = storyboard.storyboard; sourceTree = "<group>"; };
 		00CAE2B11C82029800DDC425 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		00DD503C1D5E80CB0029D239 /* PlanCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanCollectionViewCell.h; sourceTree = "<group>"; };
@@ -464,15 +464,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00C80B571C79249E005C4E39 /* Run Apple Watch */ = {
+		00A79E0A1DECBF2800CED514 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00C80B681C79249E005C4E39 /* PushNotificationPayload.apns */,
+				00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */,
+				00C80B721C79249E005C4E39 /* Assets.xcassets */,
+				00C80B741C79249E005C4E39 /* Info.plist */,
 				2886465F1D93198200542E9A /* Orange Dot.png */,
 				288646591D93191500542E9A /* Green Dot.png */,
 				2886465A1D93191500542E9A /* Red Dot.png */,
 				2879C9BA1D124F5C0088118A /* Media1.xcassets */,
 				288496451D90C37B0041BACE /* running-icon-5.png */,
 				00C80B5D1C79249E005C4E39 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		00C80B571C79249E005C4E39 /* Run Apple Watch */ = {
+			isa = PBXGroup;
+			children = (
+				00A79E0A1DECBF2800CED514 /* Supporting Files */,
 				00C80B971C79262B005C4E39 /* storyboard.storyboard */,
 			);
 			path = "Run Apple Watch";
@@ -482,13 +494,10 @@
 			isa = PBXGroup;
 			children = (
 				00C80B941C79254C005C4E39 /* Interface Controllers */,
-				00C80B951C79258F005C4E39 /* Run Apple Watch Extension.entitlements */,
 				00C80B811C792542005C4E39 /* ExtensionDelegate.h */,
 				00C80B821C792542005C4E39 /* ExtensionDelegate.m */,
 				00C80B891C792542005C4E39 /* Math.h */,
 				00C80B8A1C792542005C4E39 /* Math.m */,
-				00C80B721C79249E005C4E39 /* Assets.xcassets */,
-				00C80B741C79249E005C4E39 /* Info.plist */,
 				00C80B671C79249E005C4E39 /* Supporting Files */,
 			);
 			path = "Run Apple Watch Extension";
@@ -497,7 +506,6 @@
 		00C80B671C79249E005C4E39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				00C80B681C79249E005C4E39 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

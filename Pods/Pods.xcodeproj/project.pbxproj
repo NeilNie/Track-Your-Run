@@ -203,6 +203,7 @@
 		971BD72C11E7BCF324D99DA472DB2C3E /* Pods-Run-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Run-resources.sh"; sourceTree = "<group>"; };
 		993F2D9908E3A0A4A55AD8C18E469282 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		997E7052AFC92CE1F96696F2B4BF6223 /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		99E68458163686C8EB48AC2B8033C9E5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		9A76885F51CC024FFDCEEB6383A00D2B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		9B21B76FCB55B8773434E49F0DB7A245 /* NSDate+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Comparison.m"; path = "Source/NSDate/NSDate+MK_Comparison.m"; sourceTree = "<group>"; };
 		9EB60AC24D5692B33CDDB79E9DDC2917 /* NSObject+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_Misc.m"; path = "Source/NSObject/NSObject+MK_Misc.m"; sourceTree = "<group>"; };
@@ -250,7 +251,6 @@
 		E91A93B753DC378C96468E67FCDEC878 /* NSObject+MK_AutoDescribe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_AutoDescribe.m"; path = "Source/NSObject/NSObject+MK_AutoDescribe.m"; sourceTree = "<group>"; };
 		EA8750F585193E367E4E7297E485FE8A /* NSDate+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Creation.m"; path = "Source/NSDate/NSDate+MK_Creation.m"; sourceTree = "<group>"; };
 		EA9823EF1A57A6463C50F9620EE49499 /* NSNumber+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Creation.h"; path = "Source/NSNumber/NSNumber+MK_Creation.h"; sourceTree = "<group>"; };
-		EB5A1C9ABD8736634D2CBB007B3C605B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		F3F11DABCE51430934D3DF386CDB81D8 /* NSDate+MK_Manipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Manipulation.m"; path = "Source/NSDate/NSDate+MK_Manipulation.m"; sourceTree = "<group>"; };
 		F4688F44FE17C3C5D4864603B3731D22 /* NSNumber+MK_Manipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Manipulation.h"; path = "Source/NSNumber/NSNumber+MK_Manipulation.h"; sourceTree = "<group>"; };
 		F4803BDCCDBB5F8675AF915F74420737 /* Pods-Run.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Run.debug.xcconfig"; sourceTree = "<group>"; };
@@ -410,6 +410,14 @@
 			path = "Target Support Files/Pods-Run";
 			sourceTree = "<group>";
 		};
+		416BB6B427FD4B2486A0EF1ADEB50962 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E68458163686C8EB48AC2B8033C9E5 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		43FBF31BF28F6F7283ABF3AFD910CEC0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,14 +533,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/MKFoundationKit";
-			sourceTree = "<group>";
-		};
-		8F8754D5649A396203B7DB8E415A17F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB5A1C9ABD8736634D2CBB007B3C605B /* GoogleMobileAds.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9144CBF6130F06805727A2EC9031066C /* Block */ = {
@@ -789,7 +789,7 @@
 		F96E99755BD85449780E2D44FF7239EC /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				8F8754D5649A396203B7DB8E415A17F5 /* Frameworks */,
+				416BB6B427FD4B2486A0EF1ADEB50962 /* Frameworks */,
 			);
 			name = "Google-Mobile-Ads-SDK";
 			path = "Google-Mobile-Ads-SDK";
