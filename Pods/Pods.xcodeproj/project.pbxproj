@@ -7,104 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03C3B4507CDC632FA659DFFF14659C8B /* NSNumber+MK_Comparison.h in Headers */ = {isa = PBXBuildFile; fileRef = A585C68906DCA9CCF6A2615FEB1C1138 /* NSNumber+MK_Comparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03F5BFB8438B72AC508D6A722CAB220D /* FrameAccessor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A088A920539FF81F7E6ED7EE1492D306 /* FrameAccessor-dummy.m */; };
-		07EBE667E935D7732500905B3D8472E6 /* NSArray+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = D03A560D45A809349DF69C4152648914 /* NSArray+MK_Block.m */; };
-		0AABFA43028F981AD71C823DCC823DAE /* NSBundle+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A39BA08EB4EBCC5FD0CBF01D97546CF /* NSBundle+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C62598E8EDEA8127C8A58DBF4B3F5D9 /* MKMacro_Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 6755317E0A7753E3F760EC1B63D63ADB /* MKMacro_Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C78E38120F02858D78BB13A9D5EAFBB /* NSDictionary+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = DE3DBC121D9BD0618902D02C6AE68AE2 /* NSDictionary+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DB391A7BCE0B1CC9F22A2C33F6C7457 /* NSDate+MK_Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = C7A26945651A013B27424C411DC9B29A /* NSDate+MK_Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E4ED12B1BA7E21419E3797683EF7439 /* NSNumber+MK_Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = FFE9D9A9B8F1B605666126665A06BF90 /* NSNumber+MK_Manipulation.m */; };
-		13E5364BCD18845F35A3D2275B433877 /* NSNumber+MK_Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = EA9823EF1A57A6463C50F9620EE49499 /* NSNumber+MK_Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		147A5CE8AC5AB85EFA07BB9FB3D5CA26 /* NSDate+MK_Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F11DABCE51430934D3DF386CDB81D8 /* NSDate+MK_Manipulation.m */; };
-		1AD6495DFE4AA616B90C4A663DD6DE25 /* NSData+MK_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = B770FE7E35365CF4914E74836E478C15 /* NSData+MK_Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1B6053DB4F426B47C4A91E97990824D3 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1516325B96DEC0423FA98D2099E47404 /* GoogleToolboxForMac-dummy.m */; };
-		1DE90D80547B4843861E246126F894D4 /* NSDate+MK_Comparison.h in Headers */ = {isa = PBXBuildFile; fileRef = 45DA20F3775A30EA6FF1092612149F8D /* NSDate+MK_Comparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03C3B4507CDC632FA659DFFF14659C8B /* NSNumber+MK_Comparison.h in Headers */ = {isa = PBXBuildFile; fileRef = B7BC6548380694B9FF3218A053B0F038 /* NSNumber+MK_Comparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03F5BFB8438B72AC508D6A722CAB220D /* FrameAccessor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EE8A08AFD554375F950237B08B4D0 /* FrameAccessor-dummy.m */; };
+		07EBE667E935D7732500905B3D8472E6 /* NSArray+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 7071512295E2CB5BFE052E1771EA4B8C /* NSArray+MK_Block.m */; };
+		0AABFA43028F981AD71C823DCC823DAE /* NSBundle+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = F27E851BFB3ACCDA24DFCCB79CFDFD3F /* NSBundle+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C62598E8EDEA8127C8A58DBF4B3F5D9 /* MKMacro_Version.h in Headers */ = {isa = PBXBuildFile; fileRef = D0258FB7C230D47DB28B39040CE11D14 /* MKMacro_Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C78E38120F02858D78BB13A9D5EAFBB /* NSDictionary+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 113BE1FA105ADD8F4E7BC9969BA7FFBB /* NSDictionary+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DB391A7BCE0B1CC9F22A2C33F6C7457 /* NSDate+MK_Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C39748B2E358605987D584C2043879 /* NSDate+MK_Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E4ED12B1BA7E21419E3797683EF7439 /* NSNumber+MK_Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D2177E4D79AE69DF971668EA28C002 /* NSNumber+MK_Manipulation.m */; };
+		13E5364BCD18845F35A3D2275B433877 /* NSNumber+MK_Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = 43ACB4868FDF4BA875915A0EFBD73F94 /* NSNumber+MK_Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		147A5CE8AC5AB85EFA07BB9FB3D5CA26 /* NSDate+MK_Manipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = B3FAFC6ADA10AA2450321F75FC77135E /* NSDate+MK_Manipulation.m */; };
+		1AD6495DFE4AA616B90C4A663DD6DE25 /* NSData+MK_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 435D22C703FF9D16F63002BC0F6289A8 /* NSData+MK_Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B6053DB4F426B47C4A91E97990824D3 /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 036990E63700C8FA030C16283E992D23 /* GoogleToolboxForMac-dummy.m */; };
+		1DE90D80547B4843861E246126F894D4 /* NSDate+MK_Comparison.h in Headers */ = {isa = PBXBuildFile; fileRef = F81F13A8F5B57F275DE7856198C20187 /* NSDate+MK_Comparison.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F1CBBFD75ECC34A5D4DE3882B09C942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		27A783D29E86469F582704C8E13D897B /* NSNumber+MK_Negative.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0F8B50D6E8A445F639BD2C7ED268C1 /* NSNumber+MK_Negative.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2822B0DA82B6C0673570F289AD6B9665 /* NSNumber+MK_Precision.m in Sources */ = {isa = PBXBuildFile; fileRef = 6418EDEFC34CD9459964E43352C94CC3 /* NSNumber+MK_Precision.m */; };
-		2B6B13D2B8756A6294AF6C5B9DA04BAD /* NSString+MK_UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 18283814B69E6141F8242A3F2475A628 /* NSString+MK_UUID.m */; };
-		2CBACA30A988F06ED2D75FC33E81DE53 /* MKMacro_Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 514F2B95CB49836D34DED2B21E1E0FC0 /* MKMacro_Log.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3016D3F55559B6A7DCAEE88977C40AF0 /* NSDate+MK_Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 71CD7E918C1906A5EB769F2E80DB77BE /* NSDate+MK_Formatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		301EFCE0EAA1337AF10AB2E47D53CCD3 /* NSString+MK_Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = 5751474B23E2E1BE6A334C8B3B10997B /* NSString+MK_Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32755BC90690FEDE457E3C71BB486D06 /* MKMacro_Test.h in Headers */ = {isa = PBXBuildFile; fileRef = DC7D31612CE44105605E7D80642AFF4C /* MKMacro_Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		327B918969BDC50B05B8A87BB658EB8F /* UICountingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 997E7052AFC92CE1F96696F2B4BF6223 /* UICountingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3410C6D3354DBB4E87A5C61724DA0FBA /* UICountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFCFAFDCAE7B6CAF71B5D323D46DB7F /* UICountingLabel-dummy.m */; };
-		359F8D035E6C354A3DCE43059A25D174 /* NSObject+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B96DF423489A23C1E80CD28B8D35176 /* NSObject+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		371B8A4DEC7C895F472445AF63F74792 /* NSString+MK_Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 507913995C4B0B80F450A4028BD57C49 /* NSString+MK_Conversion.m */; };
-		380010FF914BCDF1BBF9177B21655C53 /* NSString+MK_Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B85CAFA6D98AD6FB74593E5AC77347 /* NSString+MK_Empty.m */; };
-		3D5A8358B3CE03D143C39C4BF52B34D3 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF8D47E9BEFFAE4276CF238BF4807AF /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3EDFD36FC4FDC6168AB21F955668C20E /* FrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B1DA7D31F20FAED1BD80954649DEA7 /* FrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FA79989C399027BBEE3EC5E4B64EF50 /* NSString+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 76E7C4A275B3547D410A7FBBD898D537 /* NSString+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		401753F56120BAC136B8839DEB1D1417 /* ViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = C28ED679D3322126DD369DCB206AF037 /* ViewFrameAccessor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		407E92C5733B75BA251C180482ED0FF4 /* NSArray+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 76DAE1F510C3CADACB63776142331400 /* NSArray+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27A783D29E86469F582704C8E13D897B /* NSNumber+MK_Negative.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B87DB0A7032A18B41AE573F9FE62AA3 /* NSNumber+MK_Negative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2822B0DA82B6C0673570F289AD6B9665 /* NSNumber+MK_Precision.m in Sources */ = {isa = PBXBuildFile; fileRef = E34423C1C42584255440573E018AED42 /* NSNumber+MK_Precision.m */; };
+		2B6B13D2B8756A6294AF6C5B9DA04BAD /* NSString+MK_UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = FC625D7D0FD98E26A4D3763CFAC24285 /* NSString+MK_UUID.m */; };
+		2CBACA30A988F06ED2D75FC33E81DE53 /* MKMacro_Log.h in Headers */ = {isa = PBXBuildFile; fileRef = A883ECE46D532C7410C831E5E7893067 /* MKMacro_Log.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3016D3F55559B6A7DCAEE88977C40AF0 /* NSDate+MK_Formatting.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CF30BFD3A702211DCA70C662A2C6761 /* NSDate+MK_Formatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		301EFCE0EAA1337AF10AB2E47D53CCD3 /* NSString+MK_Empty.h in Headers */ = {isa = PBXBuildFile; fileRef = BE0F713A722FC91BBC1EDE8D85B596CC /* NSString+MK_Empty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32755BC90690FEDE457E3C71BB486D06 /* MKMacro_Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 979F7C6C0E2FDCF7FD6E69569440C13A /* MKMacro_Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		327B918969BDC50B05B8A87BB658EB8F /* UICountingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A8BA62137391D3D267563783941AF470 /* UICountingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3410C6D3354DBB4E87A5C61724DA0FBA /* UICountingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F0910C7955A7EF46C7E8571DDD7AE2 /* UICountingLabel-dummy.m */; };
+		359F8D035E6C354A3DCE43059A25D174 /* NSObject+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 19BAEEF0CD69B53C9013402952CD6128 /* NSObject+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		371B8A4DEC7C895F472445AF63F74792 /* NSString+MK_Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4220E0963767C916C023211103D6BE /* NSString+MK_Conversion.m */; };
+		380010FF914BCDF1BBF9177B21655C53 /* NSString+MK_Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 86963DE27539281AA66F8CBB804A3E97 /* NSString+MK_Empty.m */; };
+		3D5A8358B3CE03D143C39C4BF52B34D3 /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 777808FCF40F25FA72F0249ED39E200C /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		3EDFD36FC4FDC6168AB21F955668C20E /* FrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = D751D62EAD0D1039905F4893C5A34F9E /* FrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3FA79989C399027BBEE3EC5E4B64EF50 /* NSString+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 275EE81D94D9FC5D7DA5EE323531D03C /* NSString+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		401753F56120BAC136B8839DEB1D1417 /* ViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CFB234CEB2043812CBDBE367DBFFFC /* ViewFrameAccessor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		407E92C5733B75BA251C180482ED0FF4 /* NSArray+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C373F529EC2806E5010BE4B945B9146 /* NSArray+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		45AA344031998428187F6BD424DA996F /* Pods-Run-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A68CD4B567C2552876002406E8DBD6 /* Pods-Run-dummy.m */; };
-		492C24B323C74B4EA308AFF95CD3D2A6 /* NSBundle+MK_Version.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA1349AA6305CA1EC99DA45C10C031F /* NSBundle+MK_Version.m */; };
-		495A4B061F3D36E93546F4598CFA0BD2 /* NSData+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F077D3440D1B1DB21605920ADA8FD2B /* NSData+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4BC5F5DD2863B436B77DAF3D661DEFFE /* ScrollViewFrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 12336959042A9F0D93A782CEFB4EB550 /* ScrollViewFrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C7E77BABACDDF96871F9F4E8552785A /* NSNumber+MK_Precision.h in Headers */ = {isa = PBXBuildFile; fileRef = 90493F88297DA1F830AF591B56A10E9C /* NSNumber+MK_Precision.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C8ED5CBBC77A95199E39920F9E025D2 /* NSNumber+MK_Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = DBADAC6FA0075493204B1D1E19FE29B2 /* NSNumber+MK_Comparison.m */; };
-		4DA2939F157B18AABB61B021D52EFD5D /* MKMacro_Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = C66942099EF06CF798496937B8C0D456 /* MKMacro_Geometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5045C6676E9D2849595C1F016F61B4D5 /* NSMutableDictionary+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FEED9A0F73920DE5D649281F86FF53 /* NSMutableDictionary+MK_Misc.m */; };
+		492C24B323C74B4EA308AFF95CD3D2A6 /* NSBundle+MK_Version.m in Sources */ = {isa = PBXBuildFile; fileRef = C602EF7C4DA00DB3E14E7CEA2EE73BDC /* NSBundle+MK_Version.m */; };
+		495A4B061F3D36E93546F4598CFA0BD2 /* NSData+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DEEAA3775FF9F0D788B3C4D0C4BF53E /* NSData+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BC5F5DD2863B436B77DAF3D661DEFFE /* ScrollViewFrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B85C088AF82F1470F0140818241FC31 /* ScrollViewFrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C7E77BABACDDF96871F9F4E8552785A /* NSNumber+MK_Precision.h in Headers */ = {isa = PBXBuildFile; fileRef = E5D02695358015E2E4F67ADEBE21D090 /* NSNumber+MK_Precision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C8ED5CBBC77A95199E39920F9E025D2 /* NSNumber+MK_Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 036CC29DD8747BB605B0A575C9827EB2 /* NSNumber+MK_Comparison.m */; };
+		4DA2939F157B18AABB61B021D52EFD5D /* MKMacro_Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = F1457AB0E44D0CE0CFEBDB4E0E91FC24 /* MKMacro_Geometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5045C6676E9D2849595C1F016F61B4D5 /* NSMutableDictionary+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A02237F1E4FDFBF7EC31BD6632CD11 /* NSMutableDictionary+MK_Misc.m */; };
 		5130B1B7B235899CCAD7CEF3CB9CF65F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		51854B746B34ADF149B57C1A88EDE03C /* NSString+MK_UTF.h in Headers */ = {isa = PBXBuildFile; fileRef = 864C8A996B28565FB76159B86F813BE3 /* NSString+MK_UTF.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5287727313028FD16222B6BFE6BD8BCB /* NSMutableDictionary+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = B16162702F8B7D7301FF43E496F1B1CF /* NSMutableDictionary+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		537C0A618044B7843E9506197CD33E61 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD5B59C6AB77342E8110F1750081C8C0 /* UICountingLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		580231A272325CDCCF2DBDE19E4ED342 /* MKMacro_Method.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D842D737A2F85A7C4A6880A74305C40 /* MKMacro_Method.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		619E6299FD7CBA7CDAF04BF3B58943AE /* NSData+MK_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D9488B8BBD6DCEBDE1A1C96C594C0EEA /* NSData+MK_Base64.m */; };
-		63917C596A303D4029A3DB356BFF2BAB /* NSString+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2718F1A938BB3187462DBD6A01A0C8 /* NSString+MK_Misc.m */; };
-		651262B2949478051FEDF714F44F1955 /* NSNumber+MK_Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = 286E3F44B25ADB55E2C4293CEA97F7F9 /* NSNumber+MK_Creation.m */; };
-		6B02824B166AF4649072CAB930283EEA /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A76885F51CC024FFDCEEB6383A00D2B /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CB3AD5A94B32EF719A3EA461AEA3A85 /* NSString+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 055A5E7DF3A88C801A9B009FFA9BF897 /* NSString+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		731EA0A2D4120F44F0B8B995AF5279B8 /* NSDate+MK_Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B21B76FCB55B8773434E49F0DB7A245 /* NSDate+MK_Comparison.m */; };
-		753DA681D9B5C1C8C53B266ED97FDA71 /* NSArray+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A88BD463E6073C7453D0AD9F60F95EA /* NSArray+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		813335CFDF36CF065DF04B0CDDDAA1EC /* NSArray+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDDB2B4A02FA97C036C30636A5DCACE /* NSArray+MK_Misc.m */; };
-		82EC6428426485F2BC7C24B128E887D7 /* NSObject+MK_AutoDescribe.m in Sources */ = {isa = PBXBuildFile; fileRef = E91A93B753DC378C96468E67FCDEC878 /* NSObject+MK_AutoDescribe.m */; };
+		51854B746B34ADF149B57C1A88EDE03C /* NSString+MK_UTF.h in Headers */ = {isa = PBXBuildFile; fileRef = F787439BD3E73FA4314837C7A8B9D819 /* NSString+MK_UTF.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5287727313028FD16222B6BFE6BD8BCB /* NSMutableDictionary+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5A7A37BB5640AA0ECF0BC92DFCC748 /* NSMutableDictionary+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		537C0A618044B7843E9506197CD33E61 /* UICountingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 010D7A12257925644A6F0A8658DB2BA5 /* UICountingLabel.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		580231A272325CDCCF2DBDE19E4ED342 /* MKMacro_Method.h in Headers */ = {isa = PBXBuildFile; fileRef = 98F505E0A896F18D9020DB0EBBC627A2 /* MKMacro_Method.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		619E6299FD7CBA7CDAF04BF3B58943AE /* NSData+MK_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B8DC957569885F50A61277BCE872DC25 /* NSData+MK_Base64.m */; };
+		63917C596A303D4029A3DB356BFF2BAB /* NSString+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A97DB854C5E99AB758B2505F5E18298 /* NSString+MK_Misc.m */; };
+		651262B2949478051FEDF714F44F1955 /* NSNumber+MK_Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A84B095FA76155281805F564CB5592 /* NSNumber+MK_Creation.m */; };
+		6B02824B166AF4649072CAB930283EEA /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = EFC7B0AAFA3BC4F864E7A840BE05910A /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CB3AD5A94B32EF719A3EA461AEA3A85 /* NSString+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F91AE038C1A0152BEB257484DC54730 /* NSString+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		731EA0A2D4120F44F0B8B995AF5279B8 /* NSDate+MK_Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 3512B8415D9C55C5A13F0FE44A838F90 /* NSDate+MK_Comparison.m */; };
+		753DA681D9B5C1C8C53B266ED97FDA71 /* NSArray+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CA9ED08E521F7AC3BE927D5EB87BF8B /* NSArray+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		813335CFDF36CF065DF04B0CDDDAA1EC /* NSArray+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FB3DBB362FE5AC24402D5CBB486FE8 /* NSArray+MK_Misc.m */; };
+		82EC6428426485F2BC7C24B128E887D7 /* NSObject+MK_AutoDescribe.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A3530CE25D7FBD2BD9B0ED4D55E59F /* NSObject+MK_AutoDescribe.m */; };
 		83D1971502104A410FFCB25E0113E4C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		83D807DBFA657FB0E59324E7A6B9999B /* NSString+MK_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D2A6D0A6C409CAB2BBD198BC6C58C1E /* NSString+MK_Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		843210B099B5BB1D1DC5511E3F405B87 /* NSMutableArray+MK_Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AD33122D51E279F52FFB8E2C0AED78 /* NSMutableArray+MK_Queue.m */; };
-		8985994745D0FF66EEC0580F1072AF93 /* NSDictionary+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = DCCD2E700E70803A80006E405BD13DA0 /* NSDictionary+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B33695A42271E491B2B28449A35F014 /* MKFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C6BBCF4EB5B377D4728AFBAD7847CF15 /* MKFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83D807DBFA657FB0E59324E7A6B9999B /* NSString+MK_Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7B3405DD1890044C8D2C2899176BE8 /* NSString+MK_Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		843210B099B5BB1D1DC5511E3F405B87 /* NSMutableArray+MK_Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C92320D32581D52912F1A64E048AB1D /* NSMutableArray+MK_Queue.m */; };
+		8985994745D0FF66EEC0580F1072AF93 /* NSDictionary+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFFA187A3F3EFE024205968755F9873 /* NSDictionary+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B33695A42271E491B2B28449A35F014 /* MKFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CB066CD08D773F40BDF16F1BF9279334 /* MKFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CFE4866911F85530FC16C3193A779BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		8D588CDD2D1600DB0E0CBC196640F4CF /* NSObject+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AFCCE27B0A31ACAC2FB5871C3FDFB10 /* NSObject+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		924E22EF5CB10E4EC864D718020F6A5C /* NSNumber+MK_Fraction.h in Headers */ = {isa = PBXBuildFile; fileRef = D55013B44F1B20B39D39AFA2D9D97CC7 /* NSNumber+MK_Fraction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9322927FC82C7CDDC7096260057C5186 /* MKFoundationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1521AF4F89E85B3B918A90E3697603AC /* MKFoundationKit-dummy.m */; };
-		95ED0088EE09950DEB625004C0DFFF61 /* NSObject+MK_AutoDescribe.h in Headers */ = {isa = PBXBuildFile; fileRef = 259554D5772230A109F98E703D9EB2CE /* NSObject+MK_AutoDescribe.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9962C053DE272E352B93E395990A1943 /* MKMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = C3333BDCBA2F040B424430DD5C8BEA14 /* MKMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C8AFDE824C85C096FF89DD56ECDF1F1 /* NSString+MK_Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC527F2C6BD7A5F93BDBF401958A2749 /* NSString+MK_Validation.m */; };
-		9E31357EB5B223557851E0BF1B64BCA3 /* NSString+MK_Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E6599484F6908FE6709AF1D617A9F24 /* NSString+MK_Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F9DDF1A531C0453053B4E0A02F4615C /* ViewFrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE0ADB3010CF822DBB053D992AB0AD5 /* ViewFrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9FE00A959FAD089B355217BE1004829D /* NSObject+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB60AC24D5692B33CDDB79E9DDC2917 /* NSObject+MK_Misc.m */; };
-		A2975BE88ACC3CC5996416D9E61E56F6 /* NSDate+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E86E7A57367BEE17338498FFC85A348 /* NSDate+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A7A4C40C1D01730296EE95A6887E3E30 /* NSDate+MK_Components.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F4D53BD8D0567522A6433798140C3A /* NSDate+MK_Components.m */; };
-		AB64E389F72B1C49801E1BB7944E21BC /* NSNumber+MK_Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 88AB33DE9584D8CB3E9980188A54F5BB /* NSNumber+MK_Fraction.m */; };
-		AC752DCB2779822A347D30DFB5A9D305 /* NSDate+MK_Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = B116689AD4A13DC9F5C71A11A0B17C05 /* NSDate+MK_Formatting.m */; };
-		ADF898A511D19C8EC3C4E862C845450B /* NSNumber+MK_Negative.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AB5D5FEA20C128540016D8F99B43973 /* NSNumber+MK_Negative.m */; };
-		AF8941D308F3BA178F068F8E1FA88447 /* NSArray+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 07DF04756C567D33014D88EBEAC15727 /* NSArray+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B25A775607EE549EE33EB056303BA62A /* NSDictionary+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = BE27D3012EB114C9893F4B332C8C1739 /* NSDictionary+MK_Block.m */; };
-		BC2392B71507EE27D61973B888C85B9F /* NSBundle+MK_Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 41F2288E1873E35F67EB7B8299AAA835 /* NSBundle+MK_Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEA9EB67E9DACA2617BE4113D8B4A919 /* NSSet+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CA8BDFDEB5C8ED0AFBE861EFB59B68B /* NSSet+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C04FF876CFB9364FEF5573EA3F28CA87 /* NSDate+MK_Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD7C24472CC91B4BD6225369C944CC7 /* NSDate+MK_Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2A03A842E9E65A7C900222941F09749 /* NSMutableArray+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A998568B085B44FB0E9BA82664290B /* NSMutableArray+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C2FD3A0D2CBD671396186073A93BEC11 /* NSDictionary+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = CD606FF90B7F799800D5DE198C15F4DE /* NSDictionary+MK_Misc.m */; };
-		C552315D1C4A4A3D3B96F4CC09BFAFE8 /* NSString+MK_UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 41BAA6778BD6B6A5C5672F8611DDA445 /* NSString+MK_UUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C5DFFA8BD956F5D798296C323CE9FC22 /* NSDate+MK_Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8750F585193E367E4E7297E485FE8A /* NSDate+MK_Creation.m */; };
-		C88ABF64D6934D9B40014F978619ED6C /* NSNumber+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E0EF4937BBABD34075BCF6C037B038A /* NSNumber+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CBC7548501161D689ACF033CA42AA1AB /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = FA66E11B6A04FB036B2FAA0073F71983 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD2CB1B181E1B736F5817EE054310911 /* NSMutableArray+MK_Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AF653A77AF438F02EEA2E2D33CF5AC /* NSMutableArray+MK_Stack.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D07B63C5577FFDF69D016C5C8D4B2B1A /* NSMutableArray+MK_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = F915E95BF32FBBF5C0E46F0C03E6787D /* NSMutableArray+MK_Stack.m */; };
-		D581CE4308D28CF20AFF0375B4FC440E /* NSDate+MK_Components.h in Headers */ = {isa = PBXBuildFile; fileRef = 7651D710873F41587AE72E7080405CFD /* NSDate+MK_Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6D8A18338DEAB37D293CB633F78967C /* NSString+MK_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C47B11078C227113CEDB71C114E9927F /* NSString+MK_Base64.m */; };
-		D75E541D83ADB7AB0E507EA135A5661B /* NSMutableArray+MK_Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3AA15A445DD900AF00D0EB3E0898E0 /* NSMutableArray+MK_Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE8F9479420B9F51EE1FCB3A38C708F3 /* ScrollViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BDFEF562766F3DE0F95C5E7411E7BBF /* ScrollViewFrameAccessor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E023DB9ECA1376FEEC3FE0E2CE9B0DAE /* NSSet+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D0EDE5B9C32BD3E10B701000826B0A /* NSSet+MK_Block.m */; };
+		8D588CDD2D1600DB0E0CBC196640F4CF /* NSObject+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 54C6C8CDD3D439E561362E8ABABFB181 /* NSObject+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		924E22EF5CB10E4EC864D718020F6A5C /* NSNumber+MK_Fraction.h in Headers */ = {isa = PBXBuildFile; fileRef = 732A16762BA48A3387DFF11D64ABB8B3 /* NSNumber+MK_Fraction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9322927FC82C7CDDC7096260057C5186 /* MKFoundationKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 887E7958FEF8A79FC9D707352986B75B /* MKFoundationKit-dummy.m */; };
+		95ED0088EE09950DEB625004C0DFFF61 /* NSObject+MK_AutoDescribe.h in Headers */ = {isa = PBXBuildFile; fileRef = 12063768AEB413A8BB3508B623458C44 /* NSObject+MK_AutoDescribe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9962C053DE272E352B93E395990A1943 /* MKMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F78F8987A93E39FA95D79802114C1C /* MKMacro.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C8AFDE824C85C096FF89DD56ECDF1F1 /* NSString+MK_Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1099744538A77A88E861443E1154FF97 /* NSString+MK_Validation.m */; };
+		9E31357EB5B223557851E0BF1B64BCA3 /* NSString+MK_Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 39CBF92FA516C65D7FFFBA7B84759D4A /* NSString+MK_Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F9DDF1A531C0453053B4E0A02F4615C /* ViewFrameAccessor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4349A46F6D06BFFFAE4FEDA5B06B39F5 /* ViewFrameAccessor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9FE00A959FAD089B355217BE1004829D /* NSObject+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 505CDB2450CFBD264D0CFF8C085C0FE1 /* NSObject+MK_Misc.m */; };
+		A2975BE88ACC3CC5996416D9E61E56F6 /* NSDate+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = B264E9046CA9A328EA3A240568BD66A7 /* NSDate+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7A4C40C1D01730296EE95A6887E3E30 /* NSDate+MK_Components.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B49D3254FC31DEC2115F562CE0766DC /* NSDate+MK_Components.m */; };
+		AB64E389F72B1C49801E1BB7944E21BC /* NSNumber+MK_Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 21B73EEF106C6DE95DFC8223331707DC /* NSNumber+MK_Fraction.m */; };
+		AC752DCB2779822A347D30DFB5A9D305 /* NSDate+MK_Formatting.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D51137198D5F2383366057061C80D5 /* NSDate+MK_Formatting.m */; };
+		ADF898A511D19C8EC3C4E862C845450B /* NSNumber+MK_Negative.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FD24E9FC8553C7D23E6F6B3CEAC039 /* NSNumber+MK_Negative.m */; };
+		AF8941D308F3BA178F068F8E1FA88447 /* NSArray+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 87512059D94113A782766B49B338B6DF /* NSArray+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B25A775607EE549EE33EB056303BA62A /* NSDictionary+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD6D0A63B8FB0B0211B7AF564DE7375 /* NSDictionary+MK_Block.m */; };
+		BC2392B71507EE27D61973B888C85B9F /* NSBundle+MK_Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 0292C632DC288F9BD7426450CB8915FC /* NSBundle+MK_Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BEA9EB67E9DACA2617BE4113D8B4A919 /* NSSet+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CD0AF1B69697408BD83E7872210D64 /* NSSet+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C04FF876CFB9364FEF5573EA3F28CA87 /* NSDate+MK_Creation.h in Headers */ = {isa = PBXBuildFile; fileRef = 157D7738F0D15455D10370A4802BF345 /* NSDate+MK_Creation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A03A842E9E65A7C900222941F09749 /* NSMutableArray+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = EFD1640D2331CCC3E66225B8F807906A /* NSMutableArray+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2FD3A0D2CBD671396186073A93BEC11 /* NSDictionary+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F68A32B0C22C5903B0FAD4C65AA265 /* NSDictionary+MK_Misc.m */; };
+		C552315D1C4A4A3D3B96F4CC09BFAFE8 /* NSString+MK_UUID.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF961DAFDFF69A853033250A8181BBB /* NSString+MK_UUID.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5DFFA8BD956F5D798296C323CE9FC22 /* NSDate+MK_Creation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F7621EA1A01C16004A6457280A3A98 /* NSDate+MK_Creation.m */; };
+		C88ABF64D6934D9B40014F978619ED6C /* NSNumber+MK.h in Headers */ = {isa = PBXBuildFile; fileRef = F887454F3E284D87B55CCB41C25F8C88 /* NSNumber+MK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC7548501161D689ACF033CA42AA1AB /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 77BA3BBC2874C4B78D2F5E34E824F8FC /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD2CB1B181E1B736F5817EE054310911 /* NSMutableArray+MK_Stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E4DD2E3FFB84AFC405FF17C636C1F2A /* NSMutableArray+MK_Stack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D07B63C5577FFDF69D016C5C8D4B2B1A /* NSMutableArray+MK_Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CFC02CE5601489499C716689B0A5EF /* NSMutableArray+MK_Stack.m */; };
+		D581CE4308D28CF20AFF0375B4FC440E /* NSDate+MK_Components.h in Headers */ = {isa = PBXBuildFile; fileRef = 3672C3D0EFA4AAD9E92386C66A6BE580 /* NSDate+MK_Components.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6D8A18338DEAB37D293CB633F78967C /* NSString+MK_Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C20BEB71ABF5A101149FB12F6256 /* NSString+MK_Base64.m */; };
+		D75E541D83ADB7AB0E507EA135A5661B /* NSMutableArray+MK_Queue.h in Headers */ = {isa = PBXBuildFile; fileRef = FEEAF66628E1A38A4D5B6F854D080378 /* NSMutableArray+MK_Queue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE8F9479420B9F51EE1FCB3A38C708F3 /* ScrollViewFrameAccessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B49680FD276C5AC4AEACBD7F751B4D /* ScrollViewFrameAccessor.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E023DB9ECA1376FEEC3FE0E2CE9B0DAE /* NSSet+MK_Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 6920D1D3D5B0B963A8B5AFBE3362AD95 /* NSSet+MK_Block.m */; };
 		E6DEB884E4073EBBE4109C77CB31C356 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		EFA71EC051C75A461D0CDEA2EA4E5508 /* NSDictionary+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AAF23A9C51200182912AFA3CD7AE534 /* NSDictionary+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFE85399DF4585AB61152FE7172A2D61 /* NSNumber+MK_Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = F4688F44FE17C3C5D4864603B3731D22 /* NSNumber+MK_Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F09E43AC1FF89148C3D9CF4E13B21F9A /* NSSet+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = 70587B036181727D654F4CD32F8D5593 /* NSSet+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4FB15C7571BC2D9EECCB3B90B5EF375 /* NSMutableArray+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 07E9CE542B8E24A7CECF47A7928BA5B0 /* NSMutableArray+MK_Misc.m */; };
-		F6F2D7025317636C1F1A180AF528CA85 /* NSString+MK_UTF.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8C84937F56EE58F01CD6F341CE83BB /* NSString+MK_UTF.m */; };
-		F851126D4F7E89FF49526F3BD3E4A785 /* NSString+MK_Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = A3390EF79E539C311F17E59E71573F4E /* NSString+MK_Conversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFA71EC051C75A461D0CDEA2EA4E5508 /* NSDictionary+MK_Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C9D35E85DD93C643576C2FFBACE3B67 /* NSDictionary+MK_Misc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE85399DF4585AB61152FE7172A2D61 /* NSNumber+MK_Manipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E764198F48095ACC4EC4DCDACC8C0A0 /* NSNumber+MK_Manipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F09E43AC1FF89148C3D9CF4E13B21F9A /* NSSet+MK_Block.h in Headers */ = {isa = PBXBuildFile; fileRef = CD002DC727CADAA2CF498619F33F4C3A /* NSSet+MK_Block.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4FB15C7571BC2D9EECCB3B90B5EF375 /* NSMutableArray+MK_Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F8AD8EBB5092AB5BF90019DBA10D93 /* NSMutableArray+MK_Misc.m */; };
+		F6F2D7025317636C1F1A180AF528CA85 /* NSString+MK_UTF.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BEA5A8BCD3609360EB89E85B599E2E7 /* NSString+MK_UTF.m */; };
+		F851126D4F7E89FF49526F3BD3E4A785 /* NSString+MK_Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 72745DCCD0E30E6502A737D7966F4B45 /* NSString+MK_Conversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,128 +139,125 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02700FF5079D152FFA14A106A28426FC /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
-		055A5E7DF3A88C801A9B009FFA9BF897 /* NSString+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Misc.h"; path = "Source/NSString/NSString+MK_Misc.h"; sourceTree = "<group>"; };
-		07DF04756C567D33014D88EBEAC15727 /* NSArray+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK_Block.h"; path = "Source/NSArray/NSArray+MK_Block.h"; sourceTree = "<group>"; };
-		07E9CE542B8E24A7CECF47A7928BA5B0 /* NSMutableArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Misc.m"; path = "Source/NSArray/NSMutableArray+MK_Misc.m"; sourceTree = "<group>"; };
-		0A88BD463E6073C7453D0AD9F60F95EA /* NSArray+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK.h"; path = "Source/NSArray/NSArray+MK.h"; sourceTree = "<group>"; };
-		0BDDB2B4A02FA97C036C30636A5DCACE /* NSArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MK_Misc.m"; path = "Source/NSArray/NSArray+MK_Misc.m"; sourceTree = "<group>"; };
-		0BDFEF562766F3DE0F95C5E7411E7BBF /* ScrollViewFrameAccessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ScrollViewFrameAccessor.m; path = FrameAccessor/ScrollViewFrameAccessor.m; sourceTree = "<group>"; };
-		0FFCFAFDCAE7B6CAF71B5D323D46DB7F /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
-		12336959042A9F0D93A782CEFB4EB550 /* ScrollViewFrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScrollViewFrameAccessor.h; path = FrameAccessor/ScrollViewFrameAccessor.h; sourceTree = "<group>"; };
-		13AF653A77AF438F02EEA2E2D33CF5AC /* NSMutableArray+MK_Stack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Stack.h"; path = "Source/NSArray/NSMutableArray+MK_Stack.h"; sourceTree = "<group>"; };
-		141B053DE4D84EB1FFD20DB462C7E607 /* MKFoundationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKFoundationKit.xcconfig; sourceTree = "<group>"; };
-		1516325B96DEC0423FA98D2099E47404 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		1521AF4F89E85B3B918A90E3697603AC /* MKFoundationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKFoundationKit-dummy.m"; sourceTree = "<group>"; };
-		18283814B69E6141F8242A3F2475A628 /* NSString+MK_UUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_UUID.m"; path = "Source/NSString/NSString+MK_UUID.m"; sourceTree = "<group>"; };
-		1D2A6D0A6C409CAB2BBD198BC6C58C1E /* NSString+MK_Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Base64.h"; path = "Source/NSString/NSString+MK_Base64.h"; sourceTree = "<group>"; };
-		1D842D737A2F85A7C4A6880A74305C40 /* MKMacro_Method.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Method.h; path = Source/Macros/MKMacro_Method.h; sourceTree = "<group>"; };
-		1E0EF4937BBABD34075BCF6C037B038A /* NSNumber+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK.h"; path = "Source/NSNumber/NSNumber+MK.h"; sourceTree = "<group>"; };
-		1E6599484F6908FE6709AF1D617A9F24 /* NSString+MK_Validation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Validation.h"; path = "Source/NSString/NSString+MK_Validation.h"; sourceTree = "<group>"; };
-		259554D5772230A109F98E703D9EB2CE /* NSObject+MK_AutoDescribe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK_AutoDescribe.h"; path = "Source/NSObject/NSObject+MK_AutoDescribe.h"; sourceTree = "<group>"; };
-		286E3F44B25ADB55E2C4293CEA97F7F9 /* NSNumber+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Creation.m"; path = "Source/NSNumber/NSNumber+MK_Creation.m"; sourceTree = "<group>"; };
-		30B85CAFA6D98AD6FB74593E5AC77347 /* NSString+MK_Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Empty.m"; path = "Source/NSString/NSString+MK_Empty.m"; sourceTree = "<group>"; };
-		3A3AA15A445DD900AF00D0EB3E0898E0 /* NSMutableArray+MK_Queue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Queue.h"; path = "Source/NSArray/NSMutableArray+MK_Queue.h"; sourceTree = "<group>"; };
-		3A85707423CE67963A2BC15B083B38E3 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		3AAF23A9C51200182912AFA3CD7AE534 /* NSDictionary+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK_Misc.h"; path = "Source/NSDictionary/NSDictionary+MK_Misc.h"; sourceTree = "<group>"; };
-		3DD7C24472CC91B4BD6225369C944CC7 /* NSDate+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Creation.h"; path = "Source/NSDate/NSDate+MK_Creation.h"; sourceTree = "<group>"; };
+		010D7A12257925644A6F0A8658DB2BA5 /* UICountingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
+		0292C632DC288F9BD7426450CB8915FC /* NSBundle+MK_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MK_Version.h"; path = "Source/NSBundle/NSBundle+MK_Version.h"; sourceTree = "<group>"; };
+		02D2177E4D79AE69DF971668EA28C002 /* NSNumber+MK_Manipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Manipulation.m"; path = "Source/NSNumber/NSNumber+MK_Manipulation.m"; sourceTree = "<group>"; };
+		036990E63700C8FA030C16283E992D23 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		036CC29DD8747BB605B0A575C9827EB2 /* NSNumber+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Comparison.m"; path = "Source/NSNumber/NSNumber+MK_Comparison.m"; sourceTree = "<group>"; };
+		04C39748B2E358605987D584C2043879 /* NSDate+MK_Manipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Manipulation.h"; path = "Source/NSDate/NSDate+MK_Manipulation.h"; sourceTree = "<group>"; };
+		08F68A32B0C22C5903B0FAD4C65AA265 /* NSDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSDictionary+MK_Misc.m"; sourceTree = "<group>"; };
+		0BEA5A8BCD3609360EB89E85B599E2E7 /* NSString+MK_UTF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_UTF.m"; path = "Source/NSString/NSString+MK_UTF.m"; sourceTree = "<group>"; };
+		1099744538A77A88E861443E1154FF97 /* NSString+MK_Validation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Validation.m"; path = "Source/NSString/NSString+MK_Validation.m"; sourceTree = "<group>"; };
+		113BE1FA105ADD8F4E7BC9969BA7FFBB /* NSDictionary+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK_Block.h"; path = "Source/NSDictionary/NSDictionary+MK_Block.h"; sourceTree = "<group>"; };
+		12063768AEB413A8BB3508B623458C44 /* NSObject+MK_AutoDescribe.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK_AutoDescribe.h"; path = "Source/NSObject/NSObject+MK_AutoDescribe.h"; sourceTree = "<group>"; };
+		13FCAB83618AA836F86AAB159BD2668C /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		157D7738F0D15455D10370A4802BF345 /* NSDate+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Creation.h"; path = "Source/NSDate/NSDate+MK_Creation.h"; sourceTree = "<group>"; };
+		16CFB234CEB2043812CBDBE367DBFFFC /* ViewFrameAccessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewFrameAccessor.m; path = FrameAccessor/ViewFrameAccessor.m; sourceTree = "<group>"; };
+		19BAEEF0CD69B53C9013402952CD6128 /* NSObject+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK_Misc.h"; path = "Source/NSObject/NSObject+MK_Misc.h"; sourceTree = "<group>"; };
+		1B49D3254FC31DEC2115F562CE0766DC /* NSDate+MK_Components.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Components.m"; path = "Source/NSDate/NSDate+MK_Components.m"; sourceTree = "<group>"; };
+		1B85C088AF82F1470F0140818241FC31 /* ScrollViewFrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ScrollViewFrameAccessor.h; path = FrameAccessor/ScrollViewFrameAccessor.h; sourceTree = "<group>"; };
+		21B73EEF106C6DE95DFC8223331707DC /* NSNumber+MK_Fraction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Fraction.m"; path = "Source/NSNumber/NSNumber+MK_Fraction.m"; sourceTree = "<group>"; };
+		275EE81D94D9FC5D7DA5EE323531D03C /* NSString+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK.h"; path = "Source/NSString/NSString+MK.h"; sourceTree = "<group>"; };
+		2F91AE038C1A0152BEB257484DC54730 /* NSString+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Misc.h"; path = "Source/NSString/NSString+MK_Misc.h"; sourceTree = "<group>"; };
+		33D51137198D5F2383366057061C80D5 /* NSDate+MK_Formatting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Formatting.m"; path = "Source/NSDate/NSDate+MK_Formatting.m"; sourceTree = "<group>"; };
+		34FB3DBB362FE5AC24402D5CBB486FE8 /* NSArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MK_Misc.m"; path = "Source/NSArray/NSArray+MK_Misc.m"; sourceTree = "<group>"; };
+		3512B8415D9C55C5A13F0FE44A838F90 /* NSDate+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Comparison.m"; path = "Source/NSDate/NSDate+MK_Comparison.m"; sourceTree = "<group>"; };
+		36477D5A99BD2E527E31E72CC02B37D3 /* MKFoundationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKFoundationKit-prefix.pch"; sourceTree = "<group>"; };
+		3672C3D0EFA4AAD9E92386C66A6BE580 /* NSDate+MK_Components.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Components.h"; path = "Source/NSDate/NSDate+MK_Components.h"; sourceTree = "<group>"; };
+		39CBF92FA516C65D7FFFBA7B84759D4A /* NSString+MK_Validation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Validation.h"; path = "Source/NSString/NSString+MK_Validation.h"; sourceTree = "<group>"; };
+		3B4220E0963767C916C023211103D6BE /* NSString+MK_Conversion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Conversion.m"; path = "Source/NSString/NSString+MK_Conversion.m"; sourceTree = "<group>"; };
+		3C86E51A81D4620A449FDC94691537BC /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		3E764198F48095ACC4EC4DCDACC8C0A0 /* NSNumber+MK_Manipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Manipulation.h"; path = "Source/NSNumber/NSNumber+MK_Manipulation.h"; sourceTree = "<group>"; };
 		410B81D4F3439E88F9F2FE4F73B6D639 /* Pods-Run.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Run.release.xcconfig"; sourceTree = "<group>"; };
-		41BAA6778BD6B6A5C5672F8611DDA445 /* NSString+MK_UUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_UUID.h"; path = "Source/NSString/NSString+MK_UUID.h"; sourceTree = "<group>"; };
-		41F2288E1873E35F67EB7B8299AAA835 /* NSBundle+MK_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MK_Version.h"; path = "Source/NSBundle/NSBundle+MK_Version.h"; sourceTree = "<group>"; };
 		423FADF261A9994569716045FE3D1640 /* libFrameAccessor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFrameAccessor.a; path = libFrameAccessor.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		45DA20F3775A30EA6FF1092612149F8D /* NSDate+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Comparison.h"; path = "Source/NSDate/NSDate+MK_Comparison.h"; sourceTree = "<group>"; };
-		4AB5D5FEA20C128540016D8F99B43973 /* NSNumber+MK_Negative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Negative.m"; path = "Source/NSNumber/NSNumber+MK_Negative.m"; sourceTree = "<group>"; };
-		507913995C4B0B80F450A4028BD57C49 /* NSString+MK_Conversion.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Conversion.m"; path = "Source/NSString/NSString+MK_Conversion.m"; sourceTree = "<group>"; };
-		514F2B95CB49836D34DED2B21E1E0FC0 /* MKMacro_Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Log.h; path = Source/Macros/MKMacro_Log.h; sourceTree = "<group>"; };
-		564BA5B4444ACF58E9A874655EDF102E /* MKFoundationKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MKFoundationKit-prefix.pch"; sourceTree = "<group>"; };
-		5751474B23E2E1BE6A334C8B3B10997B /* NSString+MK_Empty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Empty.h"; path = "Source/NSString/NSString+MK_Empty.h"; sourceTree = "<group>"; };
-		5BDB8E908E23582678B86D1E13A09BB1 /* UICountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		4349A46F6D06BFFFAE4FEDA5B06B39F5 /* ViewFrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewFrameAccessor.h; path = FrameAccessor/ViewFrameAccessor.h; sourceTree = "<group>"; };
+		435D22C703FF9D16F63002BC0F6289A8 /* NSData+MK_Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MK_Base64.h"; path = "Source/NSData/NSData+MK_Base64.h"; sourceTree = "<group>"; };
+		43ACB4868FDF4BA875915A0EFBD73F94 /* NSNumber+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Creation.h"; path = "Source/NSNumber/NSNumber+MK_Creation.h"; sourceTree = "<group>"; };
+		4B65FFE92A92DFE9FCCB3090F6456D97 /* MKFoundationKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MKFoundationKit.xcconfig; sourceTree = "<group>"; };
+		4CA9ED08E521F7AC3BE927D5EB87BF8B /* NSArray+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK.h"; path = "Source/NSArray/NSArray+MK.h"; sourceTree = "<group>"; };
+		505CDB2450CFBD264D0CFF8C085C0FE1 /* NSObject+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_Misc.m"; path = "Source/NSObject/NSObject+MK_Misc.m"; sourceTree = "<group>"; };
+		54B49680FD276C5AC4AEACBD7F751B4D /* ScrollViewFrameAccessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ScrollViewFrameAccessor.m; path = FrameAccessor/ScrollViewFrameAccessor.m; sourceTree = "<group>"; };
+		54C6C8CDD3D439E561362E8ABABFB181 /* NSObject+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK.h"; path = "Source/NSObject/NSObject+MK.h"; sourceTree = "<group>"; };
+		5B87DB0A7032A18B41AE573F9FE62AA3 /* NSNumber+MK_Negative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Negative.h"; path = "Source/NSNumber/NSNumber+MK_Negative.h"; sourceTree = "<group>"; };
+		5C92320D32581D52912F1A64E048AB1D /* NSMutableArray+MK_Queue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Queue.m"; path = "Source/NSArray/NSMutableArray+MK_Queue.m"; sourceTree = "<group>"; };
+		5C9D35E85DD93C643576C2FFBACE3B67 /* NSDictionary+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK_Misc.h"; path = "Source/NSDictionary/NSDictionary+MK_Misc.h"; sourceTree = "<group>"; };
+		5DEEAA3775FF9F0D788B3C4D0C4BF53E /* NSData+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MK.h"; path = "Source/NSData/NSData+MK.h"; sourceTree = "<group>"; };
 		5F64077CD754A5A7CC8249963AB1DE92 /* Pods-Run-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Run-acknowledgements.markdown"; sourceTree = "<group>"; };
-		63315FBEAE60B3C7CF3C768C974D2181 /* FrameAccessor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrameAccessor-prefix.pch"; sourceTree = "<group>"; };
-		6418EDEFC34CD9459964E43352C94CC3 /* NSNumber+MK_Precision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Precision.m"; path = "Source/NSNumber/NSNumber+MK_Precision.m"; sourceTree = "<group>"; };
-		6755317E0A7753E3F760EC1B63D63ADB /* MKMacro_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Version.h; path = Source/Macros/MKMacro_Version.h; sourceTree = "<group>"; };
-		6A39BA08EB4EBCC5FD0CBF01D97546CF /* NSBundle+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MK.h"; path = "Source/NSBundle/NSBundle+MK.h"; sourceTree = "<group>"; };
-		6AFCCE27B0A31ACAC2FB5871C3FDFB10 /* NSObject+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK.h"; path = "Source/NSObject/NSObject+MK.h"; sourceTree = "<group>"; };
-		70587B036181727D654F4CD32F8D5593 /* NSSet+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+MK_Block.h"; path = "Source/NSSet/NSSet+MK_Block.h"; sourceTree = "<group>"; };
-		71CD7E918C1906A5EB769F2E80DB77BE /* NSDate+MK_Formatting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Formatting.h"; path = "Source/NSDate/NSDate+MK_Formatting.h"; sourceTree = "<group>"; };
+		5F943019354F14244116761952856853 /* FrameAccessor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FrameAccessor-prefix.pch"; sourceTree = "<group>"; };
+		65ADAA0418035F2F129EEA3ECFA85BDD /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
+		67A02237F1E4FDFBF7EC31BD6632CD11 /* NSMutableDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSMutableDictionary+MK_Misc.m"; sourceTree = "<group>"; };
+		6920D1D3D5B0B963A8B5AFBE3362AD95 /* NSSet+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSSet+MK_Block.m"; path = "Source/NSSet/NSSet+MK_Block.m"; sourceTree = "<group>"; };
+		6C373F529EC2806E5010BE4B945B9146 /* NSArray+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK_Misc.h"; path = "Source/NSArray/NSArray+MK_Misc.h"; sourceTree = "<group>"; };
+		6E4DD2E3FFB84AFC405FF17C636C1F2A /* NSMutableArray+MK_Stack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Stack.h"; path = "Source/NSArray/NSMutableArray+MK_Stack.h"; sourceTree = "<group>"; };
+		7071512295E2CB5BFE052E1771EA4B8C /* NSArray+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MK_Block.m"; path = "Source/NSArray/NSArray+MK_Block.m"; sourceTree = "<group>"; };
+		70F78F8987A93E39FA95D79802114C1C /* MKMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro.h; path = Source/Macros/MKMacro.h; sourceTree = "<group>"; };
+		72745DCCD0E30E6502A737D7966F4B45 /* NSString+MK_Conversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Conversion.h"; path = "Source/NSString/NSString+MK_Conversion.h"; sourceTree = "<group>"; };
+		732A16762BA48A3387DFF11D64ABB8B3 /* NSNumber+MK_Fraction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Fraction.h"; path = "Source/NSNumber/NSNumber+MK_Fraction.h"; sourceTree = "<group>"; };
 		753A0654B47A16F9DDDC9BB330BE9005 /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7651D710873F41587AE72E7080405CFD /* NSDate+MK_Components.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Components.h"; path = "Source/NSDate/NSDate+MK_Components.h"; sourceTree = "<group>"; };
-		76DAE1F510C3CADACB63776142331400 /* NSArray+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK_Misc.h"; path = "Source/NSArray/NSArray+MK_Misc.h"; sourceTree = "<group>"; };
-		76E7C4A275B3547D410A7FBBD898D537 /* NSString+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK.h"; path = "Source/NSString/NSString+MK.h"; sourceTree = "<group>"; };
-		7CA8BDFDEB5C8ED0AFBE861EFB59B68B /* NSSet+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+MK.h"; path = "Source/NSSet/NSSet+MK.h"; sourceTree = "<group>"; };
-		84A998568B085B44FB0E9BA82664290B /* NSMutableArray+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Misc.h"; path = "Source/NSArray/NSMutableArray+MK_Misc.h"; sourceTree = "<group>"; };
-		864C8A996B28565FB76159B86F813BE3 /* NSString+MK_UTF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_UTF.h"; path = "Source/NSString/NSString+MK_UTF.h"; sourceTree = "<group>"; };
-		86AD33122D51E279F52FFB8E2C0AED78 /* NSMutableArray+MK_Queue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Queue.m"; path = "Source/NSArray/NSMutableArray+MK_Queue.m"; sourceTree = "<group>"; };
-		86FEED9A0F73920DE5D649281F86FF53 /* NSMutableDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSMutableDictionary+MK_Misc.m"; sourceTree = "<group>"; };
-		882FB4501F8F1998B43B4869847F49B2 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		88AB33DE9584D8CB3E9980188A54F5BB /* NSNumber+MK_Fraction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Fraction.m"; path = "Source/NSNumber/NSNumber+MK_Fraction.m"; sourceTree = "<group>"; };
+		777808FCF40F25FA72F0249ED39E200C /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		77BA3BBC2874C4B78D2F5E34E824F8FC /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		7AF961DAFDFF69A853033250A8181BBB /* NSString+MK_UUID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_UUID.h"; path = "Source/NSString/NSString+MK_UUID.h"; sourceTree = "<group>"; };
+		7CF30BFD3A702211DCA70C662A2C6761 /* NSDate+MK_Formatting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Formatting.h"; path = "Source/NSDate/NSDate+MK_Formatting.h"; sourceTree = "<group>"; };
+		7D5EE8A08AFD554375F950237B08B4D0 /* FrameAccessor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FrameAccessor-dummy.m"; sourceTree = "<group>"; };
+		81D2C20BEB71ABF5A101149FB12F6256 /* NSString+MK_Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Base64.m"; path = "Source/NSString/NSString+MK_Base64.m"; sourceTree = "<group>"; };
+		85097B75088A1538F9BB0DEA7EB2AD90 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		86963DE27539281AA66F8CBB804A3E97 /* NSString+MK_Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Empty.m"; path = "Source/NSString/NSString+MK_Empty.m"; sourceTree = "<group>"; };
+		87512059D94113A782766B49B338B6DF /* NSArray+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK_Block.h"; path = "Source/NSArray/NSArray+MK_Block.h"; sourceTree = "<group>"; };
+		887E7958FEF8A79FC9D707352986B75B /* MKFoundationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKFoundationKit-dummy.m"; sourceTree = "<group>"; };
 		892F7A4290546EACA7E814B51CAC72A9 /* libPods-Run.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Run.a"; path = "libPods-Run.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B96DF423489A23C1E80CD28B8D35176 /* NSObject+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK_Misc.h"; path = "Source/NSObject/NSObject+MK_Misc.h"; sourceTree = "<group>"; };
-		8E86E7A57367BEE17338498FFC85A348 /* NSDate+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK.h"; path = "Source/NSDate/NSDate+MK.h"; sourceTree = "<group>"; };
-		8F077D3440D1B1DB21605920ADA8FD2B /* NSData+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MK.h"; path = "Source/NSData/NSData+MK.h"; sourceTree = "<group>"; };
-		90493F88297DA1F830AF591B56A10E9C /* NSNumber+MK_Precision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Precision.h"; path = "Source/NSNumber/NSNumber+MK_Precision.h"; sourceTree = "<group>"; };
+		8D5A7A37BB5640AA0ECF0BC92DFCC748 /* NSMutableDictionary+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+MK_Misc.h"; path = "Source/NSDictionary/NSMutableDictionary+MK_Misc.h"; sourceTree = "<group>"; };
+		91CD0AF1B69697408BD83E7872210D64 /* NSSet+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+MK.h"; path = "Source/NSSet/NSSet+MK.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		971BD72C11E7BCF324D99DA472DB2C3E /* Pods-Run-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Run-resources.sh"; sourceTree = "<group>"; };
-		993F2D9908E3A0A4A55AD8C18E469282 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		997E7052AFC92CE1F96696F2B4BF6223 /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
-		99E68458163686C8EB48AC2B8033C9E5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
-		9A76885F51CC024FFDCEEB6383A00D2B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		9B21B76FCB55B8773434E49F0DB7A245 /* NSDate+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Comparison.m"; path = "Source/NSDate/NSDate+MK_Comparison.m"; sourceTree = "<group>"; };
-		9EB60AC24D5692B33CDDB79E9DDC2917 /* NSObject+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_Misc.m"; path = "Source/NSObject/NSObject+MK_Misc.m"; sourceTree = "<group>"; };
-		A088A920539FF81F7E6ED7EE1492D306 /* FrameAccessor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FrameAccessor-dummy.m"; sourceTree = "<group>"; };
-		A0F4D53BD8D0567522A6433798140C3A /* NSDate+MK_Components.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Components.m"; path = "Source/NSDate/NSDate+MK_Components.m"; sourceTree = "<group>"; };
+		979F7C6C0E2FDCF7FD6E69569440C13A /* MKMacro_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Test.h; path = Source/Macros/MKMacro_Test.h; sourceTree = "<group>"; };
+		98F505E0A896F18D9020DB0EBBC627A2 /* MKMacro_Method.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Method.h; path = Source/Macros/MKMacro_Method.h; sourceTree = "<group>"; };
+		9A97DB854C5E99AB758B2505F5E18298 /* NSString+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Misc.m"; path = "Source/NSString/NSString+MK_Misc.m"; sourceTree = "<group>"; };
+		9AD71739D4A4B5B7314DC72AAC497D95 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		A117B88375FA277CDCC06483D1718894 /* Pods-Run-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Run-frameworks.sh"; sourceTree = "<group>"; };
-		A3390EF79E539C311F17E59E71573F4E /* NSString+MK_Conversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Conversion.h"; path = "Source/NSString/NSString+MK_Conversion.h"; sourceTree = "<group>"; };
-		A585C68906DCA9CCF6A2615FEB1C1138 /* NSNumber+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Comparison.h"; path = "Source/NSNumber/NSNumber+MK_Comparison.h"; sourceTree = "<group>"; };
-		AD5B59C6AB77342E8110F1750081C8C0 /* UICountingLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = UICountingLabel.m; sourceTree = "<group>"; };
-		AFF8D47E9BEFFAE4276CF238BF4807AF /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
-		B116689AD4A13DC9F5C71A11A0B17C05 /* NSDate+MK_Formatting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Formatting.m"; path = "Source/NSDate/NSDate+MK_Formatting.m"; sourceTree = "<group>"; };
-		B1460C6A4DFBA83E47982B31209602E9 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
-		B16162702F8B7D7301FF43E496F1B1CF /* NSMutableDictionary+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableDictionary+MK_Misc.h"; path = "Source/NSDictionary/NSMutableDictionary+MK_Misc.h"; sourceTree = "<group>"; };
-		B1B1DA7D31F20FAED1BD80954649DEA7 /* FrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FrameAccessor.h; path = FrameAccessor/FrameAccessor.h; sourceTree = "<group>"; };
-		B25134DDE18F8FE046E2FE01FC435FB0 /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
-		B6C74F3404B6C0327BC0E317FC266035 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		B75FB62C83B867FAADE7E58323A19769 /* FrameAccessor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrameAccessor.xcconfig; sourceTree = "<group>"; };
-		B770FE7E35365CF4914E74836E478C15 /* NSData+MK_Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+MK_Base64.h"; path = "Source/NSData/NSData+MK_Base64.h"; sourceTree = "<group>"; };
-		BC527F2C6BD7A5F93BDBF401958A2749 /* NSString+MK_Validation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Validation.m"; path = "Source/NSString/NSString+MK_Validation.m"; sourceTree = "<group>"; };
+		A1A3530CE25D7FBD2BD9B0ED4D55E59F /* NSObject+MK_AutoDescribe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_AutoDescribe.m"; path = "Source/NSObject/NSObject+MK_AutoDescribe.m"; sourceTree = "<group>"; };
+		A3A84B095FA76155281805F564CB5592 /* NSNumber+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Creation.m"; path = "Source/NSNumber/NSNumber+MK_Creation.m"; sourceTree = "<group>"; };
+		A883ECE46D532C7410C831E5E7893067 /* MKMacro_Log.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Log.h; path = Source/Macros/MKMacro_Log.h; sourceTree = "<group>"; };
+		A8BA62137391D3D267563783941AF470 /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
+		A9F7621EA1A01C16004A6457280A3A98 /* NSDate+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Creation.m"; path = "Source/NSDate/NSDate+MK_Creation.m"; sourceTree = "<group>"; };
+		ADFFA187A3F3EFE024205968755F9873 /* NSDictionary+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK.h"; path = "Source/NSDictionary/NSDictionary+MK.h"; sourceTree = "<group>"; };
+		B264E9046CA9A328EA3A240568BD66A7 /* NSDate+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK.h"; path = "Source/NSDate/NSDate+MK.h"; sourceTree = "<group>"; };
+		B3FAFC6ADA10AA2450321F75FC77135E /* NSDate+MK_Manipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Manipulation.m"; path = "Source/NSDate/NSDate+MK_Manipulation.m"; sourceTree = "<group>"; };
+		B4FD24E9FC8553C7D23E6F6B3CEAC039 /* NSNumber+MK_Negative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Negative.m"; path = "Source/NSNumber/NSNumber+MK_Negative.m"; sourceTree = "<group>"; };
+		B6CFC02CE5601489499C716689B0A5EF /* NSMutableArray+MK_Stack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Stack.m"; path = "Source/NSArray/NSMutableArray+MK_Stack.m"; sourceTree = "<group>"; };
+		B7BC6548380694B9FF3218A053B0F038 /* NSNumber+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Comparison.h"; path = "Source/NSNumber/NSNumber+MK_Comparison.h"; sourceTree = "<group>"; };
+		B8DC957569885F50A61277BCE872DC25 /* NSData+MK_Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MK_Base64.m"; path = "Source/NSData/NSData+MK_Base64.m"; sourceTree = "<group>"; };
+		BE0F713A722FC91BBC1EDE8D85B596CC /* NSString+MK_Empty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Empty.h"; path = "Source/NSString/NSString+MK_Empty.h"; sourceTree = "<group>"; };
 		BE157E72C4350E3C4E99347F86A7C247 /* libMKFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKFoundationKit.a; path = libMKFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE27D3012EB114C9893F4B332C8C1739 /* NSDictionary+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MK_Block.m"; path = "Source/NSDictionary/NSDictionary+MK_Block.m"; sourceTree = "<group>"; };
-		C28ED679D3322126DD369DCB206AF037 /* ViewFrameAccessor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ViewFrameAccessor.m; path = FrameAccessor/ViewFrameAccessor.m; sourceTree = "<group>"; };
-		C3333BDCBA2F040B424430DD5C8BEA14 /* MKMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro.h; path = Source/Macros/MKMacro.h; sourceTree = "<group>"; };
-		C47B11078C227113CEDB71C114E9927F /* NSString+MK_Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Base64.m"; path = "Source/NSString/NSString+MK_Base64.m"; sourceTree = "<group>"; };
-		C66942099EF06CF798496937B8C0D456 /* MKMacro_Geometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Geometry.h; path = Source/Macros/MKMacro_Geometry.h; sourceTree = "<group>"; };
-		C6BBCF4EB5B377D4728AFBAD7847CF15 /* MKFoundationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKFoundationKit.h; path = Source/MKFoundationKit.h; sourceTree = "<group>"; };
-		C77DA99C448422A53DE204A61D8A5867 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
-		C7A26945651A013B27424C411DC9B29A /* NSDate+MK_Manipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Manipulation.h"; path = "Source/NSDate/NSDate+MK_Manipulation.h"; sourceTree = "<group>"; };
+		C1F0910C7955A7EF46C7E8571DDD7AE2 /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
+		C54A093A6D9044F315BB5A46D62BBC0E /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		C59A529490255CADE184D838C9A289B7 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		C602EF7C4DA00DB3E14E7CEA2EE73BDC /* NSBundle+MK_Version.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MK_Version.m"; path = "Source/NSBundle/NSBundle+MK_Version.m"; sourceTree = "<group>"; };
+		CB066CD08D773F40BDF16F1BF9279334 /* MKFoundationKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKFoundationKit.h; path = Source/MKFoundationKit.h; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CD606FF90B7F799800D5DE198C15F4DE /* NSDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSDictionary+MK_Misc.m"; sourceTree = "<group>"; };
-		D03A560D45A809349DF69C4152648914 /* NSArray+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MK_Block.m"; path = "Source/NSArray/NSArray+MK_Block.m"; sourceTree = "<group>"; };
-		D55013B44F1B20B39D39AFA2D9D97CC7 /* NSNumber+MK_Fraction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Fraction.h"; path = "Source/NSNumber/NSNumber+MK_Fraction.h"; sourceTree = "<group>"; };
+		CD002DC727CADAA2CF498619F33F4C3A /* NSSet+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+MK_Block.h"; path = "Source/NSSet/NSSet+MK_Block.h"; sourceTree = "<group>"; };
+		D0258FB7C230D47DB28B39040CE11D14 /* MKMacro_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Version.h; path = Source/Macros/MKMacro_Version.h; sourceTree = "<group>"; };
+		D751D62EAD0D1039905F4893C5A34F9E /* FrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FrameAccessor.h; path = FrameAccessor/FrameAccessor.h; sourceTree = "<group>"; };
 		D8031A7D87BD6B22CD495D14342621FB /* Pods-Run-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Run-acknowledgements.plist"; sourceTree = "<group>"; };
-		D9488B8BBD6DCEBDE1A1C96C594C0EEA /* NSData+MK_Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MK_Base64.m"; path = "Source/NSData/NSData+MK_Base64.m"; sourceTree = "<group>"; };
-		DB0F8B50D6E8A445F639BD2C7ED268C1 /* NSNumber+MK_Negative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Negative.h"; path = "Source/NSNumber/NSNumber+MK_Negative.h"; sourceTree = "<group>"; };
-		DBADAC6FA0075493204B1D1E19FE29B2 /* NSNumber+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Comparison.m"; path = "Source/NSNumber/NSNumber+MK_Comparison.m"; sourceTree = "<group>"; };
-		DC2718F1A938BB3187462DBD6A01A0C8 /* NSString+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Misc.m"; path = "Source/NSString/NSString+MK_Misc.m"; sourceTree = "<group>"; };
-		DC7D31612CE44105605E7D80642AFF4C /* MKMacro_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Test.h; path = Source/Macros/MKMacro_Test.h; sourceTree = "<group>"; };
-		DCCD2E700E70803A80006E405BD13DA0 /* NSDictionary+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK.h"; path = "Source/NSDictionary/NSDictionary+MK.h"; sourceTree = "<group>"; };
-		DE3DBC121D9BD0618902D02C6AE68AE2 /* NSDictionary+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK_Block.h"; path = "Source/NSDictionary/NSDictionary+MK_Block.h"; sourceTree = "<group>"; };
-		DFA1349AA6305CA1EC99DA45C10C031F /* NSBundle+MK_Version.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MK_Version.m"; path = "Source/NSBundle/NSBundle+MK_Version.m"; sourceTree = "<group>"; };
-		E4E9E10AF9224C0AAC3354FCE0F9C793 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		D9F8AD8EBB5092AB5BF90019DBA10D93 /* NSMutableArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Misc.m"; path = "Source/NSArray/NSMutableArray+MK_Misc.m"; sourceTree = "<group>"; };
+		DB544A555B03F873758797FD423FECAA /* FrameAccessor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FrameAccessor.xcconfig; sourceTree = "<group>"; };
+		DFD6D0A63B8FB0B0211B7AF564DE7375 /* NSDictionary+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MK_Block.m"; path = "Source/NSDictionary/NSDictionary+MK_Block.m"; sourceTree = "<group>"; };
+		E34423C1C42584255440573E018AED42 /* NSNumber+MK_Precision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Precision.m"; path = "Source/NSNumber/NSNumber+MK_Precision.m"; sourceTree = "<group>"; };
+		E5D02695358015E2E4F67ADEBE21D090 /* NSNumber+MK_Precision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Precision.h"; path = "Source/NSNumber/NSNumber+MK_Precision.h"; sourceTree = "<group>"; };
 		E8A68CD4B567C2552876002406E8DBD6 /* Pods-Run-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Run-dummy.m"; sourceTree = "<group>"; };
-		E8D0EDE5B9C32BD3E10B701000826B0A /* NSSet+MK_Block.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSSet+MK_Block.m"; path = "Source/NSSet/NSSet+MK_Block.m"; sourceTree = "<group>"; };
-		E91A93B753DC378C96468E67FCDEC878 /* NSObject+MK_AutoDescribe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_AutoDescribe.m"; path = "Source/NSObject/NSObject+MK_AutoDescribe.m"; sourceTree = "<group>"; };
-		EA8750F585193E367E4E7297E485FE8A /* NSDate+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Creation.m"; path = "Source/NSDate/NSDate+MK_Creation.m"; sourceTree = "<group>"; };
-		EA9823EF1A57A6463C50F9620EE49499 /* NSNumber+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Creation.h"; path = "Source/NSNumber/NSNumber+MK_Creation.h"; sourceTree = "<group>"; };
-		F3F11DABCE51430934D3DF386CDB81D8 /* NSDate+MK_Manipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Manipulation.m"; path = "Source/NSDate/NSDate+MK_Manipulation.m"; sourceTree = "<group>"; };
-		F4688F44FE17C3C5D4864603B3731D22 /* NSNumber+MK_Manipulation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Manipulation.h"; path = "Source/NSNumber/NSNumber+MK_Manipulation.h"; sourceTree = "<group>"; };
+		EFC7B0AAFA3BC4F864E7A840BE05910A /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		EFD1640D2331CCC3E66225B8F807906A /* NSMutableArray+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Misc.h"; path = "Source/NSArray/NSMutableArray+MK_Misc.h"; sourceTree = "<group>"; };
+		F1457AB0E44D0CE0CFEBDB4E0E91FC24 /* MKMacro_Geometry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Geometry.h; path = Source/Macros/MKMacro_Geometry.h; sourceTree = "<group>"; };
+		F27E851BFB3ACCDA24DFCCB79CFDFD3F /* NSBundle+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MK.h"; path = "Source/NSBundle/NSBundle+MK.h"; sourceTree = "<group>"; };
 		F4803BDCCDBB5F8675AF915F74420737 /* Pods-Run.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Run.debug.xcconfig"; sourceTree = "<group>"; };
-		F915E95BF32FBBF5C0E46F0C03E6787D /* NSMutableArray+MK_Stack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Stack.m"; path = "Source/NSArray/NSMutableArray+MK_Stack.m"; sourceTree = "<group>"; };
-		FA66E11B6A04FB036B2FAA0073F71983 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		F610A3F63EE9DEF4E02E5D8DCEABD444 /* UICountingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UICountingLabel-prefix.pch"; sourceTree = "<group>"; };
+		F787439BD3E73FA4314837C7A8B9D819 /* NSString+MK_UTF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_UTF.h"; path = "Source/NSString/NSString+MK_UTF.h"; sourceTree = "<group>"; };
+		F81F13A8F5B57F275DE7856198C20187 /* NSDate+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Comparison.h"; path = "Source/NSDate/NSDate+MK_Comparison.h"; sourceTree = "<group>"; };
+		F8331B5D78109571F20B7A9148FA39EE /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		F887454F3E284D87B55CCB41C25F8C88 /* NSNumber+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK.h"; path = "Source/NSNumber/NSNumber+MK.h"; sourceTree = "<group>"; };
+		FC625D7D0FD98E26A4D3763CFAC24285 /* NSString+MK_UUID.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_UUID.m"; path = "Source/NSString/NSString+MK_UUID.m"; sourceTree = "<group>"; };
 		FC6BEA775AA2978EA7388191C26B5FC1 /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libUICountingLabel.a; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD30B26A7274F45C1A71DB006503FE7D /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
-		FE8C84937F56EE58F01CD6F341CE83BB /* NSString+MK_UTF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_UTF.m"; path = "Source/NSString/NSString+MK_UTF.m"; sourceTree = "<group>"; };
-		FEE0ADB3010CF822DBB053D992AB0AD5 /* ViewFrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewFrameAccessor.h; path = FrameAccessor/ViewFrameAccessor.h; sourceTree = "<group>"; };
-		FFE9D9A9B8F1B605666126665A06BF90 /* NSNumber+MK_Manipulation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Manipulation.m"; path = "Source/NSNumber/NSNumber+MK_Manipulation.m"; sourceTree = "<group>"; };
+		FEEAF66628E1A38A4D5B6F854D080378 /* NSMutableArray+MK_Queue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+MK_Queue.h"; path = "Source/NSArray/NSMutableArray+MK_Queue.h"; sourceTree = "<group>"; };
+		FF7B3405DD1890044C8D2C2899176BE8 /* NSString+MK_Base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Base64.h"; path = "Source/NSString/NSString+MK_Base64.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,39 +304,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08158C743C66A0FBB36BFAF43AF7B51A /* Pods */ = {
+		14DF58B12CBD20C336445581E581521D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9E077981BD2605D3DF502E30C4B39306 /* Firebase */,
-				2588A8F6DA83FC798EDD1C391FAB4B7E /* FirebaseAnalytics */,
-				2F1B2E5C695270363F487003A1EB1554 /* FirebaseCore */,
-				E5B215C9DD2CF1AD6F471D9AC6C0D2EF /* FirebaseInstanceID */,
-				96D25D60C5037FE7D1D182EF34A987A5 /* FrameAccessor */,
-				F96E99755BD85449780E2D44FF7239EC /* Google-Mobile-Ads-SDK */,
-				F6F78905D4F7AD79A635517A673E3A73 /* GoogleInterchangeUtilities */,
-				B8C17857E13FE4B9849221604B2A0D20 /* GoogleSymbolUtilities */,
-				67CF531D0C7CEEE7E73206B95EF9D35A /* GoogleToolboxForMac */,
-				CEED622984D70B7EF71FA209F54B0FBD /* MKFoundationKit */,
-				F30E8214CAF3C6F9D7228CCB18B8FC65 /* UICountingLabel */,
+				DB544A555B03F873758797FD423FECAA /* FrameAccessor.xcconfig */,
+				7D5EE8A08AFD554375F950237B08B4D0 /* FrameAccessor-dummy.m */,
+				5F943019354F14244116761952856853 /* FrameAccessor-prefix.pch */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		09A9D6014DA2375B8875C76F9974F57B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B6C74F3404B6C0327BC0E317FC266035 /* FirebaseAnalytics.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		14C55EF74C1146E94656526CFAB5426E /* NSData+zlib */ = {
-			isa = PBXGroup;
-			children = (
-				FA66E11B6A04FB036B2FAA0073F71983 /* GTMNSData+zlib.h */,
-				AFF8D47E9BEFFAE4276CF238BF4807AF /* GTMNSData+zlib.m */,
-			);
-			name = "NSData+zlib";
+			name = "Support Files";
+			path = "../Target Support Files/FrameAccessor";
 			sourceTree = "<group>";
 		};
 		1C50F61FA7BFF7FAF366E4C8CEEECFB8 /* Products */ = {
@@ -354,45 +327,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		217378361DE1BAC008F205536393B326 /* NSSet */ = {
+		2D6D3C2F7BBE7E8C58284050B47D7508 /* Base64 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = NSSet;
+			name = Base64;
 			sourceTree = "<group>";
 		};
-		2588A8F6DA83FC798EDD1C391FAB4B7E /* FirebaseAnalytics */ = {
+		3163C60A7C57CDDA58CD5B057D4AA518 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				09A9D6014DA2375B8875C76F9974F57B /* Frameworks */,
-			);
-			name = FirebaseAnalytics;
-			path = FirebaseAnalytics;
-			sourceTree = "<group>";
-		};
-		28CF47CD2DBC3E25684714968B2B1068 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				993F2D9908E3A0A4A55AD8C18E469282 /* FirebaseInstanceID.framework */,
+				3C86E51A81D4620A449FDC94691537BC /* FirebaseAnalytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2F1B2E5C695270363F487003A1EB1554 /* FirebaseCore */ = {
+		348462BC84DD53E5634929AA8A95793D /* Stack */ = {
 			isa = PBXGroup;
 			children = (
-				E1762451E553F51B90416871400301B5 /* Frameworks */,
 			);
-			name = FirebaseCore;
-			path = FirebaseCore;
+			name = Stack;
 			sourceTree = "<group>";
 		};
-		325EE81E1724ABAAAA5EC7E50E5131A3 /* Frameworks */ = {
+		365424AFF302A40D0D8D2622A7F87065 /* NSNumber */ = {
 			isa = PBXGroup;
 			children = (
-				FD30B26A7274F45C1A71DB006503FE7D /* GoogleInterchangeUtilities.framework */,
 			);
-			name = Frameworks;
+			name = NSNumber;
 			sourceTree = "<group>";
 		};
 		3AD0E01210B3ACF0FBCBF2C255617D38 /* Pods-Run */ = {
@@ -410,77 +371,104 @@
 			path = "Target Support Files/Pods-Run";
 			sourceTree = "<group>";
 		};
-		416BB6B427FD4B2486A0EF1ADEB50962 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				99E68458163686C8EB48AC2B8033C9E5 /* GoogleMobileAds.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		43FBF31BF28F6F7283ABF3AFD910CEC0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B75FB62C83B867FAADE7E58323A19769 /* FrameAccessor.xcconfig */,
-				A088A920539FF81F7E6ED7EE1492D306 /* FrameAccessor-dummy.m */,
-				63315FBEAE60B3C7CF3C768C974D2181 /* FrameAccessor-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FrameAccessor";
-			sourceTree = "<group>";
-		};
-		450BFAA7D6A1A61EA69A5835037032B3 /* NSString */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSString;
-			sourceTree = "<group>";
-		};
-		575A10DF2D99D6B78F708ADBC8C88648 /* NSBundle */ = {
+		3E96AB21FC89C43C57FC6BCFAB06B8D5 /* NSBundle */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = NSBundle;
 			sourceTree = "<group>";
 		};
-		61591262DD595F8261C7A453D5A5D130 /* NSNumber */ = {
+		414E41C08AAA8BA5103A4B2D35E82DE4 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				553AA1A1059AEFF63445328984D2A6C6 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		437A90602EEBFEAC0DADD5CC1E040388 /* AutoDescribe */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = NSNumber;
+			name = AutoDescribe;
 			sourceTree = "<group>";
 		};
-		64470365223ACBABA11722DA4DF5DFEF /* Frameworks */ = {
+		4882E2335846092831BFB23778E6AF50 /* NSData+zlib */ = {
 			isa = PBXGroup;
 			children = (
-				882FB4501F8F1998B43B4869847F49B2 /* GoogleSymbolUtilities.framework */,
+				77BA3BBC2874C4B78D2F5E34E824F8FC /* GTMNSData+zlib.h */,
+				777808FCF40F25FA72F0249ED39E200C /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		525CDEC4DA564442EDFF702AF1D6C2FF /* NSSet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSSet;
+			sourceTree = "<group>";
+		};
+		553AA1A1059AEFF63445328984D2A6C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9AD71739D4A4B5B7314DC72AAC497D95 /* FirebaseCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		66EC46E266B5669522BEE2A2C6131AAA /* Queue */ = {
+		57F2C3C4B27E287D06D869B2E5571BF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C66B54A55B6AEC79AADCD05E28F59072 /* Firebase */,
+				F026C5544619125A0AD9E135346EF8C3 /* FirebaseAnalytics */,
+				414E41C08AAA8BA5103A4B2D35E82DE4 /* FirebaseCore */,
+				C7FE48F10F8271BED6CC14A140870F30 /* FirebaseInstanceID */,
+				D9A9607AC18876299F598D1067A91C73 /* FrameAccessor */,
+				A5A83F317F0428FD533C5FF670CEC663 /* Google-Mobile-Ads-SDK */,
+				FD0E521C72326AD235F5AB5325B1E71A /* GoogleToolboxForMac */,
+				81A4DBC73F52589AAB9CEBC9260FA6B3 /* MKFoundationKit */,
+				D3F757225DC31C85507ACBC438F0AB54 /* UICountingLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5A15D3E23203104A850FF67E64B027E3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				13FCAB83618AA836F86AAB159BD2668C /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		6084FE55F4B973EAA1E764E04214FC8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8331B5D78109571F20B7A9148FA39EE /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61F802A645C1F6AC7013E15B5B1FCA80 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Queue;
+			name = NSString;
 			sourceTree = "<group>";
 		};
-		67CF531D0C7CEEE7E73206B95EF9D35A /* GoogleToolboxForMac */ = {
-			isa = PBXGroup;
-			children = (
-				75B41DBD056FBEFC27B8D3BAAE1D930F /* Defines */,
-				14C55EF74C1146E94656526CFAB5426E /* NSData+zlib */,
-				C7D64CEDB32E982D9E12F42824391E91 /* Support Files */,
-			);
-			name = GoogleToolboxForMac;
-			path = GoogleToolboxForMac;
-			sourceTree = "<group>";
-		};
-		6CE9693AD0C06A1F04368AC59511CE4F /* NSDate */ = {
+		6AAE060929BDC97FEE519F32B0A3C445 /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = NSDate;
+			sourceTree = "<group>";
+		};
+		70F33059F6A703681971B2245AAB1689 /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSArray;
 			sourceTree = "<group>";
 		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
@@ -491,69 +479,130 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		75B41DBD056FBEFC27B8D3BAAE1D930F /* Defines */ = {
-			isa = PBXGroup;
-			children = (
-				9A76885F51CC024FFDCEEB6383A00D2B /* GTMDefines.h */,
-			);
-			name = Defines;
-			sourceTree = "<group>";
-		};
-		789EE42CC4277127C287A5059CE71BD4 /* Stack */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Stack;
-			sourceTree = "<group>";
-		};
-		7B08FEAB0AA19903EC0D78B684045C36 /* NSDictionary */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSDictionary;
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				08158C743C66A0FBB36BFAF43AF7B51A /* Pods */,
+				57F2C3C4B27E287D06D869B2E5571BF5 /* Pods */,
 				1C50F61FA7BFF7FAF366E4C8CEEECFB8 /* Products */,
 				97D4BB2B19FA602574C868355DE175DF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		800D84EFA6935D2F1B45C9074E16FB8C /* Support Files */ = {
+		81A4DBC73F52589AAB9CEBC9260FA6B3 /* MKFoundationKit */ = {
 			isa = PBXGroup;
 			children = (
-				141B053DE4D84EB1FFD20DB462C7E607 /* MKFoundationKit.xcconfig */,
-				1521AF4F89E85B3B918A90E3697603AC /* MKFoundationKit-dummy.m */,
-				564BA5B4444ACF58E9A874655EDF102E /* MKFoundationKit-prefix.pch */,
+				CB066CD08D773F40BDF16F1BF9279334 /* MKFoundationKit.h */,
+				70F78F8987A93E39FA95D79802114C1C /* MKMacro.h */,
+				F1457AB0E44D0CE0CFEBDB4E0E91FC24 /* MKMacro_Geometry.h */,
+				A883ECE46D532C7410C831E5E7893067 /* MKMacro_Log.h */,
+				98F505E0A896F18D9020DB0EBBC627A2 /* MKMacro_Method.h */,
+				979F7C6C0E2FDCF7FD6E69569440C13A /* MKMacro_Test.h */,
+				D0258FB7C230D47DB28B39040CE11D14 /* MKMacro_Version.h */,
+				4CA9ED08E521F7AC3BE927D5EB87BF8B /* NSArray+MK.h */,
+				87512059D94113A782766B49B338B6DF /* NSArray+MK_Block.h */,
+				7071512295E2CB5BFE052E1771EA4B8C /* NSArray+MK_Block.m */,
+				6C373F529EC2806E5010BE4B945B9146 /* NSArray+MK_Misc.h */,
+				34FB3DBB362FE5AC24402D5CBB486FE8 /* NSArray+MK_Misc.m */,
+				F27E851BFB3ACCDA24DFCCB79CFDFD3F /* NSBundle+MK.h */,
+				0292C632DC288F9BD7426450CB8915FC /* NSBundle+MK_Version.h */,
+				C602EF7C4DA00DB3E14E7CEA2EE73BDC /* NSBundle+MK_Version.m */,
+				5DEEAA3775FF9F0D788B3C4D0C4BF53E /* NSData+MK.h */,
+				435D22C703FF9D16F63002BC0F6289A8 /* NSData+MK_Base64.h */,
+				B8DC957569885F50A61277BCE872DC25 /* NSData+MK_Base64.m */,
+				B264E9046CA9A328EA3A240568BD66A7 /* NSDate+MK.h */,
+				F81F13A8F5B57F275DE7856198C20187 /* NSDate+MK_Comparison.h */,
+				3512B8415D9C55C5A13F0FE44A838F90 /* NSDate+MK_Comparison.m */,
+				3672C3D0EFA4AAD9E92386C66A6BE580 /* NSDate+MK_Components.h */,
+				1B49D3254FC31DEC2115F562CE0766DC /* NSDate+MK_Components.m */,
+				157D7738F0D15455D10370A4802BF345 /* NSDate+MK_Creation.h */,
+				A9F7621EA1A01C16004A6457280A3A98 /* NSDate+MK_Creation.m */,
+				7CF30BFD3A702211DCA70C662A2C6761 /* NSDate+MK_Formatting.h */,
+				33D51137198D5F2383366057061C80D5 /* NSDate+MK_Formatting.m */,
+				04C39748B2E358605987D584C2043879 /* NSDate+MK_Manipulation.h */,
+				B3FAFC6ADA10AA2450321F75FC77135E /* NSDate+MK_Manipulation.m */,
+				ADFFA187A3F3EFE024205968755F9873 /* NSDictionary+MK.h */,
+				113BE1FA105ADD8F4E7BC9969BA7FFBB /* NSDictionary+MK_Block.h */,
+				DFD6D0A63B8FB0B0211B7AF564DE7375 /* NSDictionary+MK_Block.m */,
+				5C9D35E85DD93C643576C2FFBACE3B67 /* NSDictionary+MK_Misc.h */,
+				08F68A32B0C22C5903B0FAD4C65AA265 /* NSDictionary+MK_Misc.m */,
+				EFD1640D2331CCC3E66225B8F807906A /* NSMutableArray+MK_Misc.h */,
+				D9F8AD8EBB5092AB5BF90019DBA10D93 /* NSMutableArray+MK_Misc.m */,
+				FEEAF66628E1A38A4D5B6F854D080378 /* NSMutableArray+MK_Queue.h */,
+				5C92320D32581D52912F1A64E048AB1D /* NSMutableArray+MK_Queue.m */,
+				6E4DD2E3FFB84AFC405FF17C636C1F2A /* NSMutableArray+MK_Stack.h */,
+				B6CFC02CE5601489499C716689B0A5EF /* NSMutableArray+MK_Stack.m */,
+				8D5A7A37BB5640AA0ECF0BC92DFCC748 /* NSMutableDictionary+MK_Misc.h */,
+				67A02237F1E4FDFBF7EC31BD6632CD11 /* NSMutableDictionary+MK_Misc.m */,
+				F887454F3E284D87B55CCB41C25F8C88 /* NSNumber+MK.h */,
+				B7BC6548380694B9FF3218A053B0F038 /* NSNumber+MK_Comparison.h */,
+				036CC29DD8747BB605B0A575C9827EB2 /* NSNumber+MK_Comparison.m */,
+				43ACB4868FDF4BA875915A0EFBD73F94 /* NSNumber+MK_Creation.h */,
+				A3A84B095FA76155281805F564CB5592 /* NSNumber+MK_Creation.m */,
+				732A16762BA48A3387DFF11D64ABB8B3 /* NSNumber+MK_Fraction.h */,
+				21B73EEF106C6DE95DFC8223331707DC /* NSNumber+MK_Fraction.m */,
+				3E764198F48095ACC4EC4DCDACC8C0A0 /* NSNumber+MK_Manipulation.h */,
+				02D2177E4D79AE69DF971668EA28C002 /* NSNumber+MK_Manipulation.m */,
+				5B87DB0A7032A18B41AE573F9FE62AA3 /* NSNumber+MK_Negative.h */,
+				B4FD24E9FC8553C7D23E6F6B3CEAC039 /* NSNumber+MK_Negative.m */,
+				E5D02695358015E2E4F67ADEBE21D090 /* NSNumber+MK_Precision.h */,
+				E34423C1C42584255440573E018AED42 /* NSNumber+MK_Precision.m */,
+				54C6C8CDD3D439E561362E8ABABFB181 /* NSObject+MK.h */,
+				12063768AEB413A8BB3508B623458C44 /* NSObject+MK_AutoDescribe.h */,
+				A1A3530CE25D7FBD2BD9B0ED4D55E59F /* NSObject+MK_AutoDescribe.m */,
+				19BAEEF0CD69B53C9013402952CD6128 /* NSObject+MK_Misc.h */,
+				505CDB2450CFBD264D0CFF8C085C0FE1 /* NSObject+MK_Misc.m */,
+				91CD0AF1B69697408BD83E7872210D64 /* NSSet+MK.h */,
+				CD002DC727CADAA2CF498619F33F4C3A /* NSSet+MK_Block.h */,
+				6920D1D3D5B0B963A8B5AFBE3362AD95 /* NSSet+MK_Block.m */,
+				275EE81D94D9FC5D7DA5EE323531D03C /* NSString+MK.h */,
+				FF7B3405DD1890044C8D2C2899176BE8 /* NSString+MK_Base64.h */,
+				81D2C20BEB71ABF5A101149FB12F6256 /* NSString+MK_Base64.m */,
+				72745DCCD0E30E6502A737D7966F4B45 /* NSString+MK_Conversion.h */,
+				3B4220E0963767C916C023211103D6BE /* NSString+MK_Conversion.m */,
+				BE0F713A722FC91BBC1EDE8D85B596CC /* NSString+MK_Empty.h */,
+				86963DE27539281AA66F8CBB804A3E97 /* NSString+MK_Empty.m */,
+				2F91AE038C1A0152BEB257484DC54730 /* NSString+MK_Misc.h */,
+				9A97DB854C5E99AB758B2505F5E18298 /* NSString+MK_Misc.m */,
+				F787439BD3E73FA4314837C7A8B9D819 /* NSString+MK_UTF.h */,
+				0BEA5A8BCD3609360EB89E85B599E2E7 /* NSString+MK_UTF.m */,
+				7AF961DAFDFF69A853033250A8181BBB /* NSString+MK_UUID.h */,
+				FC625D7D0FD98E26A4D3763CFAC24285 /* NSString+MK_UUID.m */,
+				39CBF92FA516C65D7FFFBA7B84759D4A /* NSString+MK_Validation.h */,
+				1099744538A77A88E861443E1154FF97 /* NSString+MK_Validation.m */,
+				437A90602EEBFEAC0DADD5CC1E040388 /* AutoDescribe */,
+				2D6D3C2F7BBE7E8C58284050B47D7508 /* Base64 */,
+				FB157FB6A2DF0C5F6EB66E8C0571CF51 /* Block */,
+				70F33059F6A703681971B2245AAB1689 /* NSArray */,
+				3E96AB21FC89C43C57FC6BCFAB06B8D5 /* NSBundle */,
+				6AAE060929BDC97FEE519F32B0A3C445 /* NSDate */,
+				D2577E5F9F0A3754F150A5647F4E05F2 /* NSDictionary */,
+				365424AFF302A40D0D8D2622A7F87065 /* NSNumber */,
+				FD71DD346826DDC11010C2F465E70320 /* NSObject */,
+				525CDEC4DA564442EDFF702AF1D6C2FF /* NSSet */,
+				61F802A645C1F6AC7013E15B5B1FCA80 /* NSString */,
+				8C556623508B3CA420F87A6A5035E13B /* Queue */,
+				348462BC84DD53E5634929AA8A95793D /* Stack */,
+				A5ED30505D63496313D35FA9C8A77449 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/MKFoundationKit";
+			name = MKFoundationKit;
+			path = MKFoundationKit;
 			sourceTree = "<group>";
 		};
-		9144CBF6130F06805727A2EC9031066C /* Block */ = {
+		8C556623508B3CA420F87A6A5035E13B /* Queue */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Block;
+			name = Queue;
 			sourceTree = "<group>";
 		};
-		96D25D60C5037FE7D1D182EF34A987A5 /* FrameAccessor */ = {
+		96C940CFFCFC070B349509C56C14220E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B1B1DA7D31F20FAED1BD80954649DEA7 /* FrameAccessor.h */,
-				12336959042A9F0D93A782CEFB4EB550 /* ScrollViewFrameAccessor.h */,
-				0BDFEF562766F3DE0F95C5E7411E7BBF /* ScrollViewFrameAccessor.m */,
-				FEE0ADB3010CF822DBB053D992AB0AD5 /* ViewFrameAccessor.h */,
-				C28ED679D3322126DD369DCB206AF037 /* ViewFrameAccessor.m */,
-				43FBF31BF28F6F7283ABF3AFD910CEC0 /* Support Files */,
+				C54A093A6D9044F315BB5A46D62BBC0E /* FirebaseInstanceID.framework */,
 			);
-			name = FrameAccessor;
-			path = FrameAccessor;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		97D4BB2B19FA602574C868355DE175DF /* Targets Support Files */ = {
@@ -564,36 +613,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9B7CCA7E44CBE700992B1F6737ACE6E7 /* Base64 */ = {
+		A5A83F317F0428FD533C5FF670CEC663 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
+				6084FE55F4B973EAA1E764E04214FC8B /* Frameworks */,
 			);
-			name = Base64;
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
-		9E077981BD2605D3DF502E30C4B39306 /* Firebase */ = {
+		A5ED30505D63496313D35FA9C8A77449 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				DF2543237A362D679DA6782D2739AF01 /* Core */,
+				4B65FFE92A92DFE9FCCB3090F6456D97 /* MKFoundationKit.xcconfig */,
+				887E7958FEF8A79FC9D707352986B75B /* MKFoundationKit-dummy.m */,
+				36477D5A99BD2E527E31E72CC02B37D3 /* MKFoundationKit-prefix.pch */,
 			);
-			name = Firebase;
-			path = Firebase;
-			sourceTree = "<group>";
-		};
-		A7B565A1A0792860AFF4F0264FDE015C /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = NSObject;
-			sourceTree = "<group>";
-		};
-		B8C17857E13FE4B9849221604B2A0D20 /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				64470365223ACBABA11722DA4DF5DFEF /* Frameworks */,
-			);
-			name = GoogleSymbolUtilities;
-			path = GoogleSymbolUtilities;
+			name = "Support Files";
+			path = "../Target Support Files/MKFoundationKit";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -604,195 +641,118 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCC7C8534215E0485C68977B9D85A108 /* AutoDescribe */ = {
+		C66B54A55B6AEC79AADCD05E28F59072 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				5A15D3E23203104A850FF67E64B027E3 /* Core */,
 			);
-			name = AutoDescribe;
+			name = Firebase;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
-		C7D64CEDB32E982D9E12F42824391E91 /* Support Files */ = {
+		C7FE48F10F8271BED6CC14A140870F30 /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				B1460C6A4DFBA83E47982B31209602E9 /* GoogleToolboxForMac.xcconfig */,
-				1516325B96DEC0423FA98D2099E47404 /* GoogleToolboxForMac-dummy.m */,
-				02700FF5079D152FFA14A106A28426FC /* GoogleToolboxForMac-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleToolboxForMac";
-			sourceTree = "<group>";
-		};
-		CEED622984D70B7EF71FA209F54B0FBD /* MKFoundationKit */ = {
-			isa = PBXGroup;
-			children = (
-				C6BBCF4EB5B377D4728AFBAD7847CF15 /* MKFoundationKit.h */,
-				C3333BDCBA2F040B424430DD5C8BEA14 /* MKMacro.h */,
-				C66942099EF06CF798496937B8C0D456 /* MKMacro_Geometry.h */,
-				514F2B95CB49836D34DED2B21E1E0FC0 /* MKMacro_Log.h */,
-				1D842D737A2F85A7C4A6880A74305C40 /* MKMacro_Method.h */,
-				DC7D31612CE44105605E7D80642AFF4C /* MKMacro_Test.h */,
-				6755317E0A7753E3F760EC1B63D63ADB /* MKMacro_Version.h */,
-				0A88BD463E6073C7453D0AD9F60F95EA /* NSArray+MK.h */,
-				07DF04756C567D33014D88EBEAC15727 /* NSArray+MK_Block.h */,
-				D03A560D45A809349DF69C4152648914 /* NSArray+MK_Block.m */,
-				76DAE1F510C3CADACB63776142331400 /* NSArray+MK_Misc.h */,
-				0BDDB2B4A02FA97C036C30636A5DCACE /* NSArray+MK_Misc.m */,
-				6A39BA08EB4EBCC5FD0CBF01D97546CF /* NSBundle+MK.h */,
-				41F2288E1873E35F67EB7B8299AAA835 /* NSBundle+MK_Version.h */,
-				DFA1349AA6305CA1EC99DA45C10C031F /* NSBundle+MK_Version.m */,
-				8F077D3440D1B1DB21605920ADA8FD2B /* NSData+MK.h */,
-				B770FE7E35365CF4914E74836E478C15 /* NSData+MK_Base64.h */,
-				D9488B8BBD6DCEBDE1A1C96C594C0EEA /* NSData+MK_Base64.m */,
-				8E86E7A57367BEE17338498FFC85A348 /* NSDate+MK.h */,
-				45DA20F3775A30EA6FF1092612149F8D /* NSDate+MK_Comparison.h */,
-				9B21B76FCB55B8773434E49F0DB7A245 /* NSDate+MK_Comparison.m */,
-				7651D710873F41587AE72E7080405CFD /* NSDate+MK_Components.h */,
-				A0F4D53BD8D0567522A6433798140C3A /* NSDate+MK_Components.m */,
-				3DD7C24472CC91B4BD6225369C944CC7 /* NSDate+MK_Creation.h */,
-				EA8750F585193E367E4E7297E485FE8A /* NSDate+MK_Creation.m */,
-				71CD7E918C1906A5EB769F2E80DB77BE /* NSDate+MK_Formatting.h */,
-				B116689AD4A13DC9F5C71A11A0B17C05 /* NSDate+MK_Formatting.m */,
-				C7A26945651A013B27424C411DC9B29A /* NSDate+MK_Manipulation.h */,
-				F3F11DABCE51430934D3DF386CDB81D8 /* NSDate+MK_Manipulation.m */,
-				DCCD2E700E70803A80006E405BD13DA0 /* NSDictionary+MK.h */,
-				DE3DBC121D9BD0618902D02C6AE68AE2 /* NSDictionary+MK_Block.h */,
-				BE27D3012EB114C9893F4B332C8C1739 /* NSDictionary+MK_Block.m */,
-				3AAF23A9C51200182912AFA3CD7AE534 /* NSDictionary+MK_Misc.h */,
-				CD606FF90B7F799800D5DE198C15F4DE /* NSDictionary+MK_Misc.m */,
-				84A998568B085B44FB0E9BA82664290B /* NSMutableArray+MK_Misc.h */,
-				07E9CE542B8E24A7CECF47A7928BA5B0 /* NSMutableArray+MK_Misc.m */,
-				3A3AA15A445DD900AF00D0EB3E0898E0 /* NSMutableArray+MK_Queue.h */,
-				86AD33122D51E279F52FFB8E2C0AED78 /* NSMutableArray+MK_Queue.m */,
-				13AF653A77AF438F02EEA2E2D33CF5AC /* NSMutableArray+MK_Stack.h */,
-				F915E95BF32FBBF5C0E46F0C03E6787D /* NSMutableArray+MK_Stack.m */,
-				B16162702F8B7D7301FF43E496F1B1CF /* NSMutableDictionary+MK_Misc.h */,
-				86FEED9A0F73920DE5D649281F86FF53 /* NSMutableDictionary+MK_Misc.m */,
-				1E0EF4937BBABD34075BCF6C037B038A /* NSNumber+MK.h */,
-				A585C68906DCA9CCF6A2615FEB1C1138 /* NSNumber+MK_Comparison.h */,
-				DBADAC6FA0075493204B1D1E19FE29B2 /* NSNumber+MK_Comparison.m */,
-				EA9823EF1A57A6463C50F9620EE49499 /* NSNumber+MK_Creation.h */,
-				286E3F44B25ADB55E2C4293CEA97F7F9 /* NSNumber+MK_Creation.m */,
-				D55013B44F1B20B39D39AFA2D9D97CC7 /* NSNumber+MK_Fraction.h */,
-				88AB33DE9584D8CB3E9980188A54F5BB /* NSNumber+MK_Fraction.m */,
-				F4688F44FE17C3C5D4864603B3731D22 /* NSNumber+MK_Manipulation.h */,
-				FFE9D9A9B8F1B605666126665A06BF90 /* NSNumber+MK_Manipulation.m */,
-				DB0F8B50D6E8A445F639BD2C7ED268C1 /* NSNumber+MK_Negative.h */,
-				4AB5D5FEA20C128540016D8F99B43973 /* NSNumber+MK_Negative.m */,
-				90493F88297DA1F830AF591B56A10E9C /* NSNumber+MK_Precision.h */,
-				6418EDEFC34CD9459964E43352C94CC3 /* NSNumber+MK_Precision.m */,
-				6AFCCE27B0A31ACAC2FB5871C3FDFB10 /* NSObject+MK.h */,
-				259554D5772230A109F98E703D9EB2CE /* NSObject+MK_AutoDescribe.h */,
-				E91A93B753DC378C96468E67FCDEC878 /* NSObject+MK_AutoDescribe.m */,
-				8B96DF423489A23C1E80CD28B8D35176 /* NSObject+MK_Misc.h */,
-				9EB60AC24D5692B33CDDB79E9DDC2917 /* NSObject+MK_Misc.m */,
-				7CA8BDFDEB5C8ED0AFBE861EFB59B68B /* NSSet+MK.h */,
-				70587B036181727D654F4CD32F8D5593 /* NSSet+MK_Block.h */,
-				E8D0EDE5B9C32BD3E10B701000826B0A /* NSSet+MK_Block.m */,
-				76E7C4A275B3547D410A7FBBD898D537 /* NSString+MK.h */,
-				1D2A6D0A6C409CAB2BBD198BC6C58C1E /* NSString+MK_Base64.h */,
-				C47B11078C227113CEDB71C114E9927F /* NSString+MK_Base64.m */,
-				A3390EF79E539C311F17E59E71573F4E /* NSString+MK_Conversion.h */,
-				507913995C4B0B80F450A4028BD57C49 /* NSString+MK_Conversion.m */,
-				5751474B23E2E1BE6A334C8B3B10997B /* NSString+MK_Empty.h */,
-				30B85CAFA6D98AD6FB74593E5AC77347 /* NSString+MK_Empty.m */,
-				055A5E7DF3A88C801A9B009FFA9BF897 /* NSString+MK_Misc.h */,
-				DC2718F1A938BB3187462DBD6A01A0C8 /* NSString+MK_Misc.m */,
-				864C8A996B28565FB76159B86F813BE3 /* NSString+MK_UTF.h */,
-				FE8C84937F56EE58F01CD6F341CE83BB /* NSString+MK_UTF.m */,
-				41BAA6778BD6B6A5C5672F8611DDA445 /* NSString+MK_UUID.h */,
-				18283814B69E6141F8242A3F2475A628 /* NSString+MK_UUID.m */,
-				1E6599484F6908FE6709AF1D617A9F24 /* NSString+MK_Validation.h */,
-				BC527F2C6BD7A5F93BDBF401958A2749 /* NSString+MK_Validation.m */,
-				BCC7C8534215E0485C68977B9D85A108 /* AutoDescribe */,
-				9B7CCA7E44CBE700992B1F6737ACE6E7 /* Base64 */,
-				9144CBF6130F06805727A2EC9031066C /* Block */,
-				EEF687C636FAB87358D650B7ADDB9339 /* NSArray */,
-				575A10DF2D99D6B78F708ADBC8C88648 /* NSBundle */,
-				6CE9693AD0C06A1F04368AC59511CE4F /* NSDate */,
-				7B08FEAB0AA19903EC0D78B684045C36 /* NSDictionary */,
-				61591262DD595F8261C7A453D5A5D130 /* NSNumber */,
-				A7B565A1A0792860AFF4F0264FDE015C /* NSObject */,
-				217378361DE1BAC008F205536393B326 /* NSSet */,
-				450BFAA7D6A1A61EA69A5835037032B3 /* NSString */,
-				66EC46E266B5669522BEE2A2C6131AAA /* Queue */,
-				789EE42CC4277127C287A5059CE71BD4 /* Stack */,
-				800D84EFA6935D2F1B45C9074E16FB8C /* Support Files */,
-			);
-			name = MKFoundationKit;
-			path = MKFoundationKit;
-			sourceTree = "<group>";
-		};
-		DF2543237A362D679DA6782D2739AF01 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				3A85707423CE67963A2BC15B083B38E3 /* Firebase.h */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		E1762451E553F51B90416871400301B5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E4E9E10AF9224C0AAC3354FCE0F9C793 /* FirebaseCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E5B215C9DD2CF1AD6F471D9AC6C0D2EF /* FirebaseInstanceID */ = {
-			isa = PBXGroup;
-			children = (
-				C77DA99C448422A53DE204A61D8A5867 /* FIRInstanceID.h */,
-				28CF47CD2DBC3E25684714968B2B1068 /* Frameworks */,
+				96C940CFFCFC070B349509C56C14220E /* Frameworks */,
 			);
 			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
-		E621D2C0E631693BFB66C963C6341F18 /* Support Files */ = {
+		CF9B23903BEE67790776AC87531DE829 /* Defines */ = {
 			isa = PBXGroup;
 			children = (
-				B25134DDE18F8FE046E2FE01FC435FB0 /* UICountingLabel.xcconfig */,
-				0FFCFAFDCAE7B6CAF71B5D323D46DB7F /* UICountingLabel-dummy.m */,
-				5BDB8E908E23582678B86D1E13A09BB1 /* UICountingLabel-prefix.pch */,
+				EFC7B0AAFA3BC4F864E7A840BE05910A /* GTMDefines.h */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/UICountingLabel";
+			name = Defines;
 			sourceTree = "<group>";
 		};
-		EEF687C636FAB87358D650B7ADDB9339 /* NSArray */ = {
+		D2577E5F9F0A3754F150A5647F4E05F2 /* NSDictionary */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = NSArray;
+			name = NSDictionary;
 			sourceTree = "<group>";
 		};
-		F30E8214CAF3C6F9D7228CCB18B8FC65 /* UICountingLabel */ = {
+		D3F757225DC31C85507ACBC438F0AB54 /* UICountingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				997E7052AFC92CE1F96696F2B4BF6223 /* UICountingLabel.h */,
-				AD5B59C6AB77342E8110F1750081C8C0 /* UICountingLabel.m */,
-				E621D2C0E631693BFB66C963C6341F18 /* Support Files */,
+				A8BA62137391D3D267563783941AF470 /* UICountingLabel.h */,
+				010D7A12257925644A6F0A8658DB2BA5 /* UICountingLabel.m */,
+				E808E474DC83A5928FD8E0BDE173AFE6 /* Support Files */,
 			);
 			name = UICountingLabel;
 			path = UICountingLabel;
 			sourceTree = "<group>";
 		};
-		F6F78905D4F7AD79A635517A673E3A73 /* GoogleInterchangeUtilities */ = {
+		D9A9607AC18876299F598D1067A91C73 /* FrameAccessor */ = {
 			isa = PBXGroup;
 			children = (
-				325EE81E1724ABAAAA5EC7E50E5131A3 /* Frameworks */,
+				D751D62EAD0D1039905F4893C5A34F9E /* FrameAccessor.h */,
+				1B85C088AF82F1470F0140818241FC31 /* ScrollViewFrameAccessor.h */,
+				54B49680FD276C5AC4AEACBD7F751B4D /* ScrollViewFrameAccessor.m */,
+				4349A46F6D06BFFFAE4FEDA5B06B39F5 /* ViewFrameAccessor.h */,
+				16CFB234CEB2043812CBDBE367DBFFFC /* ViewFrameAccessor.m */,
+				14DF58B12CBD20C336445581E581521D /* Support Files */,
 			);
-			name = GoogleInterchangeUtilities;
-			path = GoogleInterchangeUtilities;
+			name = FrameAccessor;
+			path = FrameAccessor;
 			sourceTree = "<group>";
 		};
-		F96E99755BD85449780E2D44FF7239EC /* Google-Mobile-Ads-SDK */ = {
+		E808E474DC83A5928FD8E0BDE173AFE6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				416BB6B427FD4B2486A0EF1ADEB50962 /* Frameworks */,
+				65ADAA0418035F2F129EEA3ECFA85BDD /* UICountingLabel.xcconfig */,
+				C1F0910C7955A7EF46C7E8571DDD7AE2 /* UICountingLabel-dummy.m */,
+				F610A3F63EE9DEF4E02E5D8DCEABD444 /* UICountingLabel-prefix.pch */,
 			);
-			name = "Google-Mobile-Ads-SDK";
-			path = "Google-Mobile-Ads-SDK";
+			name = "Support Files";
+			path = "../Target Support Files/UICountingLabel";
+			sourceTree = "<group>";
+		};
+		F026C5544619125A0AD9E135346EF8C3 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				3163C60A7C57CDDA58CD5B057D4AA518 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		F84B65F30421D606D42F793CF5A79E92 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C59A529490255CADE184D838C9A289B7 /* GoogleToolboxForMac.xcconfig */,
+				036990E63700C8FA030C16283E992D23 /* GoogleToolboxForMac-dummy.m */,
+				85097B75088A1538F9BB0DEA7EB2AD90 /* GoogleToolboxForMac-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		FB157FB6A2DF0C5F6EB66E8C0571CF51 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Block;
+			sourceTree = "<group>";
+		};
+		FD0E521C72326AD235F5AB5325B1E71A /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				CF9B23903BEE67790776AC87531DE829 /* Defines */,
+				4882E2335846092831BFB23778E6AF50 /* NSData+zlib */,
+				F84B65F30421D606D42F793CF5A79E92 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		FD71DD346826DDC11010C2F465E70320 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1108,7 +1068,7 @@
 /* Begin XCBuildConfiguration section */
 		0906FE89FE1CA8208D0E43B65A931573 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75FB62C83B867FAADE7E58323A19769 /* FrameAccessor.xcconfig */;
+			baseConfigurationReference = DB544A555B03F873758797FD423FECAA /* FrameAccessor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1131,7 +1091,7 @@
 		};
 		0EE9988F8844C331F8907A57DA9CB8EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B75FB62C83B867FAADE7E58323A19769 /* FrameAccessor.xcconfig */;
+			baseConfigurationReference = DB544A555B03F873758797FD423FECAA /* FrameAccessor.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1154,7 +1114,7 @@
 		};
 		2B3E17DDC438EBD7505297D921A8481F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B25134DDE18F8FE046E2FE01FC435FB0 /* UICountingLabel.xcconfig */;
+			baseConfigurationReference = 65ADAA0418035F2F129EEA3ECFA85BDD /* UICountingLabel.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1221,7 +1181,7 @@
 		};
 		69EA47D48A139B65FB8350131D6D99D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1460C6A4DFBA83E47982B31209602E9 /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = C59A529490255CADE184D838C9A289B7 /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1244,7 +1204,7 @@
 		};
 		7DB7966F2AC9DF99D74D5AFE4973AABB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1460C6A4DFBA83E47982B31209602E9 /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = C59A529490255CADE184D838C9A289B7 /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1267,7 +1227,7 @@
 		};
 		832FA56DCDDDC1BAFF768F5DA98D122A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B25134DDE18F8FE046E2FE01FC435FB0 /* UICountingLabel.xcconfig */;
+			baseConfigurationReference = 65ADAA0418035F2F129EEA3ECFA85BDD /* UICountingLabel.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1353,7 +1313,7 @@
 		};
 		B99A8B345E0D65A6A8443C5E435ECE1C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 141B053DE4D84EB1FFD20DB462C7E607 /* MKFoundationKit.xcconfig */;
+			baseConfigurationReference = 4B65FFE92A92DFE9FCCB3090F6456D97 /* MKFoundationKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1399,7 +1359,7 @@
 		};
 		E2DDABC25816E5846E1548E248E2E777 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 141B053DE4D84EB1FFD20DB462C7E607 /* MKFoundationKit.xcconfig */;
+			baseConfigurationReference = 4B65FFE92A92DFE9FCCB3090F6456D97 /* MKFoundationKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
