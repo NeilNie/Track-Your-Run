@@ -269,7 +269,7 @@
 
     _rootViewStyleView = [UIView new];
     _rootViewStyleView.hidden = YES;
-    _rootViewStyleView.backgroundColor = [UIColor blackColor];
+    _rootViewStyleView.backgroundColor = [UIColor whiteColor];
     _rootViewStyleView.layer.masksToBounds = NO;
     _rootViewStyleView.layer.shadowOffset = CGSizeZero;
     _rootViewStyleView.layer.shadowOpacity = 1.f;

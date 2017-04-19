@@ -32,7 +32,7 @@
     NSArray *name;
     NSArray *valueA;
 }
-
+@property BOOL saveNewRun;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
 @property (strong, nonatomic) NSArray *colorSegmentArray;
@@ -40,5 +40,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
 @property (nonatomic, weak) IBOutlet UITableView *table;
+@property (nonatomic, weak) IBOutlet UIButton *backButton;
 
 @end

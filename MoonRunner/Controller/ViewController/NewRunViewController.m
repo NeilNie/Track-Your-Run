@@ -386,6 +386,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     if ([[segue identifier] isEqualToString:detailSegueName]) {
         [[segue destinationViewController] setRun:self.run];
         [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        [(RunDetailsViewController *)[segue destinationViewController] setSaveNewRun:YES];
     }
 }
 

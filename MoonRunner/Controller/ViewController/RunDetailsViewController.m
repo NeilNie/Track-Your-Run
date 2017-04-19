@@ -222,11 +222,19 @@ static float const mapPadding = 1.1f;
 
 #pragma mark - Lifecycle
 
+-(void)viewDidAppear:(BOOL)animated{
+    if (self.saveNewRun) {
+        [self.navigationItem setHidesBackButton:YES animated:YES];
+    }else{
+        [self.navigationItem setHidesBackButton:NO animated:YES];
+        self.backButton.hidden = YES;
+    }
+    [super viewDidAppear:YES];
+}
+
 - (void)viewDidLoad
 {
-    if ([self.parentViewController isKindOfClass:[NewRunViewController class]]) {
-        [self.navigationItem setHidesBackButton:YES animated:YES];
-    }
+
     [self configureView];
     [self loadMap];
     [self setUpData];

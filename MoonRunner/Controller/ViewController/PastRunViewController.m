@@ -74,8 +74,8 @@
         NSIndexPath *indexPath = [self.table indexPathForSelectedRow];
         Run *run = [self.runArray objectAtIndex:indexPath.row];
         [(RunDetailsViewController *)[segue destinationViewController] setRun:run];
-        NSLog(@"run %@", run);
         [[segue destinationViewController] setManagedObjectContext:self.managedObjectContext];
+        [(RunDetailsViewController *)[segue destinationViewController] setSaveNewRun:NO];
     }
 }
 

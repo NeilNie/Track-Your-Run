@@ -36,7 +36,7 @@
     _imageArray = @[@"", @"", @"home", @"history",@"progress", @"preference"];
 
     // -----
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.contentInset = UIEdgeInsetsMake(44.f, 0.f, 44.f, 0.f);
 }
 
@@ -60,8 +60,8 @@
     cell.image.image = [UIImage imageNamed:[_imageArray objectAtIndex:indexPath.row]];
     cell.separatorView.hidden = !(indexPath.row != 0 && indexPath.row != 1 && indexPath.row != _titlesArray.count-1);
     cell.userInteractionEnabled = (indexPath.row != 1);
-    cell.tintColor = _tintColor;
-
+    cell.label.textColor = [UIColor blackColor];
+    cell.backgroundColor = [UIColor whiteColor];
     return cell;
 }
 

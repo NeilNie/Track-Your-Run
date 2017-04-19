@@ -18,6 +18,12 @@
 
 @implementation MainViewController
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.leftViewBackgroundColor = [UIColor whiteColor];
+}
+
 - (void)setupWithPresentationStyle:(LGSideMenuPresentationStyle)style
                               type:(NSUInteger)type
 {
@@ -48,7 +54,7 @@
             self.leftViewBackgroundColor = [UIColor colorWithWhite:1.f alpha:0.9];
             
             _leftViewController.tableView.backgroundColor = [UIColor clearColor];
-            _leftViewController.tintColor = [UIColor blackColor];
+            _leftViewController.tintColor = [UIColor whiteColor];
 
         }
         else if (style == LGSideMenuPresentationStyleSlideBelow)
@@ -93,7 +99,7 @@
         self.leftViewBackgroundColor = [UIColor colorWithWhite:1.f alpha:0.9];
         
         _leftViewController.tableView.backgroundColor = [UIColor clearColor];
-        _leftViewController.tintColor = [UIColor blackColor];
+        _leftViewController.tintColor = [UIColor whiteColor];
 
     }
     else if (type == 3)
@@ -111,17 +117,7 @@
 
     }
     else if (type == 4)
-    {
-//        self.swipeGestureArea = LGSideMenuSwipeGestureAreaFull;
-//        self.rootViewCoverColorForLeftView = [UIColor colorWithRed:0.f green:1.f blue:0.5 alpha:0.3];
-//        self.rootViewScaleForLeftView = 0.6;
-//        self.rootViewLayerBorderWidth = 3.f;
-//        self.rootViewLayerBorderColor = [UIColor whiteColor];
-//        self.rootViewLayerShadowRadius = 10.f;
-//        self.rootViewCoverColorForRightView = [UIColor colorWithRed:0.f green:0.5 blue:1.f alpha:0.3];
-        
-        // -----
-        
+    {        
         [self setLeftViewEnabledWithWidth:250.f
                         presentationStyle:LGSideMenuPresentationStyleScaleFromBig
                      alwaysVisibleOptions:LGSideMenuAlwaysVisibleOnNone];
