@@ -93,6 +93,16 @@
 
 #pragma mark - WCSession Delegate
 
+-(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error{
+    
+}
+-(void)sessionDidBecomeInactive:(WCSession *)session{
+    
+}
+-(void)sessionDidDeactivate:(WCSession *)session{
+    
+}
+
 -(void)session:(WCSession *)session didReceiveApplicationContext:(NSDictionary<NSString *,id> *)applicationContext{
 
     dispatch_async(dispatch_get_main_queue(), ^{

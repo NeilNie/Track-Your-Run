@@ -85,44 +85,24 @@
         case 2:
             mainViewController.rootViewController = today;
             window.rootViewController = mainViewController;
-            [UIView transitionWithView:window
-                              duration:0.3
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:nil
-                            completion:nil];
             break;
         case 3:
-            
             mainViewController.rootViewController = projects;
             window.rootViewController = mainViewController;
-            [UIView transitionWithView:window
-                              duration:0.3
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:nil
-                            completion:nil];
             break;
         case 4:
             mainViewController.rootViewController = calendar;
             window.rootViewController = mainViewController;
-            [UIView transitionWithView:window
-                              duration:0.3
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:nil
-                            completion:nil];
             break;
         case 5:
             mainViewController.rootViewController = preference;
             window.rootViewController = mainViewController;
-            [UIView transitionWithView:window
-                              duration:0.3
-                               options:UIViewAnimationOptionTransitionCrossDissolve
-                            animations:nil
-                            completion:nil];
             break;
             
         default:
             break;
     }
+    [UIView transitionWithView:window duration:0.3 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
     [mainViewController setupWithPresentationStyle:LGSideMenuPresentationStyleSlideBelow type:0];
 }
 

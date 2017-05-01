@@ -27,9 +27,6 @@
     NSTimer *timer;
     NSTimer *startTimer;
     NSTimer *timeTimer;
-    
-    CMPedometer *Pedometer;
-    CMAltimeter *altimeter;
 }
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -38,6 +35,8 @@
 @property float distance;
 @property int miliseconds;
 
+@property (nonatomic, strong) CMPedometer *pedometer;
+@property (nonatomic, strong) CMAltimeter *altimeter;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) NSMutableArray *splitsArray;
@@ -45,7 +44,7 @@
 @property (nonatomic, strong) NSMutableArray *altitude;
 @property (nonatomic, strong) NSMutableArray *heartRate;
 @property (nonatomic, strong) Run *run;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *MapWidth;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *mapWidth;
 
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
 @property (nonatomic, weak) IBOutlet UILabel *distLabel;

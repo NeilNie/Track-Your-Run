@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 #import "Run.h"
 #import "MathController.h"
@@ -26,16 +27,18 @@
 
 @class Run;
 
-@interface RunDetailsViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate>{
-    NSMutableArray *masterArray;
-    NSArray *array;
-    NSArray *name;
-    NSArray *valueA;
-}
+@interface RunDetailsViewController : UIViewController <MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
+
 @property BOOL saveNewRun;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) Run *run;
+@property (nonatomic, strong) NSMutableArray *masterArray;
+@property (nonatomic, strong) NSArray *array;
+@property (nonatomic, strong) NSArray *name;
+@property (nonatomic, strong) NSArray *valueA;
+@property (nonatomic, strong) CLLocationManager *locationManager;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *colorSegmentArray;
+
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) IBOutlet UILabel *distanceLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;

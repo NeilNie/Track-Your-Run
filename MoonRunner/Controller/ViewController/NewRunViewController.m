@@ -36,7 +36,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
         [session activateSession];
     }
     
-    self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+    self.mapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
     MKCoordinateRegion mapRegion;
     mapRegion.center = self.mapView.userLocation.coordinate;
     mapRegion.span.latitudeDelta = 0.015;
@@ -69,7 +69,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     [timer invalidate];
     [timeTimer invalidate];
     if ([CMPedometer isPaceAvailable]) {
-        [Pedometer stopPedometerUpdates];
+        [self.pedometer stopPedometerUpdates];
     }
     
     UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
@@ -114,32 +114,13 @@ static NSString * const detailSegueName = @"NewRunDetails";
     
     [self.table reloadData];
     [UIView animateWithDuration:1 animations:^{
-        self.MapWidth.constant = 0;
+        self.mapWidth.constant = 0;
         [self.view layoutIfNeeded];
     }];
     [self.mapView removeOverlays:self.mapView.overlays];
-    
-    //modify view
 }
 
 #pragma mark - Private
-
--(NSDictionary *)queryWeatherAPI{
-    
-    CLLocationCoordinate2D coordinate = [self getLocation]; //select * from weather.forecast where woeid in
-    YQL *yql = [[YQL alloc] init];
-    NSString *queryString = [NSString stringWithFormat:@"select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text=\"(%f,%f)\")", coordinate.latitude, coordinate.longitude];
-    NSDictionary *results = [yql query:queryString];
-    
-    NSString *temperature = results[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"];
-    NSString *humidity = results[@"query"][@"results"][@"channel"][@"atmosphere"][@"humidity"];
-    NSString *wind_speed = results[@"query"][@"results"][@"channel"][@"wind"][@"speed"];
-    
-    NSDictionary *returnResult = @{@"temperature": temperature,
-                     @"humidity": humidity,
-                     @"wind": wind_speed};
-    return returnResult;
-}
 
 -(void)setUpGestures{
     
@@ -169,14 +150,14 @@ static NSString * const detailSegueName = @"NewRunDetails";
         
         [self.view layoutIfNeeded];
         [UIView animateWithDuration:0.8 animations:^{
-            self.MapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
+            self.mapWidth.constant = [[UIScreen mainScreen] bounds].size.width;
             [self.view layoutIfNeeded];
         }];
         
     }else if (swipe.direction == UISwipeGestureRecognizerDirectionLeft){
         
         [UIView animateWithDuration:0.8 animations:^{
-            self.MapWidth.constant = 0;
+            self.mapWidth.constant = 0;
             [self.view layoutIfNeeded];
         }];
     }
@@ -203,9 +184,9 @@ static NSString * const detailSegueName = @"NewRunDetails";
 
 -(void)startPedometer{
     
-    Pedometer = [[CMPedometer alloc] init];
+    self.pedometer = [[CMPedometer alloc] init];
     if ([CMPedometer isPaceAvailable]){
-        [Pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
+        [self.pedometer startPedometerUpdatesFromDate:[NSDate dateWithTimeIntervalSinceNow:0] withHandler:^(CMPedometerData *pedometerData, NSError *error) {
             if (!error) {
                 [self.strides addObject:[MathController stringifyStrideRateFromSteps:pedometerData.numberOfSteps.intValue overTime:self.seconds]];
             }else{
@@ -214,7 +195,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
         }];
     }
     
-    [altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData * _Nullable altitudeData, NSError * _Nullable error) {
+    [self.altimeter startRelativeAltitudeUpdatesToQueue:[NSOperationQueue mainQueue] withHandler:^(CMAltitudeData * _Nullable altitudeData, NSError * _Nullable error) {
         if (!error) {
             [self.altitude addObject:altitudeData.relativeAltitude];
         }else{
@@ -241,7 +222,7 @@ static NSString * const detailSegueName = @"NewRunDetails";
     newRun.splits = [NSKeyedArchiver archivedDataWithRootObject:self.splitsArray];
     newRun.stride_rate = [NSKeyedArchiver archivedDataWithRootObject:self.strides];
     newRun.heart_rate = [NSKeyedArchiver archivedDataWithRootObject:self.heartRate];
-    newRun.weather = [NSKeyedArchiver archivedDataWithRootObject:[self queryWeatherAPI]];
+    //newRun.weather = [NSKeyedArchiver archivedDataWithRootObject:[self queryWeatherAPI]];
     
     //save locations as NSOrderSet
     newRun.locations = [NSOrderedSet orderedSetWithArray:[self createLocationArray]];
@@ -307,7 +288,6 @@ static NSString * const detailSegueName = @"NewRunDetails";
     
     return coordinate;
 }
-
 
 - (void)startLocationUpdates
 {
@@ -390,7 +370,17 @@ static NSString * const detailSegueName = @"NewRunDetails";
     }
 }
 
-#pragma mark - WCSession Delegate
+#pragma mark - WCSession
+
+-(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error{
+    
+}
+-(void)sessionDidBecomeInactive:(WCSession *)session{
+    
+}
+-(void)sessionDidDeactivate:(WCSession *)session{
+    
+}
 
 -(void)sendWorkoutInfo:(float)meters{
     

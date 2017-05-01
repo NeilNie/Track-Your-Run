@@ -40,17 +40,18 @@ static float const mapPadding = 1.1f;
 
 -(void)setUpData{
     
-    valueA = [[NSMutableArray alloc] initWithObjects:
-              [NSString stringWithFormat:@"%@'%@", [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES], self.run.miliseconds],
+    self.valueA = [[NSMutableArray alloc] initWithObjects:
+              [NSString stringWithFormat:@"%@'%@",
+               [MathController stringifySecondCount:self.run.duration.intValue usingLongFormat:YES], self.run.miliseconds],
               [MathController stringifyAvgPaceFromDist:self.run.distance.floatValue overTime:self.run.duration.intValue],
               [MathController stringifyCaloriesFromDist:self.run.distance.floatValue],
               [RunHelper getAverageStride:self.run.stride_rate],
               [RunHelper getAverageHeartbeatFromArray:self.run.heart_rate],
               [RunHelper getMaxHeartbeatFromArray:self.run.heart_rate],
               nil];
-    array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
-    name = [[NSMutableArray alloc] initWithObjects:@"Stride Rate",@"Average Heart Rate", @"Max Heart Rate", nil];
-    masterArray = [[NSMutableArray alloc] initWithObjects:name, array, nil];
+    self.array = [NSKeyedUnarchiver unarchiveObjectWithData:self.run.splits];
+    self.name = [[NSMutableArray alloc] initWithObjects:@"Stride Rate",@"Average Heart Rate", @"Max Heart Rate", nil];
+    self.masterArray = [[NSMutableArray alloc] initWithObjects:self.name, self.array, nil];
 }
 
 -(void)configureView{
@@ -121,13 +122,13 @@ static float const mapPadding = 1.1f;
             return 6;
             break;
         case 1:
-            return [array count];
+            return [self.array count];
             break;
             
         default:
             break;
     }
-    return array.count;
+    return self.array.count;
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     
@@ -144,9 +145,9 @@ static float const mapPadding = 1.1f;
         
         if (indexPath.row == 0) {
             SummaryTableViewCell *cell = (SummaryTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idCellSummary" forIndexPath:indexPath];
-            cell.time.text = [valueA objectAtIndex:0];
-            cell.pace.text = [valueA objectAtIndex:1];
-            cell.pace.text = [valueA objectAtIndex:3];
+            cell.time.text = [self.valueA objectAtIndex:0];
+            cell.pace.text = [self.valueA objectAtIndex:1];
+            cell.pace.text = [self.valueA objectAtIndex:3];
             return cell;
         }else if (indexPath.row == 1){
             WeatherTableViewCell *cell = (WeatherTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idWeatherCell" forIndexPath:indexPath];
@@ -161,12 +162,12 @@ static float const mapPadding = 1.1f;
             return cell;
         }else{
             BasicTableViewCell *cell = (BasicTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"idCell" forIndexPath:indexPath];
-            cell.subtitle.text = [valueA objectAtIndex:indexPath.row];
-            cell.title.text = [name objectAtIndex:indexPath.row - 3];
+            cell.subtitle.text = [self.valueA objectAtIndex:indexPath.row];
+            cell.title.text = [self.name objectAtIndex:indexPath.row - 3];
             return cell;
         }
     }else{
-        NSArray *tableArray = [masterArray objectAtIndex:indexPath.section];
+        NSArray *tableArray = [self.masterArray objectAtIndex:indexPath.section];
         NSDictionary *dict = [tableArray objectAtIndex:indexPath.row];
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"idCellinfo" forIndexPath:indexPath];
         cell.textLabel.text = [NSString stringWithFormat:@"%@'%@", [dict objectForKey:@"time"], [dict objectForKey:@"mili"]];
@@ -220,33 +221,82 @@ static float const mapPadding = 1.1f;
     return aRenderer;
 }
 
+#pragma mark - Private
+
+-(NSDictionary *)queryWeatherAPI{
+    
+    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways) {
+        CLLocationCoordinate2D coordinate = [self getLocation]; //select * from weather.forecast where woeid in
+        YQL *yql = [[YQL alloc] init];
+        NSString *queryString = [NSString stringWithFormat:@"select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text=\"(%f,%f)\")", coordinate.latitude, coordinate.longitude];
+        NSDictionary *results = [yql query:queryString];
+        
+        NSString *temperature = results[@"query"][@"results"][@"channel"][@"item"][@"condition"][@"temp"];
+        NSString *humidity = results[@"query"][@"results"][@"channel"][@"atmosphere"][@"humidity"];
+        NSString *wind_speed = results[@"query"][@"results"][@"channel"][@"wind"][@"speed"];
+        
+        NSDictionary *returnResult = @{@"temperature": temperature,
+                                       @"humidity": humidity,
+                                       @"wind": wind_speed};
+        return returnResult;
+    }
+    return nil;
+}
+
+-(CLLocationCoordinate2D) getLocation{
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = kCLDistanceFilterNone;
+    [self.locationManager startUpdatingLocation];
+    CLLocation *location = [self.locationManager location];
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    return coordinate;
+}
+
+-(void)updateWeatherData{
+    NSDictionary *dic = [self queryWeatherAPI];
+    if (dic) {
+        self.run.weather = [NSKeyedArchiver archivedDataWithRootObject:dic];
+    }else{
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Can query weather data" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleCancel handler:nil];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    NSError *error;
+    [self.managedObjectContext save:&error];
+}
+
+
 #pragma mark - Lifecycle
 
 -(void)viewDidAppear:(BOOL)animated{
-    if (self.saveNewRun) {
+    if (self.saveNewRun)
         [self.navigationItem setHidesBackButton:YES animated:YES];
-    }else{
+    else{
         [self.navigationItem setHidesBackButton:NO animated:YES];
         self.backButton.hidden = YES;
     }
     [super viewDidAppear:YES];
 }
 
-- (void)viewDidLoad
-{
-
+- (void)viewDidLoad{
+    
     [self configureView];
     [self loadMap];
+    [self updateWeatherData];
     [self setUpData];
-    
     [self.table reloadData];
     [super viewDidLoad];
 }
 
 #pragma mark - Navigation
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if ([[segue destinationViewController] isKindOfClass:[AnalysisViewController class]]) {
         AnalysisViewController *controller = (AnalysisViewController *)[segue destinationViewController];
         controller.run = self.run;

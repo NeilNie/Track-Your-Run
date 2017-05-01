@@ -204,7 +204,10 @@
             
             Predicate = [HKQuery predicateForSamplesWithStartDate:[NSDate dateWithTimeIntervalSinceNow:0] endDate:nil options:HKQueryOptionNone];
             healthStore = [[HKHealthStore alloc] init];
-            workoutSession = [[HKWorkoutSession alloc] initWithActivityType:HKWorkoutActivityTypeRunning locationType:HKWorkoutSessionLocationTypeIndoor];
+            HKWorkoutConfiguration *config = [[HKWorkoutConfiguration alloc] init];
+            config.activityType = HKWorkoutActivityTypeRunning;
+            config.locationType = HKWorkoutSessionLocationTypeIndoor;
+            workoutSession =  [[HKWorkoutSession alloc] initWithConfiguration:config error:nil];
             workoutSession.delegate = self;
             [healthStore startWorkoutSession:workoutSession];
         }
@@ -215,7 +218,7 @@
 
 - (void)willActivate {
     
-    if (started == NO) {
+    if (started == NO) {;
         
         self.heartBeatArray = [[NSMutableArray alloc] init];
         self.splitsArray = [[NSMutableArray alloc] init];

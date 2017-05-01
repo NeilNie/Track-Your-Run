@@ -155,7 +155,17 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-#pragma mark - WCsession delegates
+#pragma mark - WCsession
+
+-(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error{
+    
+}
+-(void)sessionDidBecomeInactive:(WCSession *)session{
+    
+}
+-(void)sessionDidDeactivate:(WCSession *)session{
+    
+}
 
 -(void)session:(WCSession *)session didReceiveUserInfo:(NSDictionary<NSString *,id> *)userInfo{
     
@@ -182,9 +192,6 @@
 
 -(void)sessionWatchStateDidChange:(WCSession *)session{
     NSLog(@"watch status changed");
-}
--(void)sessionDidDeactivate:(WCSession *)session{
-    NSLog(@"session deactivated");
 }
 
 @end

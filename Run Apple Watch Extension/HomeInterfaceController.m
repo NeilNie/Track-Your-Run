@@ -52,4 +52,8 @@
     [super didDeactivate];
 }
 
+-(void)session:(WCSession *)session activationDidCompleteWithState:(WCSessionActivationState)activationState error:(NSError *)error{
+    
+}
+
 @end

@@ -61,13 +61,13 @@
 - (NSDate *)readBirthDate {
     
     NSError *error;
-    NSDate *dateOfBirth = [self.healthStore dateOfBirthWithError:&error];   // Convenience method of HKHealthStore to get date of birth directly.
+    NSDateComponents *dateOfBirth = [self.healthStore dateOfBirthComponentsWithError:&error];   // Convenience method of HKHealthStore to get date of birth directly.
     
     if (!dateOfBirth) {
         NSLog(@"Either an error occured fetching the user's age information or none has been stored yet. In your app, try to handle this gracefully.");
     }
     
-    return dateOfBirth;
+    return dateOfBirth.date;
 }
 
 @end
