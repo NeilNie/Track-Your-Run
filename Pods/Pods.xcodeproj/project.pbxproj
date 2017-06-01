@@ -212,7 +212,6 @@
 		979F7C6C0E2FDCF7FD6E69569440C13A /* MKMacro_Test.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Test.h; path = Source/Macros/MKMacro_Test.h; sourceTree = "<group>"; };
 		98F505E0A896F18D9020DB0EBBC627A2 /* MKMacro_Method.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Method.h; path = Source/Macros/MKMacro_Method.h; sourceTree = "<group>"; };
 		9A97DB854C5E99AB758B2505F5E18298 /* NSString+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Misc.m"; path = "Source/NSString/NSString+MK_Misc.m"; sourceTree = "<group>"; };
-		9AD71739D4A4B5B7314DC72AAC497D95 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		A117B88375FA277CDCC06483D1718894 /* Pods-Run-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Run-frameworks.sh"; sourceTree = "<group>"; };
 		A1A3530CE25D7FBD2BD9B0ED4D55E59F /* NSObject+MK_AutoDescribe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MK_AutoDescribe.m"; path = "Source/NSObject/NSObject+MK_AutoDescribe.m"; sourceTree = "<group>"; };
 		A3A84B095FA76155281805F564CB5592 /* NSNumber+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Creation.m"; path = "Source/NSNumber/NSNumber+MK_Creation.m"; sourceTree = "<group>"; };
@@ -226,8 +225,10 @@
 		B6CFC02CE5601489499C716689B0A5EF /* NSMutableArray+MK_Stack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Stack.m"; path = "Source/NSArray/NSMutableArray+MK_Stack.m"; sourceTree = "<group>"; };
 		B7BC6548380694B9FF3218A053B0F038 /* NSNumber+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Comparison.h"; path = "Source/NSNumber/NSNumber+MK_Comparison.h"; sourceTree = "<group>"; };
 		B8DC957569885F50A61277BCE872DC25 /* NSData+MK_Base64.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+MK_Base64.m"; path = "Source/NSData/NSData+MK_Base64.m"; sourceTree = "<group>"; };
+		B9317E4C5A6E666CCEA85999B4C98492 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		BE0F713A722FC91BBC1EDE8D85B596CC /* NSString+MK_Empty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Empty.h"; path = "Source/NSString/NSString+MK_Empty.h"; sourceTree = "<group>"; };
 		BE157E72C4350E3C4E99347F86A7C247 /* libMKFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKFoundationKit.a; path = libMKFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C079D313FC3485636CFC9C748D10B9F8 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
 		C1F0910C7955A7EF46C7E8571DDD7AE2 /* UICountingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UICountingLabel-dummy.m"; sourceTree = "<group>"; };
 		C54A093A6D9044F315BB5A46D62BBC0E /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		C59A529490255CADE184D838C9A289B7 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
@@ -236,6 +237,7 @@
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		CD002DC727CADAA2CF498619F33F4C3A /* NSSet+MK_Block.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSSet+MK_Block.h"; path = "Source/NSSet/NSSet+MK_Block.h"; sourceTree = "<group>"; };
 		D0258FB7C230D47DB28B39040CE11D14 /* MKMacro_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Version.h; path = Source/Macros/MKMacro_Version.h; sourceTree = "<group>"; };
+		D58F7B45D5999A7FCF795C072F388D88 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		D751D62EAD0D1039905F4893C5A34F9E /* FrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FrameAccessor.h; path = FrameAccessor/FrameAccessor.h; sourceTree = "<group>"; };
 		D8031A7D87BD6B22CD495D14342621FB /* Pods-Run-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Run-acknowledgements.plist"; sourceTree = "<group>"; };
 		D9F8AD8EBB5092AB5BF90019DBA10D93 /* NSMutableArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+MK_Misc.m"; path = "Source/NSArray/NSMutableArray+MK_Misc.m"; sourceTree = "<group>"; };
@@ -378,15 +380,6 @@
 			name = NSBundle;
 			sourceTree = "<group>";
 		};
-		414E41C08AAA8BA5103A4B2D35E82DE4 /* FirebaseCore */ = {
-			isa = PBXGroup;
-			children = (
-				553AA1A1059AEFF63445328984D2A6C6 /* Frameworks */,
-			);
-			name = FirebaseCore;
-			path = FirebaseCore;
-			sourceTree = "<group>";
-		};
 		437A90602EEBFEAC0DADD5CC1E040388 /* AutoDescribe */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,20 +403,12 @@
 			name = NSSet;
 			sourceTree = "<group>";
 		};
-		553AA1A1059AEFF63445328984D2A6C6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9AD71739D4A4B5B7314DC72AAC497D95 /* FirebaseCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		57F2C3C4B27E287D06D869B2E5571BF5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				C66B54A55B6AEC79AADCD05E28F59072 /* Firebase */,
 				F026C5544619125A0AD9E135346EF8C3 /* FirebaseAnalytics */,
-				414E41C08AAA8BA5103A4B2D35E82DE4 /* FirebaseCore */,
+				ECF53FAC82C9421456FF00B5A10987E2 /* FirebaseCore */,
 				C7FE48F10F8271BED6CC14A140870F30 /* FirebaseInstanceID */,
 				D9A9607AC18876299F598D1067A91C73 /* FrameAccessor */,
 				A5A83F317F0428FD533C5FF670CEC663 /* Google-Mobile-Ads-SDK */,
@@ -613,6 +598,16 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		A558657980AF03E32A625DA04CC70D9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D58F7B45D5999A7FCF795C072F388D88 /* FirebaseCore.framework */,
+				B9317E4C5A6E666CCEA85999B4C98492 /* FirebaseCoreDiagnostics.framework */,
+				C079D313FC3485636CFC9C748D10B9F8 /* FirebaseNanoPB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A5A83F317F0428FD533C5FF670CEC663 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +703,15 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/UICountingLabel";
+			sourceTree = "<group>";
+		};
+		ECF53FAC82C9421456FF00B5A10987E2 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				A558657980AF03E32A625DA04CC70D9C /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
 		F026C5544619125A0AD9E135346EF8C3 /* FirebaseAnalytics */ = {
