@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-# 2017-08-25 -- v2.0.2
-- Fixed a startup performance regression, removing a call which was blocking the
-  main thread.
-
-=======
->>>>>>> abed98bd42501cfbb216bcbef0b8dd6f85cd1f1e
 # 2017-08-07 -- v2.0.1
 - Fixed issues with token and app identifier being inaccessible when the device
   is locked.

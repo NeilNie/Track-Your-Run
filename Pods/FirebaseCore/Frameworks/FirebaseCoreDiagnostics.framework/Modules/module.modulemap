@@ -1,4 +1,5 @@
 framework module FirebaseCoreDiagnostics {
   export *
   module * { export *}
-  link "z"}
+  link "z"
+}
