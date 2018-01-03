@@ -26,20 +26,17 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     if (isMetric) {
         
         unitName = @"km";
-        
         // to get from meters to kilometers divide by this
         unitDivider = metersInKM;
-        
     // U.S.
     } else {
         
         unitName = @"mi";
-        
         // to get from meters to miles divide by this
         unitDivider = metersInMile;
     }
     
-    return [NSString stringWithFormat:@"%.2f%@", (meters / unitDivider), unitName];
+    return [NSString stringWithFormat:@"%.2f", (meters / unitDivider)]; //unitName
 }
 
 + (NSString *)stringifySecondCount:(int)seconds usingLongFormat:(BOOL)longFormat {

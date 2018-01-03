@@ -27,7 +27,7 @@
     [super viewDidLoad];
 
     // -----
-    _titlesArray = @[@"For Better Workouts",
+    _titlesArray = @[@"Smarter Workouts",
                      @"",
                      @"Home",
                      @"History",

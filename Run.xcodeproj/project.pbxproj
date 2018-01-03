@@ -16,7 +16,6 @@
 		00937C281C8A40AE0096B5EC /* bar_chart.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C221C8A40AE0096B5EC /* bar_chart.png */; };
 		00937C291C8A40AE0096B5EC /* greedot.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C231C8A40AE0096B5EC /* greedot.png */; };
 		00937C2A1C8A40AE0096B5EC /* reddot.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C241C8A40AE0096B5EC /* reddot.png */; };
-		00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C251C8A40AE0096B5EC /* running-blue.png */; };
 		00937C2C1C8A40AE0096B5EC /* save.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C261C8A40AE0096B5EC /* save.png */; };
 		00937C2D1C8A40AE0096B5EC /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 00937C271C8A40AE0096B5EC /* settings.png */; };
 		00C80B631C79249E005C4E39 /* Run Apple Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00C80B621C79249E005C4E39 /* Run Apple Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -34,6 +33,9 @@
 		00DD503E1D5E80CB0029D239 /* PlanCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DD503D1D5E80CB0029D239 /* PlanCollectionViewCell.m */; };
 		00EC02B61C8A3C8B00FBEE87 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */; };
 		00F64F5A1C78E65B00851B49 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F64F591C78E65B00851B49 /* WatchConnectivity.framework */; };
+		00FCAC571FFD07C100E0843B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 00FCAC561FFD07C100E0843B /* Fonts */; };
+		00FCAC581FFD07C100E0843B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 00FCAC561FFD07C100E0843B /* Fonts */; };
+		00FCAC591FFD07C100E0843B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 00FCAC561FFD07C100E0843B /* Fonts */; };
 		2808B80E1D46960300296E4C /* RunHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808B80D1D46960300296E4C /* RunHelper.m */; };
 		2808B8121D4697A700296E4C /* InfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2808B8101D4697A700296E4C /* InfoTableViewCell.m */; };
 		2808B8131D4697A700296E4C /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2808B8111D4697A700296E4C /* InfoTableViewCell.xib */; };
@@ -109,7 +111,6 @@
 		2879C9B31D122E140088118A /* trophy_award_ribon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9AA1D122E140088118A /* trophy_award_ribon-512.png */; };
 		2879C9B61D124B410088118A /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B41D124B410088118A /* lock.png */; };
 		2879C9B71D124B410088118A /* unlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B51D124B410088118A /* unlock.png */; };
-		2879C9B91D124F550088118A /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9B81D124F550088118A /* Media.xcassets */; };
 		2879C9BB1D124F5C0088118A /* Media1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2879C9BA1D124F5C0088118A /* Media1.xcassets */; };
 		287E2F961D11F17B00D45488 /* ProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287E2F951D11F17B00D45488 /* ProgressViewController.m */; };
 		288496461D90C37B0041BACE /* running-icon-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 288496451D90C37B0041BACE /* running-icon-5.png */; };
@@ -129,7 +130,6 @@
 		28E784071D1103BB00C17A4F /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E784051D1103BB00C17A4F /* MainViewController.m */; };
 		28E7840B1D1104DB00C17A4F /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */; };
 		28E7840E1D11054F00C17A4F /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E7840D1D11054F00C17A4F /* LeftViewCell.m */; };
-		28E784101D11084600C17A4F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E7840F1D11084600C17A4F /* menu.png */; };
 		28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517C1D11AE5B000C3955 /* Media.xcassets */; };
 		28F051821D11B35E000C3955 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517E1D11B35E000C3955 /* history.png */; };
 		28F051831D11B35E000C3955 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 28F0517F1D11B35E000C3955 /* home.png */; };
@@ -210,7 +210,6 @@
 		00937C221C8A40AE0096B5EC /* bar_chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar_chart.png; sourceTree = "<group>"; };
 		00937C231C8A40AE0096B5EC /* greedot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greedot.png; sourceTree = "<group>"; };
 		00937C241C8A40AE0096B5EC /* reddot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reddot.png; sourceTree = "<group>"; };
-		00937C251C8A40AE0096B5EC /* running-blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "running-blue.png"; sourceTree = "<group>"; };
 		00937C261C8A40AE0096B5EC /* save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = save.png; sourceTree = "<group>"; };
 		00937C271C8A40AE0096B5EC /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		00B8434E1C8E2AF300331CD0 /* RunMaster 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "RunMaster 2.xcdatamodel"; sourceTree = "<group>"; };
@@ -238,6 +237,7 @@
 		00EC02B41C8A3C8B00FBEE87 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		00EC02B51C8A3C8B00FBEE87 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		00F64F591C78E65B00851B49 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		00FCAC561FFD07C100E0843B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		2808B80C1D46960300296E4C /* RunHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunHelper.h; sourceTree = "<group>"; };
 		2808B80D1D46960300296E4C /* RunHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunHelper.m; sourceTree = "<group>"; };
 		2808B80F1D4697A700296E4C /* InfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoTableViewCell.h; sourceTree = "<group>"; };
@@ -370,7 +370,6 @@
 		2879C9AA1D122E140088118A /* trophy_award_ribon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trophy_award_ribon-512.png"; sourceTree = "<group>"; };
 		2879C9B41D124B410088118A /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		2879C9B51D124B410088118A /* unlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlock.png; sourceTree = "<group>"; };
-		2879C9B81D124F550088118A /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		2879C9BA1D124F5C0088118A /* Media1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media1.xcassets; sourceTree = "<group>"; };
 		287E2F941D11F17B00D45488 /* ProgressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressViewController.h; sourceTree = "<group>"; };
 		287E2F951D11F17B00D45488 /* ProgressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressViewController.m; sourceTree = "<group>"; };
@@ -395,7 +394,6 @@
 		28E7840A1D1104DB00C17A4F /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
 		28E7840C1D11054F00C17A4F /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
 		28E7840D1D11054F00C17A4F /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
-		28E7840F1D11084600C17A4F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		28F0517C1D11AE5B000C3955 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		28F0517E1D11B35E000C3955 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
 		28F0517F1D11B35E000C3955 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -686,16 +684,14 @@
 		28422E3E1D10F5D70070E982 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				2879C9A11D122E140088118A /* trophy */,
 				286E66711D130572008B4BDE /* LOL.png */,
 				286E66721D130573008B4BDE /* confused.png */,
 				286E66731D130573008B4BDE /* sad.png */,
-				2879C9B81D124F550088118A /* Media.xcassets */,
-				2879C9A11D122E140088118A /* trophy */,
 				28F0517E1D11B35E000C3955 /* history.png */,
 				28F0517F1D11B35E000C3955 /* home.png */,
 				28F051801D11B35E000C3955 /* preference.png */,
 				28F051811D11B35E000C3955 /* progress.png */,
-				28E7840F1D11084600C17A4F /* menu.png */,
 				28422E3F1D10F5E80070E982 /* classpass-icon-sneaker.png */,
 				28422E401D10F5E80070E982 /* icon-39-512.png */,
 				28422E411D10F5E80070E982 /* speed.png */,
@@ -703,9 +699,9 @@
 				00937C221C8A40AE0096B5EC /* bar_chart.png */,
 				00937C231C8A40AE0096B5EC /* greedot.png */,
 				00937C241C8A40AE0096B5EC /* reddot.png */,
-				00937C251C8A40AE0096B5EC /* running-blue.png */,
 				00937C261C8A40AE0096B5EC /* save.png */,
 				00937C271C8A40AE0096B5EC /* settings.png */,
+				28F0517C1D11AE5B000C3955 /* Media.xcassets */,
 			);
 			name = Media;
 			path = Resource;
@@ -853,7 +849,7 @@
 		FA1F95131929CF2600A0179A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				28F0517C1D11AE5B000C3955 /* Media.xcassets */,
+				00FCAC561FFD07C100E0843B /* Fonts */,
 				006E9F7C1C8F61B4002B8B37 /* GoogleService-Info.plist */,
 				FA1F95141929CF2600A0179A /* Info.plist */,
 				FA1F95181929CF2600A0179A /* main.m */,
@@ -1043,6 +1039,7 @@
 				00C80B981C79262B005C4E39 /* storyboard.storyboard in Resources */,
 				28F9E13D1D90D41B00523D96 /* Assets.xcassets in Resources */,
 				281E8BB91D90CD39009C8CD5 /* running-icon-5.png in Resources */,
+				00FCAC581FFD07C100E0843B /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1055,6 +1052,7 @@
 				00C80B731C79249E005C4E39 /* Assets.xcassets in Resources */,
 				00C80B991C79262B005C4E39 /* storyboard.storyboard in Resources */,
 				288496461D90C37B0041BACE /* running-icon-5.png in Resources */,
+				00FCAC591FFD07C100E0843B /* Fonts in Resources */,
 				2886465E1D93191600542E9A /* Red Dot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1068,14 +1066,13 @@
 				28B852521D503E0500B84881 /* WeatherTableViewCell.xib in Resources */,
 				2879C9AD1D122E140088118A /* award.png in Resources */,
 				28F051821D11B35E000C3955 /* history.png in Resources */,
-				28E784101D11084600C17A4F /* menu.png in Resources */,
+				00FCAC571FFD07C100E0843B /* Fonts in Resources */,
 				2879C9B11D122E140088118A /* trophy_1m.png in Resources */,
 				00937C2D1C8A40AE0096B5EC /* settings.png in Resources */,
 				00937C291C8A40AE0096B5EC /* greedot.png in Resources */,
 				2879C9B31D122E140088118A /* trophy_award_ribon-512.png in Resources */,
 				286E66741D130573008B4BDE /* LOL.png in Resources */,
 				2879C9B71D124B410088118A /* unlock.png in Resources */,
-				2879C9B91D124F550088118A /* Media.xcassets in Resources */,
 				28F051851D11B35E000C3955 /* progress.png in Resources */,
 				2808B8131D4697A700296E4C /* InfoTableViewCell.xib in Resources */,
 				28F0517D1D11AE5B000C3955 /* Media.xcassets in Resources */,
@@ -1090,7 +1087,6 @@
 				286E666E1D13035C008B4BDE /* ButtonTableCell.xib in Resources */,
 				2879C9AB1D122E140088118A /* award-fastest.png in Resources */,
 				2879C9B21D122E140088118A /* trophy_5m.png in Resources */,
-				00937C2B1C8A40AE0096B5EC /* running-blue.png in Resources */,
 				2879C9B61D124B410088118A /* lock.png in Resources */,
 				28F051831D11B35E000C3955 /* home.png in Resources */,
 				28422E431D10F5E80070E982 /* classpass-icon-sneaker.png in Resources */,
@@ -1354,7 +1350,7 @@
 		00C80B7D1C79249E005C4E39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1376,7 +1372,7 @@
 		00C80B7E1C79249E005C4E39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1493,7 +1489,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 64CC42117DEFED8EC4DD933E /* Pods-Run.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1520,7 +1516,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8EAE9943CD2A555783BCC69E /* Pods-Run.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Run.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
