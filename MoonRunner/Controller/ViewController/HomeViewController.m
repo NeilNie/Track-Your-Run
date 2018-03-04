@@ -26,6 +26,15 @@
     }
 
     [[HealthKitManager sharedManager] requestAuthorization];
+    BOOL adsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    if (adsRemoved == FALSE){
+        self.bannerView.hidden = NO;
+        self.bannerView.adUnitID = @"ca-app-pub-7942613644553368/1835128737";
+        self.bannerView.rootViewController = self;
+        [self.bannerView loadRequest:[GADRequest request]];
+    }else{
+        self.bannerView.hidden = YES;
+    }
     
     self.runArray = [[RunHelper new] retrieveAllObjects];
     [self setUpView];

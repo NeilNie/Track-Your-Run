@@ -7,36 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>901761972907-gpc15g5im0mp4j37ju6b89qcdi7a83qe.apps.googleusercontent.com</string>
+	<string>1065176494480-6u9ndgovgk9ojfd2ikc0f9taqa02fhhb.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.901761972907-gpc15g5im0mp4j37ju6b89qcdi7a83qe</string>
+	<string>com.googleusercontent.apps.1065176494480-6u9ndgovgk9ojfd2ikc0f9taqa02fhhb</string>
 	<key>API_KEY</key>
-	<string>AIzaSyB6cYyJszITvO92gvPU7mYDi6EubZ2Nj1w</string>
+	<string>AIzaSyB43dTlcpVHP34URYXP9d76pPoEEom_Ujc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>901761972907</string>
+	<string>1065176494480</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.yongyang.running</string>
 	<key>PROJECT_ID</key>
-	<string>track-your-run</string>
+	<string>run-tracker-79998</string>
 	<key>STORAGE_BUCKET</key>
-	<string>track-your-run.appspot.com</string>
+	<string>run-tracker-79998.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:901761972907:ios:27104736dbfdb544</string>
+	<string>1:1065176494480:ios:78013ee5f9f6079a</string>
 	<key>DATABASE_URL</key>
-	<string>https://track-your-run.firebaseio.com</string>
-	<key>TRACKING_ID</key>
-	<string>UA-74138512-8</string>
+	<string>https://run-tracker-79998.firebaseio.com</string>
 </dict>
 </plist>

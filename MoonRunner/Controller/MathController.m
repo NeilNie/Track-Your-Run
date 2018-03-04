@@ -105,7 +105,7 @@ static const int idealSmoothReachSize = 33; // about 133 locations/mi
     int paceMin = (int) ((avgPaceSecMeters * unitMultiplier) / 60);
     int paceSec = (int) (avgPaceSecMeters * unitMultiplier - (paceMin*60));
     
-    return [NSString stringWithFormat:@"%i:%02i %@", paceMin, paceSec, unitName];
+    return [NSString stringWithFormat:@"%i:%02i", paceMin, paceSec];
 }
 
 +(NSString *)stringifyPaceFromSpeed:(float)speed{

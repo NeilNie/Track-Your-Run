@@ -17,13 +17,15 @@
 #import "SettingViewController.h"
 #import "AppDelegate.h"
 
+@import GoogleMobileAds;
+
 @interface HomeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate, WCSessionDelegate>{
     NSTimer *timer;
 }
 
 @property (nonatomic, strong) Run *run;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 @property (weak, nonatomic) IBOutlet UILabel *totalDistance;
 @property (weak, nonatomic) IBOutlet UILabel *longestRun;
 @property (weak, nonatomic) IBOutlet UILabel *BestPace;
