@@ -1186,11 +1186,11 @@
 				TargetAttributes = {
 					00C80B551C79249E005C4E39 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 8NZ8K5GNH8;
+						DevelopmentTeam = YC4C987ET6;
 					};
 					00C80B611C79249E005C4E39 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 8NZ8K5GNH8;
+						DevelopmentTeam = YC4C987ET6;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
 								enabled = 1;
@@ -1636,12 +1636,13 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CODE_SIGN_ENTITLEMENTS = "Run Apple Watch Extension/Run Apple Watch Extension.entitlements";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YC4C987ET6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Run Apple Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchapp.watchextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1657,12 +1658,13 @@
 				CODE_SIGN_ENTITLEMENTS = "Run Apple Watch Extension/Run Apple Watch Extension.entitlements";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YC4C987ET6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = NO;
 				INFOPLIST_FILE = "Run Apple Watch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchapp.watchextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1679,12 +1681,13 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YC4C987ET6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = NO;
 				IBSC_MODULE = Run_Apple_Watch_Extension;
 				INFOPLIST_FILE = "Run Apple Watch/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1702,12 +1705,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YC4C987ET6;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = NO;
 				IBSC_MODULE = Run_Apple_Watch_Extension;
 				INFOPLIST_FILE = "Run Apple Watch/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yongyang.running.watchapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
