@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -173,15 +173,15 @@
 		26FB2963EEF7209466795B096CFA08DC /* NSString+MK_Validation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Validation.m"; path = "Source/NSString/NSString+MK_Validation.m"; sourceTree = "<group>"; };
 		2865FB4F2F44BAD01BFE75D1C181026C /* NSDate+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+MK_Creation.h"; path = "Source/NSDate/NSDate+MK_Creation.h"; sourceTree = "<group>"; };
 		28FFFE3CF354E6ACA54E649069CCEA09 /* NSDate+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Comparison.m"; path = "Source/NSDate/NSDate+MK_Comparison.m"; sourceTree = "<group>"; };
-		2D81C503C7D0AAADDEFFCCEA183A9743 /* libFrameAccessor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFrameAccessor.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D81C503C7D0AAADDEFFCCEA183A9743 /* libFrameAccessor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libFrameAccessor.a; path = libFrameAccessor.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		30349B5DFD0E5ED2FA0FC2578ED5B94C /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
 		32A1093BD3C64D682D5E9DD975820853 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		32BCF18A1DB2B9273DA754860DC658B2 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		344E9CA13DF2DFEA88672C0B00DE0805 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		3876A9CA889B684F504CDB9DDDC6E6D2 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_encode.c; sourceTree = "<group>"; };
+		344E9CA13DF2DFEA88672C0B00DE0805 /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libnanopb.a; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3876A9CA889B684F504CDB9DDDC6E6D2 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
 		394AFC5E1FC63EC4C20AD8863A3010A5 /* MKMacro.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro.h; path = Source/Macros/MKMacro.h; sourceTree = "<group>"; };
 		39ABDFE256409C94A4C40F8FA428515E /* NSString+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_Misc.m"; path = "Source/NSString/NSString+MK_Misc.m"; sourceTree = "<group>"; };
-		3BBD7AA945B62AC3332A1645E9BDC4FB /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BBD7AA945B62AC3332A1645E9BDC4FB /* libGoogleToolboxForMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGoogleToolboxForMac.a; path = libGoogleToolboxForMac.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		405E520551EC973CF3DD2C964BF82EEE /* NSNumber+MK_Creation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Creation.h"; path = "Source/NSNumber/NSNumber+MK_Creation.h"; sourceTree = "<group>"; };
 		410B81D4F3439E88F9F2FE4F73B6D639 /* Pods-Run.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Run.release.xcconfig"; sourceTree = "<group>"; };
 		425FCE24EDDF36F4A0ADFFDB97EF1AC7 /* NSArray+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MK.h"; path = "Source/NSArray/NSArray+MK.h"; sourceTree = "<group>"; };
@@ -208,7 +208,7 @@
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6705E99D1CB906B1B2C3EDC7E1C0C4AF /* NSNumber+MK_Fraction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Fraction.m"; path = "Source/NSNumber/NSNumber+MK_Fraction.m"; sourceTree = "<group>"; };
 		6BAA5B2D8966B19052A66B8203669937 /* MKFoundationKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MKFoundationKit-dummy.m"; sourceTree = "<group>"; };
-		71394DAEE619534EC77B1F38A8C2F679 /* libPods-Run.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Run.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71394DAEE619534EC77B1F38A8C2F679 /* libPods-Run.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Run.a"; path = "libPods-Run.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72F24B825D7BAACAB8EA8EA3341CC4BA /* NSDictionary+MK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK.h"; path = "Source/NSDictionary/NSDictionary+MK.h"; sourceTree = "<group>"; };
 		73509939C0733D4E00435E3EA16EB34F /* NSObject+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MK_Misc.h"; path = "Source/NSObject/NSObject+MK_Misc.h"; sourceTree = "<group>"; };
 		73F353FB2E0830AA1416951D523B893B /* NSNumber+MK_Precision.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Precision.m"; path = "Source/NSNumber/NSNumber+MK_Precision.m"; sourceTree = "<group>"; };
@@ -216,14 +216,14 @@
 		76FC85EBECEE9975EE484B4F34668961 /* UICountingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = UICountingLabel.h; sourceTree = "<group>"; };
 		77EBA546CB4E143E36B0672BD4B491A2 /* NSString+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_Misc.h"; path = "Source/NSString/NSString+MK_Misc.h"; sourceTree = "<group>"; };
 		79703F8707E288CCCCE56E5A1376FEC9 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
-		79FE475F0D208152B139C77648B1FD71 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_decode.c; sourceTree = "<group>"; };
+		79FE475F0D208152B139C77648B1FD71 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
 		7DEAD4B4EEE1D470C9CF5959612DB9B1 /* UICountingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UICountingLabel.xcconfig; sourceTree = "<group>"; };
 		909FC39B8118765C599B2D429520373D /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
 		9125CD3D85E28A9AB882D0E6EBA16BAD /* NSArray+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MK_Misc.m"; path = "Source/NSArray/NSArray+MK_Misc.m"; sourceTree = "<group>"; };
 		913D56A516BFDF8140223BEE1C2A8C26 /* NSMutableDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSMutableDictionary+MK_Misc.m"; sourceTree = "<group>"; };
 		9287ABEF073914B7B1312B846AD34FB0 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
 		92DD74F5417042E4FC021437429312C2 /* ViewFrameAccessor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ViewFrameAccessor.h; path = FrameAccessor/ViewFrameAccessor.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		971BD72C11E7BCF324D99DA472DB2C3E /* Pods-Run-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Run-resources.sh"; sourceTree = "<group>"; };
 		97DC7476FAEF9BD748ED4A06BC719A8E /* NSNumber+MK_Comparison.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Comparison.h"; path = "Source/NSNumber/NSNumber+MK_Comparison.h"; sourceTree = "<group>"; };
 		984F14662A3B5334D5035715C315D4E9 /* NSDictionary+MK_Misc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MK_Misc.h"; path = "Source/NSDictionary/NSDictionary+MK_Misc.h"; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 		B572AD74FF58960152F97E390FB15080 /* NSNumber+MK_Fraction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSNumber+MK_Fraction.h"; path = "Source/NSNumber/NSNumber+MK_Fraction.h"; sourceTree = "<group>"; };
 		BDD8B472287131C8F7BB8A74A9AE6B46 /* NSNumber+MK_Creation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Creation.m"; path = "Source/NSNumber/NSNumber+MK_Creation.m"; sourceTree = "<group>"; };
 		BFCB69006A4E11CF2A19C80AC3117519 /* NSDate+MK_Components.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+MK_Components.m"; path = "Source/NSDate/NSDate+MK_Components.m"; sourceTree = "<group>"; };
-		C0853E63119235688C55D730490F3618 /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0853E63119235688C55D730490F3618 /* libUICountingLabel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libUICountingLabel.a; path = libUICountingLabel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C0B421A1D726DD2BDEFF32DA71E759 /* FrameAccessor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FrameAccessor-dummy.m"; sourceTree = "<group>"; };
 		C3EFDE9044A83ED5C61A728819C1B3AA /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
 		C6A620E61CDBF6F956592742BD4A409E /* NSString+MK_UTF.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+MK_UTF.h"; path = "Source/NSString/NSString+MK_UTF.h"; sourceTree = "<group>"; };
@@ -275,7 +275,7 @@
 		E8A68CD4B567C2552876002406E8DBD6 /* Pods-Run-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Run-dummy.m"; sourceTree = "<group>"; };
 		E9ECD1BC61435FCBAFE1EA410E1616B3 /* NSString+MK_UTF.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+MK_UTF.m"; path = "Source/NSString/NSString+MK_UTF.m"; sourceTree = "<group>"; };
 		EAC0EE06EAC438C8F68EBC7F79AF6772 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
-		EBA5915FD2D7FA19B677C1047C788160 /* libMKFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBA5915FD2D7FA19B677C1047C788160 /* libMKFoundationKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libMKFoundationKit.a; path = libMKFoundationKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2CB035A2BE6C695924261DD8CA9297 /* NSDictionary+MK_Misc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MK_Misc.m"; path = "Source/NSDictionary/NSDictionary+MK_Misc.m"; sourceTree = "<group>"; };
 		EFFDDA6AFFD136750E335EFA9070A863 /* NSBundle+MK_Version.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MK_Version.h"; path = "Source/NSBundle/NSBundle+MK_Version.h"; sourceTree = "<group>"; };
 		F29DB85853E1DF82E134B72F0839DF74 /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		FC0F00C167AD557BF1D7ACBA054A7A93 /* NSBundle+MK_Version.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MK_Version.m"; path = "Source/NSBundle/NSBundle+MK_Version.m"; sourceTree = "<group>"; };
 		FCCCFB71F2049C95FF5C59EC38F5A444 /* NSNumber+MK_Negative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Negative.m"; path = "Source/NSNumber/NSNumber+MK_Negative.m"; sourceTree = "<group>"; };
 		FDD1705A547B6361A49DD1A5994D46E5 /* NSNumber+MK_Comparison.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+MK_Comparison.m"; path = "Source/NSNumber/NSNumber+MK_Comparison.m"; sourceTree = "<group>"; };
-		FDE04560A445A34D12C37725EB1DCC45 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; path = pb_common.c; sourceTree = "<group>"; };
+		FDE04560A445A34D12C37725EB1DCC45 /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
 		FFB6391A87DC54335630D21FCC68953B /* MKMacro_Method.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKMacro_Method.h; path = Source/Macros/MKMacro_Method.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -353,6 +353,7 @@
 			children = (
 				D6CF6C85E40FE00189D797BAED055103 /* Core */,
 			);
+			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
@@ -547,6 +548,7 @@
 				D490C0D418839B2BC312AD637E3FF8B8 /* Stack */,
 				B2048D2594D5260B6F0A81A7B8E85C46 /* Support Files */,
 			);
+			name = MKFoundationKit;
 			path = MKFoundationKit;
 			sourceTree = "<group>";
 		};
@@ -566,6 +568,7 @@
 			children = (
 				8C580154D2126BF612F57F83A0128419 /* Frameworks */,
 			);
+			name = FirebaseCore;
 			path = FirebaseCore;
 			sourceTree = "<group>";
 		};
@@ -585,6 +588,7 @@
 			children = (
 				06470E26BF87F2AC07EA215F839ED178 /* Frameworks */,
 			);
+			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
@@ -611,6 +615,7 @@
 				D7DDFA44EFED8481BE2E6EADB0CBF983 /* NSData+zlib */,
 				8917476B48293CA84C9ADB59EC29D83B /* Support Files */,
 			);
+			name = GoogleToolboxForMac;
 			path = GoogleToolboxForMac;
 			sourceTree = "<group>";
 		};
@@ -636,6 +641,7 @@
 				584487726BD169A5CC1DD80B4AAF2EF6 /* encode */,
 				B3311E95A118D735A7BA888AAD642445 /* Support Files */,
 			);
+			name = nanopb;
 			path = nanopb;
 			sourceTree = "<group>";
 		};
@@ -666,6 +672,7 @@
 			children = (
 				C0DAB65D4FC1F9247C5BC9CB718004BE /* Frameworks */,
 			);
+			name = FirebaseInstanceID;
 			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
@@ -771,6 +778,7 @@
 				C78F8E38B907AA1B763BFE43C3B3E512 /* UICountingLabel.m */,
 				6AB78AD765CB971206437F5C1AD188B7 /* Support Files */,
 			);
+			name = UICountingLabel;
 			path = UICountingLabel;
 			sourceTree = "<group>";
 		};
@@ -799,6 +807,7 @@
 			children = (
 				D2CEF8E43A18A28C0F77972B4BE854C5 /* Frameworks */,
 			);
+			name = "Google-Mobile-Ads-SDK";
 			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
@@ -819,6 +828,7 @@
 				D30748A02B47CD23CBC72052D76612ED /* ViewFrameAccessor.m */,
 				C8982F6B3BF9641DECA5136ECE6661AE /* Support Files */,
 			);
+			name = FrameAccessor;
 			path = FrameAccessor;
 			sourceTree = "<group>";
 		};
@@ -1040,7 +1050,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1198,7 +1208,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FrameAccessor/FrameAccessor-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1221,7 +1231,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FrameAccessor/FrameAccessor-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1244,7 +1254,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1313,7 +1323,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1335,9 +1345,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1345,21 +1353,15 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_DEBUG=1",
@@ -1392,7 +1394,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1415,7 +1417,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1438,7 +1440,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/nanopb/nanopb-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1461,7 +1463,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MKFoundationKit/MKFoundationKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1484,7 +1486,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/UICountingLabel/UICountingLabel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -1506,9 +1508,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1516,20 +1516,14 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"POD_CONFIGURATION_RELEASE=1",
 					"$(inherited)",
@@ -1559,7 +1553,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/MKFoundationKit/MKFoundationKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
