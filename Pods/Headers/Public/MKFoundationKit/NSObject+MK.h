@@ -1,0 +1,1 @@
+../../../MKFoundationKit/Source/NSObject/NSObject+MK.h
